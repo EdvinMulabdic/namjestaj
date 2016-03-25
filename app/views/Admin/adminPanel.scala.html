@@ -1,0 +1,93 @@
+@(user: AppUser)
+@main{
+    <div class="container">
+        <div>
+            @if(flash.containsKey("success")) {
+                <div class="alert alert-success" role="alert">
+                    <i class="fa fa-check-square-o" style="font-size:30px"></i>
+                    <span  aria-hidden="true" class="flash-font">@flash.get("success")</span>
+
+                </div>
+            }
+            @if(flash.containsKey("error")) {
+                <div class="alert alert-danger" role="alert">
+                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                    <span class="sr-only">Error:</span>
+                    @flash.get("error")
+                </div>
+            }
+        </div>
+    </div>
+    <!-- Main Container -->
+    <section class="main-container col2-right-layout wow bounceInUp animated">
+        <div class="main container">
+            <div class="row">
+                <div class="col-main col-sm-9">
+                    <div class="my-account">
+                        <div class="page-title">
+                            <h2>Admin Panel</h2>
+                            <br>
+                        </div>
+                        <div class="dashboard">
+                            <div class="box-account">
+                                <div class="page-title">
+                                    <h2>Informacije o profilu</h2>
+                                </div>
+                                <div class="col2-set">
+                                    <div class="col-1">
+                                        <form  method="GET" role="form" action="@routes.AppUsers.updateAdminInformationsRender(user.id)" >
+                                            <h5>Kontakt Informacije</h5>
+                                            <p> Ime: @user.name <br>
+                                                Adresa: @user.address<br>
+                                                Grad: @user.city<br>
+                                                Telefon: @user.phone
+                                                <br>
+                                                <br>
+                                            </p>
+                                            <div class="buttons-set">
+                                                <button id="send2" name="send" type="submit" class="button login"><span>Ažuriraj</span></button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-2">
+                                        <form  method="POST" role="form" action="@routes.AppUsers.updateAdminPassword(user.id)" >
+                                            <h5>Pristupne informacije</h5>
+                                            <p>@user.email</p>
+                                            <input type="password" title="Password" class="input-text" name="password" required>
+                                            <br>
+                                            <br>
+                                            <br>
+                                            <div class="buttons-set">
+                                                <button id="send2" name="send" type="submit" class="button login"><span>Ažuriraj</span></button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <aside class="col-right sidebar col-sm-3">
+                    <div class="block block-account">
+                        <div class="block-title">Upravljanje stranicom</div>
+                        <div class="block-content">
+                            <ul>
+                                <li class="current"><a>Admin Panel</a></li>
+                                <li><a href="@routes.AppUsers.listOfUsersRender()">Korisnici</a></li>
+                                <li><a href="@routes.AppUsers.createUserRender()">Dodaj korisnika</a></li>
+                                <li><a href="@routes.Categories.listOfCategories()">Kategorije</a></li>
+                                <li><a href="@routes.Categories.createCategory()">Dodaj kategoriju</a></li>
+                                <li><a href="#">Recurring Profiles</a></li>
+                                <li><a href="#">My Product Reviews</a></li>
+                                <li><a href="#">My Tags</a></li>
+                                <li><a href="wishlist.html">My Wishlist</a></li>
+                                <li><a href="#">My Downloadable</a></li>
+                                <li class="last"><a href="#">Newsletter Subscriptions</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+}

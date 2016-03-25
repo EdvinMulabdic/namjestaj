@@ -1,0 +1,76 @@
+@(userId: Integer)
+@main{
+    <!-- Main Container -->
+    <section class="main-container col2-right-layout wow bounceInUp animated">
+        <div class="main container">
+            <div class="row">
+                <section class="col-main col-sm-9">
+                    <div class="page-title">
+                        <h2>Kreiraj proizvod</h2>
+                    </div>
+                    <div class="static-contain">
+                        <fieldset class="group-select">
+                            <form  method="POST" role="form" action="@routes.Items.createItem(userId)" >
+                                <ul>
+                                    <li id="billing-new-address-form">
+                                        <fieldset>
+                                            <ul>
+                                                <li>
+                                                    <div class="customer-name">
+                                                        <div class="input-box name-firstname">
+                                                            <label for="name">Naziv proizvoda <span class="required">*</span></label>
+                                                            <br>
+                                                            <input type="text" id="name" name="name" title="Naziv proizvoda" class="input-text" required>
+                                                        </div>
+
+                                                        <div class="input-box">
+                                                            <label for="price">Cijena <span class="required">*</span>  </label>
+                                                            <br>
+                                                            <input type="text" id="price" name="price" title="Cijena" class="input-text" required>
+                                                        </div>
+                                                        <div class="input-box name-lastname">
+
+                                                                <label  for="category">Kategorija<em class="required">*</em></label>
+
+                                                                <select title="Kategorija" class="validate-select" id="category" name="category">
+                                                                    <option value="Select">Select</option>
+                                                                    @for(category <- models.Category.findAllCategories()){
+                                                                        <option value="@category.id">@category.name</option>
+                                                                    }
+                                                                </select>
+
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+
+                                                    <div class="input-box">
+                                                        <label for="description">Comment<em class="required">*</em></label>
+                                                        <br>
+                                                        <div class="">
+                                                            <textarea name="description" id="description" title="Opis" class="input-text" cols="5" rows="3" style="resize: vertical"></textarea>
+                                                        </div>
+                                                    </div>
+
+
+                                                </li>
+                                            </ul>
+
+                                        </fieldset>
+                                    </li>
+                                    <li><span class="require"><em class="required">* </em>Obavezna polja</span></li>
+                                    <li>
+                                        <div class="buttons-set">
+                                            <button type="submit" title="Submit" class="button submit"> <span> Dodaj </span> </button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </form>
+                        </fieldset>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+    <!-- Main Container End -->
+}

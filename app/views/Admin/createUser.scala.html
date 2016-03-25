@@ -1,0 +1,73 @@
+@main{
+    <!-- Main Container -->
+    <section class="main-container col2-right-layout wow bounceInUp animated">
+        <div class="main container">
+            <div class="row">
+                <section class="col-main col-sm-9">
+                    <div class="page-title">
+                        <h2>Kreiraj korisnika</h2>
+                    </div>
+                    <div class="static-contain">
+                        <fieldset class="group-select">
+                            <form  method="POST" role="form" action="@routes.AppUsers.createUser()" >
+                                <ul>
+                                    <li id="billing-new-address-form">
+                                        <fieldset>
+                                            <ul>
+                                                <li>
+                                                    <div class="customer-name">
+                                                        <div class="input-box name-firstname">
+                                                            <label for="name">Naziv firme <span class="required">*</span></label>
+                                                            <br>
+                                                            <input type="text" id="name" name="name" title="First Name" class="input-text" required>
+                                                        </div>
+                                                        <div class="input-box name-lastname">
+                                                            <label for="email"> Email  <span class="required">*</span> </label>
+                                                            <br>
+                                                            <input type="text" id="email" name="email" title="Email" class="input-text" required>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="input-box">
+                                                        <label for="billing:company">Grad <span class="required">*</span>  </label>
+                                                        <br>
+                                                        <input type="text" id="city" name="city" title="City" class="input-text" required>
+                                                    </div>
+                                                    <div class="input-box">
+                                                        <label for="billing:email">Adresa <span class="required">*</span></label>
+                                                        <br>
+                                                        <input type="text" name="address" id="address" title="Address" class="input-text" required>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="input-box">
+                                                        <label for="phone">Telefon <span class="required">*</span>  </label>
+                                                        <br>
+                                                        <input type="text" id="phone" name="phone" title="Phone" class="input-text" required>
+                                                    </div>
+                                                    <div class="input-box">
+                                                        <label for="password">Password <span class="required">*</span> </label>
+                                                        <br>
+                                                        <input type="password" id="password" name="password" title="Password" class="input-text" required>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </fieldset>
+                                    </li>
+                                    <li><span class="require"><em class="required">* </em>Obavezna polja</span></li>
+                                    <li>
+                                        <div class="buttons-set">
+                                            <button type="submit" title="Submit" class="button submit"> <span> Dodaj </span> </button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </form>
+                        </fieldset>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+    <!-- Main Container End -->
+}

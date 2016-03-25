@@ -1,0 +1,52 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET           /                                        @controllers.Application.index()
+
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET           /assets/*file                            @controllers.Assets.versioned(path="/public", file: Asset)
+
+#LOGIN
+GET           /login                                   @controllers.Login.loginPageRender()
+POST          /login                                   @controllers.Login.login()
+GET           /logout                                  @controllers.Login.logout()
+
+#ADMIN
+GET           /adminpanel/:userId                      @controllers.AppUsers.adminPanelRender(userId: Integer)
+GET           /listakorisnika                          @controllers.AppUsers.listOfUsersRender()
+GET           /kreirajkorisnka                         @controllers.AppUsers.createUserRender()
+POST          /kreirajkorisnika                        @controllers.AppUsers.createUser()
+GET           /obisikorisnika/:userId                  @controllers.AppUsers.deleteUser(userId: Integer)
+DELETE        /obisikorisnika/:userId                  @controllers.AppUsers.deleteUser(userId: Integer)
+GET           /azuriranjepodataka/:userId              @controllers.AppUsers.updateAdminInformationsRender(userId: Integer)
+POST          /azuriranjepodataka/:userId              @controllers.AppUsers.updateAdminInformations(userId: Integer)
+POST          /adminpanel/:userId                      @controllers.AppUsers.updateAdminPassword(userId: Integer)
+
+#USER
+GET           /userpanel/:userId                       @controllers.AppUsers.userPanelRender(userId: Integer)
+GET           /azuriranjepodatakauser/:userId          @controllers.AppUsers.updateUserInformationsRender(userId: Integer)
+POST          /azuriranjepodatakauser/:userId          @controllers.AppUsers.updateUserInformations(userId: Integer)
+POST          /userpanel/:userId                       @controllers.AppUsers.updateUserPassword(userId: Integer)
+
+#ITEM
+GET           /listaproizvoda/:userId                  @controllers.Items.listOfItems(userId: Integer)
+GET           /brisanjeproizvoda/:itemId               @controllers.Items.deleteItem(itemId: Integer)
+DELETE        /brisanjeproizvoda/:itemId               @controllers.Items.deleteItem(itemId: Integer)
+GET           /azuriranjeproizvoda/itemId              @controllers.Items.updateItemRender(itemId: Integer)
+POST          /azuriranjeproizvoda/itemId              @controllers.Items.updateItem(itemId: Integer)
+GET           /kreiranjeproizvoda/:userId              @controllers.Items.createItemRender(userId: Integer)
+POST          /kreiranjeproizvoda/:userId              @controllers.Items.createItem(userId: Integer)
+GET           /proizvod/:itemId                        @controllers.Items.itemRender(itemId: Integer)
+
+#CATEGORIES
+GET           /kategorije                              @controllers.Categories.listOfCategories()
+GET           /brisanjekategorije/:categoryId          @controllers.Categories.deleteCategory(categoryId: Integer)
+DELETE        /brisanjekategorije/:categoryId          @controllers.Categories.deleteCategory(categoryId: Integer)
+GET           /kreiranjekategorije                     @controllers.Categories.createCategoryRender()
+POST          /kreiranjekategorije                     @controllers.Categories.createCategory()
+GET           /azuriranjekategorije/:categoryId        @controllers.Categories.updateCategoryRender(categoryId: Integer)
+POST          /azuriranjekategorije/:categoryId        @controllers.Categories.updateCategory(categoryId: Integer)
