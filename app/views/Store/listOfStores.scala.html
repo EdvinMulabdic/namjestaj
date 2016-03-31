@@ -1,0 +1,78 @@
+@(stores: java.util.List[Store])(userId: Integer)
+@main {
+    <div class="container">
+        <div class="row">
+            <div class="text-center" id="margin-bottom-admin">
+                <h1>Lista objekata</h1>
+            </div>
+        </div>
+        <div>
+            @if(flash.containsKey("success")) {
+                <div class="alert alert-success" role="alert">
+                    <i class="fa fa-check-square-o" style="font-size:30px"></i>
+                    <span  aria-hidden="true" class="flash-font">@flash.get("success")</span>
+                </div>
+            }
+            @if(flash.containsKey("error")) {
+                <div class="alert alert-danger" role="alert">
+                    <i class="fa fa-check-square-o" style="font-size:30px"></i>
+                    <span  aria-hidden="true" class="flash-font">@flash.get("error")</span>
+                </div>
+            }
+        </div>
+    </div>
+    <section class="main-container col2-right-layout wow bounceInUp animated">
+        <div class="main container">
+            <div class="row">
+                <section class="col-md-12" id="tablemargins">
+                    <table class="table table-striped table-bordered table-responsive" id="sort">
+                        <thead>
+                            <tr class="about">
+                                <th>Naziv objekta</th>
+                                <th>Grad</th>
+                                <th class="text-center">Adresa</th>
+                                <th class="text-center">Uredi</th>
+                                <th class="text-center">Obriši</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        @for(store <- stores) {
+                            <tr class="about" >
+                                <td>@store.name</td>
+                                <td>@store.city</td>
+                                <td class="text-center">@store.address</td>
+                                <td class="text-center">
+                                    <a class="fa-buttons" title="Uredi proizvod" href="@routes.Stores.updateStoreRender(store.id)" role="button">
+                                        <i class=" fa fa-pencil fa-lg"></i>
+                                    </a>
+                                </td>
+                                <td class="text-center">
+                                    <a class="fa-buttons" data-role="delete-store" title="Obriši proixvod" href="@routes.Stores.deleteStore(store.id)" role="button">
+                                        <i class=" fa fa-trash-o fa-lg"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                        </tbody>
+                    </table>
+                </section>
+
+                <section>
+                    <div class="col-md-6 col-md-offset-5" id="margin-bottom-header">
+                        <form  method="GET" role="form" action="@routes.Stores.createStore(userId)" >
+                            <div class="buttons-set">
+                                <button class="button submit"><span>DODAJ OBJEKAT</span></button>
+                            </div>
+                        </form>
+
+                    </div>
+                </section>
+
+            </div>
+
+        </div>
+    </section>
+
+    <script src="@routes.Assets.versioned("javascripts/sort.js")"></script>
+    <script src='@routes.Assets.versioned("javascripts/deleteConfirm.js")'></script>
+}

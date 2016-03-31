@@ -972,7 +972,8 @@ nav {
 	border-right: none;
 }
 .cms-index-index nav {
-	border-bottom: none
+	border-bottom: none;
+    background-color: #6ECA62;
 }
 #nav {
 	position: relative;
@@ -5481,7 +5482,8 @@ margin-right: 10px;
 	display: block;
 	text-align: left;
 	margin-left: 50px;
-	margin-top: 12px
+	margin-top: 12px;
+    color: #65B55B;
 }
 .our-features-box .feature-box span {
 	font-size: 12px;
@@ -10358,18 +10360,18 @@ a#fancybox-close {
 	font-family: 'Shadows Into Light';
 	letter-spacing: 5px
 }
-.category-description .small-tag span {
-	background: #ffc000;
-	display: inline-block;
-	line-height: 90px;
-	padding-left: 10px;
-	padding-right: 20px;
-	height: 90px;
-	width: 90px;
-	border-radius: 80px;
-	font-size: 40px;
-	color: #fff
-}
+/*.category-description .small-tag span {*/
+	/*background: #ffc000;*/
+	/*display: inline-block;*/
+	/*line-height: 90px;*/
+	/*padding-left: 10px;*/
+	/*padding-right: 20px;*/
+	/*height: 90px;*/
+	/*width: 90px;*/
+	/*border-radius: 80px;*/
+	/*font-size: 40px;*/
+	/*color: #fff*/
+/*}*/
 /*	Category Image */
 
 .cat-img-title {
@@ -10984,7 +10986,8 @@ width:300px;
 }
 .mm-toggle-wrap {
 	display: block;
-	width: 100%;
+	width: 30%;
+	float: right;
 }
 .toplinks div.links div a {
 	padding: 3px 5px;
@@ -12903,3 +12906,10 @@ div#fancybox-wrap {
 
 }
 
+.map2{
+	height:300px;
+	margin-top: 20px;
+}
+.margin-bottom-20 {
+	margin-bottom: 40px;
+}

@@ -45,7 +45,7 @@
                                                 <br>
                                             </p>
                                             <div class="buttons-set">
-                                                <button id="send2" name="send" type="submit" class="button login"><span>Ažuriraj</span></button>
+                                                <button id="send2" name="send" type="submit" class="button"> <i class="fa fa-pencil"></i> <span> Ažuriraj</span></button>
                                             </div>
                                         </form>
                                     </div>
@@ -58,7 +58,7 @@
                                             <br>
                                             <br>
                                             <div class="buttons-set">
-                                                <button id="send2" name="send" type="submit" class="button login"><span>Ažuriraj</span></button>
+                                                <button id="send2" name="send" type="submit" class="button "> <i class="fa fa-pencil"></i><span> Ažuriraj</span></button>
                                             </div>
                                         </form>
                                     </div>
@@ -73,8 +73,8 @@
                         <div class="block-content">
                             <ul>
                                 <li class="current"><a>Korisnički panel</a></li>
-                                <li><a href="">Objekti</a></li>
-                                <li><a href="">Dodaj objekat</a></li>
+                                <li><a href="@routes.Stores.listOfStores(user.id)">Objekti</a></li>
+                                <li><a href="@routes.Stores.createStoreRender(user.id)">Dodaj objekat</a></li>
                                 <li><a href="@routes.Items.listOfItems(user.id)">Poizvodi</a></li>
                                 <li><a href="@routes.Items.createItem(user.id)">Dodaj proizvod</a></li>
                                 <li><a href="#">My Orders</a></li>

@@ -3,50 +3,90 @@
 # ~~~~
 
 # Home page
-GET           /                                        @controllers.Application.index()
+GET           /                                              @controllers.Application.index()
 
 
 
 # Map static resources from the /public folder to the /assets URL path
-GET           /assets/*file                            @controllers.Assets.versioned(path="/public", file: Asset)
+GET           /assets/*file                                  @controllers.Assets.versioned(path="/public", file: Asset)
 
 #LOGIN
-GET           /login                                   @controllers.Login.loginPageRender()
-POST          /login                                   @controllers.Login.login()
-GET           /logout                                  @controllers.Login.logout()
+GET           /login                                         @controllers.Login.loginPageRender()
+POST          /login                                         @controllers.Login.login()
+GET           /logout                                        @controllers.Login.logout()
 
 #ADMIN
-GET           /adminpanel/:userId                      @controllers.AppUsers.adminPanelRender(userId: Integer)
-GET           /listakorisnika                          @controllers.AppUsers.listOfUsersRender()
-GET           /kreirajkorisnka                         @controllers.AppUsers.createUserRender()
-POST          /kreirajkorisnika                        @controllers.AppUsers.createUser()
-GET           /obisikorisnika/:userId                  @controllers.AppUsers.deleteUser(userId: Integer)
-DELETE        /obisikorisnika/:userId                  @controllers.AppUsers.deleteUser(userId: Integer)
-GET           /azuriranjepodataka/:userId              @controllers.AppUsers.updateAdminInformationsRender(userId: Integer)
-POST          /azuriranjepodataka/:userId              @controllers.AppUsers.updateAdminInformations(userId: Integer)
-POST          /adminpanel/:userId                      @controllers.AppUsers.updateAdminPassword(userId: Integer)
+GET           /adminpanel/:userId                            @controllers.AppUsers.adminPanelRender(userId: Integer)
+GET           /listakorisnika                                @controllers.AppUsers.listOfUsersRender()
+GET           /kreirajkorisnka                               @controllers.AppUsers.createUserRender()
+POST          /kreirajkorisnika                              @controllers.AppUsers.createUser()
+GET           /obisikorisnika/:userId                        @controllers.AppUsers.deleteUser(userId: Integer)
+DELETE        /obisikorisnika/:userId                        @controllers.AppUsers.deleteUser(userId: Integer)
+GET           /azuriranjepodataka/:userId                    @controllers.AppUsers.updateAdminInformationsRender(userId: Integer)
+POST          /azuriranjepodataka/:userId                    @controllers.AppUsers.updateAdminInformations(userId: Integer)
+POST          /adminpanel/:userId                            @controllers.AppUsers.updateAdminPassword(userId: Integer)
+GET           /proizvodi                                     @controllers.Items.allItems()
+GET           /proizvodi/:itemId                             @controllers.Items.showOnHomepage(itemId: Integer)
 
 #USER
-GET           /userpanel/:userId                       @controllers.AppUsers.userPanelRender(userId: Integer)
-GET           /azuriranjepodatakauser/:userId          @controllers.AppUsers.updateUserInformationsRender(userId: Integer)
-POST          /azuriranjepodatakauser/:userId          @controllers.AppUsers.updateUserInformations(userId: Integer)
-POST          /userpanel/:userId                       @controllers.AppUsers.updateUserPassword(userId: Integer)
+GET           /userpanel/:userId                             @controllers.AppUsers.userPanelRender(userId: Integer)
+GET           /azuriranjepodatakauser/:userId                @controllers.AppUsers.updateUserInformationsRender(userId: Integer)
+POST          /azuriranjepodatakauser/:userId                @controllers.AppUsers.updateUserInformations(userId: Integer)
+POST          /userpanel/:userId                             @controllers.AppUsers.updateUserPassword(userId: Integer)
 
 #ITEM
-GET           /listaproizvoda/:userId                  @controllers.Items.listOfItems(userId: Integer)
-GET           /brisanjeproizvoda/:itemId               @controllers.Items.deleteItem(itemId: Integer)
-DELETE        /brisanjeproizvoda/:itemId               @controllers.Items.deleteItem(itemId: Integer)
-GET           /azuriranjeproizvoda/itemId              @controllers.Items.updateItemRender(itemId: Integer)
-POST          /azuriranjeproizvoda/itemId              @controllers.Items.updateItem(itemId: Integer)
-GET           /kreiranjeproizvoda/:userId              @controllers.Items.createItemRender(userId: Integer)
-POST          /kreiranjeproizvoda/:userId              @controllers.Items.createItem(userId: Integer)
-GET           /proizvod/:itemId                        @controllers.Items.itemRender(itemId: Integer)
+GET           /listaproizvoda/:userId                        @controllers.Items.listOfItems(userId: Integer)
+GET           /brisanjeproizvoda/:itemId                     @controllers.Items.deleteItem(itemId: Integer)
+DELETE        /brisanjeproizvoda/:itemId                     @controllers.Items.deleteItem(itemId: Integer)
+GET           /azuriranjeproizvoda/itemId                    @controllers.Items.updateItemRender(itemId: Integer)
+POST          /azuriranjeproizvoda/itemId                    @controllers.Items.updateItem(itemId: Integer)
+GET           /kreiranjeproizvoda/:userId                    @controllers.Items.createItemRender(userId: Integer)
+POST          /kreiranjeproizvoda/:userId                    @controllers.Items.createItem(userId: Integer)
+GET           /proizvod/:itemId                              @controllers.Items.itemRender(itemId: Integer)
+GET           /kategorije/:categoryId                        @controllers.Items.getItemsWithCategory(categoryId: Integer)
+GET           /potkategorije/:subcategoryId                  @controllers.Items.getItemsWithSubCategory(subcategoryId: Integer)
+
 
 #CATEGORIES
-GET           /kategorije                              @controllers.Categories.listOfCategories()
-GET           /brisanjekategorije/:categoryId          @controllers.Categories.deleteCategory(categoryId: Integer)
-DELETE        /brisanjekategorije/:categoryId          @controllers.Categories.deleteCategory(categoryId: Integer)
-GET           /kreiranjekategorije                     @controllers.Categories.createCategoryRender()
-POST          /kreiranjekategorije                     @controllers.Categories.createCategory()
-GET           /azuriranjekategorije/:categoryId        @controllers.Categories.updateCategoryRender(categoryId: Integer)
-POST          /azuriranjekategorije/:categoryId        @controllers.Categories.updateCategory(categoryId: Integer)
+GET           /kategorije                                    @controllers.Categories.listOfCategories()
+GET           /brisanjekategorije/:categoryId                @controllers.Categories.deleteCategory(categoryId: Integer)
+DELETE        /brisanjekategorije/:categoryId                @controllers.Categories.deleteCategory(categoryId: Integer)
+GET           /kreiranjekategorije                           @controllers.Categories.createCategoryRender()
+POST          /kreiranjekategorije                           @controllers.Categories.createCategory()
+GET           /azuriranjekategorije/:categoryId              @controllers.Categories.updateCategoryRender(categoryId: Integer)
+POST          /azuriranjekategorije/:categoryId              @controllers.Categories.updateCategory(categoryId: Integer)
+
+#SUBCATEGORIES
+GET           /podkategorija/:categoryId                     @controllers.Categories.createSubCategoryRender(categoryId: Integer)
+POST          /podkategorija/:categoryId                     @controllers.Categories.createSubCategory(categoryId: Integer)
+GET           /listapodkategorija/:categoryId                @controllers.Categories.listOfSubCategories(categoryId: Integer)
+GET           /azuriranjepodkategorije/:subcategoryId        @controllers.Categories.updateSubCategoryRender(subcategoryId: Integer)
+POST          /azuriranjepodkategorije/:subcategoryId        @controllers.Categories.updateSubCategory(subcategoryId: Integer)
+GET           /brisanjepodkategorije/:subcategoryId          @controllers.Categories.deleteSubCategory(subcategoryId: Integer)
+DELETE        /brisanjepodkategorije/:subcategoryId          @controllers.Categories.deleteSubCategory(subcategoryId: Integer)
+
+#STORE
+GET           /dodajobjekat/:userId                          @controllers.Stores.createStoreRender(userId: Integer)
+POST          /dodajobjekat/:userId                          @controllers.Stores.createStore(userId: Integer)
+GET           /azuriranjeobjekta/:storeId                    @controllers.Stores.updateStoreRender(storeId: Integer)
+POST          /azuriranjeobjekta/:storeId                    @controllers.Stores.updateStore(storeId: Integer)
+GET           /brisanjeobjekta/:storeId                      @controllers.Stores.deleteStore(storeId: Integer)
+DELETE        /brisanjeobjekta/:storeId                      @controllers.Stores.deleteStore(storeId: Integer)
+GET           /listaobjekata/:userId                         @controllers.Stores.listOfStores(userId: Integer)
+
+#CONTACT US
+GET           /kontakt                                       @controllers.ContactUs.contactUsRender()
+POST          /kontakt                                       @controllers.ContactUs.contactUs()
+
+#FAQ
+GET           /faq                                           @controllers.Application.faqRender()
+
+#IMAGES
+GET           /uploadslika/:itemId                           @controllers.Images.imagesUploadRender(itemId: Integer)
+POST          /uploadslika/:itemId                           @controllers.Images.imagesUpload(itemId: Integer)
+GET           /listaslika/:itemId                            @controllers.Images.listOfPicturesRender(itemId: Integer)
+GET           /brisanjeslike/:imageId                        @controllers.Images.deleteImage(imageId: String)
+DELETE        /brisanjeslike/:imageId                        @controllers.Images.deleteImage(imageId: String)
+
+#AJAX LAST TEN PRODUCTS
+POST          /                                              @controllers.Items.lastTenProducts()

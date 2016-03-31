@@ -651,28 +651,28 @@
 [debug] == resolving dependencies org.scala-sbt#precompiled-2_9_3;0.13.8->org.scala-lang#scala-library;2.10.4 [compile->compile]
 [debug] == resolving dependencies org.scala-sbt#precompiled-2_9_3;0.13.8->org.scala-lang#scala-library;2.10.4 [compile->master]
 [debug] == resolving dependencies org.scala-sbt#precompiled-2_9_3;0.13.8->org.scala-sbt#interface;0.13.8 [compile->default(compile)]
-[debug] == resolving dependencies blankproject#blankproject$sbt_2.11;1.0-SNAPSHOT->com.typesafe.play#sbt-plugin;2.4.4 [default->default(compile)]
-[info] Resolving com.typesafe.play#sbt-plugin;2.4.4 ...
-[debug] sbt-chain: Checking cache for: dependency: com.typesafe.play#sbt-plugin;2.4.4 {default=[default(compile)]}
-[debug] sbt-chain: module revision found in cache: com.typesafe.play#sbt-plugin;2.4.4
-[debug] 	found com.typesafe.play#sbt-plugin;2.4.4 in sbt-chain
-[debug] 	[2.4.4] com.typesafe.play#sbt-plugin;2.4.4
-[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.4->com.typesafe.play#routes-compiler_2.10;2.4.4 [compile->default(compile)]
-[info] Resolving com.typesafe.play#routes-compiler_2.10;2.4.4 ...
-[debug] sbt-chain: Checking cache for: dependency: com.typesafe.play#routes-compiler_2.10;2.4.4 {compile=[default(compile)]}
-[debug] sbt-chain: module revision found in cache: com.typesafe.play#routes-compiler_2.10;2.4.4
-[debug] 	found com.typesafe.play#routes-compiler_2.10;2.4.4 in sbt-chain
-[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.4->com.typesafe.play#routes-compiler_2.10;2.4.4 [compile->runtime]
-[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.4->com.typesafe.play#routes-compiler_2.10;2.4.4 [compile->compile]
-[debug] == resolving dependencies com.typesafe.play#routes-compiler_2.10;2.4.4->org.scala-lang#scala-library;2.10.4 [compile->master(compile)]
-[debug] == resolving dependencies com.typesafe.play#routes-compiler_2.10;2.4.4->org.scala-lang#scala-library;2.10.4 [compile->compile(*)]
-[debug] == resolving dependencies com.typesafe.play#routes-compiler_2.10;2.4.4->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->master(compile)]
+[debug] == resolving dependencies blankproject#blankproject$sbt_2.11;1.0-SNAPSHOT->com.typesafe.play#sbt-plugin;2.4.2 [default->default(compile)]
+[info] Resolving com.typesafe.play#sbt-plugin;2.4.2 ...
+[debug] sbt-chain: Checking cache for: dependency: com.typesafe.play#sbt-plugin;2.4.2 {default=[default(compile)]}
+[debug] sbt-chain: module revision found in cache: com.typesafe.play#sbt-plugin;2.4.2
+[debug] 	found com.typesafe.play#sbt-plugin;2.4.2 in sbt-chain
+[debug] 	[2.4.2] com.typesafe.play#sbt-plugin;2.4.2
+[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.2->com.typesafe.play#routes-compiler_2.10;2.4.2 [compile->default(compile)]
+[info] Resolving com.typesafe.play#routes-compiler_2.10;2.4.2 ...
+[debug] sbt-chain: Checking cache for: dependency: com.typesafe.play#routes-compiler_2.10;2.4.2 {compile=[default(compile)]}
+[debug] sbt-chain: module revision found in cache: com.typesafe.play#routes-compiler_2.10;2.4.2
+[debug] 	found com.typesafe.play#routes-compiler_2.10;2.4.2 in sbt-chain
+[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.2->com.typesafe.play#routes-compiler_2.10;2.4.2 [compile->runtime]
+[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.2->com.typesafe.play#routes-compiler_2.10;2.4.2 [compile->compile]
+[debug] == resolving dependencies com.typesafe.play#routes-compiler_2.10;2.4.2->org.scala-lang#scala-library;2.10.4 [compile->master(compile)]
+[debug] == resolving dependencies com.typesafe.play#routes-compiler_2.10;2.4.2->org.scala-lang#scala-library;2.10.4 [compile->compile(*)]
+[debug] == resolving dependencies com.typesafe.play#routes-compiler_2.10;2.4.2->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->master(compile)]
 [info] Resolving com.typesafe.play#twirl-api_2.10;1.1.1 ...
 [debug] sbt-chain: Checking cache for: dependency: com.typesafe.play#twirl-api_2.10;1.1.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
 [debug] sbt-chain: module revision found in cache: com.typesafe.play#twirl-api_2.10;1.1.1
 [debug] 	found com.typesafe.play#twirl-api_2.10;1.1.1 in sbt-chain
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[debug] == resolving dependencies com.typesafe.play#routes-compiler_2.10;2.4.4->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->compile(*)]
+[debug] == resolving dependencies com.typesafe.play#routes-compiler_2.10;2.4.2->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->compile(*)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
 [debug] == resolving dependencies com.typesafe.play#twirl-api_2.10;1.1.1->org.scala-lang#scala-library;2.10.4 [compile->master(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
@@ -698,117 +698,117 @@
 [debug] == resolving dependencies com.typesafe.play#twirl-api_2.10;1.1.1->org.apache.commons#commons-lang3;3.4 [compile->runtime]
 [debug] == resolving dependencies com.typesafe.play#twirl-api_2.10;1.1.1->org.apache.commons#commons-lang3;3.4 [compile->compile]
 [debug] == resolving dependencies com.typesafe.play#twirl-api_2.10;1.1.1->org.apache.commons#commons-lang3;3.4 [compile->master]
-[debug] == resolving dependencies com.typesafe.play#routes-compiler_2.10;2.4.4->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->runtime(*)]
-[debug] == resolving dependencies com.typesafe.play#routes-compiler_2.10;2.4.4->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->compile]
+[debug] == resolving dependencies com.typesafe.play#routes-compiler_2.10;2.4.2->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->runtime(*)]
+[debug] == resolving dependencies com.typesafe.play#routes-compiler_2.10;2.4.2->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->compile]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
 [debug] == resolving dependencies com.typesafe.play#twirl-api_2.10;1.1.1->org.scala-lang#scala-library;2.10.4 [runtime->runtime(*)]
 [debug] == resolving dependencies com.typesafe.play#twirl-api_2.10;1.1.1->org.scala-lang#scala-library;2.10.4 [runtime->compile]
 [debug] == resolving dependencies com.typesafe.play#twirl-api_2.10;1.1.1->org.apache.commons#commons-lang3;3.4 [runtime->runtime(*)]
 [debug] == resolving dependencies com.typesafe.play#twirl-api_2.10;1.1.1->org.apache.commons#commons-lang3;3.4 [runtime->compile]
-[debug] == resolving dependencies com.typesafe.play#routes-compiler_2.10;2.4.4->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->default(compile)]
-[debug] == resolving dependencies com.typesafe.play#routes-compiler_2.10;2.4.4->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->runtime]
-[debug] == resolving dependencies com.typesafe.play#routes-compiler_2.10;2.4.4->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->compile]
-[debug] == resolving dependencies com.typesafe.play#routes-compiler_2.10;2.4.4->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->master]
+[debug] == resolving dependencies com.typesafe.play#routes-compiler_2.10;2.4.2->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->default(compile)]
+[debug] == resolving dependencies com.typesafe.play#routes-compiler_2.10;2.4.2->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->runtime]
+[debug] == resolving dependencies com.typesafe.play#routes-compiler_2.10;2.4.2->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->compile]
+[debug] == resolving dependencies com.typesafe.play#routes-compiler_2.10;2.4.2->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->master]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[debug] == resolving dependencies com.typesafe.play#routes-compiler_2.10;2.4.4->commons-io#commons-io;2.4 [compile->master(compile)]
+[debug] == resolving dependencies com.typesafe.play#routes-compiler_2.10;2.4.2->commons-io#commons-io;2.4 [compile->master(compile)]
 [info] Resolving commons-io#commons-io;2.4 ...
 [debug] sbt-chain: Checking cache for: dependency: commons-io#commons-io;2.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
 [debug] sbt-chain: module revision found in cache: commons-io#commons-io;2.4
 [debug] 	found commons-io#commons-io;2.4 in sbt-chain
-[debug] == resolving dependencies com.typesafe.play#routes-compiler_2.10;2.4.4->commons-io#commons-io;2.4 [compile->compile(*)]
-[debug] == resolving dependencies com.typesafe.play#routes-compiler_2.10;2.4.4->commons-io#commons-io;2.4 [compile->runtime(*)]
-[debug] == resolving dependencies com.typesafe.play#routes-compiler_2.10;2.4.4->commons-io#commons-io;2.4 [compile->compile]
-[debug] == resolving dependencies com.typesafe.play#routes-compiler_2.10;2.4.4->commons-io#commons-io;2.4 [compile->default(compile)]
-[debug] == resolving dependencies com.typesafe.play#routes-compiler_2.10;2.4.4->commons-io#commons-io;2.4 [compile->runtime]
-[debug] == resolving dependencies com.typesafe.play#routes-compiler_2.10;2.4.4->commons-io#commons-io;2.4 [compile->compile]
-[debug] == resolving dependencies com.typesafe.play#routes-compiler_2.10;2.4.4->commons-io#commons-io;2.4 [compile->master]
-[debug] == resolving dependencies com.typesafe.play#routes-compiler_2.10;2.4.4->org.scala-lang#scala-library;2.10.4 [runtime->runtime(*)]
-[debug] == resolving dependencies com.typesafe.play#routes-compiler_2.10;2.4.4->org.scala-lang#scala-library;2.10.4 [runtime->compile]
-[debug] == resolving dependencies com.typesafe.play#routes-compiler_2.10;2.4.4->com.typesafe.play#twirl-api_2.10;1.1.1 [runtime->runtime(*)]
-[debug] == resolving dependencies com.typesafe.play#routes-compiler_2.10;2.4.4->com.typesafe.play#twirl-api_2.10;1.1.1 [runtime->compile]
-[debug] == resolving dependencies com.typesafe.play#routes-compiler_2.10;2.4.4->commons-io#commons-io;2.4 [runtime->runtime(*)]
-[debug] == resolving dependencies com.typesafe.play#routes-compiler_2.10;2.4.4->commons-io#commons-io;2.4 [runtime->compile]
-[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.4->com.typesafe.play#routes-compiler_2.10;2.4.4 [compile->master]
-[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.4->com.typesafe.play#sbt-run-support_2.10;2.4.4 [compile->default(compile)]
-[info] Resolving com.typesafe.play#sbt-run-support_2.10;2.4.4 ...
-[debug] sbt-chain: Checking cache for: dependency: com.typesafe.play#sbt-run-support_2.10;2.4.4 {compile=[default(compile)]}
-[debug] sbt-chain: module revision found in cache: com.typesafe.play#sbt-run-support_2.10;2.4.4
-[debug] 	found com.typesafe.play#sbt-run-support_2.10;2.4.4 in sbt-chain
-[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.4->com.typesafe.play#sbt-run-support_2.10;2.4.4 [compile->runtime]
-[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.4->com.typesafe.play#sbt-run-support_2.10;2.4.4 [compile->compile]
-[debug] == resolving dependencies com.typesafe.play#sbt-run-support_2.10;2.4.4->org.scala-lang#scala-library;2.10.4 [compile->master(compile)]
-[debug] == resolving dependencies com.typesafe.play#sbt-run-support_2.10;2.4.4->org.scala-lang#scala-library;2.10.4 [compile->compile(*)]
-[debug] == resolving dependencies com.typesafe.play#sbt-run-support_2.10;2.4.4->com.typesafe.play#build-link;2.4.4 [compile->master(compile)]
-[info] Resolving com.typesafe.play#build-link;2.4.4 ...
-[debug] sbt-chain: Checking cache for: dependency: com.typesafe.play#build-link;2.4.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[debug] sbt-chain: module revision found in cache: com.typesafe.play#build-link;2.4.4
-[debug] 	found com.typesafe.play#build-link;2.4.4 in sbt-chain
-[debug] == resolving dependencies com.typesafe.play#sbt-run-support_2.10;2.4.4->com.typesafe.play#build-link;2.4.4 [compile->compile(*)]
-[debug] == resolving dependencies com.typesafe.play#build-link;2.4.4->com.typesafe.play#play-exceptions;2.4.4 [compile->master(compile)]
-[info] Resolving com.typesafe.play#play-exceptions;2.4.4 ...
-[debug] sbt-chain: Checking cache for: dependency: com.typesafe.play#play-exceptions;2.4.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[debug] sbt-chain: module revision found in cache: com.typesafe.play#play-exceptions;2.4.4
-[debug] 	found com.typesafe.play#play-exceptions;2.4.4 in sbt-chain
-[debug] == resolving dependencies com.typesafe.play#build-link;2.4.4->com.typesafe.play#play-exceptions;2.4.4 [compile->compile(*)]
-[debug] == resolving dependencies com.typesafe.play#build-link;2.4.4->com.typesafe.play#play-exceptions;2.4.4 [compile->default(compile)]
-[debug] == resolving dependencies com.typesafe.play#build-link;2.4.4->com.typesafe.play#play-exceptions;2.4.4 [compile->runtime]
-[debug] == resolving dependencies com.typesafe.play#build-link;2.4.4->com.typesafe.play#play-exceptions;2.4.4 [compile->compile]
-[debug] == resolving dependencies com.typesafe.play#build-link;2.4.4->com.typesafe.play#play-exceptions;2.4.4 [compile->master]
-[debug] == resolving dependencies com.typesafe.play#build-link;2.4.4->org.javassist#javassist;3.19.0-GA [compile->master(compile)]
+[debug] == resolving dependencies com.typesafe.play#routes-compiler_2.10;2.4.2->commons-io#commons-io;2.4 [compile->compile(*)]
+[debug] == resolving dependencies com.typesafe.play#routes-compiler_2.10;2.4.2->commons-io#commons-io;2.4 [compile->runtime(*)]
+[debug] == resolving dependencies com.typesafe.play#routes-compiler_2.10;2.4.2->commons-io#commons-io;2.4 [compile->compile]
+[debug] == resolving dependencies com.typesafe.play#routes-compiler_2.10;2.4.2->commons-io#commons-io;2.4 [compile->default(compile)]
+[debug] == resolving dependencies com.typesafe.play#routes-compiler_2.10;2.4.2->commons-io#commons-io;2.4 [compile->runtime]
+[debug] == resolving dependencies com.typesafe.play#routes-compiler_2.10;2.4.2->commons-io#commons-io;2.4 [compile->compile]
+[debug] == resolving dependencies com.typesafe.play#routes-compiler_2.10;2.4.2->commons-io#commons-io;2.4 [compile->master]
+[debug] == resolving dependencies com.typesafe.play#routes-compiler_2.10;2.4.2->org.scala-lang#scala-library;2.10.4 [runtime->runtime(*)]
+[debug] == resolving dependencies com.typesafe.play#routes-compiler_2.10;2.4.2->org.scala-lang#scala-library;2.10.4 [runtime->compile]
+[debug] == resolving dependencies com.typesafe.play#routes-compiler_2.10;2.4.2->com.typesafe.play#twirl-api_2.10;1.1.1 [runtime->runtime(*)]
+[debug] == resolving dependencies com.typesafe.play#routes-compiler_2.10;2.4.2->com.typesafe.play#twirl-api_2.10;1.1.1 [runtime->compile]
+[debug] == resolving dependencies com.typesafe.play#routes-compiler_2.10;2.4.2->commons-io#commons-io;2.4 [runtime->runtime(*)]
+[debug] == resolving dependencies com.typesafe.play#routes-compiler_2.10;2.4.2->commons-io#commons-io;2.4 [runtime->compile]
+[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.2->com.typesafe.play#routes-compiler_2.10;2.4.2 [compile->master]
+[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.2->com.typesafe.play#sbt-run-support_2.10;2.4.2 [compile->default(compile)]
+[info] Resolving com.typesafe.play#sbt-run-support_2.10;2.4.2 ...
+[debug] sbt-chain: Checking cache for: dependency: com.typesafe.play#sbt-run-support_2.10;2.4.2 {compile=[default(compile)]}
+[debug] sbt-chain: module revision found in cache: com.typesafe.play#sbt-run-support_2.10;2.4.2
+[debug] 	found com.typesafe.play#sbt-run-support_2.10;2.4.2 in sbt-chain
+[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.2->com.typesafe.play#sbt-run-support_2.10;2.4.2 [compile->runtime]
+[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.2->com.typesafe.play#sbt-run-support_2.10;2.4.2 [compile->compile]
+[debug] == resolving dependencies com.typesafe.play#sbt-run-support_2.10;2.4.2->org.scala-lang#scala-library;2.10.4 [compile->master(compile)]
+[debug] == resolving dependencies com.typesafe.play#sbt-run-support_2.10;2.4.2->org.scala-lang#scala-library;2.10.4 [compile->compile(*)]
+[debug] == resolving dependencies com.typesafe.play#sbt-run-support_2.10;2.4.2->com.typesafe.play#build-link;2.4.2 [compile->master(compile)]
+[info] Resolving com.typesafe.play#build-link;2.4.2 ...
+[debug] sbt-chain: Checking cache for: dependency: com.typesafe.play#build-link;2.4.2 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
+[debug] sbt-chain: module revision found in cache: com.typesafe.play#build-link;2.4.2
+[debug] 	found com.typesafe.play#build-link;2.4.2 in sbt-chain
+[debug] == resolving dependencies com.typesafe.play#sbt-run-support_2.10;2.4.2->com.typesafe.play#build-link;2.4.2 [compile->compile(*)]
+[debug] == resolving dependencies com.typesafe.play#build-link;2.4.2->com.typesafe.play#play-exceptions;2.4.2 [compile->master(compile)]
+[info] Resolving com.typesafe.play#play-exceptions;2.4.2 ...
+[debug] sbt-chain: Checking cache for: dependency: com.typesafe.play#play-exceptions;2.4.2 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
+[debug] sbt-chain: module revision found in cache: com.typesafe.play#play-exceptions;2.4.2
+[debug] 	found com.typesafe.play#play-exceptions;2.4.2 in sbt-chain
+[debug] == resolving dependencies com.typesafe.play#build-link;2.4.2->com.typesafe.play#play-exceptions;2.4.2 [compile->compile(*)]
+[debug] == resolving dependencies com.typesafe.play#build-link;2.4.2->com.typesafe.play#play-exceptions;2.4.2 [compile->default(compile)]
+[debug] == resolving dependencies com.typesafe.play#build-link;2.4.2->com.typesafe.play#play-exceptions;2.4.2 [compile->runtime]
+[debug] == resolving dependencies com.typesafe.play#build-link;2.4.2->com.typesafe.play#play-exceptions;2.4.2 [compile->compile]
+[debug] == resolving dependencies com.typesafe.play#build-link;2.4.2->com.typesafe.play#play-exceptions;2.4.2 [compile->master]
+[debug] == resolving dependencies com.typesafe.play#build-link;2.4.2->org.javassist#javassist;3.19.0-GA [compile->master(compile)]
 [info] Resolving org.javassist#javassist;3.19.0-GA ...
 [debug] sbt-chain: Checking cache for: dependency: org.javassist#javassist;3.19.0-GA {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
 [debug] sbt-chain: module revision found in cache: org.javassist#javassist;3.19.0-GA
 [debug] 	found org.javassist#javassist;3.19.0-GA in sbt-chain
-[debug] == resolving dependencies com.typesafe.play#build-link;2.4.4->org.javassist#javassist;3.19.0-GA [compile->compile(*)]
-[debug] == resolving dependencies com.typesafe.play#build-link;2.4.4->org.javassist#javassist;3.19.0-GA [compile->default(compile)]
-[debug] == resolving dependencies com.typesafe.play#build-link;2.4.4->org.javassist#javassist;3.19.0-GA [compile->runtime]
-[debug] == resolving dependencies com.typesafe.play#build-link;2.4.4->org.javassist#javassist;3.19.0-GA [compile->compile]
-[debug] == resolving dependencies com.typesafe.play#build-link;2.4.4->org.javassist#javassist;3.19.0-GA [compile->master]
-[debug] == resolving dependencies com.typesafe.play#sbt-run-support_2.10;2.4.4->com.typesafe.play#build-link;2.4.4 [compile->runtime(*)]
-[debug] == resolving dependencies com.typesafe.play#sbt-run-support_2.10;2.4.4->com.typesafe.play#build-link;2.4.4 [compile->compile]
-[debug] == resolving dependencies com.typesafe.play#build-link;2.4.4->com.typesafe.play#play-exceptions;2.4.4 [runtime->runtime(*)]
-[debug] == resolving dependencies com.typesafe.play#build-link;2.4.4->com.typesafe.play#play-exceptions;2.4.4 [runtime->compile]
-[debug] == resolving dependencies com.typesafe.play#build-link;2.4.4->org.javassist#javassist;3.19.0-GA [runtime->runtime(*)]
-[debug] == resolving dependencies com.typesafe.play#build-link;2.4.4->org.javassist#javassist;3.19.0-GA [runtime->compile]
-[debug] == resolving dependencies com.typesafe.play#sbt-run-support_2.10;2.4.4->com.typesafe.play#build-link;2.4.4 [compile->default(compile)]
-[debug] == resolving dependencies com.typesafe.play#sbt-run-support_2.10;2.4.4->com.typesafe.play#build-link;2.4.4 [compile->runtime]
-[debug] == resolving dependencies com.typesafe.play#sbt-run-support_2.10;2.4.4->com.typesafe.play#build-link;2.4.4 [compile->compile]
-[debug] == resolving dependencies com.typesafe.play#sbt-run-support_2.10;2.4.4->com.typesafe.play#build-link;2.4.4 [compile->master]
-[debug] == resolving dependencies com.typesafe.play#sbt-run-support_2.10;2.4.4->org.scala-lang#scala-library;2.10.4 [runtime->runtime(*)]
-[debug] == resolving dependencies com.typesafe.play#sbt-run-support_2.10;2.4.4->org.scala-lang#scala-library;2.10.4 [runtime->compile]
-[debug] == resolving dependencies com.typesafe.play#sbt-run-support_2.10;2.4.4->com.typesafe.play#build-link;2.4.4 [runtime->runtime(*)]
-[debug] == resolving dependencies com.typesafe.play#sbt-run-support_2.10;2.4.4->com.typesafe.play#build-link;2.4.4 [runtime->compile]
-[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.4->com.typesafe.play#sbt-run-support_2.10;2.4.4 [compile->master]
-[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.4->com.typesafe#config;1.3.0 [compile->default(compile)]
+[debug] == resolving dependencies com.typesafe.play#build-link;2.4.2->org.javassist#javassist;3.19.0-GA [compile->compile(*)]
+[debug] == resolving dependencies com.typesafe.play#build-link;2.4.2->org.javassist#javassist;3.19.0-GA [compile->default(compile)]
+[debug] == resolving dependencies com.typesafe.play#build-link;2.4.2->org.javassist#javassist;3.19.0-GA [compile->runtime]
+[debug] == resolving dependencies com.typesafe.play#build-link;2.4.2->org.javassist#javassist;3.19.0-GA [compile->compile]
+[debug] == resolving dependencies com.typesafe.play#build-link;2.4.2->org.javassist#javassist;3.19.0-GA [compile->master]
+[debug] == resolving dependencies com.typesafe.play#sbt-run-support_2.10;2.4.2->com.typesafe.play#build-link;2.4.2 [compile->runtime(*)]
+[debug] == resolving dependencies com.typesafe.play#sbt-run-support_2.10;2.4.2->com.typesafe.play#build-link;2.4.2 [compile->compile]
+[debug] == resolving dependencies com.typesafe.play#build-link;2.4.2->com.typesafe.play#play-exceptions;2.4.2 [runtime->runtime(*)]
+[debug] == resolving dependencies com.typesafe.play#build-link;2.4.2->com.typesafe.play#play-exceptions;2.4.2 [runtime->compile]
+[debug] == resolving dependencies com.typesafe.play#build-link;2.4.2->org.javassist#javassist;3.19.0-GA [runtime->runtime(*)]
+[debug] == resolving dependencies com.typesafe.play#build-link;2.4.2->org.javassist#javassist;3.19.0-GA [runtime->compile]
+[debug] == resolving dependencies com.typesafe.play#sbt-run-support_2.10;2.4.2->com.typesafe.play#build-link;2.4.2 [compile->default(compile)]
+[debug] == resolving dependencies com.typesafe.play#sbt-run-support_2.10;2.4.2->com.typesafe.play#build-link;2.4.2 [compile->runtime]
+[debug] == resolving dependencies com.typesafe.play#sbt-run-support_2.10;2.4.2->com.typesafe.play#build-link;2.4.2 [compile->compile]
+[debug] == resolving dependencies com.typesafe.play#sbt-run-support_2.10;2.4.2->com.typesafe.play#build-link;2.4.2 [compile->master]
+[debug] == resolving dependencies com.typesafe.play#sbt-run-support_2.10;2.4.2->org.scala-lang#scala-library;2.10.4 [runtime->runtime(*)]
+[debug] == resolving dependencies com.typesafe.play#sbt-run-support_2.10;2.4.2->org.scala-lang#scala-library;2.10.4 [runtime->compile]
+[debug] == resolving dependencies com.typesafe.play#sbt-run-support_2.10;2.4.2->com.typesafe.play#build-link;2.4.2 [runtime->runtime(*)]
+[debug] == resolving dependencies com.typesafe.play#sbt-run-support_2.10;2.4.2->com.typesafe.play#build-link;2.4.2 [runtime->compile]
+[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.2->com.typesafe.play#sbt-run-support_2.10;2.4.2 [compile->master]
+[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.2->com.typesafe#config;1.3.0 [compile->default(compile)]
 [info] Resolving com.typesafe#config;1.3.0 ...
 [debug] sbt-chain: Checking cache for: dependency: com.typesafe#config;1.3.0 {compile=[default(compile)]}
 [debug] sbt-chain: module revision found in cache: com.typesafe#config;1.3.0
 [debug] 	found com.typesafe#config;1.3.0 in sbt-chain
-[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.4->com.typesafe#config;1.3.0 [compile->runtime]
-[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.4->com.typesafe#config;1.3.0 [compile->compile]
-[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.4->com.typesafe#config;1.3.0 [compile->master]
-[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.4->com.google.guava#guava;18.0 [compile->default(compile)]
+[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.2->com.typesafe#config;1.3.0 [compile->runtime]
+[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.2->com.typesafe#config;1.3.0 [compile->compile]
+[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.2->com.typesafe#config;1.3.0 [compile->master]
+[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.2->com.google.guava#guava;18.0 [compile->default(compile)]
 [info] Resolving com.google.guava#guava;18.0 ...
 [debug] sbt-chain: Checking cache for: dependency: com.google.guava#guava;18.0 {compile=[default(compile)]}
 [debug] sbt-chain: module revision found in cache: com.google.guava#guava;18.0
 [debug] 	found com.google.guava#guava;18.0 in sbt-chain
-[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.4->com.google.guava#guava;18.0 [compile->runtime]
-[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.4->com.google.guava#guava;18.0 [compile->compile]
-[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.4->com.google.guava#guava;18.0 [compile->master]
-[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.4->com.h2database#h2;1.4.187 [compile->default(compile)]
+[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.2->com.google.guava#guava;18.0 [compile->runtime]
+[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.2->com.google.guava#guava;18.0 [compile->compile]
+[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.2->com.google.guava#guava;18.0 [compile->master]
+[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.2->com.h2database#h2;1.4.187 [compile->default(compile)]
 [info] Resolving com.h2database#h2;1.4.187 ...
 [debug] sbt-chain: Checking cache for: dependency: com.h2database#h2;1.4.187 {compile=[default(compile)]}
 [debug] sbt-chain: module revision found in cache: com.h2database#h2;1.4.187
 [debug] 	found com.h2database#h2;1.4.187 in sbt-chain
-[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.4->com.h2database#h2;1.4.187 [compile->runtime]
-[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.4->com.h2database#h2;1.4.187 [compile->compile]
-[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.4->com.h2database#h2;1.4.187 [compile->master]
-[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.4->net.contentobjects.jnotify#jnotify;0.94-play-1 [compile->default(compile)]
+[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.2->com.h2database#h2;1.4.187 [compile->runtime]
+[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.2->com.h2database#h2;1.4.187 [compile->compile]
+[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.2->com.h2database#h2;1.4.187 [compile->master]
+[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.2->net.contentobjects.jnotify#jnotify;0.94-play-1 [compile->default(compile)]
 [info] Resolving net.contentobjects.jnotify#jnotify;0.94-play-1 ...
 [debug] sbt-chain: Checking cache for: dependency: net.contentobjects.jnotify#jnotify;0.94-play-1 {compile=[default(compile)]}
 [debug] sbt-chain: module revision found in cache: net.contentobjects.jnotify#jnotify;0.94-play-1
 [debug] 	found net.contentobjects.jnotify#jnotify;0.94-play-1 in sbt-chain
-[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.4->com.typesafe.sbt#sbt-twirl;1.1.1 [compile->default(compile)]
+[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.2->com.typesafe.sbt#sbt-twirl;1.1.1 [compile->default(compile)]
 [info] Resolving com.typesafe.sbt#sbt-twirl;1.1.1 ...
 [debug] sbt-chain: Checking cache for: dependency: com.typesafe.sbt#sbt-twirl;1.1.1 {compile=[default(compile)]}
 [debug] sbt-chain: module revision found in cache: com.typesafe.sbt#sbt-twirl;1.1.1
@@ -910,7 +910,7 @@
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-compiler;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.4->com.typesafe.sbt#sbt-native-packager;1.0.1 [compile->default(compile)]
+[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.2->com.typesafe.sbt#sbt-native-packager;1.0.1 [compile->default(compile)]
 [info] Resolving com.typesafe.sbt#sbt-native-packager;1.0.1 ...
 [debug] sbt-chain: Checking cache for: dependency: com.typesafe.sbt#sbt-native-packager;1.0.1 {compile=[default(compile)]}
 [debug] sbt-chain: module revision found in cache: com.typesafe.sbt#sbt-native-packager;1.0.1
@@ -2641,7 +2641,7 @@
 [debug] == resolving dependencies org.vafer#jdeb;1.3->org.bouncycastle#bcpg-jdk15on;1.51 [runtime->runtime(*)]
 [debug] == resolving dependencies org.vafer#jdeb;1.3->org.bouncycastle#bcpg-jdk15on;1.51 [runtime->compile]
 [debug] == resolving dependencies com.typesafe.sbt#sbt-native-packager;1.0.1->org.vafer#jdeb;1.3 [compile->master]
-[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.4->com.typesafe.sbt#sbt-web;1.2.2 [compile->default(compile)]
+[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.2->com.typesafe.sbt#sbt-web;1.2.2 [compile->default(compile)]
 [info] Resolving com.typesafe.sbt#sbt-web;1.2.2 ...
 [debug] sbt-chain: Checking cache for: dependency: com.typesafe.sbt#sbt-web;1.2.2 {compile=[default(compile)]}
 [debug] sbt-chain: module revision found in cache: com.typesafe.sbt#sbt-web;1.2.2
@@ -2736,7 +2736,7 @@
 [debug] == resolving dependencies org.webjars#webjars-locator;0.26->org.apache.commons#commons-lang3;3.4 [runtime->runtime(*)]
 [debug] == resolving dependencies org.webjars#webjars-locator;0.26->org.apache.commons#commons-lang3;3.4 [runtime->compile]
 [debug] == resolving dependencies com.typesafe.sbt#sbt-web;1.2.2->org.webjars#webjars-locator;0.26 [compile->master]
-[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.4->com.typesafe.sbt#sbt-js-engine;1.1.3 [compile->default(compile)]
+[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.2->com.typesafe.sbt#sbt-js-engine;1.1.3 [compile->default(compile)]
 [info] Resolving com.typesafe.sbt#sbt-js-engine;1.1.3 ...
 [debug] sbt-chain: Checking cache for: dependency: com.typesafe.sbt#sbt-js-engine;1.1.3 {compile=[default(compile)]}
 [debug] sbt-chain: module revision found in cache: com.typesafe.sbt#sbt-js-engine;1.1.3
@@ -3251,14 +3251,14 @@
 [debug] == resolving dependencies com.typesafe.sbt#sbt-js-engine;1.1.3->com.typesafe#npm_2.10;1.1.1 [compile->master]
 [debug] == resolving dependencies com.typesafe.sbt#sbt-js-engine;1.1.3->com.typesafe.sbt#sbt-web;1.2.1 [compile->default(compile)]
 [debug] == resolving dependencies com.typesafe.sbt#sbt-js-engine;1.1.3->com.typesafe.sbt#sbt-web;1.2.2 [compile->default(compile)]
-[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.4->org.javassist#javassist;3.19.0-GA [compile->default(compile)]
-[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.4->org.javassist#javassist;3.19.0-GA [compile->runtime]
-[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.4->org.javassist#javassist;3.19.0-GA [compile->compile]
-[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.4->org.javassist#javassist;3.19.0-GA [compile->master]
-[debug] == resolving dependencies blankproject#blankproject$sbt_2.11;1.0-SNAPSHOT->com.typesafe.play#routes-compiler_2.10;2.4.4 [default->default(compile)]
-[debug] == resolving dependencies blankproject#blankproject$sbt_2.11;1.0-SNAPSHOT->com.typesafe.play#routes-compiler_2.10;2.4.4 [default->runtime]
-[debug] == resolving dependencies blankproject#blankproject$sbt_2.11;1.0-SNAPSHOT->com.typesafe.play#routes-compiler_2.10;2.4.4 [default->compile]
-[debug] == resolving dependencies blankproject#blankproject$sbt_2.11;1.0-SNAPSHOT->com.typesafe.play#routes-compiler_2.10;2.4.4 [default->master]
+[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.2->org.javassist#javassist;3.19.0-GA [compile->default(compile)]
+[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.2->org.javassist#javassist;3.19.0-GA [compile->runtime]
+[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.2->org.javassist#javassist;3.19.0-GA [compile->compile]
+[debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.4.2->org.javassist#javassist;3.19.0-GA [compile->master]
+[debug] == resolving dependencies blankproject#blankproject$sbt_2.11;1.0-SNAPSHOT->com.typesafe.play#routes-compiler_2.10;2.4.2 [default->default(compile)]
+[debug] == resolving dependencies blankproject#blankproject$sbt_2.11;1.0-SNAPSHOT->com.typesafe.play#routes-compiler_2.10;2.4.2 [default->runtime]
+[debug] == resolving dependencies blankproject#blankproject$sbt_2.11;1.0-SNAPSHOT->com.typesafe.play#routes-compiler_2.10;2.4.2 [default->compile]
+[debug] == resolving dependencies blankproject#blankproject$sbt_2.11;1.0-SNAPSHOT->com.typesafe.play#routes-compiler_2.10;2.4.2 [default->master]
 [debug] == resolving dependencies blankproject#blankproject$sbt_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [default->default(compile)]
 [debug] == resolving dependencies blankproject#blankproject$sbt_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [default->runtime]
 [debug] == resolving dependencies blankproject#blankproject$sbt_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [default->compile]
@@ -3275,18 +3275,18 @@
 [debug] == resolving dependencies blankproject#blankproject$sbt_2.11;1.0-SNAPSHOT->commons-io#commons-io;2.4 [default->runtime]
 [debug] == resolving dependencies blankproject#blankproject$sbt_2.11;1.0-SNAPSHOT->commons-io#commons-io;2.4 [default->compile]
 [debug] == resolving dependencies blankproject#blankproject$sbt_2.11;1.0-SNAPSHOT->commons-io#commons-io;2.4 [default->master]
-[debug] == resolving dependencies blankproject#blankproject$sbt_2.11;1.0-SNAPSHOT->com.typesafe.play#sbt-run-support_2.10;2.4.4 [default->default(compile)]
-[debug] == resolving dependencies blankproject#blankproject$sbt_2.11;1.0-SNAPSHOT->com.typesafe.play#sbt-run-support_2.10;2.4.4 [default->runtime]
-[debug] == resolving dependencies blankproject#blankproject$sbt_2.11;1.0-SNAPSHOT->com.typesafe.play#sbt-run-support_2.10;2.4.4 [default->compile]
-[debug] == resolving dependencies blankproject#blankproject$sbt_2.11;1.0-SNAPSHOT->com.typesafe.play#sbt-run-support_2.10;2.4.4 [default->master]
-[debug] == resolving dependencies blankproject#blankproject$sbt_2.11;1.0-SNAPSHOT->com.typesafe.play#build-link;2.4.4 [default->default(compile)]
-[debug] == resolving dependencies blankproject#blankproject$sbt_2.11;1.0-SNAPSHOT->com.typesafe.play#build-link;2.4.4 [default->runtime]
-[debug] == resolving dependencies blankproject#blankproject$sbt_2.11;1.0-SNAPSHOT->com.typesafe.play#build-link;2.4.4 [default->compile]
-[debug] == resolving dependencies blankproject#blankproject$sbt_2.11;1.0-SNAPSHOT->com.typesafe.play#build-link;2.4.4 [default->master]
-[debug] == resolving dependencies blankproject#blankproject$sbt_2.11;1.0-SNAPSHOT->com.typesafe.play#play-exceptions;2.4.4 [default->default(compile)]
-[debug] == resolving dependencies blankproject#blankproject$sbt_2.11;1.0-SNAPSHOT->com.typesafe.play#play-exceptions;2.4.4 [default->runtime]
-[debug] == resolving dependencies blankproject#blankproject$sbt_2.11;1.0-SNAPSHOT->com.typesafe.play#play-exceptions;2.4.4 [default->compile]
-[debug] == resolving dependencies blankproject#blankproject$sbt_2.11;1.0-SNAPSHOT->com.typesafe.play#play-exceptions;2.4.4 [default->master]
+[debug] == resolving dependencies blankproject#blankproject$sbt_2.11;1.0-SNAPSHOT->com.typesafe.play#sbt-run-support_2.10;2.4.2 [default->default(compile)]
+[debug] == resolving dependencies blankproject#blankproject$sbt_2.11;1.0-SNAPSHOT->com.typesafe.play#sbt-run-support_2.10;2.4.2 [default->runtime]
+[debug] == resolving dependencies blankproject#blankproject$sbt_2.11;1.0-SNAPSHOT->com.typesafe.play#sbt-run-support_2.10;2.4.2 [default->compile]
+[debug] == resolving dependencies blankproject#blankproject$sbt_2.11;1.0-SNAPSHOT->com.typesafe.play#sbt-run-support_2.10;2.4.2 [default->master]
+[debug] == resolving dependencies blankproject#blankproject$sbt_2.11;1.0-SNAPSHOT->com.typesafe.play#build-link;2.4.2 [default->default(compile)]
+[debug] == resolving dependencies blankproject#blankproject$sbt_2.11;1.0-SNAPSHOT->com.typesafe.play#build-link;2.4.2 [default->runtime]
+[debug] == resolving dependencies blankproject#blankproject$sbt_2.11;1.0-SNAPSHOT->com.typesafe.play#build-link;2.4.2 [default->compile]
+[debug] == resolving dependencies blankproject#blankproject$sbt_2.11;1.0-SNAPSHOT->com.typesafe.play#build-link;2.4.2 [default->master]
+[debug] == resolving dependencies blankproject#blankproject$sbt_2.11;1.0-SNAPSHOT->com.typesafe.play#play-exceptions;2.4.2 [default->default(compile)]
+[debug] == resolving dependencies blankproject#blankproject$sbt_2.11;1.0-SNAPSHOT->com.typesafe.play#play-exceptions;2.4.2 [default->runtime]
+[debug] == resolving dependencies blankproject#blankproject$sbt_2.11;1.0-SNAPSHOT->com.typesafe.play#play-exceptions;2.4.2 [default->compile]
+[debug] == resolving dependencies blankproject#blankproject$sbt_2.11;1.0-SNAPSHOT->com.typesafe.play#play-exceptions;2.4.2 [default->master]
 [debug] == resolving dependencies blankproject#blankproject$sbt_2.11;1.0-SNAPSHOT->org.javassist#javassist;3.19.0-GA [default->default(compile)]
 [debug] == resolving dependencies blankproject#blankproject$sbt_2.11;1.0-SNAPSHOT->org.javassist#javassist;3.19.0-GA [default->runtime]
 [debug] == resolving dependencies blankproject#blankproject$sbt_2.11;1.0-SNAPSHOT->org.javassist#javassist;3.19.0-GA [default->compile]
@@ -3889,7 +3889,7 @@
 [debug] == resolving dependencies com.typesafe.sbt#sbt-play-ebean;1.0.0->com.typesafe#config;1.3.0 [compile->master]
 [debug] == resolving dependencies com.typesafe.sbt#sbt-play-ebean;1.0.0->com.typesafe.sbt#sbt-play-enhancer;1.1.0 [compile->default(compile)]
 [debug] == resolving dependencies com.typesafe.sbt#sbt-play-ebean;1.0.0->com.typesafe.play#sbt-plugin;2.4.0 [compile->default(compile)]
-[debug] == resolving dependencies com.typesafe.sbt#sbt-play-ebean;1.0.0->com.typesafe.play#sbt-plugin;2.4.4 [compile->default(compile)]
+[debug] == resolving dependencies com.typesafe.sbt#sbt-play-ebean;1.0.0->com.typesafe.play#sbt-plugin;2.4.2 [compile->default(compile)]
 [debug] == resolving dependencies blankproject#blankproject$sbt_2.11;1.0-SNAPSHOT->org.avaje.ebeanorm#avaje-ebeanorm-agent;4.5.3 [default->default(compile)]
 [debug] == resolving dependencies blankproject#blankproject$sbt_2.11;1.0-SNAPSHOT->org.avaje.ebeanorm#avaje-ebeanorm-agent;4.5.3 [default->runtime]
 [debug] == resolving dependencies blankproject#blankproject$sbt_2.11;1.0-SNAPSHOT->org.avaje.ebeanorm#avaje-ebeanorm-agent;4.5.3 [default->compile]
@@ -3901,15 +3901,15 @@
 [debug] 	resolved ivy file produced in cache
 [debug] :: downloading artifacts ::
 [debug] 	[NOT REQUIRED] org.scala-sbt#sbt;0.13.8!sbt.jar
-[debug] 	[NOT REQUIRED] com.typesafe.play#sbt-plugin;2.4.4!sbt-plugin.jar
-[debug] 	[NOT REQUIRED] com.typesafe.play#routes-compiler_2.10;2.4.4!routes-compiler_2.10.jar
+[debug] 	[NOT REQUIRED] com.typesafe.play#sbt-plugin;2.4.2!sbt-plugin.jar
+[debug] 	[NOT REQUIRED] com.typesafe.play#routes-compiler_2.10;2.4.2!routes-compiler_2.10.jar
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-library;2.10.4!scala-library.jar
 [debug] 	[NOT REQUIRED] com.typesafe.play#twirl-api_2.10;1.1.1!twirl-api_2.10.jar
 [debug] 	[NOT REQUIRED] org.apache.commons#commons-lang3;3.4!commons-lang3.jar
 [debug] 	[NOT REQUIRED] commons-io#commons-io;2.4!commons-io.jar
-[debug] 	[NOT REQUIRED] com.typesafe.play#sbt-run-support_2.10;2.4.4!sbt-run-support_2.10.jar
-[debug] 	[NOT REQUIRED] com.typesafe.play#build-link;2.4.4!build-link.jar
-[debug] 	[NOT REQUIRED] com.typesafe.play#play-exceptions;2.4.4!play-exceptions.jar
+[debug] 	[NOT REQUIRED] com.typesafe.play#sbt-run-support_2.10;2.4.2!sbt-run-support_2.10.jar
+[debug] 	[NOT REQUIRED] com.typesafe.play#build-link;2.4.2!build-link.jar
+[debug] 	[NOT REQUIRED] com.typesafe.play#play-exceptions;2.4.2!play-exceptions.jar
 [debug] 	[NOT REQUIRED] org.javassist#javassist;3.19.0-GA!javassist.jar(bundle)
 [debug] 	[NOT REQUIRED] com.typesafe#config;1.3.0!config.jar(bundle)
 [debug] 	[NOT REQUIRED] com.google.guava#guava;18.0!guava.jar(bundle)
@@ -4068,9 +4068,9 @@
 [debug] 	[NOT REQUIRED] asm#asm;3.1!asm.jar
 [debug] 	[NOT REQUIRED] jfree#jcommon;1.0.12!jcommon.jar
 [debug] 	[NOT REQUIRED] jfree#jfreechart;1.0.8a!jfreechart.jar
-[debug] :: resolution report :: resolve 2433ms :: artifacts dl 137ms
+[debug] :: resolution report :: resolve 2159ms :: artifacts dl 171ms
 [debug] 	report for blankproject#blankproject$sbt_2.11;1.0-SNAPSHOT default produced in E:\namjestaj\target\resolution-cache\reports\blankproject-blankproject$sbt_2.11-default.xml
-[debug] 	resolve done (2433ms resolve - 137ms download)
+[debug] 	resolve done (2159ms resolve - 171ms download)
 [debug] Using inline dependencies specified in Scala.
 [debug] :: resolving dependencies :: blankproject#blankproject$sources_2.11;1.0-SNAPSHOT
 [debug] 	confs: [default]
@@ -4380,20 +4380,20 @@
 [debug] sbt-chain: Checking cache for: dependency: org.scala-sbt#precompiled-2_9_3;0.13.8 {default=[default(compile)]}
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#precompiled-2_9_3;0.13.8
 [debug] 	found org.scala-sbt#precompiled-2_9_3;0.13.8 in sbt-chain
-[debug] == resolving dependencies blankproject#blankproject$sources_2.11;1.0-SNAPSHOT->com.typesafe.play#sbt-plugin;2.4.4 [default->default(compile)]
-[info] Resolving com.typesafe.play#sbt-plugin;2.4.4 ...
-[debug] sbt-chain: Checking cache for: dependency: com.typesafe.play#sbt-plugin;2.4.4 {default=[default(compile)]}
-[debug] sbt-chain: module revision found in cache: com.typesafe.play#sbt-plugin;2.4.4
-[debug] 	found com.typesafe.play#sbt-plugin;2.4.4 in sbt-chain
-[debug] 	[2.4.4] com.typesafe.play#sbt-plugin;2.4.4
-[debug] == resolving dependencies blankproject#blankproject$sources_2.11;1.0-SNAPSHOT->com.typesafe.play#routes-compiler_2.10;2.4.4 [default->default(compile)]
-[info] Resolving com.typesafe.play#routes-compiler_2.10;2.4.4 ...
-[debug] sbt-chain: Checking cache for: dependency: com.typesafe.play#routes-compiler_2.10;2.4.4 {default=[default(compile)]}
-[debug] sbt-chain: module revision found in cache: com.typesafe.play#routes-compiler_2.10;2.4.4
-[debug] 	found com.typesafe.play#routes-compiler_2.10;2.4.4 in sbt-chain
-[debug] == resolving dependencies blankproject#blankproject$sources_2.11;1.0-SNAPSHOT->com.typesafe.play#routes-compiler_2.10;2.4.4 [default->runtime]
-[debug] == resolving dependencies blankproject#blankproject$sources_2.11;1.0-SNAPSHOT->com.typesafe.play#routes-compiler_2.10;2.4.4 [default->compile]
-[debug] == resolving dependencies blankproject#blankproject$sources_2.11;1.0-SNAPSHOT->com.typesafe.play#routes-compiler_2.10;2.4.4 [default->master]
+[debug] == resolving dependencies blankproject#blankproject$sources_2.11;1.0-SNAPSHOT->com.typesafe.play#sbt-plugin;2.4.2 [default->default(compile)]
+[info] Resolving com.typesafe.play#sbt-plugin;2.4.2 ...
+[debug] sbt-chain: Checking cache for: dependency: com.typesafe.play#sbt-plugin;2.4.2 {default=[default(compile)]}
+[debug] sbt-chain: module revision found in cache: com.typesafe.play#sbt-plugin;2.4.2
+[debug] 	found com.typesafe.play#sbt-plugin;2.4.2 in sbt-chain
+[debug] 	[2.4.2] com.typesafe.play#sbt-plugin;2.4.2
+[debug] == resolving dependencies blankproject#blankproject$sources_2.11;1.0-SNAPSHOT->com.typesafe.play#routes-compiler_2.10;2.4.2 [default->default(compile)]
+[info] Resolving com.typesafe.play#routes-compiler_2.10;2.4.2 ...
+[debug] sbt-chain: Checking cache for: dependency: com.typesafe.play#routes-compiler_2.10;2.4.2 {default=[default(compile)]}
+[debug] sbt-chain: module revision found in cache: com.typesafe.play#routes-compiler_2.10;2.4.2
+[debug] 	found com.typesafe.play#routes-compiler_2.10;2.4.2 in sbt-chain
+[debug] == resolving dependencies blankproject#blankproject$sources_2.11;1.0-SNAPSHOT->com.typesafe.play#routes-compiler_2.10;2.4.2 [default->runtime]
+[debug] == resolving dependencies blankproject#blankproject$sources_2.11;1.0-SNAPSHOT->com.typesafe.play#routes-compiler_2.10;2.4.2 [default->compile]
+[debug] == resolving dependencies blankproject#blankproject$sources_2.11;1.0-SNAPSHOT->com.typesafe.play#routes-compiler_2.10;2.4.2 [default->master]
 [debug] == resolving dependencies blankproject#blankproject$sources_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.10;1.1.1 [default->default(compile)]
 [info] Resolving com.typesafe.play#twirl-api_2.10;1.1.1 ...
 [debug] sbt-chain: Checking cache for: dependency: com.typesafe.play#twirl-api_2.10;1.1.1 {default=[default(compile)]}
@@ -4418,30 +4418,30 @@
 [debug] == resolving dependencies blankproject#blankproject$sources_2.11;1.0-SNAPSHOT->commons-io#commons-io;2.4 [default->runtime]
 [debug] == resolving dependencies blankproject#blankproject$sources_2.11;1.0-SNAPSHOT->commons-io#commons-io;2.4 [default->compile]
 [debug] == resolving dependencies blankproject#blankproject$sources_2.11;1.0-SNAPSHOT->commons-io#commons-io;2.4 [default->master]
-[debug] == resolving dependencies blankproject#blankproject$sources_2.11;1.0-SNAPSHOT->com.typesafe.play#sbt-run-support_2.10;2.4.4 [default->default(compile)]
-[info] Resolving com.typesafe.play#sbt-run-support_2.10;2.4.4 ...
-[debug] sbt-chain: Checking cache for: dependency: com.typesafe.play#sbt-run-support_2.10;2.4.4 {default=[default(compile)]}
-[debug] sbt-chain: module revision found in cache: com.typesafe.play#sbt-run-support_2.10;2.4.4
-[debug] 	found com.typesafe.play#sbt-run-support_2.10;2.4.4 in sbt-chain
-[debug] == resolving dependencies blankproject#blankproject$sources_2.11;1.0-SNAPSHOT->com.typesafe.play#sbt-run-support_2.10;2.4.4 [default->runtime]
-[debug] == resolving dependencies blankproject#blankproject$sources_2.11;1.0-SNAPSHOT->com.typesafe.play#sbt-run-support_2.10;2.4.4 [default->compile]
-[debug] == resolving dependencies blankproject#blankproject$sources_2.11;1.0-SNAPSHOT->com.typesafe.play#sbt-run-support_2.10;2.4.4 [default->master]
-[debug] == resolving dependencies blankproject#blankproject$sources_2.11;1.0-SNAPSHOT->com.typesafe.play#build-link;2.4.4 [default->default(compile)]
-[info] Resolving com.typesafe.play#build-link;2.4.4 ...
-[debug] sbt-chain: Checking cache for: dependency: com.typesafe.play#build-link;2.4.4 {default=[default(compile)]}
-[debug] sbt-chain: module revision found in cache: com.typesafe.play#build-link;2.4.4
-[debug] 	found com.typesafe.play#build-link;2.4.4 in sbt-chain
-[debug] == resolving dependencies blankproject#blankproject$sources_2.11;1.0-SNAPSHOT->com.typesafe.play#build-link;2.4.4 [default->runtime]
-[debug] == resolving dependencies blankproject#blankproject$sources_2.11;1.0-SNAPSHOT->com.typesafe.play#build-link;2.4.4 [default->compile]
-[debug] == resolving dependencies blankproject#blankproject$sources_2.11;1.0-SNAPSHOT->com.typesafe.play#build-link;2.4.4 [default->master]
-[debug] == resolving dependencies blankproject#blankproject$sources_2.11;1.0-SNAPSHOT->com.typesafe.play#play-exceptions;2.4.4 [default->default(compile)]
-[info] Resolving com.typesafe.play#play-exceptions;2.4.4 ...
-[debug] sbt-chain: Checking cache for: dependency: com.typesafe.play#play-exceptions;2.4.4 {default=[default(compile)]}
-[debug] sbt-chain: module revision found in cache: com.typesafe.play#play-exceptions;2.4.4
-[debug] 	found com.typesafe.play#play-exceptions;2.4.4 in sbt-chain
-[debug] == resolving dependencies blankproject#blankproject$sources_2.11;1.0-SNAPSHOT->com.typesafe.play#play-exceptions;2.4.4 [default->runtime]
-[debug] == resolving dependencies blankproject#blankproject$sources_2.11;1.0-SNAPSHOT->com.typesafe.play#play-exceptions;2.4.4 [default->compile]
-[debug] == resolving dependencies blankproject#blankproject$sources_2.11;1.0-SNAPSHOT->com.typesafe.play#play-exceptions;2.4.4 [default->master]
+[debug] == resolving dependencies blankproject#blankproject$sources_2.11;1.0-SNAPSHOT->com.typesafe.play#sbt-run-support_2.10;2.4.2 [default->default(compile)]
+[info] Resolving com.typesafe.play#sbt-run-support_2.10;2.4.2 ...
+[debug] sbt-chain: Checking cache for: dependency: com.typesafe.play#sbt-run-support_2.10;2.4.2 {default=[default(compile)]}
+[debug] sbt-chain: module revision found in cache: com.typesafe.play#sbt-run-support_2.10;2.4.2
+[debug] 	found com.typesafe.play#sbt-run-support_2.10;2.4.2 in sbt-chain
+[debug] == resolving dependencies blankproject#blankproject$sources_2.11;1.0-SNAPSHOT->com.typesafe.play#sbt-run-support_2.10;2.4.2 [default->runtime]
+[debug] == resolving dependencies blankproject#blankproject$sources_2.11;1.0-SNAPSHOT->com.typesafe.play#sbt-run-support_2.10;2.4.2 [default->compile]
+[debug] == resolving dependencies blankproject#blankproject$sources_2.11;1.0-SNAPSHOT->com.typesafe.play#sbt-run-support_2.10;2.4.2 [default->master]
+[debug] == resolving dependencies blankproject#blankproject$sources_2.11;1.0-SNAPSHOT->com.typesafe.play#build-link;2.4.2 [default->default(compile)]
+[info] Resolving com.typesafe.play#build-link;2.4.2 ...
+[debug] sbt-chain: Checking cache for: dependency: com.typesafe.play#build-link;2.4.2 {default=[default(compile)]}
+[debug] sbt-chain: module revision found in cache: com.typesafe.play#build-link;2.4.2
+[debug] 	found com.typesafe.play#build-link;2.4.2 in sbt-chain
+[debug] == resolving dependencies blankproject#blankproject$sources_2.11;1.0-SNAPSHOT->com.typesafe.play#build-link;2.4.2 [default->runtime]
+[debug] == resolving dependencies blankproject#blankproject$sources_2.11;1.0-SNAPSHOT->com.typesafe.play#build-link;2.4.2 [default->compile]
+[debug] == resolving dependencies blankproject#blankproject$sources_2.11;1.0-SNAPSHOT->com.typesafe.play#build-link;2.4.2 [default->master]
+[debug] == resolving dependencies blankproject#blankproject$sources_2.11;1.0-SNAPSHOT->com.typesafe.play#play-exceptions;2.4.2 [default->default(compile)]
+[info] Resolving com.typesafe.play#play-exceptions;2.4.2 ...
+[debug] sbt-chain: Checking cache for: dependency: com.typesafe.play#play-exceptions;2.4.2 {default=[default(compile)]}
+[debug] sbt-chain: module revision found in cache: com.typesafe.play#play-exceptions;2.4.2
+[debug] 	found com.typesafe.play#play-exceptions;2.4.2 in sbt-chain
+[debug] == resolving dependencies blankproject#blankproject$sources_2.11;1.0-SNAPSHOT->com.typesafe.play#play-exceptions;2.4.2 [default->runtime]
+[debug] == resolving dependencies blankproject#blankproject$sources_2.11;1.0-SNAPSHOT->com.typesafe.play#play-exceptions;2.4.2 [default->compile]
+[debug] == resolving dependencies blankproject#blankproject$sources_2.11;1.0-SNAPSHOT->com.typesafe.play#play-exceptions;2.4.2 [default->master]
 [debug] == resolving dependencies blankproject#blankproject$sources_2.11;1.0-SNAPSHOT->org.javassist#javassist;3.19.0-GA [default->default(compile)]
 [info] Resolving org.javassist#javassist;3.19.0-GA ...
 [debug] sbt-chain: Checking cache for: dependency: org.javassist#javassist;3.19.0-GA {default=[default(compile)]}
@@ -5157,14 +5157,14 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_8_2;0.13.8!precompiled-2_8_2.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_9_2;0.13.8!precompiled-2_9_2.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_9_3;0.13.8!precompiled-2_9_3.jar(src)
-[debug] 	[NOT REQUIRED] com.typesafe.play#sbt-plugin;2.4.4!sbt-plugin.jar(src)
-[debug] 	[NOT REQUIRED] com.typesafe.play#routes-compiler_2.10;2.4.4!routes-compiler_2.10.jar(src)
+[debug] 	[NOT REQUIRED] com.typesafe.play#sbt-plugin;2.4.2!sbt-plugin.jar(src)
+[debug] 	[NOT REQUIRED] com.typesafe.play#routes-compiler_2.10;2.4.2!routes-compiler_2.10.jar(src)
 [debug] 	[NOT REQUIRED] com.typesafe.play#twirl-api_2.10;1.1.1!twirl-api_2.10.jar(src)
 [debug] 	[NOT REQUIRED] org.apache.commons#commons-lang3;3.4!commons-lang3.jar(src)
 [debug] 	[NOT REQUIRED] commons-io#commons-io;2.4!commons-io.jar(src)
-[debug] 	[NOT REQUIRED] com.typesafe.play#sbt-run-support_2.10;2.4.4!sbt-run-support_2.10.jar(src)
-[debug] 	[NOT REQUIRED] com.typesafe.play#build-link;2.4.4!build-link.jar(src)
-[debug] 	[NOT REQUIRED] com.typesafe.play#play-exceptions;2.4.4!play-exceptions.jar(src)
+[debug] 	[NOT REQUIRED] com.typesafe.play#sbt-run-support_2.10;2.4.2!sbt-run-support_2.10.jar(src)
+[debug] 	[NOT REQUIRED] com.typesafe.play#build-link;2.4.2!build-link.jar(src)
+[debug] 	[NOT REQUIRED] com.typesafe.play#play-exceptions;2.4.2!play-exceptions.jar(src)
 [debug] 	[NOT REQUIRED] org.javassist#javassist;3.19.0-GA!javassist.jar(src)
 [debug] 	[NOT REQUIRED] com.typesafe#config;1.3.0!config.jar(src)
 [debug] 	[NOT REQUIRED] com.google.guava#guava;18.0!guava.jar(src)
@@ -5251,6 +5251,6 @@
 [debug] 	[NOT REQUIRED] com.typesafe.sbt#sbt-play-ebean;1.0.0!sbt-play-ebean.jar(src)
 [debug] 	[NOT REQUIRED] org.avaje.ebeanorm#avaje-ebeanorm-agent;4.5.3!avaje-ebeanorm-agent.jar(src)
 [debug] 	[NOT REQUIRED] javax.persistence#persistence-api;1.0!persistence-api.jar(src)
-[debug] :: resolution report :: resolve 1248ms :: artifacts dl 150ms
+[debug] :: resolution report :: resolve 1687ms :: artifacts dl 102ms
 [debug] 	report for blankproject#blankproject$sources_2.11;1.0-SNAPSHOT default produced in E:\namjestaj\target\resolution-cache\reports\blankproject-blankproject$sources_2.11-default.xml
-[debug] 	resolve done (1248ms resolve - 150ms download)
+[debug] 	resolve done (1687ms resolve - 102ms download)

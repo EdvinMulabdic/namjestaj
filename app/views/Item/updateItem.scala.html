@@ -6,7 +6,7 @@
             <div class="row">
                 <section class="col-main col-sm-9">
                     <div class="page-title">
-                        <h2>Ažuriraj proizvod</h2>
+                        <h2>Ažuriraj proizvod - @item.name</h2>
                     </div>
                     <div class="static-contain">
                         <fieldset class="group-select">
@@ -22,37 +22,63 @@
                                                             <br>
                                                             <input type="text" id="name" name="name" title="Naziv proizvoda" class="input-text" value="@item.name" required>
                                                         </div>
-
-                                                        <div class="input-box">
-                                                            <label for="price">Cijena <span class="required">*</span>  </label>
-                                                            <br>
-                                                            <input type="text" id="price" name="price" title="Cijena" class="input-text" value="@item.price" required>
-                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="customer-name">
                                                         <div class="input-box name-lastname">
-
                                                             <label  for="category">Kategorija<em class="required">*</em></label>
-
                                                             <select title="Kategorija" class="validate-select" id="category" name="category">
-                                                                <option selected disabled>@item.category.name</option>
+                                                                <option selected value="@item.category.id">@item.category.name</option>
                                                                 @for(category <- models.Category.findAllCategories()){
                                                                     <option value="@category.id">@category.name</option>
                                                                 }
                                                             </select>
-
                                                         </div>
                                                     </div>
                                                 </li>
                                                 <li>
-
-                                                    <div class="input-box">
-                                                        <label for="description">Comment<em class="required">*</em></label>
-                                                        <br>
-                                                        <div class="">
-                                                            <textarea name="description" id="description" title="Opis" class="input-text" cols="5" rows="3" style="resize: vertical">@item.description</textarea>
+                                                    <div class="customer-name">
+                                                        <div class="input-box name-lastname">
+                                                            <label  for="subCategory">Potkategorija<em class="required">*</em></label>
+                                                            <select title="Potkategorija" class="validate-select" id="subCategory" name="subCategory">
+                                                                <option  value="0" >Odaberite potkategoriju</option>
+                                                            @for(subCategory <- models.SubCategory.allSubCategories(item.category.id)){
+                                                                <option value="@subCategory.id">@subCategory.name</option>
+                                                            }
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="customer-name">
+                                                        <div class="input-box">
+                                                            <label for="price"> Cijena <span class="required">*</span>  </label>
+                                                            <br>
+                                                            <input type="text" id="price" name="price" title="Cijena" class="input-text" value="@item.price" required>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="customer-name">
+                                                        <p>Ukoliko je proizvod snižen, molimo Vas da unesete staru i novu cijenu.</p>
+                                                        <p>U suprotnom ostavite polje "Stara cijena" prazno. Hvala! </p>
+                                                        <div class="input-box">
+                                                            <label for="oldPrice">Stara cijena <span class="required"></span>  </label>
+                                                            <br>
+                                                            <input type="text" id="oldPrice" name="oldPrice" title="Stara Cijena" class="input-text" value="@item.oldPrice" >
                                                         </div>
                                                     </div>
 
-
+                                                </li>
+                                                <li>
+                                                    <div class="input-box">
+                                                        <label for="description">Opis proizvoda<em class="required">*</em></label>
+                                                        <br>
+                                                        <div class="">
+                                                            <textarea name="description" id="description" title="Opis" class="input-text" cols="5" rows="5" style="resize: vertical">@item.description</textarea>
+                                                        </div>
+                                                    </div>
                                                 </li>
                                             </ul>
 

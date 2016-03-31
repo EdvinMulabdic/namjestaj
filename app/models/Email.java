@@ -41,7 +41,7 @@ public class Email extends Model {
     }
 
 
-    public static void contactFormEmail(String name, String userEmail, String phone, String messsage){
+    public static void contactFormEmail(String name, String lastName, String userEmail, String phone, String messsage){
 
 
         SimpleEmail email = new SimpleEmail();
@@ -54,10 +54,10 @@ public class Email extends Model {
             email.setStartTLSEnabled(true);
             email.addTo(ConfigProvider.MAIL_FROM);
             email.setSubject("Poruka");
-            email.setMsg("Ime i prezime:  " + name + "\n" +
+            email.setMsg("Ime i prezime:  " + name + "  " + lastName +  "\n" +
                     "Email:  " + userEmail + "\n" +
                     "Telefon:  " + phone + "\n" +
-                    "Poruka :  "  + "\n" + messsage);
+                     "\n\n\n" + messsage);
             email.send();
         } catch (EmailException e) {
             e.printStackTrace();

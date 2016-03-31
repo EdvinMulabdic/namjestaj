@@ -39,7 +39,7 @@ Seq[Any](format.raw/*2.88*/("""
     <head>
         <meta charset="utf-8">
 
-         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
@@ -62,8 +62,8 @@ Seq[Any](format.raw/*2.88*/("""
         <link rel="stylesheet" type="text/css" href='"""),_display_(/*29.55*/routes/*29.61*/.Assets.versioned("stylesheets/owl.theme.css")),format.raw/*29.107*/("""'>
         <link rel="stylesheet" type="text/css" href='"""),_display_(/*30.55*/routes/*30.61*/.Assets.versioned("stylesheets/jquery.bxslider.css")),format.raw/*30.113*/("""'>
         <link rel="stylesheet" type="text/css" href='"""),_display_(/*31.55*/routes/*31.61*/.Assets.versioned("stylesheets/jquery.mobile-menu.css")),format.raw/*31.116*/("""'>
-        <link rel="stylesheet" type="text/css" href='"""),_display_(/*32.55*/routes/*32.61*/.Assets.versioned("stylesheets/style.css")),format.raw/*32.103*/("""'media="all">
-        <link rel="stylesheet" type="text/css" href='"""),_display_(/*33.55*/routes/*33.61*/.Assets.versioned("stylesheets/flexslider.css")),format.raw/*33.108*/("""'media="all">
+        <link rel="stylesheet" type="text/css" href='"""),_display_(/*32.55*/routes/*32.61*/.Assets.versioned("stylesheets/style.css")),format.raw/*32.103*/("""' media="all">
+        <link rel="stylesheet" type="text/css" href='"""),_display_(/*33.55*/routes/*33.61*/.Assets.versioned("stylesheets/flexslider.css")),format.raw/*33.108*/("""' media="all">
             <!-- Google Fonts -->
         <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200italic,300,300italic,400,400italic,600,600italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
@@ -158,419 +158,467 @@ Seq[Any](format.raw/*2.88*/("""
         <link rel="stylesheet" media="screen" href='"""),_display_(/*125.54*/routes/*125.60*/.Assets.versioned("stylesheets/sweetalert.css")),format.raw/*125.107*/("""'>
 
         <link rel="stylesheet" media="screen" href="https://cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css">
-        <script  src="https://cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
+
+        """),format.raw/*130.111*/("""
+        """),format.raw/*131.9*/("""<script type="text/javascript" src='"""),_display_(/*131.46*/routes/*131.52*/.Assets.versioned("javascripts/googleAnalytics.js")),format.raw/*131.103*/("""'></script>
+
+
 
     </head>
 
 
     <body class="cms-index-index cms-home-page">
         <div id="page">
-            """),format.raw/*135.45*/("""
-                """),format.raw/*136.134*/("""
-                """),format.raw/*137.137*/("""
-            """),format.raw/*138.23*/("""
+            """),format.raw/*140.45*/("""
+            """),format.raw/*141.130*/("""
+            """),format.raw/*142.133*/("""
+            """),format.raw/*143.23*/("""
 
-                """),format.raw/*140.17*/("""<!-- Navbar -->
-            <nav>
-                """),format.raw/*142.44*/("""
-                    """),format.raw/*143.21*/("""<div class="row">
-                        <div class="col-lg-2 col-sm-2 col-xs-4 col-lg-offset-1">
-                                <!-- Header Logo -->
-                            <div class="logo"><a title="Magento Commerce" href=""""),_display_(/*146.82*/routes/*146.88*/.Application.index()),format.raw/*146.108*/(""""><img alt="Namjestaj" src='"""),_display_(/*146.137*/routes/*146.143*/.Assets.versioned("images/logo.png")),format.raw/*146.179*/("""'></a></div>
-                                <!-- End Header Logo -->
-                        </div>
-                        <div class="mm-toggle-wrap">
-                            <div class="mm-toggle"><i class="icon-reorder"></i><span class="mm-label">Menu</span> </div>
-                        </div>
-                        <div class="nav-inner col-lg-9">
+                """),format.raw/*145.17*/("""<!-- Navbar -->
+            <nav class=" navbar-fixed-top">
+                """),format.raw/*147.45*/("""
+                """),format.raw/*148.17*/("""<div class="row">
+                    <div class="col-lg-2 col-sm-2 col-xs-4 col-lg-offset-1">
+                            <!-- Header Logo -->
+                        <div class="logo"><a title="Magento Commerce" href=""""),_display_(/*151.78*/routes/*151.84*/.Application.index()),format.raw/*151.104*/(""""><img alt="Namjestaj" src='"""),_display_(/*151.133*/routes/*151.139*/.Assets.versioned("images/logo.png")),format.raw/*151.175*/("""'></a></div>
+                            <!-- End Header Logo -->
+                    </div>
+                    <div class="mm-toggle-wrap">
+                        <div class="mm-toggle"><i class="fa fa-bars"></i><span class="mm-label">Menu</span> </div>
+                    </div>
+                    <div class="nav-inner col-lg-9">
 
-                            <ul id="nav" class="hidden-xs">
-                                <li class="mega-menu"><a href="" class="level-top"><span>Women</span></a>
-                                    <div class="level0-wrapper dropdown-6col">
-                                        <div class="container">
-                                            <div class="level0-wrapper2">
-                                                <div class="col-1">
-                                                    <div class="nav-block nav-block-center">
-                                                        <ul class="level0">
-                                                            <li class="level1 nav-6-1 parent item"><a href="" class=""><span>Stylish Bag</span></a>
-                                                                <ul class="level1">
-                                                                    <li class="level2 nav-6-1-1"><a href="" class=""><span>Clutch Handbags</span></a></li>
-                                                                    <li class="level2 nav-6-1-1"><a href="" class=""><span>Diaper Bags</span></a></li>
-                                                                    <li class="level2 nav-6-1-1"><a href="" class=""><span>Bags</span></a></li>
-                                                                    <li class="level2 nav-6-1-1"><a href="" class=""><span>Hobo handbags</span></a></li>
-                                                                </ul>
-                                                            </li>
-                                                            <li class="level1 nav-6-1 parent item"><a href=""><span>Material Bag</span></a>
-                                                                <ul class="level1">
-                                                                    <li class="level2 nav-6-1-1"><a href=""><span>Beaded Handbags</span></a></li>
-                                                                    <li class="level2 nav-6-1-1"><a href=""><span>Fabric Handbags</span></a></li>
-                                                                    <li class="level2 nav-6-1-1"><a href=""><span>Handbags</span></a></li>
-                                                                    <li class="level2 nav-6-1-1"><a href=""><span>Leather Handbags</span></a></li>
-                                                                </ul>
-                                                            </li>
-                                                            <li class="level1 nav-6-1 parent item"><a href=""><span>Shoes</span></a>
-                                                                <ul class="level1">
-                                                                    <li class="level2 nav-6-1-1"><a href=""><span>Flat Shoes</span></a></li>
-                                                                    <li class="level2 nav-6-1-1"><a href=""><span>Flat Sandals</span></a></li>
-                                                                    <li class="level2 nav-6-1-1"><a href=""><span>Boots</span></a></li>
-                                                                    <li class="level2 nav-6-1-1"><a href=""><span>Heels</span></a></li>
-                                                                </ul>
-                                                            </li>
-                                                            <li class="level1 nav-6-1 parent item"><a href=""><span>Jwellery</span></a>
-                                                                <ul class="level1">
-                                                                    <li class="level2 nav-6-1-1"><a href=""><span>Bracelets</span></a></li>
-                                                                    <li class="level2 nav-6-1-1"><a href=""><span>Necklaces &amp; Pendent</span></a></li>
-                                                                    <li class="level2 nav-6-1-1"><a href=""><span>Pendants</span></a></li>
-                                                                    <li class="level2 nav-6-1-1"><a href=""><span>Pins &amp; Brooches</span></a></li>
-                                                                </ul>
-                                                            </li>
-                                                            <li class="level1 nav-6-1 parent item"><a href=""><span>Dresses</span></a>
-                                                                <ul class="level1">
-                                                                    <li class="level2 nav-6-1-1"><a href=""><span>Casual Dresses</span></a></li>
-                                                                    <li class="level2 nav-6-1-1"><a href=""><span>Evening</span></a></li>
-                                                                    <li class="level2 nav-6-1-1"><a href=""><span>Designer</span></a></li>
-                                                                    <li class="level2 nav-6-1-1"><a href=""><span>Party</span></a></li>
-                                                                </ul>
-                                                            </li>
-                                                            <li class="level1 nav-6-1 parent item"><a href=""><span>Swimwear</span></a>
-                                                                <ul class="level1">
-                                                                    <li class="level2 nav-6-1-1"><a href=""><span>Swimsuits</span></a></li>
-                                                                    <li class="level2 nav-6-1-1"><a href=""><span>Beach Clothing</span></a></li>
-                                                                    <li class="level2 nav-6-1-1"><a href=""><span>Clothing</span></a></li>
-                                                                    <li class="level2 nav-6-1-1"><a href=""><span>Bikinis</span></a></li>
-                                                                </ul>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                    <!--nav-block nav-block-center-->
-                                                <div class="col-2">
-                                                    <div class="menu_image"><a href="#" title=""><img src='"""),_display_(/*215.109*/routes/*215.115*/.Assets.versioned("images/menu_image.jpg")),format.raw/*215.157*/("""' alt="menu_image"></a></div>
-                                                    <div class="menu_image1"><a href="#" title=""><img src='"""),_display_(/*216.110*/routes/*216.116*/.Assets.versioned("images/menu_image.jpg")),format.raw/*216.158*/("""' alt="menu_image"></a></div>
-                                                </div>
-                                            </div>
-                                                <!--level0-wrapper2--> </div>
-                                    </div>
-                                </li>
-                                <li class="mega-menu"><a href="grid.html" class="level-top"><span>Men</span></a>
-                                    <div class="level0-wrapper dropdown-6col">
-                                        <div class="container">
-                                            <div class="level0-wrapper2">
+                        <ul id="nav" class="hidden-xs">
+                            <li class="mega-menu"><a href="" class="level-top"><span>Women</span></a>
+                                <div class="level0-wrapper dropdown-6col">
+                                    <div class="container">
+                                        <div class="level0-wrapper2">
+                                            <div class="col-1">
                                                 <div class="nav-block nav-block-center">
                                                     <ul class="level0">
-                                                        <li class="level1 nav-6-1 parent item"><a href="grid.html" class=""><span>Shoes</span></a>
+                                                        <li class="level1 nav-6-1 parent item"><a href="" class=""><span>
+                                                            Stylish Bag</span></a>
                                                             <ul class="level1">
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Sport Shoes</span></a></li>
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Casual Shoes</span></a></li>
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Leather Shoes</span></a></li>
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>canvas shoes</span></a></li>
+                                                                <li class="level2 nav-6-1-1"><a href="" class=""><span>
+                                                                    Clutch Handbags</span></a></li>
+                                                                <li class="level2 nav-6-1-1"><a href="" class=""><span>
+                                                                    Diaper Bags</span></a></li>
+                                                                <li class="level2 nav-6-1-1"><a href="" class=""><span>
+                                                                    Bags</span></a></li>
+                                                                <li class="level2 nav-6-1-1"><a href="" class=""><span>
+                                                                    Hobo handbags</span></a></li>
                                                             </ul>
                                                         </li>
-                                                        <li class="level1 nav-6-1 parent item"><a href="grid.html"><span>Dresses</span></a>
+                                                        <li class="level1 nav-6-1 parent item"><a href=""><span>
+                                                            Material Bag</span></a>
                                                             <ul class="level1">
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Casual Dresses</span></a></li>
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Evening</span></a></li>
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Designer</span></a></li>
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Party</span></a></li>
+                                                                <li class="level2 nav-6-1-1"><a href=""><span>
+                                                                    Beaded Handbags</span></a></li>
+                                                                <li class="level2 nav-6-1-1"><a href=""><span>
+                                                                    Fabric Handbags</span></a></li>
+                                                                <li class="level2 nav-6-1-1"><a href=""><span>
+                                                                    Handbags</span></a></li>
+                                                                <li class="level2 nav-6-1-1"><a href=""><span>
+                                                                    Leather Handbags</span></a></li>
                                                             </ul>
                                                         </li>
-                                                        <li class="level1 nav-6-1 parent item"><a href="grid.html"><span>Jackets</span></a>
+                                                        <li class="level1 nav-6-1 parent item"><a href=""><span>
+                                                            Shoes</span></a>
                                                             <ul class="level1">
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Coats</span></a></li>
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Formal Jackets</span></a></li>
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Leather Jackets</span></a></li>
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Blazers</span></a></li>
+                                                                <li class="level2 nav-6-1-1"><a href=""><span>
+                                                                    Flat Shoes</span></a></li>
+                                                                <li class="level2 nav-6-1-1"><a href=""><span>
+                                                                    Flat Sandals</span></a></li>
+                                                                <li class="level2 nav-6-1-1"><a href=""><span>
+                                                                    Boots</span></a></li>
+                                                                <li class="level2 nav-6-1-1"><a href=""><span>
+                                                                    Heels</span></a></li>
                                                             </ul>
                                                         </li>
-                                                        <li class="level1 nav-6-1 parent item"><a href="grid.html"><span>Watches</span></a>
+                                                        <li class="level1 nav-6-1 parent item"><a href=""><span>
+                                                            Jwellery</span></a>
                                                             <ul class="level1">
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Fasttrack</span></a></li>
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Casio</span></a></li>
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Titan</span></a></li>
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Tommy-Hilfiger</span></a></li>
+                                                                <li class="level2 nav-6-1-1"><a href=""><span>
+                                                                    Bracelets</span></a></li>
+                                                                <li class="level2 nav-6-1-1"><a href=""><span>
+                                                                    Necklaces &amp; Pendent</span></a></li>
+                                                                <li class="level2 nav-6-1-1"><a href=""><span>
+                                                                    Pendants</span></a></li>
+                                                                <li class="level2 nav-6-1-1"><a href=""><span>
+                                                                    Pins &amp; Brooches</span></a></li>
                                                             </ul>
                                                         </li>
-                                                        <li class="level1 nav-6-1 parent item"><a href="grid.html"><span>Sunglasses</span></a>
+                                                        <li class="level1 nav-6-1 parent item"><a href=""><span>
+                                                            Dresses</span></a>
                                                             <ul class="level1">
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Ray Ban</span></a></li>
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Fasttrack</span></a></li>
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Police</span></a></li>
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Oakley</span></a></li>
+                                                                <li class="level2 nav-6-1-1"><a href=""><span>
+                                                                    Casual Dresses</span></a></li>
+                                                                <li class="level2 nav-6-1-1"><a href=""><span>
+                                                                    Evening</span></a></li>
+                                                                <li class="level2 nav-6-1-1"><a href=""><span>
+                                                                    Designer</span></a></li>
+                                                                <li class="level2 nav-6-1-1"><a href=""><span>
+                                                                    Party</span></a></li>
                                                             </ul>
                                                         </li>
-                                                        <li class="level1 nav-6-1 parent item"><a href="grid.html"><span>Accesories</span></a>
+                                                        <li class="level1 nav-6-1 parent item"><a href=""><span>
+                                                            Swimwear</span></a>
                                                             <ul class="level1">
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Backpacks</span></a></li>
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Wallets</span></a></li>
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Laptops Bags</span></a></li>
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Belts</span></a></li>
+                                                                <li class="level2 nav-6-1-1"><a href=""><span>
+                                                                    Swimsuits</span></a></li>
+                                                                <li class="level2 nav-6-1-1"><a href=""><span>
+                                                                    Beach Clothing</span></a></li>
+                                                                <li class="level2 nav-6-1-1"><a href=""><span>
+                                                                    Clothing</span></a></li>
+                                                                <li class="level2 nav-6-1-1"><a href=""><span>
+                                                                    Bikinis</span></a></li>
                                                             </ul>
                                                         </li>
                                                     </ul>
                                                 </div>
-                                                    <!--level0-wrapper2-->
-                                                <div class="nav-add">
-                                                    <div class="push_item">
-                                                        <div class="push_img"><a href="#"><img alt="sunglass" src='"""),_display_(/*281.117*/routes/*281.123*/.Assets.versioned("images/menu_man_sunglass.png")),format.raw/*281.172*/("""'></a></div>
-                                                        <div class="push_text">Lorem Ipsum is simply dummy text of the printing</div>
-                                                    </div>
-                                                    <div class="push_item">
-                                                        <div class="push_img"><a href="#"><img alt="watch" src='"""),_display_(/*285.114*/routes/*285.120*/.Assets.versioned("images/menu_man_sunglass.png")),format.raw/*285.169*/("""'></a></div>
-                                                        <div class="push_text">Lorem Ipsum is simply dummy text of the printing</div>
-                                                    </div>
-                                                    <div class="push_item">
-                                                        <div class="push_img"><a href="#"><img alt="jeans" src='"""),_display_(/*289.114*/routes/*289.120*/.Assets.versioned("images/menu_man_sunglass.png")),format.raw/*289.169*/("""'></a></div>
-                                                        <div class="push_text">Lorem Ipsum is simply dummy text of the printing</div>
-                                                    </div>
-                                                    <div class="push_item push_item_last">
-                                                        <div class="push_img"><a href="#"><img alt="shoes" src='"""),_display_(/*293.114*/routes/*293.120*/.Assets.versioned("images/menu_man_sunglass.png")),format.raw/*293.169*/("""'></a></div>
-                                                        <div class="push_text">Lorem Ipsum is simply dummy text of the printing</div>
-                                                    </div>
-                                                </div>
+                                            </div>
+                                                <!--nav-block nav-block-center-->
+                                            <div class="col-2">
+                                                <div class="menu_image"><a href="#" title=""><img src='"""),_display_(/*250.105*/routes/*250.111*/.Assets.versioned("images/menu_image.jpg")),format.raw/*250.153*/("""' alt="menu_image"></a></div>
+                                                <div class="menu_image1"><a href="#" title=""><img src='"""),_display_(/*251.106*/routes/*251.112*/.Assets.versioned("images/menu_image.jpg")),format.raw/*251.154*/("""' alt="menu_image"></a></div>
                                             </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li class="mega-menu"><a href="grid.html" class="level-top"><span>Electronics</span></a>
-                                    <div class="level0-wrapper dropdown-6col">
-                                        <div class="container">
-                                            <div class="level0-wrapper2">
-                                                <div class="nav-block nav-block-center">
-                                                    <ul class="level0">
-                                                        <li class="level1 nav-6-1 parent item"><a href="grid.html"><span>Mobiles</span></a>
-                                                            <ul class="level1">
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Samsung</span></a></li>
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Nokia</span></a></li>
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>IPhone</span></a></li>
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Sony</span></a></li>
-                                                            </ul>
-                                                        </li>
-                                                        <li class="level1 nav-6-1 parent item"><a href="grid.html" class=""><span>Accesories</span></a>
-                                                            <ul class="level1">
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Mobile Memory Cards</span></a></li>
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Cases &amp; Covers</span></a></li>
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Mobile Headphones</span></a></li>
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Bluetooth Headsets</span></a></li>
-                                                            </ul>
-                                                        </li>
-                                                        <li class="level1 nav-6-1 parent item"><a href="grid.html"><span>Cameras</span></a>
-                                                            <ul class="level1">
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Camcorders</span></a></li>
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Point &amp; Shoot</span></a></li>
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Digital SLR</span></a></li>
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Camera Accesories</span></a></li>
-                                                            </ul>
-                                                        </li>
-                                                        <li class="level1 nav-6-1 parent item"><a href="grid.html"><span>Audio &amp; Video</span></a>
-                                                            <ul class="level1">
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>MP3 Players</span></a></li>
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>IPods</span></a></li>
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Speakers</span></a></li>
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Video Players</span></a></li>
-                                                            </ul>
-                                                        </li>
-                                                        <li class="level1 nav-6-1 parent item"><a href="grid.html"><span>Computer</span></a>
-                                                            <ul class="level1">
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>External Hard Disk</span></a></li>
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Pendrives</span></a></li>
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Headphones</span></a></li>
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>PC Components</span></a></li>
-                                                            </ul>
-                                                        </li>
-                                                        <li class="level1 nav-6-1 parent item"><a href="grid.html"><span>Appliances</span></a>
-                                                            <ul class="level1">
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Vaccum Cleaners</span></a></li>
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Indoor Lighting</span></a></li>
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Kitchen Tools</span></a></li>
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Water Purifier</span></a></li>
-                                                            </ul>
-                                                        </li>
-                                                    </ul>
-                                                </div>
+                                            <!--level0-wrapper2--> </div>
+                                </div>
+                            </li>
+                            <li class="mega-menu"><a href="" class="level-top"><span>Men</span></a>
+                                <div class="level0-wrapper dropdown-6col">
+                                    <div class="container">
+                                        <div class="level0-wrapper2">
+                                            <div class="nav-block nav-block-center">
+                                                <ul class="level0">
+                                                    <li class="level1 nav-6-1 parent item"><a href="" class=""><span>
+                                                        Shoes</span></a>
+                                                        <ul class="level1">
+                                                            <li class="level2 nav-6-1-1"><a href=""><span>
+                                                                Sport Shoes</span></a></li>
+                                                            <li class="level2 nav-6-1-1"><a href=""><span>
+                                                                Casual Shoes</span></a></li>
+                                                            <li class="level2 nav-6-1-1"><a href=""><span>
+                                                                Leather Shoes</span></a></li>
+                                                            <li class="level2 nav-6-1-1"><a href=""><span>
+                                                                canvas shoes</span></a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="level1 nav-6-1 parent item"><a href=""><span>
+                                                        Dresses</span></a>
+                                                        <ul class="level1">
+                                                            <li class="level2 nav-6-1-1"><a href=""><span>
+                                                                Casual Dresses</span></a></li>
+                                                            <li class="level2 nav-6-1-1"><a href=""><span>
+                                                                Evening</span></a></li>
+                                                            <li class="level2 nav-6-1-1"><a href=""><span>
+                                                                Designer</span></a></li>
+                                                            <li class="level2 nav-6-1-1"><a href=""><span>
+                                                                Party</span></a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="level1 nav-6-1 parent item"><a href=""><span>
+                                                        Jackets</span></a>
+                                                        <ul class="level1">
+                                                            <li class="level2 nav-6-1-1"><a href=""><span>
+                                                                Coats</span></a></li>
+                                                            <li class="level2 nav-6-1-1"><a href=""><span>
+                                                                Formal Jackets</span></a></li>
+                                                            <li class="level2 nav-6-1-1"><a href=""><span>
+                                                                Leather Jackets</span></a></li>
+                                                            <li class="level2 nav-6-1-1"><a href=""><span>
+                                                                Blazers</span></a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="level1 nav-6-1 parent item"><a href=""><span>
+                                                        Watches</span></a>
+                                                        <ul class="level1">
+                                                            <li class="level2 nav-6-1-1"><a href=""><span>
+                                                                Fasttrack</span></a></li>
+                                                            <li class="level2 nav-6-1-1"><a href=""><span>
+                                                                Casio</span></a></li>
+                                                            <li class="level2 nav-6-1-1"><a href=""><span>
+                                                                Titan</span></a></li>
+                                                            <li class="level2 nav-6-1-1"><a href=""><span>
+                                                                Tommy-Hilfiger</span></a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="level1 nav-6-1 parent item"><a href=""><span>
+                                                        Sunglasses</span></a>
+                                                        <ul class="level1">
+                                                            <li class="level2 nav-6-1-1"><a href=""><span>
+                                                                Ray Ban</span></a></li>
+                                                            <li class="level2 nav-6-1-1"><a href=""><span>
+                                                                Fasttrack</span></a></li>
+                                                            <li class="level2 nav-6-1-1"><a href=""><span>
+                                                                Police</span></a></li>
+                                                            <li class="level2 nav-6-1-1"><a href=""><span>
+                                                                Oakley</span></a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="level1 nav-6-1 parent item"><a href=""><span>
+                                                        Accesories</span></a>
+                                                        <ul class="level1">
+                                                            <li class="level2 nav-6-1-1"><a href=""><span>
+                                                                Backpacks</span></a></li>
+                                                            <li class="level2 nav-6-1-1"><a href=""><span>
+                                                                Wallets</span></a></li>
+                                                            <li class="level2 nav-6-1-1"><a href=""><span>
+                                                                Laptops Bags</span></a></li>
+                                                            <li class="level2 nav-6-1-1"><a href=""><span>
+                                                                Belts</span></a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
                                             </div>
                                                 <!--level0-wrapper2-->
                                             <div class="nav-add">
                                                 <div class="push_item">
-                                                    <div class="push_img"><a href="#"><img alt="phone" src='"""),_display_(/*361.110*/routes/*361.116*/.Assets.versioned("images/menu_ele_phone.png")),format.raw/*361.162*/("""'></a></div>
-                                                    <div class="push_text">Lorem Ipsum is simply dummy text of the printing</div>
+                                                    <div class="push_img"><a href="#"><img alt="sunglass" src='"""),_display_(/*346.113*/routes/*346.119*/.Assets.versioned("images/menu_man_sunglass.png")),format.raw/*346.168*/("""'></a></div>
+                                                    <div class="push_text">
+                                                        Lorem Ipsum is simply dummy text of the printing</div>
                                                 </div>
                                                 <div class="push_item">
-                                                    <div class="push_img"><a href="#"><img alt="camera" src='"""),_display_(/*365.111*/routes/*365.117*/.Assets.versioned("images/menu_ele_phone.png")),format.raw/*365.163*/("""'></a></div>
-                                                    <div class="push_text">Lorem Ipsum is simply dummy text of the printing</div>
+                                                    <div class="push_img"><a href="#"><img alt="watch" src='"""),_display_(/*351.110*/routes/*351.116*/.Assets.versioned("images/menu_man_sunglass.png")),format.raw/*351.165*/("""'></a></div>
+                                                    <div class="push_text">
+                                                        Lorem Ipsum is simply dummy text of the printing</div>
                                                 </div>
                                                 <div class="push_item">
-                                                    <div class="push_img"><a href="#"><img alt="ipod" src='"""),_display_(/*369.109*/routes/*369.115*/.Assets.versioned("images/menu_ele_phone.png")),format.raw/*369.161*/("""'></a></div>
-                                                    <div class="push_text">Lorem Ipsum is simply dummy text of the printing</div>
+                                                    <div class="push_img"><a href="#"><img alt="jeans" src='"""),_display_(/*356.110*/routes/*356.116*/.Assets.versioned("images/menu_man_sunglass.png")),format.raw/*356.165*/("""'></a></div>
+                                                    <div class="push_text">
+                                                        Lorem Ipsum is simply dummy text of the printing</div>
                                                 </div>
                                                 <div class="push_item push_item_last">
-                                                    <div class="push_img"><a href="#"><img alt="laptop" src='"""),_display_(/*373.111*/routes/*373.117*/.Assets.versioned("images/menu_ele_phone.png")),format.raw/*373.163*/("""'></a></div>
-                                                    <div class="push_text">Lorem Ipsum is simply dummy text of the printing</div>
+                                                    <div class="push_img"><a href="#"><img alt="shoes" src='"""),_display_(/*361.110*/routes/*361.116*/.Assets.versioned("images/menu_man_sunglass.png")),format.raw/*361.165*/("""'></a></div>
+                                                    <div class="push_text">
+                                                        Lorem Ipsum is simply dummy text of the printing</div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </li>
-                                <li class="mega-menu"><a class="level-top" href="grid.html"><span>Furniture</span></a>
-                                    <div class="level0-wrapper dropdown-6col">
-                                        <div class="container">
-                                            <div class="level0-wrapper2">
-                                                <div class="nav-block nav-block-center grid12-8 itemgrid itemgrid-4col">
-                                                    <ul class="level0">
-                                                        <li class="level1 nav-6-1 parent item"><a href="grid.html"><span>Living Room</span></a>
-                                                            <ul class="level1">
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Racks &amp; Cabinets</span></a></li>
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Sofas</span></a></li>
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Chairs</span></a></li>
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Tables</span></a></li>
-                                                            </ul>
-                                                        </li>
-                                                        <li class="level1 nav-6-1 parent item"><a href="grid.html" class=""><span>Dining &amp; Bar</span></a>
-                                                            <ul class="level1">
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Dining Table Sets</span></a></li>
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Serving Trolleys</span></a></li>
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Bar Counters</span></a></li>
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Dining Cabinets</span></a></li>
-                                                            </ul>
-                                                        </li>
-                                                        <li class="level1 nav-6-1 parent item"><a href="grid.html"><span>Bedroom</span></a>
-                                                            <ul class="level1">
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Beds</span></a></li>
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Chest of Drawers</span></a></li>
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Wardrobes &amp; Almirahs</span></a></li>
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Nightstands</span></a></li>
-                                                            </ul>
-                                                        </li>
-                                                        <li class="level1 nav-6-1 parent item"><a href="grid.html"><span>Kitchen</span></a>
-                                                            <ul class="level1">
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Kitchen Racks</span></a></li>
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Kitchen Fillings</span></a></li>
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Wall Units</span></a></li>
-                                                                <li class="level2 nav-6-1-1"><a href="grid.html"><span>Benches &amp; Stools</span></a></li>
-                                                            </ul>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                    <!--nav-block nav-block-center-->
-                                                <div class="nav-block nav-block-right std grid12-4"><a href="#"><img src='"""),_display_(/*421.124*/routes/*421.130*/.Assets.versioned("images/menu_furniture_2.png")),format.raw/*421.178*/("""' alt="furniture"></a> </div>
-                                                    <!--nav-block nav-block-right std grid12-4--> </div>
+                                </div>
+                            </li>
+                            <li class="mega-menu"><a href="" class="level-top"><span>KATEGORIJE</span></a>
+                                <div class="level0-wrapper dropdown-6col">
+                                    <div class="container">
+                                        <div class="level0-wrapper2">
+                                            <div class="nav-block nav-block-center">
+                                                <ul class="level0">
+                                                """),_display_(/*376.50*/for(category <- models.Category.findAllCategories()) yield /*376.102*/ {_display_(Seq[Any](format.raw/*376.104*/("""
+                                                    """),format.raw/*377.53*/("""<li class="level1 nav-6-1 parent item"><a href=""""),_display_(/*377.102*/routes/*377.108*/.Items.getItemsWithCategory(category.id)),format.raw/*377.148*/(""""><span>
+                                                        """),_display_(/*378.58*/category/*378.66*/.name),format.raw/*378.71*/("""</span>
+                                                    </a>
+                                                        <ul class="level1">
+                                                            """),_display_(/*381.62*/for(subcategory <- models.SubCategory.allSubCategories(category.id)) yield /*381.130*/ {_display_(Seq[Any](format.raw/*381.132*/("""
+                                                                """),format.raw/*382.65*/("""<li class="level2 nav-6-1-1"><a href=""""),_display_(/*382.104*/routes/*382.110*/.Items.getItemsWithSubCategory(subcategory.id)),format.raw/*382.156*/(""""><span>
+                                                                """),_display_(/*383.66*/subcategory/*383.77*/.name),format.raw/*383.82*/("""</span></a>
+                                                                </li>
+                                                            """)))}),format.raw/*385.62*/("""
+                                                        """),format.raw/*386.57*/("""</ul>
+                                                    </li>
+                                                """)))}),format.raw/*388.50*/("""
+
+                                                """),format.raw/*390.49*/("""</ul>
+                                            </div>
                                         </div>
                                             <!--level0-wrapper2-->
-                                    </div>
-                                </li>
-                                <li class="level0 nav-8 level-top"><a href="grid.html" class="level-top"><span>Kids</span></a></li>
-                                <li class="nav-custom-link mega-menu"><a class="level-top" href="#"><span>Custom</span></a>
-                                    <div class="level0-wrapper custom-menu">
-                                        <div class="header-nav-dropdown-wrapper clearer">
-                                            <div class="grid12-3">
-                                                <h4 class="heading">GET 20% OFF, 48 HOURS ONLY!</h4>
-                                                <div class="heart-icon">&nbsp;</div>
-                                                <p>Our designed to deliver almost everything you want to do online.</p>
-                                                <div><img  src='"""),_display_(/*435.66*/routes/*435.72*/.Assets.versioned("images/custom-img1.jpg")),format.raw/*435.115*/("""' alt=""></div>
+                                        <div class="nav-add">
+                                            <div class="push_item">
+                                                <div class="push_img"><a href="#"><img alt="phone" src='"""),_display_(/*396.106*/routes/*396.112*/.Assets.versioned("images/menu_ele_phone1.png")),format.raw/*396.159*/("""'></a></div>
+                                                <div class="push_text">
+                                                    Lorem Ipsum is simply dummy text of the printing</div>
                                             </div>
-                                            <div class="grid12-3">
-                                                <h4 class="heading">GET 20% OFF, 48 HOURS ONLY!</h4>
-                                                <a href="#">
-                                                    <div class="icon-star"></div>
-                                                </a>
-                                                <p>Responsive design is a Web design to provide an optimal navigation.</p>
-                                                <div><img  src='"""),_display_(/*443.66*/routes/*443.72*/.Assets.versioned("images/custom-img1.jpg")),format.raw/*443.115*/("""' alt=""></div>
+                                            <div class="push_item">
+                                                <div class="push_img"><a href="#"><img alt="camera" src='"""),_display_(/*401.107*/routes/*401.113*/.Assets.versioned("images/menu_ele_phone2.png")),format.raw/*401.160*/("""'></a></div>
+                                                <div class="push_text">
+                                                    Lorem Ipsum is simply dummy text of the printing</div>
                                             </div>
-                                            <div class="grid12-3">
-                                                <h4 class="heading">GET 20% OFF, 48 HOURS ONLY!</h4>
-                                                <a href="#">
-                                                    <div class="custom-icon"></div>
-                                                </a>
-                                                <p>Our font delivery service is built upon a reliable, global network of servers.</p>
-                                                <div><img  src='"""),_display_(/*451.66*/routes/*451.72*/.Assets.versioned("images/custom-img1.jpg")),format.raw/*451.115*/("""' alt=""></div>
+                                            <div class="push_item">
+                                                <div class="push_img"><a href="#"><img alt="ipod" src='"""),_display_(/*406.105*/routes/*406.111*/.Assets.versioned("images/menu_ele_phone3.png")),format.raw/*406.158*/("""'></a></div>
+                                                <div class="push_text">
+                                                    Lorem Ipsum is simply dummy text of the printing</div>
                                             </div>
-                                            <div class="grid12-3">
-                                                <h4 class="heading">GET 20% OFF, 48 HOURS ONLY!</h4>
-                                                <a href="#">
-                                                    <div class="icon-custom-grid"></div>
-                                                </a>
-                                                <p>Smart Product Grid is uses maximum available width of the screen.</p>
-                                                <div><img  src='"""),_display_(/*459.66*/routes/*459.72*/.Assets.versioned("images/custom-img1.jpg")),format.raw/*459.115*/("""' alt=""></div>
+                                            <div class="push_item push_item_last">
+                                                <div class="push_img"><a href="#"><img alt="laptop" src='"""),_display_(/*411.107*/routes/*411.113*/.Assets.versioned("images/menu_ele_phone4.png")),format.raw/*411.160*/("""'></a></div>
+                                                <div class="push_text">
+                                                    Lorem Ipsum is simply dummy text of the printing</div>
                                             </div>
-                                            <br>
                                         </div>
                                     </div>
-                                </li>
-                                """),_display_(/*465.34*/if(currentUser == null)/*465.57*/{_display_(Seq[Any](format.raw/*465.58*/("""
-                                    """),format.raw/*466.37*/("""<li class="level0 nav-8 level-top"><a href=""""),_display_(/*466.82*/routes/*466.88*/.Login.loginPageRender()),format.raw/*466.112*/("""" class="level-top"><span>Log In</span></a></li>
-                                """)))}/*467.34*/else/*467.39*/{_display_(Seq[Any](format.raw/*467.40*/("""
-                                    """),_display_(/*468.38*/if(currentUser.userAccessLevel.equals(UserAccessLevel.ADMIN))/*468.99*/{_display_(Seq[Any](format.raw/*468.100*/("""
-                                        """),format.raw/*469.41*/("""<li class="level0 parent drop-menu"><a href=""><span>"""),_display_(/*469.95*/currentUser/*469.106*/.name),format.raw/*469.111*/("""</span></a>
-                                            <ul class="level1">
-                                                <li class="level1 first parent"><a href=""""),_display_(/*471.91*/routes/*471.97*/.AppUsers.adminPanelRender(currentUser.id)),format.raw/*471.139*/(""""><span>Admin Panel</span></a></li>
-                                                <li class="level1 parent"><a href=""""),_display_(/*472.85*/routes/*472.91*/.AppUsers.listOfUsersRender()),format.raw/*472.120*/(""""><span>Korisnici</span></a></li>
-                                                <li class="level1 parent"><a href=""""),_display_(/*473.85*/routes/*473.91*/.Login.logout()),format.raw/*473.106*/(""""><span>Logout</span></a></li>
-                                            </ul>
+                                </div>
+                            </li>
+                            <li class="nav-custom-link mega-menu"><a class="level-top" href="#"><span>Custom</span></a>
+                                <div class="level0-wrapper custom-menu">
+                                    <div class="header-nav-dropdown-wrapper clearer">
+                                        <div class="grid12-3">
+                                            <h4 class="heading">GET 20% OFF, 48 HOURS ONLY!</h4>
+                                            <div class="heart-icon">&nbsp;</div>
+                                            <p>Our designed to deliver almost everything you want to do online.</p>
+                                            <div><img src='"""),_display_(/*426.61*/routes/*426.67*/.Assets.versioned("images/custom-img1.jpg")),format.raw/*426.110*/("""' alt=""></div>
+                                        </div>
+                                        <div class="grid12-3">
+                                            <h4 class="heading">GET 20% OFF, 48 HOURS ONLY!</h4>
+                                            <a href="#">
+                                                <div class="icon-star"></div>
+                                            </a>
+                                            <p>Responsive design is a Web design to provide an optimal navigation.</p>
+                                            <div><img src='"""),_display_(/*434.61*/routes/*434.67*/.Assets.versioned("images/custom-img1.jpg")),format.raw/*434.110*/("""' alt=""></div>
+                                        </div>
+                                        <div class="grid12-3">
+                                            <h4 class="heading">GET 20% OFF, 48 HOURS ONLY!</h4>
+                                            <a href="#">
+                                                <div class="custom-icon"></div>
+                                            </a>
+                                            <p>Our font delivery service is built upon a reliable, global network of servers.</p>
+                                            <div><img src='"""),_display_(/*442.61*/routes/*442.67*/.Assets.versioned("images/custom-img1.jpg")),format.raw/*442.110*/("""' alt=""></div>
+                                        </div>
+                                        <div class="grid12-3">
+                                            <h4 class="heading">GET 20% OFF, 48 HOURS ONLY!</h4>
+                                            <a href="#">
+                                                <div class="icon-custom-grid"></div>
+                                            </a>
+                                            <p>Smart Product Grid is uses maximum available width of the screen.</p>
+                                            <div><img src='"""),_display_(/*450.61*/routes/*450.67*/.Assets.versioned("images/custom-img1.jpg")),format.raw/*450.110*/("""' alt=""></div>
+                                        </div>
+                                        <br>
+                                    </div>
+                                </div>
+                            </li>
+                            """),_display_(/*456.30*/if(currentUser == null)/*456.53*/ {_display_(Seq[Any](format.raw/*456.55*/("""
+                                """),format.raw/*457.33*/("""<li class="level0 nav-8 level-top"><a href=""""),_display_(/*457.78*/routes/*457.84*/.Login.loginPageRender()),format.raw/*457.108*/("""" class="level-top"><span>
+                                    Log In</span></a></li>
+                            """)))}/*459.31*/else/*459.36*/{_display_(Seq[Any](format.raw/*459.37*/("""
+                                """),_display_(/*460.34*/if(currentUser.userAccessLevel.equals(UserAccessLevel.ADMIN))/*460.95*/ {_display_(Seq[Any](format.raw/*460.97*/("""
+                                    """),format.raw/*461.37*/("""<li class="mega-menu"><a class="level-top" href="#"><span>"""),_display_(/*461.96*/currentUser/*461.107*/.name),format.raw/*461.112*/("""</span></a>
+                                        <div class="level0-wrapper dropdown-6col">
+                                            <div class="container">
+                                                <div class="level0-wrapper2">
+                                                    <div class="nav-block nav-block-center grid12-8 itemgrid itemgrid-4col">
+                                                        <ul class="level0">
+                                                            <li class="level1 nav-6-1 parent item"><a href=""><span>
+                                                                ADMIN PANEL</span></a>
+                                                                <ul class="level1">
+                                                                    <li class="level1 first parent"><a href=""""),_display_(/*470.111*/routes/*470.117*/.AppUsers.adminPanelRender(currentUser.id)),format.raw/*470.159*/(""""><span>
+                                                                    Admin Panel</span></a></li>
+                                                                    <li class="level1 first parent"><a href=""""),_display_(/*472.111*/routes/*472.117*/.Items.allItems()),format.raw/*472.134*/(""""><span>
+                                                                        Lista proizvoda</span></a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class="level1 nav-6-1 parent item"><a href="" class=""><span>
+                                                                KORISNICI</span></a>
+                                                                <ul class="level1">
+                                                                    <li class="level1 parent"><a href=""""),_display_(/*479.105*/routes/*479.111*/.AppUsers.listOfUsersRender()),format.raw/*479.140*/(""""><span>
+                                                                    Lista korisnika</span></a></li>
+                                                                    <li class="level1 parent"><a href=""""),_display_(/*481.105*/routes/*481.111*/.AppUsers.createUserRender()),format.raw/*481.139*/(""""><span>
+                                                                        Dodaj korisnika</span></a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class="level1 nav-6-1 parent item"><a href="" class=""><span>
+                                                                KATEGORIJE</span></a>
+                                                                <ul class="level1">
+                                                                    <li class="level1 parent"><a href=""""),_display_(/*488.105*/routes/*488.111*/.Categories.listOfCategories()),format.raw/*488.141*/(""""><span>
+                                                                        Lista kategorija</span></a></li>
+                                                                    <li class="level1 parent"><a href=""""),_display_(/*490.105*/routes/*490.111*/.Categories.createCategoryRender()),format.raw/*490.145*/(""""><span>
+                                                                        Dodaj kategoriju</span></a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class="level1 nav-6-1 parent item"><a href=""><span>
+                                                               LOGOUT</span></a>
+                                                                <ul class="level1">
+                                                                    <li class="level1 parent"><a href=""""),_display_(/*497.105*/routes/*497.111*/.Login.logout()),format.raw/*497.126*/(""""><span>
+                                                                    Logout</span></a></li>
+                                                                </ul>
+                                                            </li>
+
+                                                        </ul>
+                                                    </div>
+                                                        <!--nav-block nav-block-center-->
+                                                    <div class="nav-block nav-block-right std grid12-4"><a href="#"><img src='"""),_display_(/*505.128*/routes/*505.134*/.Assets.versioned("images/navbarPicture.jpg")),format.raw/*505.179*/("""' alt="furniture"></a> </div>
+                                                        <!--nav-block nav-block-right std grid12-4-->
+                                                </div>
+                                            </div>
+                                                <!--level0-wrapper2-->
+                                        </div>
+                                    </li>
+                                """)))}/*512.35*/else/*512.40*/{_display_(Seq[Any](format.raw/*512.41*/("""
+                                    """),_display_(/*513.38*/if(currentUser.userAccessLevel.equals(UserAccessLevel.USER))/*513.98*/ {_display_(Seq[Any](format.raw/*513.100*/("""
+                                        """),format.raw/*514.41*/("""<li class="mega-menu"><a class="level-top" href="#"><span>"""),_display_(/*514.100*/currentUser/*514.111*/.name),format.raw/*514.116*/("""</span></a>
+                                            <div class="level0-wrapper dropdown-6col">
+                                                <div class="container">
+                                                    <div class="level0-wrapper2">
+                                                        <div class="nav-block nav-block-center grid12-8 itemgrid itemgrid-4col">
+                                                            <ul class="level0">
+                                                                <li class="level1 nav-6-1 parent item"><a href=""><span>
+                                                                    Krisnički panel</span></a>
+                                                                    <ul class="level1">
+                                                                        <li class="level1 first parent"><a href=""""),_display_(/*523.115*/routes/*523.121*/.AppUsers.userPanelRender(currentUser.id)),format.raw/*523.162*/(""""><span>
+                                                                            Korisnički panel</span></a></li>
+                                                                        <li class="level1 first parent"><a href=""""),_display_(/*525.115*/routes/*525.121*/.AppUsers.updateUserInformationsRender(currentUser.id)),format.raw/*525.175*/(""""><span>
+                                                                            Ažuriraj podatke</span></a></li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="level1 nav-6-1 parent item"><a href="" class=""><span>
+                                                                    OBJEKTI</span></a>
+                                                                    <ul class="level1">
+                                                                        <li class="level1 parent"><a href=""""),_display_(/*532.109*/routes/*532.115*/.Stores.listOfStores(currentUser.id)),format.raw/*532.151*/(""""><span>
+                                                                            Lista objekata</span></a></li>
+                                                                        <li class="level1 parent"><a href=""""),_display_(/*534.109*/routes/*534.115*/.Stores.createStoreRender(currentUser.id)),format.raw/*534.156*/(""""><span>
+                                                                            Dodaj objekat</span></a></li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="level1 nav-6-1 parent item"><a href="" class=""><span>
+                                                                    PROIZVODI</span></a>
+                                                                    <ul class="level1">
+                                                                        <li class="level1 parent"><a href=""""),_display_(/*541.109*/routes/*541.115*/.Items.listOfItems(currentUser.id)),format.raw/*541.149*/(""""><span>
+                                                                            Lista proizvoda</span></a></li>
+                                                                        <li class="level1 parent"><a href=""""),_display_(/*543.109*/routes/*543.115*/.Items.createItemRender(currentUser.id)),format.raw/*543.154*/(""""><span>
+                                                                            Dodaj proizvod</span></a></li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="level1 nav-6-1 parent item"><a href=""><span>
+                                                                    LOGOUT</span></a>
+                                                                    <ul class="level1">
+                                                                        <li class="level1 parent"><a href=""""),_display_(/*550.109*/routes/*550.115*/.Login.logout()),format.raw/*550.130*/(""""><span>
+                                                                            Logout</span></a></li>
+                                                                    </ul>
+                                                                </li>
+
+                                                            </ul>
+                                                        </div>
+                                                            <!--nav-block nav-block-center-->
+                                                        <div class="nav-block nav-block-right std grid12-4"><a href="#"><img src='"""),_display_(/*558.132*/routes/*558.138*/.Assets.versioned("images/navbarPicture.jpg")),format.raw/*558.183*/("""' alt="furniture"></a> </div>
+                                                            <!--nav-block nav-block-right std grid12-4-->
+                                                    </div>
+                                                </div>
+                                                    <!--level0-wrapper2-->
+                                            </div>
                                         </li>
-                                    """)))}/*476.38*/else/*476.43*/{_display_(Seq[Any](format.raw/*476.44*/("""
-                                        """),_display_(/*477.42*/if(currentUser.userAccessLevel.equals(UserAccessLevel.USER))/*477.102*/ {_display_(Seq[Any](format.raw/*477.104*/("""
-                                            """),format.raw/*478.45*/("""<li class="level0 parent drop-menu"><a href="index.html"><span>"""),_display_(/*478.109*/currentUser/*478.120*/.name),format.raw/*478.125*/("""</span></a>
-                                                <ul class="level1">
-                                                    <li class="level1 first parent"><a href=""""),_display_(/*480.95*/routes/*480.101*/.AppUsers.userPanelRender(currentUser.id)),format.raw/*480.142*/(""""><span>User Panel</span></a></li>
-                                                    <li class="level1 parent"><a href=""><span>Objekti</span></a></li>
-                                                    <li class="level1 parent"><a href=""""),_display_(/*482.89*/routes/*482.95*/.Login.logout()),format.raw/*482.110*/(""""><span>Logout</span></a></li>
-                                                </ul>
-                                            </li>
-                                        """)))}),format.raw/*485.42*/("""
-                                    """)))}),format.raw/*486.38*/("""
-                                """)))}),format.raw/*487.34*/("""
-                                """),format.raw/*488.33*/("""<!-- Search-col -->
+                                    """)))}),format.raw/*565.38*/("""
+                                """)))}),format.raw/*566.34*/("""
+                            """)))}),format.raw/*567.30*/("""
+                                """),format.raw/*568.33*/("""<!-- Search-col -->
                             <div class="search-box pull-right">
                                 <form action="cat" method="POST" id="search_mini_form" name="Categories">
-                                    <input type="text" placeholder="Search entire store here..." value="Search" maxlength="70" name="search" id="search" >
+                                    <input type="text" placeholder="Search entire store here..."  maxlength="70" name="search" id="search" >
                                     <button type="button" class="search-btn-bg"><span class="fa fa-search"></span>&nbsp;</button>
                                 </form>
                             </div>
                                 <!-- End Search-col -->
                         </ul>
-                        </div>
                     </div>
-                """),format.raw/*499.27*/("""
-            """),format.raw/*500.13*/("""</nav>
+                </div>
+                """),format.raw/*579.27*/("""
+            """),format.raw/*580.13*/("""</nav>
                 <!-- end nav -->
 
-            """),format.raw/*503.44*/("""
-                """),format.raw/*504.45*/("""
-                    """),format.raw/*505.114*/("""
-                """),format.raw/*506.27*/("""
-                """),format.raw/*507.51*/("""
-                    """),format.raw/*508.48*/("""
-                        """),format.raw/*509.33*/("""
-                            """),format.raw/*510.37*/("""
-                                """),format.raw/*511.62*/("""
-                                    """),format.raw/*512.71*/("""
-                                    """),format.raw/*513.99*/("""
-                                """),format.raw/*514.43*/("""
-                            """),format.raw/*515.38*/("""
-                            """),format.raw/*516.37*/("""
-                                """),format.raw/*517.62*/("""
-                                    """),format.raw/*518.73*/("""
-                                    """),format.raw/*519.93*/("""
-                                """),format.raw/*520.43*/("""
-                            """),format.raw/*521.38*/("""
-                            """),format.raw/*522.37*/("""
-                                """),format.raw/*523.62*/("""
-                                    """),format.raw/*524.71*/("""
-                                    """),format.raw/*525.88*/("""
-                                """),format.raw/*526.43*/("""
-                            """),format.raw/*527.38*/("""
-                            """),format.raw/*528.50*/("""
-                                """),format.raw/*529.62*/("""
-                                    """),format.raw/*530.72*/("""
-                                    """),format.raw/*531.90*/("""
-                                """),format.raw/*532.43*/("""
-                            """),format.raw/*533.38*/("""
-                        """),format.raw/*534.34*/("""
-                    """),format.raw/*535.31*/("""
-                """),format.raw/*536.27*/("""
-            """),format.raw/*537.23*/("""
+                <!-------------------------------------------- CONTENT --------------------------------------------->
+            <div style="margin-top: 60px">
+                """),_display_(/*585.18*/content),format.raw/*585.25*/("""
+            """),format.raw/*586.13*/("""</div>
 
-             """),_display_(/*539.15*/content),format.raw/*539.22*/("""
-                """),format.raw/*540.17*/("""<!-- Footer -->
+                <!-- Footer -->
             <footer>
                 <div class="footer-inner">
                     <div class="container">
@@ -580,7 +628,7 @@ Seq[Any](format.raw/*2.88*/("""
                                     <h4>Shopping Guide</h4>
                                     <ul class="links">
                                         <li class="first"><a href="#" title="How to buy">How to buy</a></li>
-                                        <li><a href="faq.html" title="FAQs">FAQs</a></li>
+                                        <li><a href=""""),_display_(/*598.55*/routes/*598.61*/.Application.faqRender()),format.raw/*598.85*/("""" title="FAQs">FAQs</a></li>
                                         <li><a href="#" title="Payment">Payment</a></li>
                                         <li><a href="#" title="Shipment&lt;/a&gt;">Shipment</a></li>
                                     </ul>
@@ -600,7 +648,8 @@ Seq[Any](format.raw/*2.88*/("""
                                         <li class="first"><a href="sitemap.html" title="Site Map">Site Map</a></li>
                                         <li><a href="#" title="Search Terms">Search Terms</a></li>
                                         <li><a href="#" title="Advanced Search">Advanced Search</a></li>
-                                        <li><a href="contact_us.html" title="Contact Us">Contact Us</a></li>
+                                        <li><a href=""""),_display_(/*618.55*/routes/*618.61*/.ContactUs.contactUsRender()),format.raw/*618.89*/("""" title="Contact Us">
+                                            Contact Us</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -620,20 +669,23 @@ Seq[Any](format.raw/*2.88*/("""
                         </div>
                     </div>
                 </div>
-                <div class="footer-middle">
+                """),format.raw/*639.48*/("""
+                    """),format.raw/*640.48*/("""
+                        """),format.raw/*641.46*/("""
+                            """),format.raw/*642.113*/("""
+                            """),format.raw/*643.42*/("""
+                                """),format.raw/*644.72*/("""
+                                """),format.raw/*645.116*/("""
+                                """),format.raw/*646.124*/("""
+                            """),format.raw/*647.43*/("""
+                        """),format.raw/*648.35*/("""
+                    """),format.raw/*649.31*/("""
+                """),format.raw/*650.27*/("""
+                """),format.raw/*651.17*/("""<div class="footer-bottom">
                     <div class="container">
                         <div class="row">
-                            <div><img src='"""),_display_(/*593.45*/routes/*593.51*/.Assets.versioned("images/footer-logo.png")),format.raw/*593.94*/("""' alt=""></div>
-                            <address>
-                                <i class="icon-location-arrow"></i> 123 Main Street, Anytown, CA 12345  USA <i class="icon-mobile-phone"></i><span> +(408) 394-7557</span> <i class="icon-envelope"></i><span> abc.magikcommerce.com</span>
-                            </address>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-bottom">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-12 col-xs-12 text-center coppyright">&copy; Copyright 2016. DT Projects. All Rights Reserved.</div>
+                            <div class="col-sm-12 col-xs-12 text-center coppyright">&copy;
+                                Copyright 2016. DT Projects. All Rights Reserved.</div>
                         </div>
                     </div>
                 </div>
@@ -646,228 +698,193 @@ Seq[Any](format.raw/*2.88*/("""
                         <form name="search">
                             <div class="input-group">
                                 <div class="input-group-btn">
-                                    <button class="btn btn-default" type="submit"><i class="icon-search"></i></button>
+                                    <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
                                 </div>
                                 <input type="text" class="form-control simple" placeholder="Search ..." name="srch-term" id="srch-term">
                             </div>
                         </form>
                     </div>
                 </li>
-                <li>
-                    <div class="home"><a href="index.html"><i class="icon-home"></i>Home</a> </div>
-                </li>
-                <li><a href="#">Pages</a>
-                    <ul>
-                        <li><a href="grid.html">Grid</a></li>
-                        <li> <a href="list.html">List</a></li>
-                        <li> <a href="product_detail.html">Product Detail</a></li>
-                        <li> <a href="shopping_cart.html">Shopping Cart</a></li>
-                        <li><a href="checkout.html">Checkout</a>
-                            <ul>
-                                <li><a href="checkout_method.html">Checkout Method</a></li>
-                                <li><a href="checkout_billing_info.html">Checkout Billing Info</a></li>
-                            </ul>
-                        </li>
-                        <li> <a href="wishlist.html">Wishlist</a></li>
-                        <li> <a href="dashboard.html">Dashboard</a></li>
-                        <li> <a href="multiple_addresses.html">Multiple Addresses</a></li>
-                        <li> <a href="about_us.html">About Us</a></li>
-                        <li> <a href="compare.html">Compare</a></li>
-                        <li> <a href="delivery.html">Delivery</a></li>
-                        <li> <a href="faq.html">FAQ</a></li>
-                        <li> <a href="quick_view.html">Quick View</a></li>
-                        <li> <a href="newsletter.html">Newsletter</a></li>
-                        <li> <a href="contact_us.html">Contact Us</a></li>
-                        <li> <a href="sitemap.html">Sitemap</a></li>
-                        <li><a href="blog.html">Blog</a>
-                            <ul>
-                                <li><a href="blog_detail.html">Blog Detail</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="contact-us.html">Contact us</a></li>
-                        <li><a href="404error.html">404 Error Page</a></li>
-                    </ul>
-                </li>
                 <li><a href="#">Women</a>
                     <ul>
-                        <li> <a href="grid.html" class="">Stylish Bag</a>
+                        <li> <a href="" class="">Stylish Bag</a>
                             <ul>
-                                <li> <a href="grid.html" class="">Clutch Handbags</a></li>
-                                <li> <a href="grid.html" class="">Diaper Bags</a></li>
-                                <li> <a href="grid.html" class="">Bags</a></li>
-                                <li> <a href="grid.html" class="">Hobo handbags</a></li>
+                                <li> <a href="" class="">Clutch Handbags</a></li>
+                                <li> <a href="" class="">Diaper Bags</a></li>
+                                <li> <a href="" class="">Bags</a></li>
+                                <li> <a href="" class="">Hobo handbags</a></li>
                             </ul>
                         </li>
-                        <li> <a href="grid.html">Material Bag</a>
+                        <li> <a href="">Material Bag</a>
                             <ul>
-                                <li> <a href="grid.html">Beaded Handbags</a></li>
-                                <li> <a href="grid.html">Fabric Handbags</a></li>
-                                <li> <a href="grid.html">Handbags</a></li>
-                                <li> <a href="grid.html">Leather Handbags</a></li>
+                                <li> <a href="">Beaded Handbags</a></li>
+                                <li> <a href="">Fabric Handbags</a></li>
+                                <li> <a href="">Handbags</a></li>
+                                <li> <a href="">Leather Handbags</a></li>
                             </ul>
                         </li>
-                        <li> <a href="grid.html">Shoes</a>
+                        <li> <a href="">Shoes</a>
                             <ul>
-                                <li> <a href="grid.html">Flat Shoes</a></li>
-                                <li> <a href="grid.html">Flat Sandals</a></li>
-                                <li> <a href="grid.html">Boots</a></li>
-                                <li> <a href="grid.html">Heels</a></li>
+                                <li> <a href="">Flat Shoes</a></li>
+                                <li> <a href="">Flat Sandals</a></li>
+                                <li> <a href="">Boots</a></li>
+                                <li> <a href="">Heels</a></li>
                             </ul>
                         </li>
-                        <li> <a href="grid.html">Jwellery</a>
+                        <li> <a href="">Jwellery</a>
                             <ul>
-                                <li> <a href="grid.html">Bracelets</a></li>
-                                <li> <a href="grid.html">Necklaces &amp; Pendent</a></li>
-                                <li> <a href="grid.html">Pendants</a></li>
-                                <li> <a href="grid.html">Pins &amp; Brooches</a></li>
+                                <li> <a href="">Bracelets</a></li>
+                                <li> <a href="">Necklaces &amp; Pendent</a></li>
+                                <li> <a href="">Pendants</a></li>
+                                <li> <a href="">Pins &amp; Brooches</a></li>
                             </ul>
                         </li>
-                        <li> <a href="grid.html">Dresses</a>
+                        <li> <a href="">Dresses</a>
                             <ul>
-                                <li> <a href="grid.html">Casual Dresses</a></li>
-                                <li> <a href="grid.html">Evening</a></li>
-                                <li> <a href="grid.html">Designer</a></li>
-                                <li> <a href="grid.html">Party</a></li>
+                                <li> <a href="">Casual Dresses</a></li>
+                                <li> <a href="">Evening</a></li>
+                                <li> <a href="">Designer</a></li>
+                                <li> <a href="">Party</a></li>
                             </ul>
                         </li>
-                        <li> <a href="grid.html">Swimwear</a>
+                        <li> <a href="">Swimwear</a>
                             <ul>
-                                <li> <a href="grid.html">Swimsuits</a></li>
-                                <li> <a href="grid.html">Beach Clothing</a></li>
-                                <li> <a href="grid.html">Clothing</a></li>
-                                <li> <a href="grid.html">Bikinis</a></li>
+                                <li> <a href="">Swimsuits</a></li>
+                                <li> <a href="">Beach Clothing</a></li>
+                                <li> <a href="">Clothing</a></li>
+                                <li> <a href="">Bikinis</a></li>
                             </ul>
                         </li>
                     </ul>
                 </li>
                 <li><a href="#">Men</a>
                     <ul>
-                        <li> <a href="grid.html" class="">Shoes</a>
+                        <li> <a href="" class="">Shoes</a>
                             <ul class="level1">
-                                <li class="level2 nav-6-1-1"><a href="grid.html">Sport Shoes</a></li>
-                                <li class="level2 nav-6-1-1"><a href="grid.html">Casual Shoes</a></li>
-                                <li class="level2 nav-6-1-1"><a href="grid.html">Leather Shoes</a></li>
-                                <li class="level2 nav-6-1-1"><a href="grid.html">canvas shoes</a></li>
+                                <li class="level2 nav-6-1-1"><a href="">Sport Shoes</a></li>
+                                <li class="level2 nav-6-1-1"><a href="">Casual Shoes</a></li>
+                                <li class="level2 nav-6-1-1"><a href="">Leather Shoes</a></li>
+                                <li class="level2 nav-6-1-1"><a href="">canvas shoes</a></li>
                             </ul>
                         </li>
-                        <li> <a href="grid.html">Dresses</a>
+                        <li> <a href="">Dresses</a>
                             <ul class="level1">
-                                <li class="level2 nav-6-1-1"><a href="grid.html">Casual Dresses</a></li>
-                                <li class="level2 nav-6-1-1"><a href="grid.html">Evening</a></li>
-                                <li class="level2 nav-6-1-1"><a href="grid.html">Designer</a></li>
-                                <li class="level2 nav-6-1-1"><a href="grid.html">Party</a></li>
+                                <li class="level2 nav-6-1-1"><a href="">Casual Dresses</a></li>
+                                <li class="level2 nav-6-1-1"><a href="">Evening</a></li>
+                                <li class="level2 nav-6-1-1"><a href="">Designer</a></li>
+                                <li class="level2 nav-6-1-1"><a href="">Party</a></li>
                             </ul>
                         </li>
-                        <li> <a href="grid.html">Jackets</a>
+                        <li> <a href="">Jackets</a>
                             <ul class="level1">
-                                <li class="level2 nav-6-1-1"><a href="grid.html">Coats</a></li>
-                                <li class="level2 nav-6-1-1"><a href="grid.html">Formal Jackets</a></li>
-                                <li class="level2 nav-6-1-1"><a href="grid.html">Leather Jackets</a></li>
-                                <li class="level2 nav-6-1-1"><a href="grid.html">Blazers</a></li>
+                                <li class="level2 nav-6-1-1"><a href="">Coats</a></li>
+                                <li class="level2 nav-6-1-1"><a href="">Formal Jackets</a></li>
+                                <li class="level2 nav-6-1-1"><a href="">Leather Jackets</a></li>
+                                <li class="level2 nav-6-1-1"><a href="">Blazers</a></li>
                             </ul>
                         </li>
-                        <li> <a href="grid.html">Watches</a>
+                        <li> <a href="">Watches</a>
                             <ul class="level1">
-                                <li class="level2 nav-6-1-1"><a href="grid.html">Fasttrack</a></li>
-                                <li class="level2 nav-6-1-1"><a href="grid.html">Casio</a></li>
-                                <li class="level2 nav-6-1-1"><a href="grid.html">Titan</a></li>
-                                <li class="level2 nav-6-1-1"><a href="grid.html">Tommy-Hilfiger</a></li>
+                                <li class="level2 nav-6-1-1"><a href="">Fasttrack</a></li>
+                                <li class="level2 nav-6-1-1"><a href="">Casio</a></li>
+                                <li class="level2 nav-6-1-1"><a href="">Titan</a></li>
+                                <li class="level2 nav-6-1-1"><a href="">Tommy-Hilfiger</a></li>
                             </ul>
                         </li>
-                        <li> <a href="grid.html">Sunglasses</a>
+                        <li> <a href="">Sunglasses</a>
                             <ul class="level1">
-                                <li class="level2 nav-6-1-1"><a href="grid.html">Ray Ban</a></li>
-                                <li class="level2 nav-6-1-1"><a href="grid.html">Fasttrack</a></li>
-                                <li class="level2 nav-6-1-1"><a href="grid.html">Police</a></li>
-                                <li class="level2 nav-6-1-1"><a href="grid.html">Oakley</a></li>
+                                <li class="level2 nav-6-1-1"><a href="">Ray Ban</a></li>
+                                <li class="level2 nav-6-1-1"><a href="">Fasttrack</a></li>
+                                <li class="level2 nav-6-1-1"><a href="">Police</a></li>
+                                <li class="level2 nav-6-1-1"><a href="">Oakley</a></li>
                             </ul>
                         </li>
-                        <li> <a href="grid.html">Accesories</a>
+                        <li> <a href="">Accesories</a>
                             <ul class="level1">
-                                <li class="level2 nav-6-1-1"><a href="grid.html">Backpacks</a></li>
-                                <li class="level2 nav-6-1-1"><a href="grid.html">Wallets</a></li>
-                                <li class="level2 nav-6-1-1"><a href="grid.html">Laptops Bags</a></li>
-                                <li class="level2 nav-6-1-1"><a href="grid.html">Belts</a></li>
+                                <li class="level2 nav-6-1-1"><a href="">Backpacks</a></li>
+                                <li class="level2 nav-6-1-1"><a href="">Wallets</a></li>
+                                <li class="level2 nav-6-1-1"><a href="">Laptops Bags</a></li>
+                                <li class="level2 nav-6-1-1"><a href="">Belts</a></li>
                             </ul>
                         </li>
                     </ul>
                 </li>
                 <li><a href="#">Electronics</a>
                     <ul>
-                        <li> <a href="grid.html"><span>Mobiles</span></a>
+                        <li> <a href=""><span>Mobiles</span></a>
                             <ul>
-                                <li> <a href="grid.html"><span>Samsung</span></a></li>
-                                <li> <a href="grid.html"><span>Nokia</span></a></li>
-                                <li> <a href="grid.html"><span>IPhone</span></a></li>
-                                <li> <a href="grid.html"><span>Sony</span></a></li>
+                                <li> <a href=""><span>Samsung</span></a></li>
+                                <li> <a href=""><span>Nokia</span></a></li>
+                                <li> <a href=""><span>IPhone</span></a></li>
+                                <li> <a href=""><span>Sony</span></a></li>
                             </ul>
                         </li>
-                        <li> <a href="grid.html" class=""><span>Accesories</span></a>
+                        <li> <a href="" class=""><span>Accesories</span></a>
                             <ul>
-                                <li> <a href="grid.html"><span>Mobile Memory Cards</span></a></li>
-                                <li> <a href="grid.html"><span>Cases &amp; Covers</span></a></li>
-                                <li> <a href="grid.html"><span>Mobile Headphones</span></a></li>
-                                <li> <a href="grid.html"><span>Bluetooth Headsets</span></a></li>
+                                <li> <a href=""><span>Mobile Memory Cards</span></a></li>
+                                <li> <a href=""><span>Cases &amp; Covers</span></a></li>
+                                <li> <a href=""><span>Mobile Headphones</span></a></li>
+                                <li> <a href=""><span>Bluetooth Headsets</span></a></li>
                             </ul>
                         </li>
-                        <li> <a href="grid.html"><span>Cameras</span></a>
+                        <li> <a href=""><span>Cameras</span></a>
                             <ul>
-                                <li> <a href="grid.html"><span>Camcorders</span></a></li>
-                                <li> <a href="grid.html"><span>Point &amp; Shoot</span></a></li>
-                                <li> <a href="grid.html"><span>Digital SLR</span></a></li>
-                                <li> <a href="grid.html"><span>Camera Accesories</span></a></li>
+                                <li> <a href=""><span>Camcorders</span></a></li>
+                                <li> <a href=""><span>Point &amp; Shoot</span></a></li>
+                                <li> <a href=""><span>Digital SLR</span></a></li>
+                                <li> <a href=""><span>Camera Accesories</span></a></li>
                             </ul>
                         </li>
-                        <li> <a href="grid.html"><span>Audio &amp; Video</span></a>
+                        <li> <a href=""><span>Audio &amp; Video</span></a>
                             <ul>
-                                <li> <a href="grid.html"><span>MP3 Players</span></a></li>
-                                <li> <a href="grid.html"><span>IPods</span></a></li>
-                                <li> <a href="grid.html"><span>Speakers</span></a></li>
-                                <li> <a href="grid.html"><span>Video Players</span></a></li>
+                                <li> <a href=""><span>MP3 Players</span></a></li>
+                                <li> <a href=""><span>IPods</span></a></li>
+                                <li> <a href=""><span>Speakers</span></a></li>
+                                <li> <a href=""><span>Video Players</span></a></li>
                             </ul>
                         </li>
-                        <li> <a href="grid.html"><span>Computer</span></a>
+                        <li> <a href=""><span>Computer</span></a>
                             <ul>
-                                <li> <a href="grid.html"><span>External Hard Disk</span></a></li>
-                                <li> <a href="grid.html"><span>Pendrives</span></a></li>
-                                <li> <a href="grid.html"><span>Headphones</span></a></li>
-                                <li> <a href="grid.html"><span>PC Components</span></a></li>
+                                <li> <a href=""><span>External Hard Disk</span></a></li>
+                                <li> <a href=""><span>Pendrives</span></a></li>
+                                <li> <a href=""><span>Headphones</span></a></li>
+                                <li> <a href=""><span>PC Components</span></a></li>
                             </ul>
                         </li>
-                        <li> <a href="grid.html"><span>Appliances</span></a>
+                        <li> <a href=""><span>Appliances</span></a>
                             <ul>
-                                <li> <a href="grid.html"><span>Vaccum Cleaners</span></a></li>
-                                <li> <a href="grid.html"><span>Indoor Lighting</span></a></li>
-                                <li> <a href="grid.html"><span>Kitchen Tools</span></a></li>
-                                <li> <a href="grid.html"><span>Water Purifier</span></a></li>
+                                <li> <a href=""><span>Vaccum Cleaners</span></a></li>
+                                <li> <a href=""><span>Indoor Lighting</span></a></li>
+                                <li> <a href=""><span>Kitchen Tools</span></a></li>
+                                <li> <a href=""><span>Water Purifier</span></a></li>
                             </ul>
                         </li>
                     </ul>
                 </li>
                 <li><a href="#">Furniture</a>
                     <ul>
-                        <li> <a href="grid.html">Living Room</a>
+                        <li> <a href="">Living Room</a>
                             <ul>
-                                <li> <a href="grid.html">Racks &amp; Cabinets</a></li>
-                                <li> <a href="grid.html">Sofas</a></li>
-                                <li> <a href="grid.html">Chairs</a></li>
-                                <li> <a href="grid.html">Tables</a></li>
+                                <li> <a href="">Racks &amp; Cabinets</a></li>
+                                <li> <a href="">Sofas</a></li>
+                                <li> <a href="">Chairs</a></li>
+                                <li> <a href="">Tables</a></li>
                             </ul>
                         </li>
-                        <li> <a href="grid.html" class="">Dining &amp; Bar</a>
+                        <li> <a href="" class="">Dining &amp; Bar</a>
                             <ul>
-                                <li> <a href="grid.html">Dining Table Sets</a></li>
-                                <li> <a href="grid.html">Serving Trolleys</a></li>
-                                <li> <a href="grid.html">Bar Counters</a></li>
-                                <li> <a href="grid.html">Dining Cabinets</a></li>
+                                <li> <a href="">Dining Table Sets</a></li>
+                                <li> <a href="">Serving Trolleys</a></li>
+                                <li> <a href="">Bar Counters</a></li>
+                                <li> <a href="">Dining Cabinets</a></li>
                             </ul>
                         </li>
-                        <li> <a href="grid.html">Bedroom</a>
+                        <li> <a href="">Bedroom</a>
                             <ul>
-                                <li> <a href="grid.html">Beds</a></li>
-                                <li> <a href="grid.html">Chest of Drawers</a></li>
-                                <li> <a href="grid.html">Wardrobes &amp; Almirahs</a></li>
-                                <li> <a href="grid.html">Nightstands</a></li>
+                                <li> <a href="">Beds</a></li>
+                                <li> <a href="">Chest of Drawers</a></li>
+                                <li> <a href="">Wardrobes &amp; Almirahs</a></li>
+                                <li> <a href="">Nightstands</a></li>
                             </ul>
                         </li>
                         <li> <a href="grid.html">Kitchen</a>
@@ -881,12 +898,36 @@ Seq[Any](format.raw/*2.88*/("""
                     </ul>
                 </li>
                 <li><a href="#">Kids</a></li>
-                <li><a href="contact-us.html">Contact Us</a></li>
-            </ul>
+                <li><a href="">Contact Us</a></li>
+                """),_display_(/*869.18*/if(currentUser == null)/*869.41*/ {_display_(Seq[Any](format.raw/*869.43*/("""
+                    """),format.raw/*870.21*/("""<li><a href=""""),_display_(/*870.35*/routes/*870.41*/.Login.loginPageRender()),format.raw/*870.65*/("""" class="level-top"><span>Log In</span></a></li>
+                """)))}/*871.19*/else/*871.24*/{_display_(Seq[Any](format.raw/*871.25*/("""
+                    """),_display_(/*872.22*/if(currentUser.userAccessLevel.equals(UserAccessLevel.ADMIN))/*872.83*/ {_display_(Seq[Any](format.raw/*872.85*/("""
+                        """),format.raw/*873.25*/("""<li><a href=""><span>"""),_display_(/*873.47*/currentUser/*873.58*/.name),format.raw/*873.63*/("""</span></a>
+                            <ul>
+                                <li><a href=""""),_display_(/*875.47*/routes/*875.53*/.AppUsers.adminPanelRender(currentUser.id)),format.raw/*875.95*/(""""><span>
+                                    Admin Panel</span></a></li>
+                                <li><a href=""""),_display_(/*877.47*/routes/*877.53*/.AppUsers.listOfUsersRender()),format.raw/*877.82*/(""""><span>Korisnici</span></a></li>
+                                <li><a href=""""),_display_(/*878.47*/routes/*878.53*/.Login.logout()),format.raw/*878.68*/(""""><span>Logout</span></a></li>
+                            </ul>
+                        </li>
+                    """)))}/*881.23*/else/*881.28*/{_display_(Seq[Any](format.raw/*881.29*/("""
+                        """),_display_(/*882.26*/if(currentUser.userAccessLevel.equals(UserAccessLevel.USER))/*882.86*/ {_display_(Seq[Any](format.raw/*882.88*/("""
+                            """),format.raw/*883.29*/("""<li><a href=""><span>"""),_display_(/*883.51*/currentUser/*883.62*/.name),format.raw/*883.67*/("""</span></a>
+                                <ul>
+                                    <li><a href=""""),_display_(/*885.51*/routes/*885.57*/.AppUsers.userPanelRender(currentUser.id)),format.raw/*885.98*/(""""><span>
+                                        User Panel</span></a></li>
+                                    <li><a href=""""),_display_(/*887.51*/routes/*887.57*/.Stores.listOfStores(currentUser.id)),format.raw/*887.93*/(""""><span>Objekti</span></a></li>
+                                    <li><a href=""""),_display_(/*888.51*/routes/*888.57*/.Login.logout()),format.raw/*888.72*/(""""><span>Logout</span></a></li>
+                                </ul>
+                            </li>
+                        """)))}),format.raw/*891.26*/("""
+                    """)))}),format.raw/*892.22*/("""
+                """)))}),format.raw/*893.18*/("""
+            """),format.raw/*894.13*/("""</ul>
         </div>
 
             <!-- End Footer -->
-
 
 
 
@@ -911,11 +952,11 @@ Seq[Any](format.raw/*2.88*/("""
 object main extends main_Scope0.main_Scope1.main
               /*
                   -- GENERATED --
-                  DATE: Fri Mar 25 02:50:20 CET 2016
+                  DATE: Thu Mar 31 17:19:43 CEST 2016
                   SOURCE: E:/namjestaj/app/views/main.scala.html
-                  HASH: 84662628ca740d0b6bcfc4666d7fc50c9be5a414
-                  MATRIX: 807->34|988->120|1016->122|1859->938|1874->944|1949->998|2080->1102|2095->1108|2167->1158|2208->1289|2245->1299|2318->1345|2333->1351|2399->1395|2496->1465|2511->1471|2579->1517|2665->1576|2680->1582|2751->1631|2836->1689|2851->1695|2919->1741|3004->1799|3019->1805|3093->1857|3178->1915|3193->1921|3270->1976|3355->2034|3370->2040|3434->2082|3530->2151|3545->2157|3614->2204|4207->2770|4222->2776|4289->2822|4374->2880|4389->2886|4460->2935|4545->2993|4560->2999|4625->3043|4710->3101|4725->3107|4791->3152|4876->3210|4891->3216|4954->3258|5039->3316|5054->3322|5131->3377|5216->3435|5231->3441|5305->3493|5390->3551|5405->3557|5485->3615|5570->3673|5585->3679|5652->3725|5775->3820|5804->3821|5846->3835|5916->3877|5945->3878|5991->3896|8124->6000|8154->6001|8194->6013|8224->6014|8320->6082|8336->6088|8412->6141|8500->6201|8516->6207|8589->6257|8683->6323|8699->6329|8769->6376|9125->6735|9173->6870|9221->7008|9264->7032|9313->7052|9394->7131|9445->7153|9709->7389|9725->7395|9768->7415|9826->7444|9843->7450|9902->7486|17010->14565|17027->14571|17092->14613|17261->14753|17278->14759|17343->14801|24255->21684|24272->21690|24344->21739|24772->22138|24789->22144|24861->22193|25289->22592|25306->22598|25378->22647|25821->23061|25838->23067|25910->23116|33099->30276|33116->30282|33185->30328|33598->30712|33615->30718|33684->30764|34095->31146|34112->31152|34181->31198|34609->31597|34626->31603|34695->31649|39801->36726|39818->36732|39889->36780|41122->37985|41138->37991|41204->38034|41859->38661|41875->38667|41941->38710|42609->39350|42625->39356|42691->39399|43351->40031|43367->40037|43433->40080|43744->40363|43777->40386|43817->40387|43884->40425|43957->40470|43973->40476|44020->40500|44123->40583|44137->40588|44177->40589|44244->40628|44315->40689|44356->40690|44427->40732|44509->40786|44531->40797|44559->40802|44755->40970|44771->40976|44836->41018|44985->41139|45001->41145|45053->41174|45200->41293|45216->41299|45254->41314|45441->41481|45455->41486|45495->41487|45566->41530|45637->41590|45679->41592|45754->41638|45847->41702|45869->41713|45897->41718|46101->41894|46118->41900|46182->41941|46454->42185|46470->42191|46508->42206|46719->42385|46790->42424|46857->42459|46920->42493|47670->43224|47713->43238|47798->43325|47845->43371|47897->43486|47944->43514|47991->43566|48042->43615|48097->43649|48156->43687|48219->43750|48286->43822|48353->43922|48416->43966|48475->44005|48534->44043|48597->44106|48664->44180|48731->44274|48794->44318|48853->44357|48912->44395|48975->44458|49042->44530|49109->44619|49172->44663|49231->44702|49290->44753|49353->44816|49420->44889|49487->44980|49550->45024|49609->45063|49664->45098|49715->45130|49762->45158|49805->45182|49851->45200|49880->45207|49927->45225|53392->48662|53408->48668|53473->48711
-                  LINES: 30->2|35->2|36->3|55->22|55->22|55->22|57->24|57->24|57->24|58->25|59->26|59->26|59->26|59->26|60->27|60->27|60->27|61->28|61->28|61->28|62->29|62->29|62->29|63->30|63->30|63->30|64->31|64->31|64->31|65->32|65->32|65->32|66->33|66->33|66->33|74->41|74->41|74->41|75->42|75->42|75->42|76->43|76->43|76->43|77->44|77->44|77->44|78->45|78->45|78->45|79->46|79->46|79->46|80->47|80->47|80->47|81->48|81->48|81->48|82->49|82->49|82->49|84->51|84->51|85->52|85->52|85->52|86->53|152->119|152->119|153->120|153->120|155->122|155->122|155->122|157->124|157->124|157->124|158->125|158->125|158->125|168->135|169->136|170->137|171->138|173->140|175->142|176->143|179->146|179->146|179->146|179->146|179->146|179->146|248->215|248->215|248->215|249->216|249->216|249->216|314->281|314->281|314->281|318->285|318->285|318->285|322->289|322->289|322->289|326->293|326->293|326->293|394->361|394->361|394->361|398->365|398->365|398->365|402->369|402->369|402->369|406->373|406->373|406->373|454->421|454->421|454->421|468->435|468->435|468->435|476->443|476->443|476->443|484->451|484->451|484->451|492->459|492->459|492->459|498->465|498->465|498->465|499->466|499->466|499->466|499->466|500->467|500->467|500->467|501->468|501->468|501->468|502->469|502->469|502->469|502->469|504->471|504->471|504->471|505->472|505->472|505->472|506->473|506->473|506->473|509->476|509->476|509->476|510->477|510->477|510->477|511->478|511->478|511->478|511->478|513->480|513->480|513->480|515->482|515->482|515->482|518->485|519->486|520->487|521->488|532->499|533->500|536->503|537->504|538->505|539->506|540->507|541->508|542->509|543->510|544->511|545->512|546->513|547->514|548->515|549->516|550->517|551->518|552->519|553->520|554->521|555->522|556->523|557->524|558->525|559->526|560->527|561->528|562->529|563->530|564->531|565->532|566->533|567->534|568->535|569->536|570->537|572->539|572->539|573->540|626->593|626->593|626->593
+                  HASH: a26a057827b212cbeba81e4aa79e4769dcfac6ed
+                  MATRIX: 807->33|988->119|1015->120|1838->916|1853->922|1928->976|2057->1078|2072->1084|2144->1134|2184->1264|2220->1273|2293->1319|2308->1325|2374->1369|2470->1438|2485->1444|2553->1490|2638->1548|2653->1554|2724->1603|2808->1660|2823->1666|2891->1712|2975->1769|2990->1775|3064->1827|3148->1884|3163->1890|3240->1945|3324->2002|3339->2008|3403->2050|3499->2119|3514->2125|3583->2172|4169->2731|4184->2737|4251->2783|4335->2840|4350->2846|4421->2895|4505->2952|4520->2958|4585->3002|4669->3059|4684->3065|4750->3110|4834->3167|4849->3173|4912->3215|4996->3272|5011->3278|5088->3333|5172->3390|5187->3396|5261->3448|5345->3505|5360->3511|5440->3569|5524->3626|5539->3632|5606->3678|5727->3771|5756->3772|5797->3785|5867->3827|5896->3828|5941->3845|8008->5883|8038->5884|8077->5895|8107->5896|8201->5962|8217->5968|8293->6021|8379->6079|8395->6085|8468->6135|8561->6200|8577->6206|8647->6253|8902->6580|8939->6589|9004->6626|9020->6632|9094->6683|9237->6829|9280->6959|9323->7092|9365->7115|9412->7133|9517->7237|9563->7254|9812->7475|9828->7481|9871->7501|9929->7530|9946->7536|10005->7572|18792->16330|18809->16336|18874->16378|19038->16513|19055->16519|19120->16561|27330->24742|27347->24748|27419->24797|27884->25233|27901->25239|27973->25288|28438->25724|28455->25730|28527->25779|29007->26230|29024->26236|29096->26285|30107->27268|30177->27320|30219->27322|30301->27375|30379->27424|30396->27430|30459->27470|30553->27536|30571->27544|30598->27549|30828->27751|30914->27819|30956->27821|31050->27886|31118->27925|31135->27931|31204->27977|31306->28051|31327->28062|31354->28067|31529->28210|31615->28267|31760->28380|31839->28430|32274->28836|32291->28842|32361->28889|32807->29306|32824->29312|32894->29359|33338->29774|33355->29780|33425->29827|33886->30259|33903->30265|33973->30312|35103->31414|35119->31420|35185->31463|35799->32049|35815->32055|35881->32098|36508->32697|36524->32703|36590->32746|37209->33337|37225->33343|37291->33386|37572->33639|37605->33662|37646->33664|37708->33697|37781->33742|37797->33748|37844->33772|37979->33888|37993->33893|38033->33894|38095->33928|38166->33989|38207->33991|38273->34028|38360->34087|38382->34098|38410->34103|39279->34943|39296->34949|39361->34991|39605->35206|39622->35212|39662->35229|40339->35877|40356->35883|40408->35912|40650->36125|40667->36131|40718->36159|41396->36808|41413->36814|41466->36844|41713->37062|41730->37068|41787->37102|42452->37738|42469->37744|42507->37759|43111->38334|43128->38340|43196->38385|43647->38817|43661->38822|43701->38823|43767->38861|43837->38921|43879->38923|43949->38964|44037->39023|44059->39034|44087->39039|44996->39919|45013->39925|45077->39966|45338->40198|45355->40204|45432->40258|46136->40933|46153->40939|46212->40975|46465->41199|46482->41205|46546->41246|47249->41920|47266->41926|47323->41960|47577->42185|47594->42191|47656->42230|48348->42893|48365->42899|48403->42914|49039->43521|49056->43527|49124->43572|49615->44031|49681->44065|49743->44095|49805->44128|50522->44826|50564->44839|50811->45058|50840->45065|50882->45078|51519->45687|51535->45693|51581->45717|53134->47242|53150->47248|53200->47276|54369->48447|54419->48495|54473->48541|54532->48654|54590->48696|54652->48768|54715->48884|54778->49008|54836->49051|54890->49086|54940->49117|54986->49144|55032->49161|67318->61419|67351->61442|67392->61444|67442->61465|67484->61479|67500->61485|67546->61509|67632->61576|67646->61581|67686->61582|67736->61604|67807->61665|67848->61667|67902->61692|67952->61714|67973->61725|68000->61730|68119->61821|68135->61827|68199->61869|68346->61988|68362->61994|68413->62023|68521->62103|68537->62109|68574->62124|68710->62241|68724->62246|68764->62247|68818->62273|68888->62333|68929->62335|68987->62364|69037->62386|69058->62397|69085->62402|69212->62501|69228->62507|69291->62548|69445->62674|69461->62680|69519->62716|69629->62798|69645->62804|69682->62819|69842->62947|69896->62969|69946->62987|69988->63000
+                  LINES: 30->2|35->2|36->3|55->22|55->22|55->22|57->24|57->24|57->24|58->25|59->26|59->26|59->26|59->26|60->27|60->27|60->27|61->28|61->28|61->28|62->29|62->29|62->29|63->30|63->30|63->30|64->31|64->31|64->31|65->32|65->32|65->32|66->33|66->33|66->33|74->41|74->41|74->41|75->42|75->42|75->42|76->43|76->43|76->43|77->44|77->44|77->44|78->45|78->45|78->45|79->46|79->46|79->46|80->47|80->47|80->47|81->48|81->48|81->48|82->49|82->49|82->49|84->51|84->51|85->52|85->52|85->52|86->53|152->119|152->119|153->120|153->120|155->122|155->122|155->122|157->124|157->124|157->124|158->125|158->125|158->125|163->130|164->131|164->131|164->131|164->131|173->140|174->141|175->142|176->143|178->145|180->147|181->148|184->151|184->151|184->151|184->151|184->151|184->151|283->250|283->250|283->250|284->251|284->251|284->251|379->346|379->346|379->346|384->351|384->351|384->351|389->356|389->356|389->356|394->361|394->361|394->361|409->376|409->376|409->376|410->377|410->377|410->377|410->377|411->378|411->378|411->378|414->381|414->381|414->381|415->382|415->382|415->382|415->382|416->383|416->383|416->383|418->385|419->386|421->388|423->390|429->396|429->396|429->396|434->401|434->401|434->401|439->406|439->406|439->406|444->411|444->411|444->411|459->426|459->426|459->426|467->434|467->434|467->434|475->442|475->442|475->442|483->450|483->450|483->450|489->456|489->456|489->456|490->457|490->457|490->457|490->457|492->459|492->459|492->459|493->460|493->460|493->460|494->461|494->461|494->461|494->461|503->470|503->470|503->470|505->472|505->472|505->472|512->479|512->479|512->479|514->481|514->481|514->481|521->488|521->488|521->488|523->490|523->490|523->490|530->497|530->497|530->497|538->505|538->505|538->505|545->512|545->512|545->512|546->513|546->513|546->513|547->514|547->514|547->514|547->514|556->523|556->523|556->523|558->525|558->525|558->525|565->532|565->532|565->532|567->534|567->534|567->534|574->541|574->541|574->541|576->543|576->543|576->543|583->550|583->550|583->550|591->558|591->558|591->558|598->565|599->566|600->567|601->568|612->579|613->580|618->585|618->585|619->586|631->598|631->598|631->598|651->618|651->618|651->618|672->639|673->640|674->641|675->642|676->643|677->644|678->645|679->646|680->647|681->648|682->649|683->650|684->651|902->869|902->869|902->869|903->870|903->870|903->870|903->870|904->871|904->871|904->871|905->872|905->872|905->872|906->873|906->873|906->873|906->873|908->875|908->875|908->875|910->877|910->877|910->877|911->878|911->878|911->878|914->881|914->881|914->881|915->882|915->882|915->882|916->883|916->883|916->883|916->883|918->885|918->885|918->885|920->887|920->887|920->887|921->888|921->888|921->888|924->891|925->892|926->893|927->894
                   -- GENERATED --
               */
           

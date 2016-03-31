@@ -7,7 +7,7 @@
 		revision="1.0-SNAPSHOT"
 		conf="default"
 		confs="default"
-		date="20160324142309"/>
+		date="20160327144729"/>
 	<dependencies>
 		<module organisation="com.typesafe.sbt" name="sbt-play-ebean">
 			<revision name="1.0.0" status="release" pubdate="20150526223843" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/playframework/play-ebean" extra-scalaVersion="2.10" extra-sbtVersion="0.13" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="143">
@@ -148,13 +148,13 @@
 			</revision>
 		</module>
 		<module organisation="com.typesafe.play" name="sbt-plugin">
-			<revision name="2.4.4" status="release" pubdate="20151118133411" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" extra-scalaVersion="2.10" extra-sbtVersion="0.13" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="52">
+			<revision name="2.4.2" status="release" pubdate="20150702223839" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" extra-scalaVersion="2.10" extra-sbtVersion="0.13" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="52">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="no" details="" size="3524" time="0" location="C:\Users\User\.ivy2\cache\scala_2.10\sbt_0.13\com.typesafe.play\sbt-plugin\ivy-2.4.4.xml" searched="false" origin-is-local="false" origin-location="https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.play/sbt-plugin/scala_2.10/sbt_0.13/2.4.4/ivys/ivy.xml"/>
-				<caller organisation="blankproject" name="blankproject$sources_2.11" conf="default" rev="2.4.4" rev-constraint-default="2.4.4" rev-constraint-dynamic="2.4.4" callerrev="1.0-SNAPSHOT" extra-scalaVersion="2.10" extra-sbtVersion="0.13"/>
+				<metadata-artifact status="no" details="" size="3524" time="0" location="C:\Users\User\.ivy2\cache\scala_2.10\sbt_0.13\com.typesafe.play\sbt-plugin\ivy-2.4.2.xml" searched="false" origin-is-local="false" origin-location="https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.play/sbt-plugin/scala_2.10/sbt_0.13/2.4.2/ivys/ivy.xml"/>
+				<caller organisation="blankproject" name="blankproject$sources_2.11" conf="default" rev="2.4.2" rev-constraint-default="2.4.2" rev-constraint-dynamic="2.4.2" callerrev="1.0-SNAPSHOT" extra-scalaVersion="2.10" extra-sbtVersion="0.13"/>
 				<artifacts>
-					<artifact name="sbt-plugin" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="23589" time="0" location="C:\Users\User\.ivy2\cache\scala_2.10\sbt_0.13\com.typesafe.play\sbt-plugin\srcs\sbt-plugin-2.4.4-sources.jar">
-						<origin-location is-local="false" location="https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.play/sbt-plugin/scala_2.10/sbt_0.13/2.4.4/srcs/sbt-plugin-sources.jar"/>
+					<artifact name="sbt-plugin" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="23581" time="0" location="C:\Users\User\.ivy2\cache\scala_2.10\sbt_0.13\com.typesafe.play\sbt-plugin\srcs\sbt-plugin-2.4.2-sources.jar">
+						<origin-location is-local="false" location="https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.play/sbt-plugin/scala_2.10/sbt_0.13/2.4.2/srcs/sbt-plugin-sources.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
@@ -982,25 +982,25 @@
 			</revision>
 		</module>
 		<module organisation="com.typesafe.play" name="sbt-run-support_2.10">
-			<revision name="2.4.4" status="release" pubdate="20151118222847" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="57">
+			<revision name="2.4.2" status="release" pubdate="20150703073542" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="57">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="no" details="" size="3225" time="0" location="C:\Users\User\.ivy2\cache\com.typesafe.play\sbt-run-support_2.10\ivy-2.4.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/sbt-run-support_2.10/2.4.4/sbt-run-support_2.10-2.4.4.pom"/>
-				<caller organisation="blankproject" name="blankproject$sources_2.11" conf="default" rev="2.4.4" rev-constraint-default="2.4.4" rev-constraint-dynamic="2.4.4" callerrev="1.0-SNAPSHOT"/>
+				<metadata-artifact status="no" details="" size="3225" time="0" location="C:\Users\User\.ivy2\cache\com.typesafe.play\sbt-run-support_2.10\ivy-2.4.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/sbt-run-support_2.10/2.4.2/sbt-run-support_2.10-2.4.2.pom"/>
+				<caller organisation="blankproject" name="blankproject$sources_2.11" conf="default" rev="2.4.2" rev-constraint-default="2.4.2" rev-constraint-dynamic="2.4.2" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
-					<artifact name="sbt-run-support_2.10" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="15530" time="0" location="C:\Users\User\.ivy2\cache\com.typesafe.play\sbt-run-support_2.10\srcs\sbt-run-support_2.10-2.4.4-sources.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/sbt-run-support_2.10/2.4.4/sbt-run-support_2.10-2.4.4-sources.jar"/>
+					<artifact name="sbt-run-support_2.10" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="14499" time="0" location="C:\Users\User\.ivy2\cache\com.typesafe.play\sbt-run-support_2.10\srcs\sbt-run-support_2.10-2.4.2-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/sbt-run-support_2.10/2.4.2/sbt-run-support_2.10-2.4.2-sources.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="com.typesafe.play" name="build-link">
-			<revision name="2.4.4" status="release" pubdate="20151118222836" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="58">
+			<revision name="2.4.2" status="release" pubdate="20150703073536" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="58">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="no" details="" size="2699" time="0" location="C:\Users\User\.ivy2\cache\com.typesafe.play\build-link\ivy-2.4.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/build-link/2.4.4/build-link-2.4.4.pom"/>
-				<caller organisation="blankproject" name="blankproject$sources_2.11" conf="default" rev="2.4.4" rev-constraint-default="2.4.4" rev-constraint-dynamic="2.4.4" callerrev="1.0-SNAPSHOT"/>
+				<metadata-artifact status="no" details="" size="2699" time="0" location="C:\Users\User\.ivy2\cache\com.typesafe.play\build-link\ivy-2.4.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/build-link/2.4.2/build-link-2.4.2.pom"/>
+				<caller organisation="blankproject" name="blankproject$sources_2.11" conf="default" rev="2.4.2" rev-constraint-default="2.4.2" rev-constraint-dynamic="2.4.2" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
-					<artifact name="build-link" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="4268" time="0" location="C:\Users\User\.ivy2\cache\com.typesafe.play\build-link\srcs\build-link-2.4.4-sources.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/build-link/2.4.4/build-link-2.4.4-sources.jar"/>
+					<artifact name="build-link" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="4268" time="0" location="C:\Users\User\.ivy2\cache\com.typesafe.play\build-link\srcs\build-link-2.4.2-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/build-link/2.4.2/build-link-2.4.2-sources.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
@@ -1020,25 +1020,25 @@
 			</revision>
 		</module>
 		<module organisation="com.typesafe.play" name="play-exceptions">
-			<revision name="2.4.4" status="release" pubdate="20151118222841" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="59">
+			<revision name="2.4.2" status="release" pubdate="20150703073532" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="59">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="no" details="" size="2381" time="0" location="C:\Users\User\.ivy2\cache\com.typesafe.play\play-exceptions\ivy-2.4.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-exceptions/2.4.4/play-exceptions-2.4.4.pom"/>
-				<caller organisation="blankproject" name="blankproject$sources_2.11" conf="default" rev="2.4.4" rev-constraint-default="2.4.4" rev-constraint-dynamic="2.4.4" callerrev="1.0-SNAPSHOT"/>
+				<metadata-artifact status="no" details="" size="2381" time="0" location="C:\Users\User\.ivy2\cache\com.typesafe.play\play-exceptions\ivy-2.4.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-exceptions/2.4.2/play-exceptions-2.4.2.pom"/>
+				<caller organisation="blankproject" name="blankproject$sources_2.11" conf="default" rev="2.4.2" rev-constraint-default="2.4.2" rev-constraint-dynamic="2.4.2" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
-					<artifact name="play-exceptions" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="2258" time="0" location="C:\Users\User\.ivy2\cache\com.typesafe.play\play-exceptions\srcs\play-exceptions-2.4.4-sources.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-exceptions/2.4.4/play-exceptions-2.4.4-sources.jar"/>
+					<artifact name="play-exceptions" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="2258" time="0" location="C:\Users\User\.ivy2\cache\com.typesafe.play\play-exceptions\srcs\play-exceptions-2.4.2-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-exceptions/2.4.2/play-exceptions-2.4.2-sources.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="com.typesafe.play" name="routes-compiler_2.10">
-			<revision name="2.4.4" status="release" pubdate="20151118222853" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="53">
+			<revision name="2.4.2" status="release" pubdate="20150703073550" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="53">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="no" details="" size="3357" time="0" location="C:\Users\User\.ivy2\cache\com.typesafe.play\routes-compiler_2.10\ivy-2.4.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/routes-compiler_2.10/2.4.4/routes-compiler_2.10-2.4.4.pom"/>
-				<caller organisation="blankproject" name="blankproject$sources_2.11" conf="default" rev="2.4.4" rev-constraint-default="2.4.4" rev-constraint-dynamic="2.4.4" callerrev="1.0-SNAPSHOT"/>
+				<metadata-artifact status="no" details="" size="3357" time="0" location="C:\Users\User\.ivy2\cache\com.typesafe.play\routes-compiler_2.10\ivy-2.4.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/routes-compiler_2.10/2.4.2/routes-compiler_2.10-2.4.2.pom"/>
+				<caller organisation="blankproject" name="blankproject$sources_2.11" conf="default" rev="2.4.2" rev-constraint-default="2.4.2" rev-constraint-dynamic="2.4.2" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
-					<artifact name="routes-compiler_2.10" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="13804" time="0" location="C:\Users\User\.ivy2\cache\com.typesafe.play\routes-compiler_2.10\srcs\routes-compiler_2.10-2.4.4-sources.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/routes-compiler_2.10/2.4.4/routes-compiler_2.10-2.4.4-sources.jar"/>
+					<artifact name="routes-compiler_2.10" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="13804" time="0" location="C:\Users\User\.ivy2\cache\com.typesafe.play\routes-compiler_2.10\srcs\routes-compiler_2.10-2.4.2-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/routes-compiler_2.10/2.4.2/routes-compiler_2.10-2.4.2-sources.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>

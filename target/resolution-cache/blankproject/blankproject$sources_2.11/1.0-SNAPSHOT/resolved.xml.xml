@@ -4,7 +4,7 @@
 		module="blankproject$sources_2.11"
 		revision="1.0-SNAPSHOT"
 		status="integration"
-		publication="20160324142309"
+		publication="20160327144729"
 	/>
 	<configurations>
 		<conf name="default" visibility="public" description=""/>
@@ -168,10 +168,10 @@
 		<dependency org="org.scala-sbt" name="precompiled-2_9_3" rev="0.13.8" transitive="false" conf="default->default(compile)">
 			<artifact name="precompiled-2_9_3" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 		</dependency>
-		<dependency org="com.typesafe.play" name="sbt-plugin" rev="2.4.4" transitive="false" conf="default->default(compile)" scalaVersion="2.10" sbtVersion="0.13">
+		<dependency org="com.typesafe.play" name="sbt-plugin" rev="2.4.2" transitive="false" conf="default->default(compile)" scalaVersion="2.10" sbtVersion="0.13">
 			<artifact name="sbt-plugin" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 		</dependency>
-		<dependency org="com.typesafe.play" name="routes-compiler_2.10" rev="2.4.4" transitive="false" conf="default->default(compile)">
+		<dependency org="com.typesafe.play" name="routes-compiler_2.10" rev="2.4.2" transitive="false" conf="default->default(compile)">
 			<artifact name="routes-compiler_2.10" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 		</dependency>
 		<dependency org="com.typesafe.play" name="twirl-api_2.10" rev="1.1.1" transitive="false" conf="default->default(compile)">
@@ -183,13 +183,13 @@
 		<dependency org="commons-io" name="commons-io" rev="2.4" transitive="false" conf="default->default(compile)">
 			<artifact name="commons-io" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 		</dependency>
-		<dependency org="com.typesafe.play" name="sbt-run-support_2.10" rev="2.4.4" transitive="false" conf="default->default(compile)">
+		<dependency org="com.typesafe.play" name="sbt-run-support_2.10" rev="2.4.2" transitive="false" conf="default->default(compile)">
 			<artifact name="sbt-run-support_2.10" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 		</dependency>
-		<dependency org="com.typesafe.play" name="build-link" rev="2.4.4" transitive="false" conf="default->default(compile)">
+		<dependency org="com.typesafe.play" name="build-link" rev="2.4.2" transitive="false" conf="default->default(compile)">
 			<artifact name="build-link" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 		</dependency>
-		<dependency org="com.typesafe.play" name="play-exceptions" rev="2.4.4" transitive="false" conf="default->default(compile)">
+		<dependency org="com.typesafe.play" name="play-exceptions" rev="2.4.2" transitive="false" conf="default->default(compile)">
 			<artifact name="play-exceptions" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 		</dependency>
 		<dependency org="org.javassist" name="javassist" rev="3.19.0-GA" transitive="false" conf="default->default(compile)">

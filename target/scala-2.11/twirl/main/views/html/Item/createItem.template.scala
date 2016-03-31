@@ -60,36 +60,33 @@ Seq[Any](format.raw/*1.19*/("""
                                                             <input type="text" id="price" name="price" title="Cijena" class="input-text" required>
                                                         </div>
                                                         <div class="input-box name-lastname">
-
                                                                 <label  for="category">Kategorija<em class="required">*</em></label>
-
                                                                 <select title="Kategorija" class="validate-select" id="category" name="category">
                                                                     <option value="Select">Select</option>
-                                                                    """),_display_(/*37.70*/for(category <- models.Category.findAllCategories()) yield /*37.122*/{_display_(Seq[Any](format.raw/*37.123*/("""
-                                                                        """),format.raw/*38.73*/("""<option value=""""),_display_(/*38.89*/category/*38.97*/.id),format.raw/*38.100*/("""">"""),_display_(/*38.103*/category/*38.111*/.name),format.raw/*38.116*/("""</option>
-                                                                    """)))}),format.raw/*39.70*/("""
-                                                                """),format.raw/*40.65*/("""</select>
-
+                                                                    """),_display_(/*35.70*/for(category <- models.Category.findAllCategories()) yield /*35.122*/{_display_(Seq[Any](format.raw/*35.123*/("""
+                                                                        """),format.raw/*36.73*/("""<option value=""""),_display_(/*36.89*/category/*36.97*/.id),format.raw/*36.100*/("""">"""),_display_(/*36.103*/category/*36.111*/.name),format.raw/*36.116*/("""</option>
+                                                                    """)))}),format.raw/*37.70*/("""
+                                                                """),format.raw/*38.65*/("""</select>
                                                         </div>
+
                                                     </div>
                                                 </li>
                                                 <li>
-
                                                     <div class="input-box">
-                                                        <label for="description">Comment<em class="required">*</em></label>
+                                                        <label for="description">Opis proizvoda<em class="required">*</em></label>
                                                         <br>
                                                         <div class="">
                                                             <textarea name="description" id="description" title="Opis" class="input-text" cols="5" rows="3" style="resize: vertical"></textarea>
                                                         </div>
                                                     </div>
-
-
                                                 </li>
                                             </ul>
 
                                         </fieldset>
                                     </li>
                                     <li><span class="require"><em class="required">* </em>Obavezna polja</span></li>
+                                    <li><span class="require"><em class="required"></em>Nakon što dodate proizvod, molimo Vas da na ažuriranju proizvoda odredite i potkategoriju kako bi
+                                    potencijalni kupci mogli lakše pronaći Vaš proizvod. Hvala.</span></li>
                                     <li>
                                         <div class="buttons-set">
                                             <button type="submit" title="Submit" class="button submit"> <span> Dodaj </span> </button>
@@ -124,11 +121,11 @@ Seq[Any](format.raw/*1.19*/("""
 object createItem extends createItem_Scope0.createItem
               /*
                   -- GENERATED --
-                  DATE: Fri Mar 25 02:08:38 CET 2016
+                  DATE: Thu Mar 31 01:03:04 CEST 2016
                   SOURCE: E:/namjestaj/app/views/Item/createItem.scala.html
-                  HASH: fa8bdda6e57c9c9b26df36e3efafb10afef7447e
-                  MATRIX: 761->1|873->18|901->21|912->25|949->26|981->32|1537->561|1552->567|1599->592|3541->2507|3610->2559|3650->2560|3752->2634|3795->2650|3812->2658|3837->2661|3868->2664|3886->2672|3913->2677|4024->2757|4118->2823
-                  LINES: 27->1|32->1|33->2|33->2|33->2|34->3|44->13|44->13|44->13|68->37|68->37|68->37|69->38|69->38|69->38|69->38|69->38|69->38|69->38|70->39|71->40
+                  HASH: 4c2dbd6370f507bab513b16adb786d8bb6ac87de
+                  MATRIX: 761->1|873->18|900->20|911->24|948->25|979->30|1525->549|1540->555|1587->580|3503->2469|3572->2521|3612->2522|3713->2595|3756->2611|3773->2619|3798->2622|3829->2625|3847->2633|3874->2638|3984->2717|4077->2782
+                  LINES: 27->1|32->1|33->2|33->2|33->2|34->3|44->13|44->13|44->13|66->35|66->35|66->35|67->36|67->36|67->36|67->36|67->36|67->36|67->36|68->37|69->38
                   -- GENERATED --
               */
           

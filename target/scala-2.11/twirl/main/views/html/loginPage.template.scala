@@ -36,18 +36,22 @@ Seq[Any](_display_(/*1.2*/main/*1.6*/{_display_(Seq[Any](format.raw/*1.7*/("""
             <div class="account-login">
                 <fieldset class="col2-set">
                     <legend>Prijavite se ili kreirajte profil</legend>
-                    <div class="col-1 new-users"><strong>Novi korisnici</strong>
-                        <div class="content">
-                            <p>Ukoliko želite kreirati profil molimo Vas da nas kontaktirate putem email-a.
-                                Kreiranjem profila biće Vam omogućeno da prezentujete svoje artikle, dodate radnje na mapu, pratite kupovinu,
-                                i još mnoge druge pogodnosti.</p>
-                            <div class="buttons-set">
-                                <button class="button create-account"><span>Kontaktirajte nas</span></button>
+
+                    <form  method="GET" role="form" action=""""),_display_(/*9.62*/routes/*9.68*/.ContactUs.contactUsRender()),format.raw/*9.96*/("""" >
+                        <div class="col-1 new-users"><strong>Novi korisnici</strong>
+                            <div class="content">
+                                <p>Ukoliko želite kreirati profil molimo Vas da nas kontaktirate putem email-a.
+                                    Kreiranjem profila biće Vam omogućeno da prezentujete svoje artikle, dodate radnje na mapu, pratite kupovinu,
+                                    i još mnoge druge pogodnosti.</p>
+                                <div class="buttons-set">
+                                    <button class="button"><i class="fa fa-envelope"></i> <span> Kontaktirajte nas </span></button>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </form>
+
                     <div class="col-2 registered-users"><strong>Registrovani korisnici </strong>
-                        <form  method="POST" role="form" action=""""),_display_(/*19.67*/routes/*19.73*/.Login.login()),format.raw/*19.87*/("""" >
+                        <form  method="POST" role="form" action=""""),_display_(/*23.67*/routes/*23.73*/.Login.login()),format.raw/*23.87*/("""" >
                             <div class="content">
                                 <p>Ukoliko imate profil, molimo Vas da unesete podatke.</p>
                                 <ul class="form-list">
@@ -99,11 +103,11 @@ Seq[Any](_display_(/*1.2*/main/*1.6*/{_display_(Seq[Any](format.raw/*1.7*/("""
 object loginPage extends loginPage_Scope0.loginPage
               /*
                   -- GENERATED --
-                  DATE: Thu Mar 24 14:28:11 CET 2016
+                  DATE: Tue Mar 29 19:08:07 CEST 2016
                   SOURCE: E:/namjestaj/app/views/loginPage.scala.html
-                  HASH: 825b2d6e7b0c742fdc206566fc9000124a08e2c5
-                  MATRIX: 835->1|846->5|883->6|915->12|2107->1177|2122->1183|2157->1197
-                  LINES: 32->1|32->1|32->1|33->2|50->19|50->19|50->19
+                  HASH: 7978bf2f89bf14d5b890e7336a9ae9313ab75a58
+                  MATRIX: 835->1|846->5|883->6|915->12|1295->366|1309->372|1357->400|2352->1368|2367->1374|2402->1388
+                  LINES: 32->1|32->1|32->1|33->2|40->9|40->9|40->9|54->23|54->23|54->23
                   -- GENERATED --
               */
           

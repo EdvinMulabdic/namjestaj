@@ -58,4 +58,7 @@ public class Category extends Model {
     public static List<Category> findAllCategories(){
         return finder.all();
     }
+
+
+
 }

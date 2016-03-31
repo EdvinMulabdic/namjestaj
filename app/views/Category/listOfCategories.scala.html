@@ -30,6 +30,7 @@
                             <tr class="about">
                                 <th>Naziv kategorije</th>
                                 <th class="text-center">Uredi</th>
+                                <th class="text-center">Podkategorije</th>
                                 <th class="text-center">Obriši</th>
                             </tr>
                         </thead>
@@ -40,6 +41,11 @@
                                 <td class="text-center">
                                     <a class="fa-buttons" title="Uredi kategoriju" href="@routes.Categories.updateCategory(category.id)" role="button">
                                         <i class=" fa fa-pencil fa-lg"></i>
+                                    </a>
+                                </td>
+                                <td class="text-center">
+                                    <a class="fa-buttons" title="Dodaj podkategoriju" href="@routes.Categories.listOfSubCategories(category.id)" role="button">
+                                        <i class=" fa fa-check fa-lg"></i>
                                     </a>
                                 </td>
                                 <td class="text-center">

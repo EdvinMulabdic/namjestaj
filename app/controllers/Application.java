@@ -2,6 +2,7 @@ package controllers;
 
 import play.mvc.Controller;
 import play.mvc.Result;
+import views.html.faq;
 import views.html.index;
 
 public class Application extends Controller {
@@ -10,5 +11,7 @@ public class Application extends Controller {
         return ok(index.render());
     }
 
-
+    public Result faqRender(){
+        return ok (faq.render());
+    }
 }

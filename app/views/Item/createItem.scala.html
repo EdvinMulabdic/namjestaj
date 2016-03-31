@@ -29,36 +29,33 @@
                                                             <input type="text" id="price" name="price" title="Cijena" class="input-text" required>
                                                         </div>
                                                         <div class="input-box name-lastname">
-
                                                                 <label  for="category">Kategorija<em class="required">*</em></label>
-
                                                                 <select title="Kategorija" class="validate-select" id="category" name="category">
                                                                     <option value="Select">Select</option>
                                                                     @for(category <- models.Category.findAllCategories()){
                                                                         <option value="@category.id">@category.name</option>
                                                                     }
                                                                 </select>
-
                                                         </div>
+
                                                     </div>
                                                 </li>
                                                 <li>
-
                                                     <div class="input-box">
-                                                        <label for="description">Comment<em class="required">*</em></label>
+                                                        <label for="description">Opis proizvoda<em class="required">*</em></label>
                                                         <br>
                                                         <div class="">
                                                             <textarea name="description" id="description" title="Opis" class="input-text" cols="5" rows="3" style="resize: vertical"></textarea>
                                                         </div>
                                                     </div>
-
-
                                                 </li>
                                             </ul>
 
                                         </fieldset>
                                     </li>
                                     <li><span class="require"><em class="required">* </em>Obavezna polja</span></li>
+                                    <li><span class="require"><em class="required"></em>Nakon što dodate proizvod, molimo Vas da na ažuriranju proizvoda odredite i potkategoriju kako bi
+                                    potencijalni kupci mogli lakše pronaći Vaš proizvod. Hvala.</span></li>
                                     <li>
                                         <div class="buttons-set">
                                             <button type="submit" title="Submit" class="button submit"> <span> Dodaj </span> </button>

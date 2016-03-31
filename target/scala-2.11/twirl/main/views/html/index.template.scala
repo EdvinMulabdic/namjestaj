@@ -30,13 +30,15 @@ class index extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Forma
 
 
 Seq[Any](_display_(/*1.2*/main/*1.6*/ {_display_(Seq[Any](format.raw/*1.8*/("""
-    """),format.raw/*2.5*/("""<!-- Slider -->
+    """),format.raw/*2.5*/("""<script type="text/javascript" src=""""),_display_(/*2.42*/routes/*2.48*/.Assets.versioned("javascripts/lastTenProducts.js")),format.raw/*2.99*/(""""></script>
+
+    <!-- Slider -->
     <div id="magik-slideshow" class="magik-slideshow">
         <div class="container">
             <div id='rev_slider_4_wrapper' class='rev_slider_wrapper fullwidthbanner-container' >
                 <div id='rev_slider_4' class='rev_slider fullwidthabanner'>
                     <ul>
-                        <li data-transition='random' data-slotamount='7' data-masterspeed='1000' data-thumb='"""),_display_(/*8.111*/routes/*8.117*/.Assets.versioned("images/slide-img1.jpg")),format.raw/*8.159*/("""'><img src='"""),_display_(/*8.172*/routes/*8.178*/.Assets.versioned("images/slide-img1.jpg")),format.raw/*8.220*/("""' data-bgposition='left top'  data-bgfit='cover' data-bgrepeat='no-repeat' alt="" />
+                        <li data-transition='random' data-slotamount='7' data-masterspeed='1000' data-thumb='"""),_display_(/*10.111*/routes/*10.117*/.Assets.versioned("images/slide-img1.jpg")),format.raw/*10.159*/("""'><img src='"""),_display_(/*10.172*/routes/*10.178*/.Assets.versioned("images/slide-img1.jpg")),format.raw/*10.220*/("""' data-bgposition='left top'  data-bgfit='cover' data-bgrepeat='no-repeat' alt="" />
                             <div class="info">
                                 <div class='tp-caption ExtraLargeTitle sft  tp-resizeme ' data-x='0'  data-y='165'  data-endspeed='500'  data-speed='500' data-start='1100' data-easing='Linear.easeNone' data-splitin='none' data-splitout='none' data-elementdelay='0.1' data-endelementdelay='0.1' style='z-index:2;max-width:auto;max-height:auto;white-space:nowrap;'><span>New Season</span></div>
                                 <div class='tp-caption LargeTitle sfl  tp-resizeme ' data-x='0'  data-y='220'  data-endspeed='500'  data-speed='500' data-start='1300' data-easing='Linear.easeNone' data-splitin='none' data-splitout='none' data-elementdelay='0.1' data-endelementdelay='0.1' style='z-index:3; max-width:auto;max-height:auto;white-space:nowrap;'><span>Summer Sale</span></div>
@@ -44,7 +46,23 @@ Seq[Any](_display_(/*1.2*/main/*1.6*/ {_display_(Seq[Any](format.raw/*1.8*/("""
                                 <div class='tp-caption Title sft  tp-resizeme ' data-x='0'  data-y='320'  data-endspeed='500'  data-speed='500' data-start='1500' data-easing='Power2.easeInOut' data-splitin='none' data-splitout='none' data-elementdelay='0.1' data-endelementdelay='0.1' style='z-index:4;max-width:auto;max-height:auto;white-space:nowrap;'><h4 class="banner-text">In augue urna, nunc, tincidunt, augue, augue facilisis facilisis</h4></div>
                             </div>
                         </li>
-                        <li data-transition='random' data-slotamount='7' data-masterspeed='1000' data-thumb='"""),_display_(/*16.111*/routes/*16.117*/.Assets.versioned("images/slide-img2.jpg")),format.raw/*16.159*/("""'><img src='"""),_display_(/*16.172*/routes/*16.178*/.Assets.versioned("images/slide-img2.jpg")),format.raw/*16.220*/("""'  data-bgposition='left top'  data-bgfit='cover' data-bgrepeat='no-repeat'  alt=""/>
+                        <li data-transition='random' data-slotamount='7' data-masterspeed='1000' data-thumb='"""),_display_(/*18.111*/routes/*18.117*/.Assets.versioned("images/slide-img2.jpg")),format.raw/*18.159*/("""'><img src='"""),_display_(/*18.172*/routes/*18.178*/.Assets.versioned("images/slide-img2.jpg")),format.raw/*18.220*/("""'  data-bgposition='left top'  data-bgfit='cover' data-bgrepeat='no-repeat'  alt=""/>
+                            <div class="info">
+                                <div class='tp-caption ExtraLargeTitle sft slide2  tp-resizeme ' data-x='45'  data-y='165'  data-endspeed='500'  data-speed='500' data-start='1100' data-easing='Linear.easeNone' data-splitin='none' data-splitout='none' data-elementdelay='0.1' data-endelementdelay='0.1' style='z-index:2;max-width:auto;max-height:auto;white-space:nowrap;padding-right:0px'>laptop Sale</div>
+                                <div class='tp-caption LargeTitle sfl  tp-resizeme ' data-x='45'  data-y='220'  data-endspeed='500'  data-speed='500' data-start='1300' data-easing='Linear.easeNone' data-splitin='none' data-splitout='none' data-elementdelay='0.1' data-endelementdelay='0.1' style='z-index:3;max-width:auto;max-height:auto;white-space:nowrap;'>Go Lightly</div>
+                                <div    class='tp-caption sfb  tp-resizeme ' data-x='45'  data-y='400'  data-endspeed='500'  data-speed='500' data-start='1500' data-easing='Linear.easeNone' data-splitin='none' data-splitout='none' data-elementdelay='0.1' data-endelementdelay='0.1' style='z-index:4;max-width:auto;max-height:auto;white-space:nowrap;'><a href='#' class="buy-btn">Buy Now</a></div>
+                                <div class='tp-caption Title sft  tp-resizeme ' data-x='45'  data-y='320'  data-endspeed='500'  data-speed='500' data-start='1500' data-easing='Power2.easeInOut' data-splitin='none' data-splitout='none' data-elementdelay='0.1' data-endelementdelay='0.1' style='z-index:4;max-width:auto;max-height:auto;white-space:nowrap;'><h4 class="banner-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4></div>
+                            </div>
+                        </li>
+                        <li data-transition='random' data-slotamount='7' data-masterspeed='1000' data-thumb='"""),_display_(/*26.111*/routes/*26.117*/.Assets.versioned("images/slide-img3.jpg")),format.raw/*26.159*/("""'><img src='"""),_display_(/*26.172*/routes/*26.178*/.Assets.versioned("images/slide-img3.jpg")),format.raw/*26.220*/("""'  data-bgposition='left top'  data-bgfit='cover' data-bgrepeat='no-repeat'  alt=""/>
+                            <div class="info">
+                                <div class='tp-caption ExtraLargeTitle sft slide2  tp-resizeme ' data-x='45'  data-y='165'  data-endspeed='500'  data-speed='500' data-start='1100' data-easing='Linear.easeNone' data-splitin='none' data-splitout='none' data-elementdelay='0.1' data-endelementdelay='0.1' style='z-index:2;max-width:auto;max-height:auto;white-space:nowrap;padding-right:0px'>laptop Sale</div>
+                                <div class='tp-caption LargeTitle sfl  tp-resizeme ' data-x='45'  data-y='220'  data-endspeed='500'  data-speed='500' data-start='1300' data-easing='Linear.easeNone' data-splitin='none' data-splitout='none' data-elementdelay='0.1' data-endelementdelay='0.1' style='z-index:3;max-width:auto;max-height:auto;white-space:nowrap;'>Go Lightly</div>
+                                <div    class='tp-caption sfb  tp-resizeme ' data-x='45'  data-y='400'  data-endspeed='500'  data-speed='500' data-start='1500' data-easing='Linear.easeNone' data-splitin='none' data-splitout='none' data-elementdelay='0.1' data-endelementdelay='0.1' style='z-index:4;max-width:auto;max-height:auto;white-space:nowrap;'><a href='#' class="buy-btn">Buy Now</a></div>
+                                <div class='tp-caption Title sft  tp-resizeme ' data-x='45'  data-y='320'  data-endspeed='500'  data-speed='500' data-start='1500' data-easing='Power2.easeInOut' data-splitin='none' data-splitout='none' data-elementdelay='0.1' data-endelementdelay='0.1' style='z-index:4;max-width:auto;max-height:auto;white-space:nowrap;'><h4 class="banner-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4></div>
+                            </div>
+                        </li>
+                        <li data-transition='random' data-slotamount='7' data-masterspeed='1000' data-thumb='"""),_display_(/*34.111*/routes/*34.117*/.Assets.versioned("images/slide-img4.jpg")),format.raw/*34.159*/("""'><img src='"""),_display_(/*34.172*/routes/*34.178*/.Assets.versioned("images/slide-img4.jpg")),format.raw/*34.220*/("""'  data-bgposition='left top'  data-bgfit='cover' data-bgrepeat='no-repeat'  alt=""/>
                             <div class="info">
                                 <div class='tp-caption ExtraLargeTitle sft slide2  tp-resizeme ' data-x='45'  data-y='165'  data-endspeed='500'  data-speed='500' data-start='1100' data-easing='Linear.easeNone' data-splitin='none' data-splitout='none' data-elementdelay='0.1' data-endelementdelay='0.1' style='z-index:2;max-width:auto;max-height:auto;white-space:nowrap;padding-right:0px'>laptop Sale</div>
                                 <div class='tp-caption LargeTitle sfl  tp-resizeme ' data-x='45'  data-y='220'  data-endspeed='500'  data-speed='500' data-start='1300' data-easing='Linear.easeNone' data-splitin='none' data-splitout='none' data-elementdelay='0.1' data-endelementdelay='0.1' style='z-index:3;max-width:auto;max-height:auto;white-space:nowrap;'>Go Lightly</div>
@@ -65,232 +83,73 @@ Seq[Any](_display_(/*1.2*/main/*1.6*/ {_display_(Seq[Any](format.raw/*1.8*/("""
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 wow bounceup animated">
-                    <div class="col"><a href="#"><img src='"""),_display_(/*37.61*/routes/*37.67*/.Assets.versioned("images/block1.jpg" )),format.raw/*37.106*/("""'alt="offer banner3"></a></div>
+                    <div class="col"><a href="#"><img src='"""),_display_(/*55.61*/routes/*55.67*/.Assets.versioned("images/block1.jpg" )),format.raw/*55.106*/("""'alt="offer banner3"></a></div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 wow bounceup animated">
-                    <div class="col"><a href="#"><img src='"""),_display_(/*40.61*/routes/*40.67*/.Assets.versioned("images/block1.jpg")),format.raw/*40.105*/("""' alt="offer banner3"></a></div>
+                    <div class="col"><a href="#"><img src='"""),_display_(/*58.61*/routes/*58.67*/.Assets.versioned("images/block2.jpg")),format.raw/*58.105*/("""' alt="offer banner3"></a></div>
                 </div>
                 <div class="ccol-lg-4 col-md-4 col-sm-4 col-xs-12 wow bounceup animated">
-                    <div class="col"><a href="#"><img src='"""),_display_(/*43.61*/routes/*43.67*/.Assets.versioned("images/block1.jpg")),format.raw/*43.105*/("""' alt="offer banner3"></a></div>
+                    <div class="col"><a href="#"><img src='"""),_display_(/*61.61*/routes/*61.67*/.Assets.versioned("images/block3.jpg")),format.raw/*61.105*/("""' alt="offer banner3"></a></div>
                 </div>
-            </div>
+             </div>
         </div>
     </div>
     <!-- end banner -->
-
     <!-- Featured Slider -->
     <section class="featured-pro container wow bounceInUp animated">
         <div class="slider-items-products">
             <div class="new_title center">
-                <h2>ACCESSORIES</h2>
+                <h2>IZDVOJENI PROIZVODI</h2>
             </div>
             <div id="best-seller-slider" class="product-flexslider hidden-buttons">
                 <div class="slider-items slider-width-col4 products-grid">
-                    <div class="item">
-                        <div class="item-inner">
-                            <div class="item-img">
-                                <div class="item-img-info"> <a class="product-image" title="Retis lapen casen" href="product_detail.html"> <img alt="Retis lapen casen" src='"""),_display_(/*61.175*/routes/*61.181*/.Assets.versioned("images/product1.jpg")),format.raw/*61.221*/("""'> </a>
-                                    <div class="new-label new-top-left">new</div>
-                                    <a href="quick_view.html" class="quickview-btn"><span>Quick View</span></a> </div>
-                            </div>
-                            <div class="item-info">
-                                <div class="info-inner">
-                                    <div class="item-title"> <a title="Retis lapen casen" href="product_detail.html"> Sample Product </a> </div>
-                                    <div class="item-content">
-                                        <div class="rating">
-                                            <div class="ratings">
-                                                <div class="rating-box">
-                                                    <div class="rating"></div>
-                                                </div>
-                                                <p class="rating-links"> <a href="#">1 Review(s)</a> <span class="separator">|</span> <a href="#">Add Review</a> </p>
+                    """),_display_(/*75.22*/for(item <- models.Item.itemsForHomepageSlider()) yield /*75.71*/ {_display_(Seq[Any](format.raw/*75.73*/("""
+                        """),format.raw/*76.25*/("""<!-- Item -->
+                        <div class="item">
+                            <div class="item-inner">
+                                <div class="item-img">
+                                    """),_display_(/*80.38*/if(item.images.size() > 0)/*80.64*/{_display_(Seq[Any](format.raw/*80.65*/("""
+                                        """),format.raw/*81.41*/("""<div class="item-img-info"> <a class="product-image" title=""""),_display_(/*81.102*/item/*81.106*/.name),format.raw/*81.111*/("""" href=""""),_display_(/*81.120*/routes/*81.126*/.Items.itemRender(item.id)),format.raw/*81.152*/(""""> <img alt="Retis lapen casen" src='"""),_display_(/*81.190*/models/*81.196*/.Item.getFirstItemImage(item.id).getSize(179,217)),format.raw/*81.245*/("""'> </a>
+                                            <div class="new-label new-top-left">new</div>
+                                            <a class="quickview-btn" ><span>Quick View</span></a> </div>
+                                    """)))}/*84.38*/else/*84.42*/{_display_(Seq[Any](format.raw/*84.43*/("""
+                                        """),format.raw/*85.41*/("""<div class="item-img-info"> <a class="product-image" title=""""),_display_(/*85.102*/item/*85.106*/.name),format.raw/*85.111*/("""" href='"""),_display_(/*85.120*/routes/*85.126*/.Items.itemRender(item.id)),format.raw/*85.152*/("""'> <img alt="Retis lapen casen" src='"""),_display_(/*85.190*/routes/*85.196*/.Assets.versioned("images/product.png")),format.raw/*85.235*/("""'> </a>
+                                            <div class="new-label new-top-left">new</div>
+                                            <a class="quickview-btn" ><span>Quick View</span></a> </div>
+                                    """)))}),format.raw/*88.38*/("""
+                                """),format.raw/*89.33*/("""</div>
+                                <div class="item-info">
+                                    <div class="info-inner">
+                                        <div class="item-title"> <a title="Retis lapen casen" href=""""),_display_(/*92.102*/routes/*92.108*/.Items.itemRender(item.id)),format.raw/*92.134*/(""""> """),_display_(/*92.138*/item/*92.142*/.name),format.raw/*92.147*/(""" """),format.raw/*92.148*/("""</a> </div>
+                                        <div class="item-content">
+                                            """),format.raw/*94.69*/("""
+                                                """),format.raw/*95.74*/("""
+                                                    """),format.raw/*96.81*/("""
+                                                        """),format.raw/*97.87*/("""
+                                                    """),format.raw/*98.63*/("""
+                                                    """),format.raw/*99.174*/("""
+                                                """),format.raw/*100.59*/("""
+                                            """),format.raw/*101.55*/("""
+                                            """),format.raw/*102.45*/("""<div class="item-price">
+                                                <div class="price-box"> <span class="regular-price"> <span class="price">"""),_display_(/*103.123*/item/*103.127*/.price),format.raw/*103.133*/("""</span> </span> </div>
                                             </div>
-                                        </div>
-                                        <div class="item-price">
-                                            <div class="price-box"> <span class="regular-price"> <span class="price">$125.00</span> </span> </div>
-                                        </div>
-                                        <div class="actions"><a href="wishlist.html" class="link-wishlist" title="Add to Wishlist"></a>
-                                            <div class="add_cart">
-                                                <button class="button btn-cart" type="button"><span>Add to Cart</span></button>
-                                            </div>
-                                            <a href="compare.html" class="link-compare" title="Add to Compare"></a> </div>
+                                            """),format.raw/*105.144*/("""
+                                                """),format.raw/*106.75*/("""
+                                                    """),format.raw/*107.136*/("""
+                                                """),format.raw/*108.59*/("""
+                                                """),format.raw/*109.125*/("""
+                                            """),format.raw/*110.55*/("""
+                                        """),format.raw/*111.41*/("""</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                        <!-- Item -->
-                    <div class="item">
-                        <div class="item-inner">
-                            <div class="item-img">
-                                <div class="item-img-info"> <a class="product-image" title="Retis lapen casen" href="product_detail.html"> <img alt="Retis lapen casen" src='"""),_display_(/*95.175*/routes/*95.181*/.Assets.versioned("images/product1.jpg")),format.raw/*95.221*/("""'> </a>
-                                    <div class="sale-label">Sale</div>
-                                    <a class="quickview-btn" ><span>Quick View</span></a> </div>
-                            </div>
-                            <div class="item-info">
-                                <div class="info-inner">
-                                    <div class="item-title"> <a title="Retis lapen casen" href="product_detail.html"> Sample Product </a> </div>
-                                    <div class="item-content">
-                                        <div class="rating">
-                                            <div class="ratings">
-                                                <div class="rating-box">
-                                                    <div class="rating"></div>
-                                                </div>
-                                                <p class="rating-links"> <a href="#">1 Review(s)</a> <span class="separator">|</span> <a href="#">Add Review</a> </p>
-                                            </div>
-                                        </div>
-                                        <div class="item-price">
-                                            <div class="price-box"> <span class="regular-price"> <span class="price">$125.00</span> </span> </div>
-                                        </div>
-                                        <div class="actions"><a href="wishlist.html" class="link-wishlist" title="Add to Wishlist"></a>
-                                            <div class="add_cart">
-                                                <button class="button btn-cart" type="button"><span>Add to Cart</span></button>
-                                            </div>
-                                            <a href="compare.html" class="link-compare" title="Add to Compare"></a> </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                        <!-- End Item -->
-
-                        <!-- Item -->
-                    <div class="item">
-                        <div class="item-inner">
-                            <div class="item-img">
-                                <div class="item-img-info"> <a class="product-image" title="Retis lapen casen" href="product_detail.html"> <img alt="Retis lapen casen" src='"""),_display_(/*130.175*/routes/*130.181*/.Assets.versioned("images/product1.jpg")),format.raw/*130.221*/("""'> </a> <a class="quickview-btn" ><span>Quick View</span></a> </div>
-                            </div>
-                            <div class="item-info">
-                                <div class="info-inner">
-                                    <div class="item-title"> <a title="Retis lapen casen" href="product_detail.html"> Sample Product</a> </div>
-                                    <div class="item-content">
-                                        <div class="rating">
-                                            <div class="ratings">
-                                                <div class="rating-box">
-                                                    <div class="rating"></div>
-                                                </div>
-                                                <p class="rating-links"> <a href="#">1 Review(s)</a> <span class="separator">|</span> <a href="#">Add Review</a> </p>
-                                            </div>
-                                        </div>
-                                        <div class="item-price">
-                                            <div class="price-box"> <span class="regular-price"> <span class="price">$125.00</span> </span> </div>
-                                        </div>
-                                        <div class="actions"><a href="wishlist.html" class="link-wishlist" title="Add to Wishlist"></a>
-                                            <div class="add_cart">
-                                                <button class="button btn-cart" type="button"><span>Add to Cart</span></button>
-                                            </div>
-                                            <a href="compare.html" class="link-compare" title="Add to Compare"></a> </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                        <!-- End Item -->
-
-                    <div class="item">
-                        <div class="item-inner">
-                            <div class="item-img">
-                                <div class="item-img-info"> <a class="product-image" title="Retis lapen casen" href="product_detail.html"> <img alt="Retis lapen casen" src='"""),_display_(/*162.175*/routes/*162.181*/.Assets.versioned("images/product1.jpg")),format.raw/*162.221*/("""'> </a>
-                                    <div class="sale-label">Sale</div>
-                                    <a class="quickview-btn" ><span>Quick View</span></a> </div>
-                            </div>
-                            <div class="item-info">
-                                <div class="info-inner">
-                                    <div class="item-title"> <a title="Retis lapen casen" href="product_detail.html"> Sample Product </a> </div>
-                                    <div class="item-content">
-                                        <div class="rating">
-                                            <div class="ratings">
-                                                <div class="rating-box">
-                                                    <div class="rating"></div>
-                                                </div>
-                                                <p class="rating-links"> <a href="#">1 Review(s)</a> <span class="separator">|</span> <a href="#">Add Review</a> </p>
-                                            </div>
-                                        </div>
-                                        <div class="item-price">
-                                            <div class="price-box"> <span class="regular-price"> <span class="price">$125.00</span> </span> </div>
-                                        </div>
-                                        <div class="actions"><a href="wishlist.html" class="link-wishlist" title="Add to Wishlist"></a>
-                                            <div class="add_cart">
-                                                <button class="button btn-cart" type="button"><span>Add to Cart</span></button>
-                                            </div>
-                                            <a href="compare.html" class="link-compare" title="Add to Compare"></a> </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                        <!-- Item -->
-                    <div class="item">
-                        <div class="item-inner">
-                            <div class="item-img">
-                                <div class="item-img-info"> <a class="product-image" title="Retis lapen casen" href="product_detail.html"> <img alt="Retis lapen casen" src='"""),_display_(/*196.175*/routes/*196.181*/.Assets.versioned("images/product1.jpg")),format.raw/*196.221*/("""'> </a> <a class="quickview-btn" ><span>Quick View</span></a> </div>
-                            </div>
-                            <div class="item-info">
-                                <div class="info-inner">
-                                    <div class="item-title"> <a title="Retis lapen casen" href="product_detail.html"> Sample Product </a> </div>
-                                    <div class="item-content">
-                                        <div class="rating">
-                                            <div class="ratings">
-                                                <div class="rating-box">
-                                                    <div class="rating"></div>
-                                                </div>
-                                                <p class="rating-links"> <a href="#">1 Review(s)</a> <span class="separator">|</span> <a href="#">Add Review</a> </p>
-                                            </div>
-                                        </div>
-                                        <div class="item-price">
-                                            <div class="price-box"> <span class="regular-price"> <span class="price">$125.00</span> </span> </div>
-                                        </div>
-                                        <div class="actions"><a href="wishlist.html" class="link-wishlist" title="Add to Wishlist"></a>
-                                            <div class="add_cart">
-                                                <button class="button btn-cart" type="button"><span>Add to Cart</span></button>
-                                            </div>
-                                            <a href="compare.html" class="link-compare" title="Add to Compare"></a> </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                        <!-- End Item -->
-
-                        <!-- Item -->
-                    <div class="item">
-                        <div class="item-inner">
-                            <div class="item-img">
-                                <div class="item-img-info"> <a class="product-image" title="Retis lapen casen" href="product_detail.html"> <img alt="Retis lapen casen" src='"""),_display_(/*229.175*/routes/*229.181*/.Assets.versioned("images/product1.jpg")),format.raw/*229.221*/("""'> </a> <a class="quickview-btn" ><span>Quick View</span></a> </div>
-                            </div>
-                            <div class="item-info">
-                                <div class="info-inner">
-                                    <div class="item-title"> <a title="Retis lapen casen" href="product_detail.html"> Sample Product </a> </div>
-                                    <div class="item-content">
-                                        <div class="rating">
-                                            <div class="ratings">
-                                                <div class="rating-box">
-                                                    <div class="rating"></div>
-                                                </div>
-                                                <p class="rating-links"> <a href="#">1 Review(s)</a> <span class="separator">|</span> <a href="#">Add Review</a> </p>
-                                            </div>
-                                        </div>
-                                        <div class="item-price">
-                                            <div class="price-box"> <span class="regular-price"> <span class="price">$125.00</span> </span> </div>
-                                        </div>
-                                        <div class="actions"><a href="wishlist.html" class="link-wishlist" title="Add to Wishlist"></a>
-                                            <div class="add_cart">
-                                                <button class="button btn-cart" type="button"><span>Add to Cart</span></button>
-                                            </div>
-                                            <a href="compare.html" class="link-compare" title="Add to Compare"></a> </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                        <!-- End Item -->
-
-                </div>
+                            <!-- End Item -->
+                    """)))}),format.raw/*117.22*/("""
+                """),format.raw/*118.17*/("""</div>
             </div>
         </div>
     </section>
-
     <!--Offer Start-->
     <div class="offer-slider wow animated parallax parallax-2">
         <div class="container">
@@ -319,242 +178,53 @@ Seq[Any](_display_(/*1.2*/main/*1.6*/ {_display_(Seq[Any](format.raw/*1.8*/("""
     <section class="featured-pro container wow bounceInUp animated">
         <div class="slider-items-products">
             <div class="new_title center">
-                <h2>New Products</h2>
+                <h2>NAJNOVIJI PROIZVODI</h2>
             </div>
             <div id="featured-slider" class="product-flexslider hidden-buttons">
                 <div class="slider-items slider-width-col4 products-grid">
-                    <div class="item">
-                        <div class="item-inner">
-                            <div class="item-img">
-                                <div class="item-img-info"> <a class="product-image" title="Retis lapen casen" href="product_detail.html"> <img alt="Retis lapen casen" src='"""),_display_(/*298.175*/routes/*298.181*/.Assets.versioned("images/product1.jpg")),format.raw/*298.221*/("""'> </a>
-                                    <div class="new-label new-top-left">new</div>
-                                    <a class="quickview-btn" ><span>Quick View</span></a> </div>
-                            </div>
-                            <div class="item-info">
-                                <div class="info-inner">
-                                    <div class="item-title"> <a title="Retis lapen casen" href="product_detail.html"> Sample Product </a> </div>
-                                    <div class="item-content">
-                                        <div class="rating">
-                                            <div class="ratings">
-                                                <div class="rating-box">
-                                                    <div class="rating"></div>
-                                                </div>
-                                                <p class="rating-links"> <a href="#">1 Review(s)</a> <span class="separator">|</span> <a href="#">Add Review</a> </p>
+                    """),_display_(/*154.22*/for(item <- models.Item.getLastTenProducts()) yield /*154.67*/{_display_(Seq[Any](format.raw/*154.68*/("""
+                        """),format.raw/*155.25*/("""<div class="item">
+                            <div class="item-inner">
+                                <div class="item-img">
+                                    """),_display_(/*158.38*/if(item.images.size() > 0)/*158.64*/{_display_(Seq[Any](format.raw/*158.65*/("""
+                                        """),format.raw/*159.41*/("""<div class="item-img-info"> <a class="product-image" title=""""),_display_(/*159.102*/item/*159.106*/.name),format.raw/*159.111*/("""" href=""""),_display_(/*159.120*/routes/*159.126*/.Items.itemRender(item.id)),format.raw/*159.152*/(""""> <img alt="Retis lapen casen" src='"""),_display_(/*159.190*/models/*159.196*/.Item.getFirstItemImage(item.id).getSize(179,217)),format.raw/*159.245*/("""'> </a>
+                                            <div class="new-label new-top-left">new</div>
+                                            <a class="quickview-btn" ><span>Quick View</span></a> </div>
+                                    """)))}/*162.38*/else/*162.42*/{_display_(Seq[Any](format.raw/*162.43*/("""
+                                        """),format.raw/*163.41*/("""<div class="item-img-info"> <a class="product-image" title=""""),_display_(/*163.102*/item/*163.106*/.name),format.raw/*163.111*/("""" href='"""),_display_(/*163.120*/routes/*163.126*/.Items.itemRender(item.id)),format.raw/*163.152*/("""'> <img alt="Retis lapen casen" src='"""),_display_(/*163.190*/routes/*163.196*/.Assets.versioned("images/product.png")),format.raw/*163.235*/("""'> </a>
+                                            <div class="new-label new-top-left">new</div>
+                                            <a class="quickview-btn" ><span>Quick View</span></a> </div>
+                                    """)))}),format.raw/*166.38*/("""
+                                """),format.raw/*167.33*/("""</div>
+                                <div class="item-info">
+                                    <div class="info-inner">
+                                        <div class="item-title"> <a title="Retis lapen casen" href=""""),_display_(/*170.102*/routes/*170.108*/.Items.itemRender(item.id)),format.raw/*170.134*/(""""> """),_display_(/*170.138*/item/*170.142*/.name),format.raw/*170.147*/(""" """),format.raw/*170.148*/("""</a> </div>
+                                        <div class="item-content">
+                                            """),format.raw/*172.69*/("""
+                                                """),format.raw/*173.74*/("""
+                                                    """),format.raw/*174.81*/("""
+                                                        """),format.raw/*175.87*/("""
+                                                    """),format.raw/*176.63*/("""
+                                                    """),format.raw/*177.174*/("""
+                                                """),format.raw/*178.59*/("""
+                                            """),format.raw/*179.55*/("""
+                                            """),format.raw/*180.45*/("""<div class="item-price">
+                                                <div class="price-box"> <span class="regular-price"> <span class="price">"""),_display_(/*181.123*/item/*181.127*/.price),format.raw/*181.133*/(""" """),format.raw/*181.134*/("""KM </span> </span> </div>
                                             </div>
-                                        </div>
-                                        <div class="item-price">
-                                            <div class="price-box"> <span class="regular-price"> <span class="price">$125.00</span> </span> </div>
-                                        </div>
-                                        <div class="actions"><a href="wishlist.html" class="link-wishlist" title="Add to Wishlist"></a>
-                                            <div class="add_cart">
-                                                <button class="button btn-cart" type="button"><span>Add to Cart</span></button>
-                                            </div>
-                                            <a href="compare.html" class="link-compare" title="Add to Compare"></a> </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                        <!-- Item -->
-                    <div class="item">
-                        <div class="item-inner">
-                            <div class="item-img">
-                                <div class="item-img-info"> <a class="product-image" title="Retis lapen casen" href="product_detail.html"> <img alt="Retis lapen casen" src='"""),_display_(/*332.175*/routes/*332.181*/.Assets.versioned("images/product1.jpg")),format.raw/*332.221*/("""'> </a>
-                                    <div class="sale-label">Sale</div>
-                                    <a class="quickview-btn" ><span>Quick View</span></a> </div>
-                            </div>
-                            <div class="item-info">
-                                <div class="info-inner">
-                                    <div class="item-title"> <a title="Retis lapen casen" href="product_detail.html"> Sample Product </a> </div>
-                                    <div class="item-content">
-                                        <div class="rating">
-                                            <div class="ratings">
-                                                <div class="rating-box">
-                                                    <div class="rating"></div>
-                                                </div>
-                                                <p class="rating-links"> <a href="#">1 Review(s)</a> <span class="separator">|</span> <a href="#">Add Review</a> </p>
-                                            </div>
-                                        </div>
-                                        <div class="item-price">
-                                            <div class="price-box"> <span class="regular-price"> <span class="price">$125.00</span> </span> </div>
-                                        </div>
-                                        <div class="actions"><a href="wishlist.html" class="link-wishlist" title="Add to Wishlist"></a>
-                                            <div class="add_cart">
-                                                <button class="button btn-cart" type="button"><span>Add to Cart</span></button>
-                                            </div>
-                                            <a href="compare.html" class="link-compare" title="Add to Compare"></a> </div>
+                                            """),format.raw/*184.144*/("""
+                                                """),format.raw/*185.75*/("""
+                                                    """),format.raw/*186.136*/("""
+                                                """),format.raw/*187.59*/("""
+                                                """),format.raw/*188.131*/("""
+                                        """),format.raw/*189.41*/("""</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                        <!-- End Item -->
+                    """)))}),format.raw/*194.22*/("""
 
-                        <!-- Item -->
-                    <div class="item">
-                        <div class="item-inner">
-                            <div class="item-img">
-                                <div class="item-img-info"> <a class="product-image" title="Retis lapen casen" href="product_detail.html"> <img alt="Retis lapen casen" src='"""),_display_(/*367.175*/routes/*367.181*/.Assets.versioned("images/product1.jpg")),format.raw/*367.221*/("""'> </a> <a class="quickview-btn" ><span>Quick View</span></a> </div>
-                    </div>
-                            <div class="item-info">
-                                <div class="info-inner">
-                                    <div class="item-title"> <a title="Retis lapen casen" href="product_detail.html"> Sample Product </a> </div>
-                                    <div class="item-content">
-                                        <div class="rating">
-                                            <div class="ratings">
-                                                <div class="rating-box">
-                                                    <div class="rating"></div>
-                                                </div>
-                                                <p class="rating-links"> <a href="#">1 Review(s)</a> <span class="separator">|</span> <a href="#">Add Review</a> </p>
-                                            </div>
-                                        </div>
-                                        <div class="item-price">
-                                            <div class="price-box"> <span class="regular-price"> <span class="price">$125.00</span> </span> </div>
-                                        </div>
-                                        <div class="actions"><a href="wishlist.html" class="link-wishlist" title="Add to Wishlist"></a>
-                                            <div class="add_cart">
-                                                <button class="button btn-cart" type="button"><span>Add to Cart</span></button>
-                                            </div>
-                                            <a href="compare.html" class="link-compare" title="Add to Compare"></a> </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                        <!-- End Item -->
-
-                    <div class="item">
-                        <div class="item-inner">
-                            <div class="item-img">
-                                <div class="item-img-info"> <a class="product-image" title="Retis lapen casen" href="product_detail.html"> <img alt="Retis lapen casen" src='"""),_display_(/*399.175*/routes/*399.181*/.Assets.versioned("images/product1.jpg")),format.raw/*399.221*/("""'> </a>
-                                    <div class="sale-label">Sale</div>
-                                    <a class="quickview-btn" ><span>Quick View</span></a> </div>
-                            </div>
-                            <div class="item-info">
-                                <div class="info-inner">
-                                    <div class="item-title"> <a title="Retis lapen casen" href="product_detail.html"> Sample Product </a> </div>
-                                    <div class="item-content">
-                                        <div class="rating">
-                                            <div class="ratings">
-                                                <div class="rating-box">
-                                                    <div class="rating"></div>
-                                                </div>
-                                                <p class="rating-links"> <a href="#">1 Review(s)</a> <span class="separator">|</span> <a href="#">Add Review</a> </p>
-                                            </div>
-                                        </div>
-                                        <div class="item-price">
-                                            <div class="price-box"> <span class="regular-price"> <span class="price">$125.00</span> </span> </div>
-                                        </div>
-                                        <div class="actions"><a href="wishlist.html" class="link-wishlist" title="Add to Wishlist"></a>
-                                            <div class="add_cart">
-                                                <button class="button btn-cart" type="button"><span>Add to Cart</span></button>
-                                            </div>
-                                            <a href="compare.html" class="link-compare" title="Add to Compare"></a> </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                        <!-- Item -->
-                    <div class="item">
-                        <div class="item-inner">
-                            <div class="item-img">
-                                <div class="item-img-info"> <a class="product-image" title="Retis lapen casen" href="product_detail.html"> <img alt="Retis lapen casen" src='"""),_display_(/*433.175*/routes/*433.181*/.Assets.versioned("images/product1.jpg")),format.raw/*433.221*/("""'> </a> <a class="quickview-btn" ><span>Quick View</span></a> </div>
-                            </div>
-                            <div class="item-info">
-                                <div class="info-inner">
-                                    <div class="item-title"> <a title="Retis lapen casen" href="product_detail.html"> Sample Product </a> </div>
-                                    <div class="item-content">
-                                        <div class="rating">
-                                            <div class="ratings">
-                                                <div class="rating-box">
-                                                    <div class="rating"></div>
-                                                </div>
-                                                <p class="rating-links"> <a href="#">1 Review(s)</a> <span class="separator">|</span> <a href="#">Add Review</a> </p>
-                                            </div>
-                                        </div>
-                                        <div class="item-price">
-                                            <div class="price-box"> <span class="regular-price"> <span class="price">$125.00</span> </span> </div>
-                                        </div>
-                                        <div class="actions"><a href="wishlist.html" class="link-wishlist" title="Add to Wishlist"></a>
-                                            <div class="add_cart">
-                                                <button class="button btn-cart" type="button"><span>Add to Cart</span></button>
-                                            </div>
-                                            <a href="compare.html" class="link-compare" title="Add to Compare"></a> </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                        <!-- End Item -->
-                    <div class="item">
-                        <div class="item-inner">
-                            <div class="item-img">
-                                <div class="item-img-info"> <a class="product-image" title="Retis lapen casen" href="product_detail.html"> <img alt="Retis lapen casen" src='"""),_display_(/*464.175*/routes/*464.181*/.Assets.versioned("images/product1.jpg")),format.raw/*464.221*/("""'> </a>
-                                    <div class="sale-label">Sale</div>
-                                    <a class="quickview-btn" ><span>Quick View</span></a> </div>
-                            </div>
-                            <div class="item-info">
-                                <div class="info-inner">
-                                    <div class="item-title"> <a title="Retis lapen casen" href="product_detail.html"> Sample Product </a> </div>
-                                    <div class="item-content">
-                                        <div class="rating">
-                                            <div class="ratings">
-                                                <div class="rating-box">
-                                                    <div class="rating"></div>
-                                                </div>
-                                                <p class="rating-links"> <a href="#">1 Review(s)</a> <span class="separator">|</span> <a href="#">Add Review</a> </p>
-                                            </div>
-                                        </div>
-                                        <div class="item-price">
-                                            <div class="price-box"> <span class="regular-price"> <span class="price">$125.00</span> </span> </div>
-                                        </div>
-                                        <div class="actions"><a href="wishlist.html" class="link-wishlist" title="Add to Wishlist"></a>
-                                            <div class="add_cart">
-                                                <button class="button btn-cart" type="button"><span>Add to Cart</span></button>
-                                            </div>
-                                            <a href="compare.html" class="link-compare" title="Add to Compare"></a> </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                        <!-- Item -->
-                    <div class="item">
-                        <div class="item-inner">
-                            <div class="item-img">
-                                <div class="item-img-info"> <a class="product-image" title="Retis lapen casen" href="product_detail.html"> <img alt="Retis lapen casen" src='"""),_display_(/*497.175*/routes/*497.181*/.Assets.versioned("images/product1.jpg")),format.raw/*497.221*/("""'> </a> <a class="quickview-btn" ><span>Quick View</span></a> </div>
-                            </div>
-                            <div class="item-info">
-                                <div class="info-inner">
-                                    <div class="item-title"> <a title="Retis lapen casen" href="product_detail.html"> Sample Product </a> </div>
-                                    <div class="item-content">
-                                        <div class="rating">
-                                            <div class="ratings">
-                                                <div class="rating-box">
-                                                    <div class="rating"></div>
-                                                </div>
-                                                <p class="rating-links"> <a href="#">1 Review(s)</a> <span class="separator">|</span> <a href="#">Add Review</a> </p>
-                                            </div>
-                                        </div>
-                                        <div class="item-price">
-                                            <div class="price-box"> <span class="regular-price"> <span class="price">$125.00</span> </span> </div>
-                                        </div>
-                                        <div class="actions"><a href="wishlist.html" class="link-wishlist" title="Add to Wishlist"></a>
-                                            <div class="add_cart">
-                                                <button class="button btn-cart" type="button"><span>Add to Cart</span></button>
-                                            </div>
-                                            <a href="compare.html" class="link-compare" title="Add to Compare"></a> </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                        <!-- End Item -->
-
-                </div>
+                """),format.raw/*196.17*/("""</div>
             </div>
         </div>
     </section>
@@ -570,116 +240,43 @@ Seq[Any](_display_(/*1.2*/main/*1.6*/ {_display_(Seq[Any](format.raw/*1.8*/("""
                     <div class="slider-items slider-width-col6">
 
                             <!-- Item -->
-                        <div class="item"><a href="#"><img src='"""),_display_(/*542.66*/routes/*542.72*/.Assets.versioned("images/b-logo3.png")),format.raw/*542.111*/("""' alt="Image"></a> </div>
+                        <div class="item"><a href="#"><img src='"""),_display_(/*212.66*/routes/*212.72*/.Assets.versioned("images/b-logo3.png")),format.raw/*212.111*/("""' alt="Image"></a> </div>
                             <!-- End Item -->
 
                             <!-- Item -->
-                        <div class="item"><a href="#"><img src='"""),_display_(/*546.66*/routes/*546.72*/.Assets.versioned("images/b-logo2.png")),format.raw/*546.111*/("""' alt="Image"></a> </div>
+                        <div class="item"><a href="#"><img src='"""),_display_(/*216.66*/routes/*216.72*/.Assets.versioned("images/b-logo2.png")),format.raw/*216.111*/("""' alt="Image"></a> </div>
                             <!-- End Item -->
 
                             <!-- Item -->
-                        <div class="item"><a href="#"><img src='"""),_display_(/*550.66*/routes/*550.72*/.Assets.versioned("images/b-logo1.png")),format.raw/*550.111*/("""' alt="Image"></a> </div>
+                        <div class="item"><a href="#"><img src='"""),_display_(/*220.66*/routes/*220.72*/.Assets.versioned("images/b-logo1.png")),format.raw/*220.111*/("""' alt="Image"></a> </div>
                             <!-- End Item -->
 
                             <!-- Item -->
-                        <div class="item"><a href="#"><img src='"""),_display_(/*554.66*/routes/*554.72*/.Assets.versioned("images/b-logo4.png")),format.raw/*554.111*/("""' alt="Image"></a> </div>
+                        <div class="item"><a href="#"><img src='"""),_display_(/*224.66*/routes/*224.72*/.Assets.versioned("images/b-logo4.png")),format.raw/*224.111*/("""' alt="Image"></a> </div>
                             <!-- End Item -->
 
                             <!-- Item -->
-                        <div class="item"><a href="#"><img src='"""),_display_(/*558.66*/routes/*558.72*/.Assets.versioned("images/b-logo5.png")),format.raw/*558.111*/("""' alt="Image"></a> </div>
+                        <div class="item"><a href="#"><img src='"""),_display_(/*228.66*/routes/*228.72*/.Assets.versioned("images/b-logo5.png")),format.raw/*228.111*/("""' alt="Image"></a> </div>
                             <!-- End Item -->
 
                             <!-- Item -->
-                        <div class="item"><a href="#"><img src='"""),_display_(/*562.66*/routes/*562.72*/.Assets.versioned("images/b-logo6.png")),format.raw/*562.111*/("""' alt="Image"></a> </div>
+                        <div class="item"><a href="#"><img src='"""),_display_(/*232.66*/routes/*232.72*/.Assets.versioned("images/b-logo6.png")),format.raw/*232.111*/("""' alt="Image"></a> </div>
                             <!-- End Item -->
 
                             <!-- Item -->
-                        <div class="item"><a href="#"><img src='"""),_display_(/*566.66*/routes/*566.72*/.Assets.versioned("images/b-logo1.png")),format.raw/*566.111*/("""' alt="Image"></a> </div>
+                        <div class="item"><a href="#"><img src='"""),_display_(/*236.66*/routes/*236.72*/.Assets.versioned("images/b-logo1.png")),format.raw/*236.111*/("""' alt="Image"></a> </div>
                             <!-- End Item -->
 
                             <!-- Item -->
-                        <div class="item"><a href="#"><img src='"""),_display_(/*570.66*/routes/*570.72*/.Assets.versioned("images/b-logo4.png")),format.raw/*570.111*/("""' alt="Image"></a> </div>
+                        <div class="item"><a href="#"><img src='"""),_display_(/*240.66*/routes/*240.72*/.Assets.versioned("images/b-logo4.png")),format.raw/*240.111*/("""' alt="Image"></a> </div>
                             <!-- End Item -->
-
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Latest Blog -->
-    <section class="latest-blog wow bounceInUp animated">
-        <div class="container">
-            <div class="new_title center">
-                <h2>Latest Blog</h2>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-xs-12 col-sm-4">
-                    <div class="blog_inner">
-                        <div class="blog-img"> <img src='"""),_display_(/*588.59*/routes/*588.65*/.Assets.versioned("images/blog-img1.jpg")),format.raw/*588.106*/("""' alt="Blog image">
-                            <div class="mask"> <a class="info" href="blog_detail.html">Read More</a> </div>
-                        </div>
-                        <h3><a href="blog_detail.html">Pellentesque habitant morbi</a> </h3>
-                        <div class="post-date"><i class="icon-calendar"></i> Apr 10, 2014</div>
-                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce sit  ... </p>
-                        <a class="readmore" href="blog_detail.html">Read More</a> </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-xs-12 col-sm-4">
-                    <div class="blog_inner">
-                        <div class="blog-img"> <img src='"""),_display_(/*598.59*/routes/*598.65*/.Assets.versioned("images/blog-img1.jpg" )),format.raw/*598.107*/("""'alt="Blog image">
-                            <div class="mask"> <a class="info" href="blog_detail.html">Read More</a> </div>
-                        </div>
-                        <h3><a href="blog_detail.html">Pellentesque habitant morbi</a> </h3>
-                        <div class="post-date"><i class="icon-calendar"></i> Apr 10, 2014</div>
-                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce sit  ... </p>
-                        <a class="readmore" href="blog_detail.html">Read More</a> </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-xs-12 col-sm-4">
-                    <div class="blog_inner">
-                        <div class="blog-img"> <img src='"""),_display_(/*608.59*/routes/*608.65*/.Assets.versioned("images/blog-img1.jpg")),format.raw/*608.106*/("""' alt="Blog image">
-                            <div class="mask"> <a class="info" href="blog_detail.html">Read More</a> </div>
-                        </div>
-                        <h3><a href="blog_detail.html">Pellentesque habitant morbi</a> </h3>
-                        <div class="post-date"><i class="icon-calendar"></i> Apr 10, 2014</div>
-                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce sit  ... </p>
-                        <a class="readmore" href="blog_detail.html">Read More</a> </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Latest Blog -->
-    <div class="header-banner mobile-show">
-        <div class="our-features-box">
-            <ul>
-                <li>
-                    <div class="feature-box">
-                        <div class="icon-truck"></div>
-                        <div class="content">FREE SHIPPING on order over $99</div>
-                    </div>
-                </li>
-                <li>
-                    <div class="feature-box">
-                        <div class="icon-support"></div>
-                        <div class="content">Need Help +1 800 123 1234</div>
-                    </div>
-                </li>
-                <li>
-                    <div class="feature-box">
-                        <div class="icon-money"></div>
-                        <div class="content">Money Back Guarantee</div>
-                    </div>
-                </li>
-                <li class="last">
-                    <div class="feature-box">
-                        <div class="icon-return"></div>
-                        <div class="content">30 days return Service</div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-""")))}),format.raw/*651.2*/("""
+""")))}),format.raw/*248.2*/("""
 """))
       }
     }
@@ -700,11 +297,11 @@ Seq[Any](_display_(/*1.2*/main/*1.6*/ {_display_(Seq[Any](format.raw/*1.8*/("""
 object index extends index_Scope0.index
               /*
                   -- GENERATED --
-                  DATE: Thu Mar 24 12:39:44 CET 2016
+                  DATE: Thu Mar 31 17:09:47 CEST 2016
                   SOURCE: E:/namjestaj/app/views/index.scala.html
-                  HASH: ec1ad41644f0865a6bf4930e6160cb636f5f69a9
-                  MATRIX: 827->1|838->5|876->7|908->13|1353->431|1368->437|1431->479|1471->492|1486->498|1549->540|3523->2486|3539->2492|3603->2534|3644->2547|3660->2553|3724->2595|5983->4827|5998->4833|6059->4872|6293->5079|6308->5085|6368->5123|6604->5332|6619->5338|6679->5376|7564->6233|7580->6239|7642->6279|10154->8763|10170->8769|10232->8809|12755->11303|12772->11309|12835->11349|15209->13694|15226->13700|15289->13740|17769->16191|17786->16197|17849->16237|20263->18622|20280->18628|20343->18668|24475->22771|24492->22777|24555->22817|27046->25279|27063->25285|27126->25325|29649->27819|29666->27825|29729->27865|32096->30203|32113->30209|32176->30249|34656->32700|34673->32706|34736->32746|37109->35090|37126->35096|37189->35136|39667->37585|39684->37591|39747->37631|42418->40274|42434->40280|42496->40319|42708->40503|42724->40509|42786->40548|42998->40732|43014->40738|43076->40777|43288->40961|43304->40967|43366->41006|43578->41190|43594->41196|43656->41235|43868->41419|43884->41425|43946->41464|44158->41648|44174->41654|44236->41693|44448->41877|44464->41883|44526->41922|45155->42523|45171->42529|45235->42570|46044->43351|46060->43357|46125->43399|46933->44179|46949->44185|47013->44226|48918->46100
-                  LINES: 32->1|32->1|32->1|33->2|39->8|39->8|39->8|39->8|39->8|39->8|47->16|47->16|47->16|47->16|47->16|47->16|68->37|68->37|68->37|71->40|71->40|71->40|74->43|74->43|74->43|92->61|92->61|92->61|126->95|126->95|126->95|161->130|161->130|161->130|193->162|193->162|193->162|227->196|227->196|227->196|260->229|260->229|260->229|329->298|329->298|329->298|363->332|363->332|363->332|398->367|398->367|398->367|430->399|430->399|430->399|464->433|464->433|464->433|495->464|495->464|495->464|528->497|528->497|528->497|573->542|573->542|573->542|577->546|577->546|577->546|581->550|581->550|581->550|585->554|585->554|585->554|589->558|589->558|589->558|593->562|593->562|593->562|597->566|597->566|597->566|601->570|601->570|601->570|619->588|619->588|619->588|629->598|629->598|629->598|639->608|639->608|639->608|682->651
+                  HASH: 4d3d6dc7d4abd08ce827f614756e65d9fd5075dc
+                  MATRIX: 827->1|838->5|876->7|907->12|970->49|984->55|1055->106|1512->535|1528->541|1592->583|1633->596|1649->602|1713->644|3679->2582|3695->2588|3759->2630|3800->2643|3816->2649|3880->2691|5841->4624|5857->4630|5921->4672|5962->4685|5978->4691|6042->4733|8003->6666|8019->6672|8083->6714|8124->6727|8140->6733|8204->6775|10442->8986|10457->8992|10518->9031|10749->9235|10764->9241|10824->9279|11057->9485|11072->9491|11132->9529|11714->10084|11779->10133|11819->10135|11872->10160|12101->10362|12136->10388|12175->10389|12244->10430|12333->10491|12347->10495|12374->10500|12411->10509|12427->10515|12475->10541|12541->10579|12557->10585|12628->10634|12887->10874|12900->10878|12939->10879|13008->10920|13097->10981|13111->10985|13138->10990|13175->10999|13191->11005|13239->11031|13305->11069|13321->11075|13382->11114|13653->11354|13714->11387|13967->11612|13983->11618|14031->11644|14063->11648|14077->11652|14104->11657|14134->11658|14285->11805|14362->11879|14443->11960|14528->12047|14609->12110|14691->12284|14769->12343|14843->12398|14917->12443|15093->12590|15108->12594|15137->12600|15285->12817|15363->12892|15446->13028|15524->13087|15603->13212|15677->13267|15747->13308|16001->13530|16047->13547|17806->15278|17868->15323|17908->15324|17962->15349|18154->15513|18190->15539|18230->15540|18300->15581|18390->15642|18405->15646|18433->15651|18471->15660|18488->15666|18537->15692|18604->15730|18621->15736|18693->15785|18953->16025|18967->16029|19007->16030|19077->16071|19167->16132|19182->16136|19210->16141|19248->16150|19265->16156|19314->16182|19381->16220|19398->16226|19460->16265|19732->16505|19794->16538|20048->16763|20065->16769|20114->16795|20147->16799|20162->16803|20190->16808|20221->16809|20373->16956|20451->17030|20533->17111|20619->17198|20701->17261|20784->17435|20862->17494|20936->17549|21010->17594|21186->17741|21201->17745|21230->17751|21261->17752|21413->17973|21491->18048|21574->18184|21652->18243|21731->18374|21801->18415|22009->18591|22056->18609|22665->19190|22681->19196|22743->19235|22951->19415|22967->19421|23029->19460|23237->19640|23253->19646|23315->19685|23523->19865|23539->19871|23601->19910|23809->20090|23825->20096|23887->20135|24095->20315|24111->20321|24173->20360|24381->20540|24397->20546|24459->20585|24667->20765|24683->20771|24745->20810|24945->20979
+                  LINES: 32->1|32->1|32->1|33->2|33->2|33->2|33->2|41->10|41->10|41->10|41->10|41->10|41->10|49->18|49->18|49->18|49->18|49->18|49->18|57->26|57->26|57->26|57->26|57->26|57->26|65->34|65->34|65->34|65->34|65->34|65->34|86->55|86->55|86->55|89->58|89->58|89->58|92->61|92->61|92->61|106->75|106->75|106->75|107->76|111->80|111->80|111->80|112->81|112->81|112->81|112->81|112->81|112->81|112->81|112->81|112->81|112->81|115->84|115->84|115->84|116->85|116->85|116->85|116->85|116->85|116->85|116->85|116->85|116->85|116->85|119->88|120->89|123->92|123->92|123->92|123->92|123->92|123->92|123->92|125->94|126->95|127->96|128->97|129->98|130->99|131->100|132->101|133->102|134->103|134->103|134->103|136->105|137->106|138->107|139->108|140->109|141->110|142->111|148->117|149->118|185->154|185->154|185->154|186->155|189->158|189->158|189->158|190->159|190->159|190->159|190->159|190->159|190->159|190->159|190->159|190->159|190->159|193->162|193->162|193->162|194->163|194->163|194->163|194->163|194->163|194->163|194->163|194->163|194->163|194->163|197->166|198->167|201->170|201->170|201->170|201->170|201->170|201->170|201->170|203->172|204->173|205->174|206->175|207->176|208->177|209->178|210->179|211->180|212->181|212->181|212->181|212->181|215->184|216->185|217->186|218->187|219->188|220->189|225->194|227->196|243->212|243->212|243->212|247->216|247->216|247->216|251->220|251->220|251->220|255->224|255->224|255->224|259->228|259->228|259->228|263->232|263->232|263->232|267->236|267->236|267->236|271->240|271->240|271->240|279->248
                   -- GENERATED --
               */
           

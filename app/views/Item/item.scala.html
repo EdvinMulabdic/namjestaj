@@ -1,4 +1,4 @@
-@(item: Item)(locations: java.util.List[String])
+@(item: Item)(locations: java.util.List[String])(currentUser: AppUser)(itemsToRecommend: java.util.List[Item])
 @main {
     <!-- Main Container -->
     <section class="main-container col1-layout wow bounceInUp animated">
@@ -9,104 +9,87 @@
                     <div class="product-view">
                         <div class="product-next-prev"> <a class="product-next" href="#"><span></span></a> <a class="product-prev" href="#"><span></span></a> </div>
                         <div class="product-essential">
-                            <form action="#" method="post" id="product_addtocart_form">
+
                                 <input name="form_key" value="6UbXroakyQlbfQzK" type="hidden">
                                 <div class="product-img-box col-sm-5 col-xs-12">
                                     <div class="new-label new-top-left"> New </div>
                                     <div class="product-image">
+                                    @if(item.images.size() > 0) {
                                         <div class="large-image">
-                                            <a href='@routes.Assets.versioned("images/product1.jpg")' class="cloud-zoom" id="zoom1" rel="useWrapper: false, adjustY:0, adjustX:20" >
-                                                <img src='@routes.Assets.versioned("images/product1.jpg")' alt="">
+                                            <a href='@item.images.get(0).getSize(768, 1024)' class="cloud-zoom" id="zoom1" rel="useWrapper: false, adjustY:0, adjustX:20" >
+                                                <img src='@item.images.get(0).getSize(465, 563)' alt="">
                                             </a>
                                         </div>
                                         <div class="flexslider flexslider-thumb">
                                             <ul class="previews-list slides">
-                                                <li><a href='@routes.Assets.versioned("images/product1.jpg")' class='cloud-zoom-gallery' rel="useZoom: 'zoom1', smallImage: '@routes.Assets.versioned("images/product1.jpg")' "><img src='@routes.Assets.versioned("images/product1.jpg")' alt = "Thumbnail 1"/></a></li>
-                                                <li><a href='@routes.Assets.versioned("images/product1.jpg")' class='cloud-zoom-gallery' rel="useZoom: 'zoom1', smallImage: '@routes.Assets.versioned("images/product1.jpg")' "><img src='@routes.Assets.versioned("images/product1.jpg")' alt = "Thumbnail 2"/></a></li>
-                                                <li><a href='@routes.Assets.versioned("images/product1.jpg")' class='cloud-zoom-gallery' rel="useZoom: 'zoom1', smallImage: '@routes.Assets.versioned("images/product1.jpg")' "><img src='@routes.Assets.versioned("images/product1.jpg")' alt = "Thumbnail 1"/></a></li>
-                                                <li><a href='@routes.Assets.versioned("images/product1.jpg")' class='cloud-zoom-gallery' rel="useZoom: 'zoom1', smallImage: '@routes.Assets.versioned("images/product1.jpg")' "><img src='@routes.Assets.versioned("images/product1.jpg")' alt = "Thumbnail 2"/></a></li>
-                                                <li><a href='@routes.Assets.versioned("images/product1.jpg")' class='cloud-zoom-gallery' rel="useZoom: 'zoom1', smallImage: '@routes.Assets.versioned("images/product1.jpg")' "><img src='@routes.Assets.versioned("images/product1.jpg")' alt = "Thumbnail 2"/></a></li>
-                                                <li><a href='@routes.Assets.versioned("images/product1.jpg")' class='cloud-zoom-gallery' rel="useZoom: 'zoom1', smallImage: '@routes.Assets.versioned("images/product1.jpg")' "><img src='@routes.Assets.versioned("images/product1.jpg")' alt = "Thumbnail 2"/></a></li>
-                                                <li><a href='@routes.Assets.versioned("images/product1.jpg")' class='cloud-zoom-gallery' rel="useZoom: 'zoom1', smallImage: '@routes.Assets.versioned("images/product1.jpg")' "><img src='@routes.Assets.versioned("images/product1.jpg")' alt = "Thumbnail 2"/></a></li>
+                                            @for(image <- item.images) {
+                                                <li><a href='@image.getSize(2000, 3000)' class='cloud-zoom-gallery' rel="useZoom: 'zoom1', smallImage: '@image.getSize(465, 563)' "><img src='@image.getSize(75, 90)' alt = "Thumbnail 1"/></a></li>
+
+                                            }
                                             </ul>
                                         </div>
+                                    }else{
+                                        <div class="large-image">
+                                            <img src='@routes.Assets.versioned("images/product.png")' alt="">
+                                        </div>
+                                        }
                                     </div>
                                         <!-- end: more-images -->
                                 </div>
-                                <div class="product-shop col-sm-7 col-xs-12">
-                                    <div class="product-name">
-                                        <h1>Sample Product</h1>
-                                    </div>
+                            <div class="product-shop col-sm-7 col-xs-12">
+                                <div class="product-name">
+                                    <h1>@item.name</h1>
+                                </div>
 
-                                    <div class="ratings">
-                                        <div class="rating-box">
-                                            <div class="rating"></div>
-                                        </div>
-                                        <p class="rating-links"> <a href="#">1 Review(s)</a> <span class="separator">|</span> <a href="#">Add Your Review</a> </p>
-                                    </div>
-
-                                    <div class="price-block">
-                                        <div class="price-box">
-                                            <p class="special-price"> <span class="price-label">Special Price</span> <span id="product-price-48" class="price"> $309.99 </span> </p>
-                                            <p class="old-price"> <span class="price-label">Regular Price:</span> <span class="price"> $315.99 </span> </p>
-
-
-
-                                            <p class="availability in-stock pull-right"><span>In Stock</span></p>
+                                <div class="price-block">
+                                    <div class="price-box">
+                                        <p class="special-price"> <span class="price-label"></span> <span id="product-price-48" class="price"> @item.price KM </span> </p>
+                                        @if(item.oldPrice != null && item.oldPrice != "" ){
+                                            <p class="old-price"> <span class="price-label"></span> <span class="price"> @item.oldPrice KM </span>
+                                        }
                                         </div>
                                     </div>
 
                                     <div class="short-description">
-                                        <h2>Quick Overview</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla. Donec a neque libero. Pellentesque aliquet, sem eget laoreet ultrices, ipsum metus feugiat sem, quis fermentum turpis eros eget velit. Donec ac tempus ante. </p>
+                                        <h2>Opis proizvoda</h2>
+                                        <p> @item.description </p>
                                     </div>
 
+                                    <div class="short-description">
+                                        <h2>Informacije o prodavaču</h2>
+                                        <p> Prodavač: @item.user.name</p>
+                                        <p> Adresa:   @item.user.address, @item.user.city</p>
+                                        <p> Email:    @item.user.email</p>
+                                        <p> Telefon:  @item.user.phone</p>
+                                    </div>
 
-
-                                    <div class="add-to-box">
-                                        <div class="add-to-cart">
-                                            <div class="pull-left">
-                                                <div class="custom pull-left">
-                                                    <button onClick="var result = document.getElementById('qty'); var qty = result.value; if( !isNaN( qty ) &amp;&amp; qty &gt; 0 ) result.value--;return false;" class="reduced items-count" type="button"><i class="icon-minus">&nbsp;</i></button>
-                                                    <input type="text" class="input-text qty" title="Qty" value="1" maxlength="12" id="qty" name="qty">
-                                                    <button onClick="var result = document.getElementById('qty'); var qty = result.value; if( !isNaN( qty )) result.value++;return false;" class="increase items-count" type="button"><i class="icon-plus">&nbsp;</i></button>
+                                    @if(currentUser != null && item.user.id == currentUser.id){
+                                        <div class="short-description">
+                                            <h2>Dodaj slike za proizvod</h2>
+                                            <form  method="GET" role="form" action="@routes.Images.imagesUploadRender(item.id)" >
+                                                <div class="buttons-set">
+                                                    <button class="button create-account"><span>Dodaj slike</span></button>
                                                 </div>
-                                            </div>
-
-                                            <button onClick="productAddToCartForm.submit(this)" class="button btn-cart" title="Add to Cart" type="button"><span><i class="icon-basket"></i> Add to Cart</span></button>
-
+                                            </form>
                                         </div>
-                                        <div class="email-addto-box">
-                                            <p class="email-friend"><a href="#" class=""><span>Email to a Friend</span></a></p>
-                                            <ul class="add-to-links">
-                                                <li> <a class="link-wishlist" href="#"><span>Add to Wishlist</span></a></li>
-                                                <li><span class="separator">|</span> <a class="link-compare" href="#"><span>Add to Compare</span></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                    }
 
                                     <div class="social">
                                         <ul class="link">
                                             <li class="fb"><a href="#"></a></li>
                                             <li class="tw"><a href="#"></a></li>
                                             <li class="googleplus"><a href="#"></a></li>
-                                            <li class="rss"><a href="#"></a></li>
-                                            <li class="pintrest"><a href="#"></a></li>
                                             <li class="linkedin"><a href="#"></a></li>
-                                            <li class="youtube"><a href="#"></a></li>
                                         </ul>
                                     </div>
 
-
-
                                 </div>
-
-                            </form>
                         </div>
                         <div class="product-collateral col-lg-12 col-sm-12 col-xs-12 bounceInUp animated">
+
                             <div class="add_info">
                                 <ul id="product-detail-tab" class="nav nav-tabs product-tabs">
-                                    <li class="active"> <a href="#product_tabs_description" data-toggle="tab"> Product Description </a> </li>
+                                    <li class="active"> <a href="#product_tabs_description" data-toggle="tab"> Lokacije objekata </a> </li>
                                     <li><a href="#product_tabs_tags" data-toggle="tab">Tags</a></li>
                                     <li> <a href="#reviews_tabs" data-toggle="tab">Reviews</a> </li>
                                     <li> <a href="#product_tabs_custom" data-toggle="tab">Custom Tab</a> </li>
@@ -115,8 +98,9 @@
                                 <div id="productTabContent" class="tab-content">
                                     <div class="tab-pane fade in active" id="product_tabs_description">
                                         <div class="std">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla. Donec a neque libero. Pellentesque aliquet, sem eget laoreet ultrices, ipsum metus feugiat sem, quis fermentum turpis eros eget velit. Donec ac tempus ante. Fusce ultricies massa massa. Fusce aliquam, purus eget sagittis vulputate, sapien libero hendrerit est, sed commodo augue nisi non neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor, lorem et placerat vestibulum, metus nisi posuere nisl, in accumsan elit odio quis mi. Cras neque metus, consequat et blandit et, luctus a nunc. Etiam gravida vehicula tellus, in imperdiet ligula euismod eget. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam erat mi, rutrum at sollicitudin rhoncus, ultricies posuere erat. Duis convallis, arcu nec aliquam consequat, purus felis vehicula felis, a dapibus enim lorem nec augue.</p>
-                                            <p> Nunc facilisis sagittis ullamcorper. Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus. Sed et lorem nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean eleifend laoreet congue. Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer enim purus, posuere at ultricies eu, placerat a felis. Suspendisse aliquet urna pretium eros convallis interdum. Quisque in arcu id dui vulputate mollis eget non arcu. Aenean et nulla purus. Mauris vel tellus non nunc mattis lobortis.</p>
+                                            <p>Pogledajte lokacije naših objekata i posjetite nas u najbližem objektu</p>
+                                            <div id="map" class="map2"></div>
+                                            <input id="locations" name="lat" value="@locations" style="display: none">
                                         </div>
                                     </div>
                                     <div class="tab-pane fade" id="product_tabs_tags">
@@ -141,7 +125,7 @@
                                         <div class="box-collateral box-reviews" id="customer-reviews">
                                             <div class="box-reviews1">
                                                 <div class="form-add">
-                                                    <form id="review-form" method="post" action="http://www.magikcommerce.com/review/product/post/id/176/">
+                                                    <form id="review-form" method="post" action="">
                                                         <h3>Write Your Own Review</h3>
                                                         <fieldset>
                                                             <h4>How do you rate this product? <em class="required">*</em></h4>
@@ -326,16 +310,18 @@
                                     </div>
                                     <div class="tab-pane fade" id="product_tabs_custom">
                                         <div class="product-tabs-content-inner clearfix">
-                                            <p><strong>Lorem Ipsum</strong><span>&nbsp;is
-                                                simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                                                has been the industry's standard dummy text ever since the 1500s, when
-                                                an unknown printer took a galley of type and scrambled it to make a type
-                                                specimen book. It has survived not only five centuries, but also the
-                                                leap into electronic typesetting, remaining essentially unchanged. It
-                                                was popularised in the 1960s with the release of Letraset sheets
-                                                containing Lorem Ipsum passages, and more recently with desktop
-                                                publishing software like Aldus PageMaker including versions of Lorem
-                                                Ipsum.</span></p>
+
+
+
+
+
+
+
+
+
+
+
+
                                         </div>
                                     </div>
                                     <div class="tab-pane fade" id="product_tabs_custom1">
@@ -369,282 +355,37 @@
         <div class="container">
             <div class="slider-items-products">
                 <div class="new_title center">
-                    <h2>Related Products</h2>
+                    <h2>SLIČNI PROIZVODI</h2>
                 </div>
                 <div id="related-products-slider" class="product-flexslider hidden-buttons">
                     <div class="slider-items slider-width-col4 products-grid">
-                        <div class="item">
-                            <div class="item-inner">
-                                <div class="item-img">
-                                    <div class="item-img-info"> <a class="product-image" title="Retis lapen casen" href="product_detail.html"> <img alt="Retis lapen casen" src="products-images/product1.jpg"> </a>
-                                        <div class="new-label new-top-left">new</div>
-
-                                        <a class="quickview-btn" ><span>Quick View</span></a>
-
+                        @for(item <- itemsToRecommend) {
+                            <div class="item">
+                                <div class="item-inner">
+                                    <div class="item-img">
+                                    @if(item.images.size() > 0){
+                                        <div class="item-img-info"> <a class="product-image" title="@item.name" href="@routes.Items.itemRender(item.id)"> <img alt="Retis lapen casen" src='@models.Item.getFirstItemImage(item.id).getSize(179,217)'> </a>
+                                            <a class="quickview-btn" ><span>Quick View</span></a> </div>
+                                    }else{
+                                        <div class="item-img-info"> <a class="product-image" title="@item.name" href='@routes.Items.itemRender(item.id)'> <img alt="Retis lapen casen" src='@routes.Assets.versioned("images/product.png")'> </a>
+                                            <a class="quickview-btn" ><span>Quick View</span></a> </div>
+                                    }
                                     </div>
+                                    <div class="item-info">
+                                        <div class="info-inner">
+                                            <div class="item-title"> <a title="Retis lapen casen" href='@routes.Items.itemRender(item.id)'> @item.name </a> </div>
+                                            <div class="item-content">
 
-                                </div>
-                                <div class="item-info">
-                                    <div class="info-inner">
-                                        <div class="item-title"> <a title="Retis lapen casen" href="product_detail.html"> Sample Product </a> </div>
-                                        <div class="item-content">
-                                            <div class="rating">
-                                                <div class="ratings">
-                                                    <div class="rating-box">
-                                                        <div class="rating"></div>
-                                                    </div>
-                                                    <p class="rating-links"> <a href="#">1 Review(s)</a> <span class="separator">|</span> <a href="#">Add Review</a> </p>
+                                                <div class="item-price">
+                                                    <div class="price-box"> <span class="regular-price"> <span class="price"> @item.price KM</span> </span> </div>
                                                 </div>
-                                            </div>
-                                            <div class="item-price">
-                                                <div class="price-box"> <span class="regular-price"> <span class="price">$125.00</span> </span> </div>
-                                            </div>
-                                            <div class="actions"><a href="wishlist.html" class="link-wishlist" title="Add to Wishlist"></a>
-                                                <div class="add_cart">
-                                                    <button class="button btn-cart" type="button"><span>Add to Cart</span></button>
-                                                </div>
-                                                <a href="compare.html" class="link-compare" title="Add to Compare"></a>
+
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
-                            <!-- Item -->
-                        <div class="item">
-                            <div class="item-inner">
-                                <div class="item-img">
-                                    <div class="item-img-info"> <a class="product-image" title="Retis lapen casen" href="product_detail.html"> <img alt="Retis lapen casen" src="products-images/product1.jpg"> </a>
-                                        <div class="sale-label">Sale</div>
-
-                                        <a class="quickview-btn" ><span>Quick View</span></a>
-
-                                    </div>
-
-                                </div>
-                                <div class="item-info">
-                                    <div class="info-inner">
-                                        <div class="item-title"> <a title="Retis lapen casen" href="product_detail.html"> Sample Product </a> </div>
-                                        <div class="item-content">
-                                            <div class="rating">
-                                                <div class="ratings">
-                                                    <div class="rating-box">
-                                                        <div class="rating"></div>
-                                                    </div>
-                                                    <p class="rating-links"> <a href="#">1 Review(s)</a> <span class="separator">|</span> <a href="#">Add Review</a> </p>
-                                                </div>
-                                            </div>
-                                            <div class="item-price">
-                                                <div class="price-box"> <span class="regular-price"> <span class="price">$125.00</span> </span> </div>
-                                            </div>
-                                            <div class="actions"><a href="wishlist.html" class="link-wishlist" title="Add to Wishlist"></a>
-                                                <div class="add_cart">
-                                                    <button class="button btn-cart" type="button"><span>Add to Cart</span></button>
-                                                </div>
-                                                <a href="compare.html" class="link-compare" title="Add to Compare"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                            <!-- End Item -->
-
-                            <!-- Item -->
-                        <div class="item">
-                            <div class="item-inner">
-                                <div class="item-img">
-                                    <div class="item-img-info"> <a class="product-image" title="Retis lapen casen" href="product_detail.html"> <img alt="Retis lapen casen" src="products-images/product1.jpg"> </a>
-
-
-                                        <a class="quickview-btn" ><span>Quick View</span></a>
-
-                                    </div>
-
-                                </div>
-                                <div class="item-info">
-                                    <div class="info-inner">
-                                        <div class="item-title"> <a title="Retis lapen casen" href="product_detail.html"> Sample Product </a> </div>
-                                        <div class="item-content">
-                                            <div class="rating">
-                                                <div class="ratings">
-                                                    <div class="rating-box">
-                                                        <div class="rating"></div>
-                                                    </div>
-                                                    <p class="rating-links"> <a href="#">1 Review(s)</a> <span class="separator">|</span> <a href="#">Add Review</a> </p>
-                                                </div>
-                                            </div>
-                                            <div class="item-price">
-                                                <div class="price-box"> <span class="regular-price"> <span class="price">$125.00</span> </span> </div>
-                                            </div>
-                                            <div class="actions"><a href="wishlist.html" class="link-wishlist" title="Add to Wishlist"></a>
-                                                <div class="add_cart">
-                                                    <button class="button btn-cart" type="button"><span>Add to Cart</span></button>
-                                                </div>
-                                                <a href="compare.html" class="link-compare" title="Add to Compare"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                            <!-- End Item -->
-
-                        <div class="item">
-                            <div class="item-inner">
-                                <div class="item-img">
-                                    <div class="item-img-info"> <a class="product-image" title="Retis lapen casen" href="product_detail.html"> <img alt="Retis lapen casen" src="products-images/product1.jpg"> </a>
-                                        <div class="sale-label">Sale</div>
-
-                                        <a class="quickview-btn" ><span>Quick View</span></a>
-
-                                    </div>
-
-                                </div>
-                                <div class="item-info">
-                                    <div class="info-inner">
-                                        <div class="item-title"> <a title="Retis lapen casen" href="product_detail.html"> Sample Product </a> </div>
-                                        <div class="item-content">
-                                            <div class="rating">
-                                                <div class="ratings">
-                                                    <div class="rating-box">
-                                                        <div class="rating"></div>
-                                                    </div>
-                                                    <p class="rating-links"> <a href="#">1 Review(s)</a> <span class="separator">|</span> <a href="#">Add Review</a> </p>
-                                                </div>
-                                            </div>
-                                            <div class="item-price">
-                                                <div class="price-box"> <span class="regular-price"> <span class="price">$125.00</span> </span> </div>
-                                            </div>
-                                            <div class="actions"><a href="wishlist.html" class="link-wishlist" title="Add to Wishlist"></a>
-                                                <div class="add_cart">
-                                                    <button class="button btn-cart" type="button"><span>Add to Cart</span></button>
-                                                </div>
-                                                <a href="compare.html" class="link-compare" title="Add to Compare"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                            <!-- Item -->
-                        <div class="item">
-                            <div class="item-inner">
-                                <div class="item-img">
-                                    <div class="item-img-info"> <a class="product-image" title="Retis lapen casen" href="product_detail.html"> <img alt="Retis lapen casen" src="products-images/product1.jpg"> </a>
-
-
-                                        <a class="quickview-btn" ><span>Quick View</span></a>
-
-                                    </div>
-
-                                </div>
-                                <div class="item-info">
-                                    <div class="info-inner">
-                                        <div class="item-title"> <a title="Retis lapen casen" href="product_detail.html"> Sample Product </a> </div>
-                                        <div class="item-content">
-                                            <div class="rating">
-                                                <div class="ratings">
-                                                    <div class="rating-box">
-                                                        <div class="rating"></div>
-                                                    </div>
-                                                    <p class="rating-links"> <a href="#">1 Review(s)</a> <span class="separator">|</span> <a href="#">Add Review</a> </p>
-                                                </div>
-                                            </div>
-                                            <div class="item-price">
-                                                <div class="price-box"> <span class="regular-price"> <span class="price">$125.00</span> </span> </div>
-                                            </div>
-                                            <div class="actions"><a href="wishlist.html" class="link-wishlist" title="Add to Wishlist"></a>
-                                                <div class="add_cart">
-                                                    <button class="button btn-cart" type="button"><span>Add to Cart</span></button>
-                                                </div>
-                                                <a href="compare.html" class="link-compare" title="Add to Compare"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                            <!-- End Item -->
-                        <div class="item">
-                            <div class="item-inner">
-                                <div class="item-img">
-                                    <div class="item-img-info"> <a class="product-image" title="Retis lapen casen" href="product_detail.html"> <img alt="Retis lapen casen" src="products-images/product1.jpg"> </a>
-                                        <div class="sale-label">Sale</div>
-
-                                        <a class="quickview-btn" ><span>Quick View</span></a>
-
-                                    </div>
-
-                                </div>
-                                <div class="item-info">
-                                    <div class="info-inner">
-                                        <div class="item-title"> <a title="Retis lapen casen" href="product_detail.html"> Sample Product </a> </div>
-                                        <div class="item-content">
-                                            <div class="rating">
-                                                <div class="ratings">
-                                                    <div class="rating-box">
-                                                        <div class="rating"></div>
-                                                    </div>
-                                                    <p class="rating-links"> <a href="#">1 Review(s)</a> <span class="separator">|</span> <a href="#">Add Review</a> </p>
-                                                </div>
-                                            </div>
-                                            <div class="item-price">
-                                                <div class="price-box"> <span class="regular-price"> <span class="price">$125.00</span> </span> </div>
-                                            </div>
-                                            <div class="actions"><a href="wishlist.html" class="link-wishlist" title="Add to Wishlist"></a>
-                                                <div class="add_cart">
-                                                    <button class="button btn-cart" type="button"><span>Add to Cart</span></button>
-                                                </div>
-                                                <a href="compare.html" class="link-compare" title="Add to Compare"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                            <!-- Item -->
-                        <div class="item">
-                            <div class="item-inner">
-                                <div class="item-img">
-                                    <div class="item-img-info"> <a class="product-image" title="Retis lapen casen" href="product_detail.html"> <img alt="Retis lapen casen" src="products-images/product1.jpg"> </a>
-
-
-                                        <a class="quickview-btn" ><span>Quick View</span></a>
-
-                                    </div>
-
-                                </div>
-                                <div class="item-info">
-                                    <div class="info-inner">
-                                        <div class="item-title"> <a title="Retis lapen casen" href="product_detail.html"> Sample Product </a> </div>
-                                        <div class="item-content">
-                                            <div class="rating">
-                                                <div class="ratings">
-                                                    <div class="rating-box">
-                                                        <div class="rating"></div>
-                                                    </div>
-                                                    <p class="rating-links"> <a href="#">1 Review(s)</a> <span class="separator">|</span> <a href="#">Add Review</a> </p>
-                                                </div>
-                                            </div>
-                                            <div class="item-price">
-                                                <div class="price-box"> <span class="regular-price"> <span class="price">$125.00</span> </span> </div>
-                                            </div>
-                                            <div class="actions"><a href="wishlist.html" class="link-wishlist" title="Add to Wishlist"></a>
-                                                <div class="add_cart">
-                                                    <button class="button btn-cart" type="button"><span>Add to Cart</span></button>
-                                                </div>
-                                                <a href="compare.html" class="link-compare" title="Add to Compare"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                            <!-- End Item -->
-
+                        }
                     </div>
                 </div>
             </div>
@@ -652,321 +393,93 @@
     </section>
     <!-- Related Products Slider End -->
 
-    <!-- Upsell Product Slider -->
-    <section class="upsell-pro wow bounceInUp animated">
-        <div class="container">
-            <div class="slider-items-products">
-                <div class="new_title center">
-                    <h2>Upsell Products</h2>
-                </div>
-                <div id="upsell-products-slider" class="product-flexslider hidden-buttons">
-                    <div class="slider-items slider-width-col4 products-grid">
-                        <div class="item">
-                            <div class="item-inner">
-                                <div class="item-img">
-                                    <div class="item-img-info"> <a class="product-image" title="Retis lapen casen" href="product_detail.html"> <img alt="Retis lapen casen" src="products-images/product1.jpg"> </a>
-                                        <div class="new-label new-top-left">new</div>
-
-                                        <a class="quickview-btn" ><span>Quick View</span></a>
-
+    <!-- Featured Slider -->
+    <section class="featured-pro container wow bounceInUp animated">
+        <div class="slider-items-products">
+            <div class="new_title center">
+                <h2>NAJNOVIJI PROIZVODI</h2>
+            </div>
+            <div id="featured-slider" class="product-flexslider hidden-buttons">
+                <div class="slider-items slider-width-col4 products-grid">
+                @for(item <- models.Item.getLastTenProducts()){
+                    <div class="item">
+                        <div class="item-inner">
+                            <div class="item-img">
+                            @if(item.images.size() > 0){
+                                <div class="item-img-info"> <a class="product-image" title="@item.name" href="@routes.Items.itemRender(item.id)"> <img alt="Retis lapen casen" src='@models.Item.getFirstItemImage(item.id).getSize(179,217)'> </a>
+                                    <div class="new-label new-top-left">new</div>
+                                    <a class="quickview-btn" ><span>Quick View</span></a> </div>
+                            }else{
+                                <div class="item-img-info"> <a class="product-image" title="@item.name" href='@routes.Items.itemRender(item.id)'> <img alt="Retis lapen casen" src='@routes.Assets.versioned("images/product.png")'> </a>
+                                    <div class="new-label new-top-left">new</div>
+                                    <a class="quickview-btn" ><span>Quick View</span></a> </div>
+                            }
+                            </div>
+                            <div class="item-info">
+                                <div class="info-inner">
+                                    <div class="item-title"> <a title="Retis lapen casen" href="@routes.Items.itemRender(item.id)"> @item.name </a> </div>
+                                    <div class="item-content">
+                                        @*<div class="rating">*@
+                                        @*<div class="ratings">*@
+                                        @*<div class="rating-box">*@
+                                        @*<div class="rating"></div>*@
+                                        @*</div>*@
+                                        @*<p class="rating-links"> <a href="#">1 Review(s)</a> <span class="separator">|</span> <a href="#">Add Review</a> </p>*@
+                                        @*</div>*@
+                                        @*</div>*@
+                                    <div class="item-price">
+                                        <div class="price-box"> <span class="regular-price"> <span class="price">@item.price KM </span> </span> </div>
                                     </div>
-
-                                </div>
-                                <div class="item-info">
-                                    <div class="info-inner">
-                                        <div class="item-title"> <a title="Retis lapen casen" href="product_detail.html"> Sample Product </a> </div>
-                                        <div class="item-content">
-                                            <div class="rating">
-                                                <div class="ratings">
-                                                    <div class="rating-box">
-                                                        <div class="rating"></div>
-                                                    </div>
-                                                    <p class="rating-links"> <a href="#">1 Review(s)</a> <span class="separator">|</span> <a href="#">Add Review</a> </p>
-                                                </div>
-                                            </div>
-                                            <div class="item-price">
-                                                <div class="price-box"> <span class="regular-price"> <span class="price">$125.00</span> </span> </div>
-                                            </div>
-                                            <div class="actions"><a href="wishlist.html" class="link-wishlist" title="Add to Wishlist"></a>
-                                                <div class="add_cart">
-                                                    <button class="button btn-cart" type="button"><span>Add to Cart</span></button>
-                                                </div>
-                                                <a href="compare.html" class="link-compare" title="Add to Compare"></a>
-                                            </div>
-                                        </div>
+                                        @*<div class="actions"><a href="wishlist.html" class="link-wishlist" title="Add to Wishlist"></a>*@
+                                        @*<div class="add_cart">*@
+                                        @*<button class="button btn-cart" type="button"><span>Add to Cart</span></button>*@
+                                        @*</div>*@
+                                        @*<a href="compare.html" class="link-compare" title="Add to Compare"></a> </div>*@
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                            <!-- Item -->
-                        <div class="item">
-                            <div class="item-inner">
-                                <div class="item-img">
-                                    <div class="item-img-info"> <a class="product-image" title="Retis lapen casen" href="product_detail.html"> <img alt="Retis lapen casen" src="products-images/product1.jpg"> </a>
-                                        <div class="sale-label">Sale</div>
-
-                                        <a class="quickview-btn" ><span>Quick View</span></a>
-
-                                    </div>
-
-                                </div>
-                                <div class="item-info">
-                                    <div class="info-inner">
-                                        <div class="item-title"> <a title="Retis lapen casen" href="product_detail.html"> Sample Product </a> </div>
-                                        <div class="item-content">
-                                            <div class="rating">
-                                                <div class="ratings">
-                                                    <div class="rating-box">
-                                                        <div class="rating"></div>
-                                                    </div>
-                                                    <p class="rating-links"> <a href="#">1 Review(s)</a> <span class="separator">|</span> <a href="#">Add Review</a> </p>
-                                                </div>
-                                            </div>
-                                            <div class="item-price">
-                                                <div class="price-box"> <span class="regular-price"> <span class="price">$125.00</span> </span> </div>
-                                            </div>
-                                            <div class="actions"><a href="wishlist.html" class="link-wishlist" title="Add to Wishlist"></a>
-                                                <div class="add_cart">
-                                                    <button class="button btn-cart" type="button"><span>Add to Cart</span></button>
-                                                </div>
-                                                <a href="compare.html" class="link-compare" title="Add to Compare"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                            <!-- End Item -->
-
-                            <!-- Item -->
-                        <div class="item">
-                            <div class="item-inner">
-                                <div class="item-img">
-                                    <div class="item-img-info"> <a class="product-image" title="Retis lapen casen" href="product_detail.html"> <img alt="Retis lapen casen" src="products-images/product1.jpg"> </a>
-
-
-                                        <a class="quickview-btn" ><span>Quick View</span></a>
-
-                                    </div>
-
-                                </div>
-                                <div class="item-info">
-                                    <div class="info-inner">
-                                        <div class="item-title"> <a title="Retis lapen casen" href="product_detail.html"> Sample Product </a> </div>
-                                        <div class="item-content">
-                                            <div class="rating">
-                                                <div class="ratings">
-                                                    <div class="rating-box">
-                                                        <div class="rating"></div>
-                                                    </div>
-                                                    <p class="rating-links"> <a href="#">1 Review(s)</a> <span class="separator">|</span> <a href="#">Add Review</a> </p>
-                                                </div>
-                                            </div>
-                                            <div class="item-price">
-                                                <div class="price-box"> <span class="regular-price"> <span class="price">$125.00</span> </span> </div>
-                                            </div>
-                                            <div class="actions"><a href="wishlist.html" class="link-wishlist" title="Add to Wishlist"></a>
-                                                <div class="add_cart">
-                                                    <button class="button btn-cart" type="button"><span>Add to Cart</span></button>
-                                                </div>
-                                                <a href="compare.html" class="link-compare" title="Add to Compare"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                            <!-- End Item -->
-
-                        <div class="item">
-                            <div class="item-inner">
-                                <div class="item-img">
-                                    <div class="item-img-info"> <a class="product-image" title="Retis lapen casen" href="product_detail.html"> <img alt="Retis lapen casen" src="products-images/product1.jpg"> </a>
-                                        <div class="sale-label">Sale</div>
-
-                                        <a class="quickview-btn" ><span>Quick View</span></a>
-
-                                    </div>
-
-                                </div>
-                                <div class="item-info">
-                                    <div class="info-inner">
-                                        <div class="item-title"> <a title="Retis lapen casen" href="product_detail.html"> Sample Product </a> </div>
-                                        <div class="item-content">
-                                            <div class="rating">
-                                                <div class="ratings">
-                                                    <div class="rating-box">
-                                                        <div class="rating"></div>
-                                                    </div>
-                                                    <p class="rating-links"> <a href="#">1 Review(s)</a> <span class="separator">|</span> <a href="#">Add Review</a> </p>
-                                                </div>
-                                            </div>
-                                            <div class="item-price">
-                                                <div class="price-box"> <span class="regular-price"> <span class="price">$125.00</span> </span> </div>
-                                            </div>
-                                            <div class="actions"><a href="wishlist.html" class="link-wishlist" title="Add to Wishlist"></a>
-                                                <div class="add_cart">
-                                                    <button class="button btn-cart" type="button"><span>Add to Cart</span></button>
-                                                </div>
-                                                <a href="compare.html" class="link-compare" title="Add to Compare"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                            <!-- Item -->
-                        <div class="item">
-                            <div class="item-inner">
-                                <div class="item-img">
-                                    <div class="item-img-info"> <a class="product-image" title="Retis lapen casen" href="product_detail.html"> <img alt="Retis lapen casen" src="products-images/product1.jpg"> </a>
-
-
-                                        <a class="quickview-btn" ><span>Quick View</span></a>
-
-                                    </div>
-
-                                </div>
-                                <div class="item-info">
-                                    <div class="info-inner">
-                                        <div class="item-title"> <a title="Retis lapen casen" href="product_detail.html"> Sample Product </a> </div>
-                                        <div class="item-content">
-                                            <div class="rating">
-                                                <div class="ratings">
-                                                    <div class="rating-box">
-                                                        <div class="rating"></div>
-                                                    </div>
-                                                    <p class="rating-links"> <a href="#">1 Review(s)</a> <span class="separator">|</span> <a href="#">Add Review</a> </p>
-                                                </div>
-                                            </div>
-                                            <div class="item-price">
-                                                <div class="price-box"> <span class="regular-price"> <span class="price">$125.00</span> </span> </div>
-                                            </div>
-                                            <div class="actions"><a href="wishlist.html" class="link-wishlist" title="Add to Wishlist"></a>
-                                                <div class="add_cart">
-                                                    <button class="button btn-cart" type="button"><span>Add to Cart</span></button>
-                                                </div>
-                                                <a href="compare.html" class="link-compare" title="Add to Compare"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                            <!-- End Item -->
-                        <div class="item">
-                            <div class="item-inner">
-                                <div class="item-img">
-                                    <div class="item-img-info"> <a class="product-image" title="Retis lapen casen" href="product_detail.html"> <img alt="Retis lapen casen" src="products-images/product1.jpg"> </a>
-                                        <div class="sale-label">Sale</div>
-
-                                        <a class="quickview-btn" ><span>Quick View</span></a>
-
-                                    </div>
-
-                                </div>
-                                <div class="item-info">
-                                    <div class="info-inner">
-                                        <div class="item-title"> <a title="Retis lapen casen" href="product_detail.html"> Sample Product </a> </div>
-                                        <div class="item-content">
-                                            <div class="rating">
-                                                <div class="ratings">
-                                                    <div class="rating-box">
-                                                        <div class="rating"></div>
-                                                    </div>
-                                                    <p class="rating-links"> <a href="#">1 Review(s)</a> <span class="separator">|</span> <a href="#">Add Review</a> </p>
-                                                </div>
-                                            </div>
-                                            <div class="item-price">
-                                                <div class="price-box"> <span class="regular-price"> <span class="price">$125.00</span> </span> </div>
-                                            </div>
-                                            <div class="actions"><a href="wishlist.html" class="link-wishlist" title="Add to Wishlist"></a>
-                                                <div class="add_cart">
-                                                    <button class="button btn-cart" type="button"><span>Add to Cart</span></button>
-                                                </div>
-                                                <a href="compare.html" class="link-compare" title="Add to Compare"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                            <!-- Item -->
-                        <div class="item">
-                            <div class="item-inner">
-                                <div class="item-img">
-                                    <div class="item-img-info"> <a class="product-image" title="Retis lapen casen" href="product_detail.html"> <img alt="Retis lapen casen" src="products-images/product1.jpg"> </a>
-
-
-                                        <a class="quickview-btn" ><span>Quick View</span></a>
-
-                                    </div>
-
-                                </div>
-                                <div class="item-info">
-                                    <div class="info-inner">
-                                        <div class="item-title"> <a title="Retis lapen casen" href="product_detail.html"> Sample Product </a> </div>
-                                        <div class="item-content">
-                                            <div class="rating">
-                                                <div class="ratings">
-                                                    <div class="rating-box">
-                                                        <div class="rating"></div>
-                                                    </div>
-                                                    <p class="rating-links"> <a href="#">1 Review(s)</a> <span class="separator">|</span> <a href="#">Add Review</a> </p>
-                                                </div>
-                                            </div>
-                                            <div class="item-price">
-                                                <div class="price-box"> <span class="regular-price"> <span class="price">$125.00</span> </span> </div>
-                                            </div>
-                                            <div class="actions"><a href="wishlist.html" class="link-wishlist" title="Add to Wishlist"></a>
-                                                <div class="add_cart">
-                                                    <button class="button btn-cart" type="button"><span>Add to Cart</span></button>
-                                                </div>
-                                                <a href="compare.html" class="link-compare" title="Add to Compare"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                            <!-- End Item -->
-
                     </div>
+                }
+
                 </div>
             </div>
         </div>
     </section>
-    <!-- Upsell Product Slider End -->
+    <!-- End Featured Slider -->
     <!-- service -->
     <div class="our-features-box wow bounceInUp animated">
         <ul>
             <li>
                 <div class="feature-box">
                     <div class="icon-truck"></div>
-                    <div class="content">FREE SHIPPING on order over $99</div>
+                    <div class="content">Dostava na Vašu adresu</div>
                 </div>
             </li>
             <li>
                 <div class="feature-box">
                     <div class="icon-support"></div>
-                    <div class="content">Need Help +1 800 123 1234</div>
+                    <div class="content">Trebate pomoć @item.user.phone</div>
                 </div>
             </li>
             <li>
                 <div class="feature-box">
                     <div class="icon-money"></div>
-                    <div class="content">Money Back Guarantee</div>
+                    <div class="content">Plaćanje gotovinom ili karticom</div>
                 </div>
             </li>
             <li class="last">
                 <div class="feature-box">
                     <div class="icon-return"></div>
-                    <div class="content">30 days return Service</div>
+                    <div class="content">Montiranje namještaja</div>
                 </div>
             </li>
         </ul>
     </div>
     <!-- end service -->
+    <!--GOOGLE -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfCf4BKPmFsOCDcyc1sq-5OWwn1O4F2Rg&callback=initialize"></script>
+    <script src='@routes.Assets.versioned("javascripts/map.js")'></script>
+    <script type="text/javascript" src='@routes.Assets.versioned("javascripts/googleAnalytics.js")'></script>
+
 }

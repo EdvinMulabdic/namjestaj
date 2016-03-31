@@ -34,6 +34,7 @@
                                 <th class="text-center">Kategorija</th>
                                 <th class="text-center">Pogledaj</th>
                                 <th class="text-center">Uredi</th>
+                                <th class="text-center">Galerija</th>
                                 <th class="text-center">Obriši</th>
                             </tr>
                         </thead>
@@ -55,7 +56,12 @@
                                     </a>
                                 </td>
                                 <td class="text-center">
-                                    <a class="fa-buttons" data-role="delete-item" title="Obriši proixvod" href="@routes.Items.deleteItem(item.id)" role="button">
+                                    <a class="fa-buttons" title="Uredi proizvod" href="@routes.Images.listOfPicturesRender(item.id)" role="button">
+                                        <i class=" fa fa-picture-o fa-lg"></i>
+                                    </a>
+                                </td>
+                                <td class="text-center">
+                                    <a class="fa-buttons" data-role="delete-item" title="Obriši proizvod" href="@routes.Items.deleteItem(item.id)" role="button">
                                         <i class=" fa fa-trash-o fa-lg"></i>
                                     </a>
                                 </td>
@@ -69,7 +75,7 @@
                     <div class="col-md-6 col-md-offset-5" id="margin-bottom-header">
                         <form  method="GET" role="form" action="@routes.Items.createItem(userId)" >
                             <div class="buttons-set">
-                                <button class="button create-account"><span>DODAJ PROIZVOD</span></button>
+                                <button class="button submit"> <span> DODAJ PROIZVOD </span></button>
                             </div>
                         </form>
 

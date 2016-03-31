@@ -5,16 +5,20 @@
             <div class="account-login">
                 <fieldset class="col2-set">
                     <legend>Prijavite se ili kreirajte profil</legend>
-                    <div class="col-1 new-users"><strong>Novi korisnici</strong>
-                        <div class="content">
-                            <p>Ukoliko želite kreirati profil molimo Vas da nas kontaktirate putem email-a.
-                                Kreiranjem profila biće Vam omogućeno da prezentujete svoje artikle, dodate radnje na mapu, pratite kupovinu,
-                                i još mnoge druge pogodnosti.</p>
-                            <div class="buttons-set">
-                                <button class="button create-account"><span>Kontaktirajte nas</span></button>
+
+                    <form  method="GET" role="form" action="@routes.ContactUs.contactUsRender()" >
+                        <div class="col-1 new-users"><strong>Novi korisnici</strong>
+                            <div class="content">
+                                <p>Ukoliko želite kreirati profil molimo Vas da nas kontaktirate putem email-a.
+                                    Kreiranjem profila biće Vam omogućeno da prezentujete svoje artikle, dodate radnje na mapu, pratite kupovinu,
+                                    i još mnoge druge pogodnosti.</p>
+                                <div class="buttons-set">
+                                    <button class="button"><i class="fa fa-envelope"></i> <span> Kontaktirajte nas </span></button>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </form>
+
                     <div class="col-2 registered-users"><strong>Registrovani korisnici </strong>
                         <form  method="POST" role="form" action="@routes.Login.login()" >
                             <div class="content">
