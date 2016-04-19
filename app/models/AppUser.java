@@ -20,8 +20,10 @@ public class AppUser extends Model {
     public String phone;
     public String city;
     public String address;
+    public String workTime;
     public String password;
     public Integer userAccessLevel;
+    public Boolean isActive;
 
     @OneToMany(cascade = CascadeType.ALL)
     public Item item;
@@ -29,10 +31,13 @@ public class AppUser extends Model {
     @OneToMany(cascade = CascadeType.ALL)
     public Store store;
 
+    @OneToMany(cascade = CascadeType.ALL)
+    public Message message;
+
     public AppUser(){
     }
 
-    public AppUser(String name, String email, String phone, String city, String address, String password, Integer userAccessLevel) {
+    public AppUser(String name, String email, String phone, String city, String address, String password, Integer userAccessLevel, Boolean isActive) {
         this.name = name;
         this.email = email;
         this.phone = phone;
@@ -40,6 +45,7 @@ public class AppUser extends Model {
         this.address = address;
         this.password = password;
         this.userAccessLevel = userAccessLevel;
+        this.isActive = isActive;
     }
 
     public static Finder<String, AppUser> finder = new Finder<>(AppUser.class);
@@ -135,6 +141,7 @@ public class AppUser extends Model {
                 user.password = password;
                 user.hashPass();
                 user.userAccessLevel = 2;
+                user.isActive = true;
                 user.save();
                 return true;
             }catch (PersistenceException e){
@@ -148,7 +155,7 @@ public class AppUser extends Model {
     }
 
     /* ------------------- update user informations ------------------ */
-    public static Boolean updateUserInformations(String name, String city, String address, String phone, Integer userId){
+    public static Boolean updateUserInformations(String name, String city, String address, String phone,String workTime, Integer userId){
         AppUser user = findUserById(userId);
         if(user != null){
             try {
@@ -156,6 +163,7 @@ public class AppUser extends Model {
                 user.city = city;
                 user.address = address;
                 user.phone = phone;
+                user.workTime = workTime;
                 user.update();
             }catch (PersistenceException e ){
                 Logger.error("Failed to update user password" + e.getMessage());
@@ -192,5 +200,25 @@ public class AppUser extends Model {
     }
 
 
+     /* ------------------- deactivate/activate user  ------------------ */
 
+    public static void isUserActive (Integer userId){
+        AppUser user = findUserById(userId);
+        List<Item> userItems = Item.findAllUserItems(userId);
+        if(user.isActive == true) {
+            for(int i = 0; i < userItems.size(); i ++) {
+                userItems.get(i).isActive = false;
+                userItems.get(i).update();
+            }
+            user.isActive = false;
+
+        } else if (user.isActive == false) {
+                for(int j = 0; j < userItems.size(); j ++) {
+                    userItems.get(j).isActive = true;
+                    userItems.get(j).update();
+                }
+                user.isActive = true;
+            }
+        user.update();
+    }
 }

@@ -4,10 +4,7 @@ import com.avaje.ebean.Model;
 import play.Logger;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by User on 3/16/2016.
@@ -22,7 +19,7 @@ public class Item extends Model {
     public String oldPrice;
     @Column(columnDefinition = "TEXT")
     public String description;
-
+    public Boolean isActive;
     public Boolean isVisible;
 
     @ManyToOne
@@ -59,6 +56,7 @@ public class Item extends Model {
         item.isVisible = false;
         item.user = user;
         item.category = category;
+        item.isActive = true;
         item.save();
         return item.id;
     }
@@ -114,10 +112,16 @@ public class Item extends Model {
         return finder.all();
     }
 
+        /* ------------------- find all active items  ------------------ */
+
+    public static List<Item> allActiveItems() {
+        return finder.where().eq("is_active",  1).findList();
+    }
+
     /* ------------------- get last 10 products from database ------------------ */
 
     public static List<Item> getLastTenProducts(){
-        List<Item> allItems = finder.all();
+        List<Item> allItems = allActiveItems();
         List<Item> items = new ArrayList<>();
         if (allItems.size() > 10){
              items = allItems.subList(allItems.size()-10, allItems.size());
@@ -152,24 +156,50 @@ public class Item extends Model {
         item.update();
     }
 
+     /* --------------- Item  activate/deactivate  ---------------*/
+
+    public static void isItemActive(Integer itemId){
+        Item  item = findItemById(itemId);
+        if(item.isActive == false) {
+            item.isActive = true;
+        }else if(item.isActive == true){
+            item.isActive = false;
+        }
+        item.update();
+    }
+
+
           /* --------------- List of items for homepage slider ---------------*/
 
     public static List<Item> itemsForHomepageSlider(){
+        List<Item> itemsForHomepageSlider = new ArrayList<>();
         List<Item> items = finder.where().eq("isVisible", true).findList();
-        return items;
+        for(int i = 0; i < items.size(); i ++) {
+            if(items.get(i).isActive == true) {
+                itemsForHomepageSlider.add(items.get(i));
+            }
+        }
+        return itemsForHomepageSlider;
     }
 
-    /* --------------- Items to recommend ---------------*/
+    /* --------------- Items to recommend. We recommend items with same subcategory ---------------*/
 
     public static List<Item> itemsToRecommend(Integer itemId) {
 
         Item item = findItemById(itemId);
-        Integer price = Integer.parseInt(item.price);
-        Integer categoryId = item.category.id;
-
-        List<Item> itemsWithSameCategory = finder.where().eq("category_id", categoryId).findList();
+//        Integer price = Integer.parseInt(item.price);
+//        List<Integer> prices = new ArrayList<>();
+        Integer subcategoryId = item.subCategory.id;
         List<Item> itemsToRecommend = new ArrayList<>();
-        List<Integer> prices = new ArrayList<>();
+
+        List<Item> items = finder.where().eq("sub_category_id", subcategoryId).findList();
+
+            for(int i = 0; i < items.size(); i ++ ) {
+                if(items.get(i).isActive == true) {
+                    itemsToRecommend.add(items.get(i));
+                }
+            }
+
 
 //        for(int i = 0; i < itemsWithSameCategory.size(); i++) {
 //            prices.add(Integer.parseInt(itemsWithSameCategory.get(i).price));
@@ -184,10 +214,10 @@ public class Item extends Model {
 //
 //            }
 //        }
-        if(itemsWithSameCategory.size() > 10 ) {
-            itemsToRecommend = itemsWithSameCategory.subList(0 , 10);
+        if(items.size() > 10 ) {
+            itemsToRecommend = items.subList(0 , 10);
         }else{
-            itemsToRecommend = itemsWithSameCategory;
+            itemsToRecommend = items;
         }
 
         Collections.shuffle(itemsToRecommend);
@@ -197,11 +227,88 @@ public class Item extends Model {
 
     /* ------------------- return items with cagtegories  ------------------ */
     public static List<Item> itemsWithCategory(Integer categoryId) {
-        return finder.where().eq("category_id", categoryId).findList();
+        List<Item> itemsWithCategory = new ArrayList<>();
+        List<Item> items = finder.where().eq("category_id", categoryId).findList();
+
+        for(int i = 0; i < items.size(); i ++ ) {
+            if(items.get(i).isActive == true) {
+                itemsWithCategory.add(items.get(i));
+            }
+        }
+        return itemsWithCategory;
     }
 
     /* ------------------- return items with subCagtegories  ------------------ */
     public static List<Item> itemsWithSubCategory(Integer subCategoryId) {
-        return finder.where().eq("sub_category_id", subCategoryId).findList();
+        List<Item> itemsWithSubCategory = new ArrayList<>();
+        List<Item> items = finder.where().eq("sub_category_id", subCategoryId).findList();
+        for(int i = 0; i < items.size(); i ++ ) {
+            if(items.get(i).isActive == true) {
+                itemsWithSubCategory.add(items.get(i));
+            }
+        }
+        return itemsWithSubCategory;
+    }
+
+    /* ------------------- return items with price range < 100 ------------------ */
+    public static List<Item> itemsWithPriceRange1() {
+        List<Item> allActiveItems = allActiveItems();
+        List<Item> itemsToRetrun = new ArrayList<>();
+        for(int i = 0; i < allActiveItems.size(); i ++) {
+            if (Integer.parseInt(allActiveItems.get(i).price )< 100) {
+                itemsToRetrun.add(allActiveItems.get(i));
+            }
+        }
+        return itemsToRetrun;
+    }
+
+    /* ------------------- return items with price range >100 < 150 ------------------ */
+    public static List<Item> itemsWithPriceRange2() {
+        List<Item> allItems = allActiveItems();
+        List<Item> itemsToRetrun = new ArrayList<>();
+        for(int i = 0; i < allItems.size(); i ++) {
+            if (Integer.parseInt(allItems.get(i).price) > 100 && Integer.parseInt(allItems.get(i).price) < 150 ) {
+                itemsToRetrun.add(allItems.get(i));
+            }
+        }
+        return itemsToRetrun;
+    }
+
+    /* ------------------- return items with price range > 150  <200 ------------------ */
+    public static List<Item> itemsWithPriceRange3() {
+        List<Item> allItems = allActiveItems();
+        List<Item> itemsToRetrun = new ArrayList<>();
+        for(int i = 0; i < allItems.size(); i ++) {
+            if (Integer.parseInt(allItems.get(i).price ) > 150 && Integer.parseInt(allItems.get(i).price ) < 200) {
+                itemsToRetrun.add(allItems.get(i));
+            }
+        }
+        return itemsToRetrun;
+    }
+
+    /* ------------------- return items with price range > 200 ------------------ */
+    public static List<Item> itemsWithPriceRange4 () {
+        List<Item> allItems = allActiveItems();
+        List<Item> itemsToRetrun = new ArrayList<>();
+        for(int i = 0; i < allItems.size(); i ++) {
+            if (Integer.parseInt(allItems.get(i).price ) > 200) {
+                itemsToRetrun.add(allItems.get(i));
+            }
+        }
+        return itemsToRetrun;
+    }
+
+
+        /* ------------------- return items with action price ------------------ */
+
+    public static List<Item> itemsOnSale () {
+        List<Item> allItems = finder.all();
+        List<Item> itemsToReturn = new LinkedList<>();
+        for(int i = 0; i < allItems.size(); i++) {
+            if(allItems.get(i).oldPrice != null ){
+                itemsToReturn.add(allItems.get(i));
+            }
+        }
+        return itemsToReturn;
     }
 }

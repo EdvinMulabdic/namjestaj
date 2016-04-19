@@ -1,4 +1,4 @@
-[0m[[31merror[0m] [0mE:\namjestaj\app\views\index.scala.html:318: Expected '}' but found '@'[0m
-[0m[[31merror[0m] [0m                                        <div class="item-img-info"> <a class="product-image" title="Retis lapen casen" href='@models.Image.findImagesByItemId(item.id).get(0)'> <img alt="Retis lapen casen" src='@'> </a>[0m
-[0m[[31merror[0m] [0m                                                                                                                                                                                                                  ^[0m
+[0m[[31merror[0m] [0mE:\namjestaj\app\views\news\newsPanel.scala.html:32: Expected '}' but found '@'[0m
+[0m[[31merror[0m] [0m                                        <div class="product-image"> <a href="product_detail.html" title="HTC Rhyme Sense"> <img class="small-image" src='@routes.Assets.versioned("images/product1.jpg")' alt="HTC Rhyme Sense"> </a> </div>*@[0m
+[0m[[31merror[0m] [0m                                                                                                                                                                                                                                             ^[0m
 [0m[[31merror[0m] [0m(compile:[31mtwirlCompileTemplates[0m) Twirl compilation failed[0m

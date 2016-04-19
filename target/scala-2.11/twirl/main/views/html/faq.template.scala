@@ -92,7 +92,7 @@ Seq[Any](_display_(/*1.2*/main/*1.6*/ {_display_(Seq[Any](format.raw/*1.8*/("""
 object faq extends faq_Scope0.faq
               /*
                   -- GENERATED --
-                  DATE: Sat Mar 26 22:24:36 CET 2016
+                  DATE: Mon Apr 18 19:38:50 CEST 2016
                   SOURCE: E:/namjestaj/app/views/faq.scala.html
                   HASH: 7dc98dd8fc2644aa1ed370b8d9cf4892f1fdbcc7
                   MATRIX: 823->1|834->5|872->7|904->13

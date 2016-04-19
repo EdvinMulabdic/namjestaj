@@ -14,15 +14,18 @@
                     <table class="table table-striped table-bordered table-responsive" id="sort">
                         <thead>
                             <tr class="about">
+                                <th>ID</th>
                                 <th>Ime korisnika</th>
                                 <th>Proizvod</th>
                                 <th>Cijena</th>
                                 <th class="text-center">Prikazi na početnom slideru</th>
+                                <th class="text-center">Blokiran</th>
                             </tr>
                         </thead>
                         <tbody>
                         @for(item <- items) {
                                 <tr class="about" >
+                                    <td>@item.id</td>
                                     <td>@item.user.name</td>
                                     <td>@item.name</td>
                                     <td class="text-center">@item.price</td>
@@ -37,23 +40,17 @@
                                             </a>
                                         }
                                     </td>
+                                    @if(item.isActive == null || item.isActive == false) {
+                                         <td class="text-center"> DA </td>
+                                    } else {
+                                        <td class="text-center"> NE </td>
+                                    }
+
                                 </tr>
                         }
                         </tbody>
                     </table>
                 </section>
-
-                <section>
-                    <div class="col-md-6 col-md-offset-5" id="margin-bottom-header">
-                        <form  method="GET" role="form" action="@routes.AppUsers.createUserRender()" >
-                            <div class="buttons-set">
-                                <button class="button create-account"><span>DODAJ KORISNIKA</span></button>
-                            </div>
-                        </form>
-
-                    </div>
-                </section>
-
             </div>
 
         </div>

@@ -139,8 +139,9 @@ public class AppUsers extends Controller {
         String city = form.field("city").value();
         String address = form.field("address").value();
         String phone = form.field("phone").value();
+        String workTime = form.field("workTime").value();
 
-        boolean updated = AppUser.updateUserInformations(name, city, address, phone, userId);
+        boolean updated = AppUser.updateUserInformations(name, city, address, phone, workTime, userId);
         if(!updated){
             flash("success", "Informacije uspješno ažurirane!");
             return redirect(routes.AppUsers.userPanelRender(userId));
@@ -167,5 +168,15 @@ public class AppUsers extends Controller {
             flash("error-search", "Neuspjelo ažuriranje.");
             return redirect(routes.AppUsers.userPanelRender(userId));
         }
+    }
+
+
+
+        /* ------------------- change user status (activate/deactivate user) ------------------ */
+    @Security.Authenticated(Authenticator.AdminFilter.class)
+
+    public Result isUserActive(Integer userId) {
+        AppUser.isUserActive(userId);
+        return redirect(routes.AppUsers.listOfUsersRender());
     }
 }

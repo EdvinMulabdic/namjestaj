@@ -73,20 +73,31 @@ Seq[Any](format.raw/*1.14*/("""
                                                         <div class="input-box name-lastname">
                                                             <label  for="subCategory">Potkategorija<em class="required">*</em></label>
                                                             <select title="Potkategorija" class="validate-select" id="subCategory" name="subCategory">
-                                                                <option  value="0" >Odaberite potkategoriju</option>
-                                                            """),_display_(/*46.62*/for(subCategory <- models.SubCategory.allSubCategories(item.category.id)) yield /*46.135*/{_display_(Seq[Any](format.raw/*46.136*/("""
-                                                                """),format.raw/*47.65*/("""<option value=""""),_display_(/*47.81*/subCategory/*47.92*/.id),format.raw/*47.95*/("""">"""),_display_(/*47.98*/subCategory/*47.109*/.name),format.raw/*47.114*/("""</option>
-                                                            """)))}),format.raw/*48.62*/("""
-                                                            """),format.raw/*49.61*/("""</select>
-                                                        </div>
+                                                                """),_display_(/*45.66*/if(item.subCategory != null)/*45.94*/ {_display_(Seq[Any](format.raw/*45.96*/("""
+                                                                    """),format.raw/*46.69*/("""<option value=""""),_display_(/*46.85*/item/*46.89*/.subCategory.id),format.raw/*46.104*/("""" >"""),_display_(/*46.108*/item/*46.112*/.subCategory.name),format.raw/*46.129*/("""</option>
+
+                                                                """)))}/*48.66*/else/*48.71*/{_display_(Seq[Any](format.raw/*48.72*/("""
+                                                                    """),format.raw/*49.69*/("""<option value="0" >Odaberite potkategoriju</option>
+                                                                """)))}),format.raw/*50.66*/("""
+                                                            """),_display_(/*51.62*/for(subCategory <- models.SubCategory.allSubCategories(item.category.id)) yield /*51.135*/{_display_(Seq[Any](format.raw/*51.136*/("""
+                                                                """),format.raw/*52.65*/("""<option value=""""),_display_(/*52.81*/subCategory/*52.92*/.id),format.raw/*52.95*/("""">"""),_display_(/*52.98*/subCategory/*52.109*/.name),format.raw/*52.114*/("""</option>
+                                                            """)))}),format.raw/*53.62*/("""
+                                                            """),format.raw/*54.61*/("""</select>
+                                                            """),_display_(/*55.62*/if(item.subCategory == null)/*55.90*/ {_display_(Seq[Any](format.raw/*55.92*/("""
+                                                                """),format.raw/*56.65*/("""<span class="require"><em class="required">
+                                                                    Molimo odaberite potkategoriju</em></span>
+                                                            """)))}),format.raw/*58.62*/("""
+                                                        """),format.raw/*59.57*/("""</div>
+
                                                     </div>
+
                                                 </li>
                                                 <li>
                                                     <div class="customer-name">
                                                         <div class="input-box">
                                                             <label for="price"> Cijena <span class="required">*</span>  </label>
                                                             <br>
-                                                            <input type="text" id="price" name="price" title="Cijena" class="input-text" value=""""),_display_(/*58.146*/item/*58.150*/.price),format.raw/*58.156*/("""" required>
+                                                            <input type="text" id="price" name="price" title="Cijena" class="input-text" value=""""),_display_(/*69.146*/item/*69.150*/.price),format.raw/*69.156*/("""" required>
                                                         </div>
                                                     </div>
                                                 </li>
@@ -97,7 +108,7 @@ Seq[Any](format.raw/*1.14*/("""
                                                         <div class="input-box">
                                                             <label for="oldPrice">Stara cijena <span class="required"></span>  </label>
                                                             <br>
-                                                            <input type="text" id="oldPrice" name="oldPrice" title="Stara Cijena" class="input-text" value=""""),_display_(/*69.158*/item/*69.162*/.oldPrice),format.raw/*69.171*/("""" >
+                                                            <input type="text" id="oldPrice" name="oldPrice" title="Stara Cijena" class="input-text" value=""""),_display_(/*80.158*/item/*80.162*/.oldPrice),format.raw/*80.171*/("""" >
                                                         </div>
                                                     </div>
 
@@ -107,7 +118,7 @@ Seq[Any](format.raw/*1.14*/("""
                                                         <label for="description">Opis proizvoda<em class="required">*</em></label>
                                                         <br>
                                                         <div class="">
-                                                            <textarea name="description" id="description" title="Opis" class="input-text" cols="5" rows="5" style="resize: vertical">"""),_display_(/*79.183*/item/*79.187*/.description),format.raw/*79.199*/("""</textarea>
+                                                            <textarea name="description" id="description" title="Opis" class="input-text" cols="5" rows="5" style="resize: vertical">"""),_display_(/*90.183*/item/*90.187*/.description),format.raw/*90.199*/("""</textarea>
                                                         </div>
                                                     </div>
                                                 </li>
@@ -150,11 +161,11 @@ Seq[Any](format.raw/*1.14*/("""
 object updateItem extends updateItem_Scope0.updateItem
               /*
                   -- GENERATED --
-                  DATE: Thu Mar 31 17:13:53 CEST 2016
+                  DATE: Tue Apr 19 10:36:53 CEST 2016
                   SOURCE: E:/namjestaj/app/views/Item/updateItem.scala.html
-                  HASH: b76963249d4f6c2f01da6b83ef57fc397cc4fac7
-                  MATRIX: 758->1|865->13|892->15|903->19|941->21|972->26|1314->342|1326->346|1351->351|1586->559|1601->565|1649->591|2468->1382|2482->1386|2509->1391|3311->2166|3324->2170|3358->2182|3389->2185|3403->2189|3439->2203|3541->2278|3610->2330|3650->2331|3747->2400|3790->2416|3807->2424|3831->2427|3861->2430|3879->2438|3906->2443|4012->2518|4101->2579|5005->3456|5095->3529|5135->3530|5228->3595|5271->3611|5291->3622|5315->3625|5345->3628|5366->3639|5393->3644|5495->3715|5584->3776|6350->4514|6364->4518|6392->4524|7434->5538|7448->5542|7479->5551|8262->6306|8276->6310|8310->6322
-                  LINES: 27->1|32->1|33->2|33->2|33->2|34->3|40->9|40->9|40->9|44->13|44->13|44->13|54->23|54->23|54->23|63->32|63->32|63->32|63->32|63->32|63->32|64->33|64->33|64->33|65->34|65->34|65->34|65->34|65->34|65->34|65->34|66->35|67->36|77->46|77->46|77->46|78->47|78->47|78->47|78->47|78->47|78->47|78->47|79->48|80->49|89->58|89->58|89->58|100->69|100->69|100->69|110->79|110->79|110->79
+                  HASH: 390b21022a2352f7ee8535241d22e752313a97f6
+                  MATRIX: 758->1|865->13|892->15|903->19|941->21|972->26|1314->342|1326->346|1351->351|1586->559|1601->565|1649->591|2468->1382|2482->1386|2509->1391|3311->2166|3324->2170|3358->2182|3389->2185|3403->2189|3439->2203|3541->2278|3610->2330|3650->2331|3747->2400|3790->2416|3807->2424|3831->2427|3861->2430|3879->2438|3906->2443|4012->2518|4101->2579|4892->3343|4929->3371|4969->3373|5066->3442|5109->3458|5122->3462|5159->3477|5191->3481|5205->3485|5244->3502|5339->3578|5352->3583|5391->3584|5488->3653|5636->3770|5725->3832|5815->3905|5855->3906|5948->3971|5991->3987|6011->3998|6035->4001|6065->4004|6086->4015|6113->4020|6215->4091|6304->4152|6402->4223|6439->4251|6479->4253|6572->4318|6819->4534|6904->4591|7606->5265|7620->5269|7648->5275|8690->6289|8704->6293|8735->6302|9518->7057|9532->7061|9566->7073
+                  LINES: 27->1|32->1|33->2|33->2|33->2|34->3|40->9|40->9|40->9|44->13|44->13|44->13|54->23|54->23|54->23|63->32|63->32|63->32|63->32|63->32|63->32|64->33|64->33|64->33|65->34|65->34|65->34|65->34|65->34|65->34|65->34|66->35|67->36|76->45|76->45|76->45|77->46|77->46|77->46|77->46|77->46|77->46|77->46|79->48|79->48|79->48|80->49|81->50|82->51|82->51|82->51|83->52|83->52|83->52|83->52|83->52|83->52|83->52|84->53|85->54|86->55|86->55|86->55|87->56|89->58|90->59|100->69|100->69|100->69|111->80|111->80|111->80|121->90|121->90|121->90
                   -- GENERATED --
               */
           

@@ -1,0 +1,40 @@
+@import helpers.UserAccessLevel
+@(message: Message)
+@main {
+    <section class="main-container col2-right-layout wow bounceInUp animated">
+        <div class="main container">
+            <div class="row">
+                <section class="col-main col-sm-9">
+                    <div class="page-title">
+                        <h2>@message.subject</h2>
+                    </div>
+                    <div class="static-contain">
+                        <p> @message.customerEmail</p>
+                        <br>
+                    </div>
+                    <div class="static-contain">
+                        <p> @message.messageText</p>
+
+                    </div>
+
+                </section>
+                <aside class="col-right sidebar col-sm-3">
+                    <div class="block block-company">
+                        <div class="block-title">NAVIGACIJA </div>
+                        <div class="block-content">
+                            <ol id="recently-viewed-items">
+                                <li class="item even"><a href="@routes.Messages.listOfMessages(message.user.id)">Poruke</a></li>
+                                @if(UserAccessLevel.getCurrentUser(ctx()).userAccessLevel.equals(UserAccessLevel.USER)) {
+
+                                    <li class="item  odd"><a href="@routes.AppUsers.userPanelRender(message.user.id)">
+                                        Korisnički panel</a></li>
+                                }
+                            </ol>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+    <!-- Main Container End -->
+}

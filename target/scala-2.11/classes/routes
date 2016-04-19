@@ -4,7 +4,7 @@
 
 # Home page
 GET           /                                              @controllers.Application.index()
-
+GET           /pogresanunos                                  @controllers.Application.unAuthorized()
 
 
 # Map static resources from the /public folder to the /assets URL path
@@ -27,6 +27,7 @@ POST          /azuriranjepodataka/:userId                    @controllers.AppUse
 POST          /adminpanel/:userId                            @controllers.AppUsers.updateAdminPassword(userId: Integer)
 GET           /proizvodi                                     @controllers.Items.allItems()
 GET           /proizvodi/:itemId                             @controllers.Items.showOnHomepage(itemId: Integer)
+GET           /korisnici/:userId                             @controllers.AppUsers.isUserActive(userId: Integer)
 
 #USER
 GET           /userpanel/:userId                             @controllers.AppUsers.userPanelRender(userId: Integer)
@@ -45,6 +46,15 @@ POST          /kreiranjeproizvoda/:userId                    @controllers.Items.
 GET           /proizvod/:itemId                              @controllers.Items.itemRender(itemId: Integer)
 GET           /kategorije/:categoryId                        @controllers.Items.getItemsWithCategory(categoryId: Integer)
 GET           /potkategorije/:subcategoryId                  @controllers.Items.getItemsWithSubCategory(subcategoryId: Integer)
+
+#ITEM PRICE RANGE
+GET           /proizvodi100                                  @controllers.Items.getItemsWithPriceRange1()
+GET           /proizvodi150                                  @controllers.Items.getItemsWithPriceRange2()
+GET           /proizvodi200                                  @controllers.Items.getItemsWithPriceRange3()
+GET           /proizvodipreko200                             @controllers.Items.getItemsWithPriceRange4()
+
+#ITEM ACTION, TOP ...
+GET           /akcija                                        @controllers.Items.itemsOnSale()
 
 
 #CATEGORIES
@@ -90,3 +100,21 @@ DELETE        /brisanjeslike/:imageId                        @controllers.Images
 
 #AJAX LAST TEN PRODUCTS
 POST          /                                              @controllers.Items.lastTenProducts()
+
+#MESSAGES
+POST          /poruka/:itemId                                @controllers.Messages.sendMessage(itemId: Integer)
+GET           /poruke/:userId                                @controllers.Messages.listOfMessages(userId: Integer)
+GET           /poruka/:messageId                             @controllers.Messages.message(messageId: Integer)
+GET           /brisanjeporuke/:messageId                     @controllers.Messages.deleteMessage(messageId: Integer)
+GET           /messagenotif                                  @controllers.Messages.notifications()
+GET           /porukekoisnika/:userId                        @controllers.Messages.listOfMessagesForAdmin(userId: Integer)
+
+#NEWS
+GET           /vijest/:newsId                                @controllers.NewsController.newsRender(newsId: Integer)
+GET           /vijestpanel                                   @controllers.NewsController.newsPanelRender()
+GET           /kreirajvijest                                 @controllers.NewsController.createNewsRender()
+POST          /kreirajvijest                                 @controllers.NewsController.createNews()
+GET           /brisivijest/:newsId                           @controllers.NewsController.deleteNews(newsId: Integer)
+DELETE        /brisivijest/:newsId                           @controllers.NewsController.deleteNews(newsId: Integer)
+GET           /azurirajvijest/:newsId                        @controllers.NewsController.updateNewsRender(newsId: Integer)
+POST          /azurirajvijest/:newsId                        @controllers.NewsController.updateNews(newsId: Integer)

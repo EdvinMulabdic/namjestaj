@@ -4,7 +4,7 @@
 		module="blankproject$sbt_2.11"
 		revision="1.0-SNAPSHOT"
 		status="integration"
-		publication="20160327144727"
+		publication="20160418192410"
 	/>
 	<configurations>
 		<conf name="default" visibility="public"/>

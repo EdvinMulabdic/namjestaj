@@ -71,8 +71,9 @@ Seq[Any](format.raw/*1.17*/("""
                                             <p> Ime: """),_display_(/*40.55*/user/*40.59*/.name),format.raw/*40.64*/(""" """),format.raw/*40.65*/("""<br>
                                                 Adresa: """),_display_(/*41.58*/user/*41.62*/.address),format.raw/*41.70*/("""<br>
                                                 Grad: """),_display_(/*42.56*/user/*42.60*/.city),format.raw/*42.65*/("""<br>
-                                                Telefon: """),_display_(/*43.59*/user/*43.63*/.phone),format.raw/*43.69*/("""
-                                                """),format.raw/*44.49*/("""<br>
+                                                Telefon: """),_display_(/*43.59*/user/*43.63*/.phone),format.raw/*43.69*/("""<br>
+                                                Radno vrijeme: """),_display_(/*44.65*/user/*44.69*/.workTime),format.raw/*44.78*/("""
+                                                """),format.raw/*45.49*/("""<br>
                                                 <br>
                                             </p>
                                             <div class="buttons-set">
@@ -81,9 +82,9 @@ Seq[Any](format.raw/*1.17*/("""
                                         </form>
                                     </div>
                                     <div class="col-2">
-                                        <form  method="POST" role="form" action=""""),_display_(/*53.83*/routes/*53.89*/.AppUsers.updateUserPassword(user.id)),format.raw/*53.126*/("""" >
+                                        <form  method="POST" role="form" action=""""),_display_(/*54.83*/routes/*54.89*/.AppUsers.updateUserPassword(user.id)),format.raw/*54.126*/("""" >
                                             <h5>Pristupne informacije</h5>
-                                            <p>"""),_display_(/*55.49*/user/*55.53*/.email),format.raw/*55.59*/("""</p>
+                                            <p>"""),_display_(/*56.49*/user/*56.53*/.email),format.raw/*56.59*/("""</p>
                                             <input type="password" title="Password" class="input-text" name="password" required>
                                             <br>
                                             <br>
@@ -104,18 +105,12 @@ Seq[Any](format.raw/*1.17*/("""
                         <div class="block-content">
                             <ul>
                                 <li class="current"><a>Korisnički panel</a></li>
-                                <li><a href=""""),_display_(/*76.47*/routes/*76.53*/.Stores.listOfStores(user.id)),format.raw/*76.82*/("""">Objekti</a></li>
-                                <li><a href=""""),_display_(/*77.47*/routes/*77.53*/.Stores.createStoreRender(user.id)),format.raw/*77.87*/("""">Dodaj objekat</a></li>
-                                <li><a href=""""),_display_(/*78.47*/routes/*78.53*/.Items.listOfItems(user.id)),format.raw/*78.80*/("""">Poizvodi</a></li>
-                                <li><a href=""""),_display_(/*79.47*/routes/*79.53*/.Items.createItem(user.id)),format.raw/*79.79*/("""">Dodaj proizvod</a></li>
-                                <li><a href="#">My Orders</a></li>
-                                <li><a href="#">Billing Agreements</a></li>
-                                <li><a href="#">Recurring Profiles</a></li>
-                                <li><a href="#">My Product Reviews</a></li>
-                                <li><a href="#">My Tags</a></li>
-                                <li><a href="wishlist.html">My Wishlist</a></li>
-                                <li><a href="#">My Downloadable</a></li>
-                                <li class="last"><a href="#">Newsletter Subscriptions</a></li>
+                                <li><a href=""""),_display_(/*77.47*/routes/*77.53*/.Stores.listOfStores(user.id)),format.raw/*77.82*/("""">Objekti</a></li>
+                                <li><a href=""""),_display_(/*78.47*/routes/*78.53*/.Stores.createStoreRender(user.id)),format.raw/*78.87*/("""">Dodaj objekat</a></li>
+                                <li><a href=""""),_display_(/*79.47*/routes/*79.53*/.Items.listOfItems(user.id)),format.raw/*79.80*/("""">Poizvodi</a></li>
+                                <li><a href=""""),_display_(/*80.47*/routes/*80.53*/.Items.createItem(user.id)),format.raw/*80.79*/("""">Dodaj proizvod</a></li>
+                                <li><a href=""""),_display_(/*81.47*/routes/*81.53*/.Messages.listOfMessages(user.id)),format.raw/*81.86*/("""">Poruke</a></li>
+
                             </ul>
                         </div>
                     </div>
@@ -143,11 +138,11 @@ Seq[Any](format.raw/*1.17*/("""
 object userPanel extends userPanel_Scope0.userPanel
               /*
                   -- GENERATED --
-                  DATE: Tue Mar 29 19:10:50 CEST 2016
+                  DATE: Mon Apr 18 19:38:53 CEST 2016
                   SOURCE: E:/namjestaj/app/views/AppUser/userPanel.scala.html
-                  HASH: 13f049709e9f2427498fcdbc28ba5b79173cb9e1
-                  MATRIX: 762->1|872->16|899->18|910->22|947->23|978->28|1055->79|1095->111|1134->113|1178->130|1397->323|1410->328|1445->343|1521->388|1562->402|1601->432|1641->434|1686->451|1934->672|1948->677|1982->690|2027->707|2078->727|2114->736|2679->1274|2692->1278|2718->1283|3204->1742|3219->1748|3288->1795|3444->1924|3457->1928|3483->1933|3512->1934|3601->1996|3614->2000|3643->2008|3730->2068|3743->2072|3769->2077|3859->2140|3872->2144|3899->2150|3976->2199|4630->2826|4645->2832|4704->2869|4858->2996|4871->3000|4898->3006|6145->4226|6160->4232|6210->4261|6302->4326|6317->4332|6372->4366|6470->4437|6485->4443|6533->4470|6626->4536|6641->4542|6688->4568
-                  LINES: 27->1|32->1|33->2|33->2|33->2|34->3|36->5|36->5|36->5|37->6|39->8|39->8|39->8|42->11|43->12|43->12|43->12|44->13|47->16|47->16|47->16|48->17|49->18|50->19|62->31|62->31|62->31|69->38|69->38|69->38|71->40|71->40|71->40|71->40|72->41|72->41|72->41|73->42|73->42|73->42|74->43|74->43|74->43|75->44|84->53|84->53|84->53|86->55|86->55|86->55|107->76|107->76|107->76|108->77|108->77|108->77|109->78|109->78|109->78|110->79|110->79|110->79
+                  HASH: a623ccffa3f9aac1d7e0543a2fc0d44f3796c0cf
+                  MATRIX: 762->1|872->16|899->18|910->22|947->23|978->28|1055->79|1095->111|1134->113|1178->130|1397->323|1410->328|1445->343|1521->388|1562->402|1601->432|1641->434|1686->451|1934->672|1948->677|1982->690|2027->707|2078->727|2114->736|2679->1274|2692->1278|2718->1283|3204->1742|3219->1748|3288->1795|3444->1924|3457->1928|3483->1933|3512->1934|3601->1996|3614->2000|3643->2008|3730->2068|3743->2072|3769->2077|3859->2140|3872->2144|3899->2150|3995->2219|4008->2223|4038->2232|4115->2281|4769->2908|4784->2914|4843->2951|4997->3078|5010->3082|5037->3088|6284->4308|6299->4314|6349->4343|6441->4408|6456->4414|6511->4448|6609->4519|6624->4525|6672->4552|6765->4618|6780->4624|6827->4650|6926->4722|6941->4728|6995->4761
+                  LINES: 27->1|32->1|33->2|33->2|33->2|34->3|36->5|36->5|36->5|37->6|39->8|39->8|39->8|42->11|43->12|43->12|43->12|44->13|47->16|47->16|47->16|48->17|49->18|50->19|62->31|62->31|62->31|69->38|69->38|69->38|71->40|71->40|71->40|71->40|72->41|72->41|72->41|73->42|73->42|73->42|74->43|74->43|74->43|75->44|75->44|75->44|76->45|85->54|85->54|85->54|87->56|87->56|87->56|108->77|108->77|108->77|109->78|109->78|109->78|110->79|110->79|110->79|111->80|111->80|111->80|112->81|112->81|112->81
                   -- GENERATED --
               */
           

@@ -42,13 +42,24 @@
                                                         <div class="input-box name-lastname">
                                                             <label  for="subCategory">Potkategorija<em class="required">*</em></label>
                                                             <select title="Potkategorija" class="validate-select" id="subCategory" name="subCategory">
-                                                                <option  value="0" >Odaberite potkategoriju</option>
+                                                                @if(item.subCategory != null) {
+                                                                    <option value="@item.subCategory.id" >@item.subCategory.name</option>
+
+                                                                }else {
+                                                                    <option value="0" >Odaberite potkategoriju</option>
+                                                                }
                                                             @for(subCategory <- models.SubCategory.allSubCategories(item.category.id)){
                                                                 <option value="@subCategory.id">@subCategory.name</option>
                                                             }
                                                             </select>
+                                                            @if(item.subCategory == null) {
+                                                                <span class="require"><em class="required">
+                                                                    Molimo odaberite potkategoriju</em></span>
+                                                            }
                                                         </div>
+
                                                     </div>
+
                                                 </li>
                                                 <li>
                                                     <div class="customer-name">

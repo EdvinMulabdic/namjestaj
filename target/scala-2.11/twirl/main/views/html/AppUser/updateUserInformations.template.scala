@@ -76,6 +76,17 @@ Seq[Any](format.raw/*1.17*/("""
                                                         <input type="text" id="phone" name="phone" title="Phone" class="input-text" value=""""),_display_(/*45.141*/user/*45.145*/.phone),format.raw/*45.151*/("""" required>
                                                     </div>
                                                 </li>
+                                                <li>
+                                                    <div class="input-box">
+                                                        <label for="workTime">Radno vrijeme  <span class="required">*</span>  </label>
+                                                        <br>
+                                                        """),_display_(/*52.58*/if(user.workTime != null)/*52.83*/ {_display_(Seq[Any](format.raw/*52.85*/("""
+                                                            """),format.raw/*53.61*/("""<input type="text" id="workTime" name="workTime" title="Radno vrijeme" class="input-text" placeholder="npr. 08 h - 16 h" value=""""),_display_(/*53.190*/user/*53.194*/.workTime),format.raw/*53.203*/("""" required>
+                                                        """)))}/*54.58*/else/*54.63*/{_display_(Seq[Any](format.raw/*54.64*/("""
+                                                            """),format.raw/*55.61*/("""<input type="text" id="workTime" name="workTime" title="Radno vrijeme" class="input-text" value="" placeholder="npr. 08 h - 16 h" required>
+                                                            """)))}),format.raw/*56.62*/("""
+                                                        """),format.raw/*57.57*/("""</div>
+                                                </li>
                                             </ul>
                                         </fieldset>
                                     </li>
@@ -114,11 +125,11 @@ Seq[Any](format.raw/*1.17*/("""
 object updateUserInformations extends updateUserInformations_Scope0.updateUserInformations
               /*
                   -- GENERATED --
-                  DATE: Fri Mar 25 01:42:12 CET 2016
+                  DATE: Mon Apr 18 19:38:53 CEST 2016
                   SOURCE: E:/namjestaj/app/views/AppUser/updateUserInformations.scala.html
-                  HASH: 661c1fbcab061cf99bf24e0d33db33a2d24d5e97
-                  MATRIX: 788->1|898->16|925->18|936->22|974->24|1005->29|1554->551|1569->557|1632->598|2434->1372|2448->1376|2475->1381|3150->2028|3164->2032|3191->2037|3810->2628|3824->2632|3854->2640|4462->3220|4476->3224|4504->3230
-                  LINES: 27->1|32->1|33->2|33->2|33->2|34->3|44->13|44->13|44->13|54->23|54->23|54->23|62->31|62->31|62->31|69->38|69->38|69->38|76->45|76->45|76->45
+                  HASH: f14590bd76c9e47ea06ba33552756dc99fb4d7b0
+                  MATRIX: 788->1|898->16|925->18|936->22|974->24|1005->29|1554->551|1569->557|1632->598|2434->1372|2448->1376|2475->1381|3150->2028|3164->2032|3191->2037|3810->2628|3824->2632|3854->2640|4462->3220|4476->3224|4504->3230|5038->3737|5072->3762|5112->3764|5201->3825|5358->3954|5372->3958|5403->3967|5491->4036|5504->4041|5543->4042|5632->4103|5864->4304|5949->4361
+                  LINES: 27->1|32->1|33->2|33->2|33->2|34->3|44->13|44->13|44->13|54->23|54->23|54->23|62->31|62->31|62->31|69->38|69->38|69->38|76->45|76->45|76->45|83->52|83->52|83->52|84->53|84->53|84->53|84->53|85->54|85->54|85->54|86->55|87->56|88->57
                   -- GENERATED --
               */
           

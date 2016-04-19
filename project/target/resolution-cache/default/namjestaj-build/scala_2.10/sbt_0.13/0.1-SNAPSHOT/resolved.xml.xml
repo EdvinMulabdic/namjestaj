@@ -4,7 +4,7 @@
 		module="namjestaj-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20160327144917"
+		publication="20160418192721"
 		e:sbtVersion="0.13" e:scalaVersion="2.10"
 	>
 		<description>

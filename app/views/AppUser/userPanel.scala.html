@@ -40,7 +40,8 @@
                                             <p> Ime: @user.name <br>
                                                 Adresa: @user.address<br>
                                                 Grad: @user.city<br>
-                                                Telefon: @user.phone
+                                                Telefon: @user.phone<br>
+                                                Radno vrijeme: @user.workTime
                                                 <br>
                                                 <br>
                                             </p>
@@ -77,14 +78,8 @@
                                 <li><a href="@routes.Stores.createStoreRender(user.id)">Dodaj objekat</a></li>
                                 <li><a href="@routes.Items.listOfItems(user.id)">Poizvodi</a></li>
                                 <li><a href="@routes.Items.createItem(user.id)">Dodaj proizvod</a></li>
-                                <li><a href="#">My Orders</a></li>
-                                <li><a href="#">Billing Agreements</a></li>
-                                <li><a href="#">Recurring Profiles</a></li>
-                                <li><a href="#">My Product Reviews</a></li>
-                                <li><a href="#">My Tags</a></li>
-                                <li><a href="wishlist.html">My Wishlist</a></li>
-                                <li><a href="#">My Downloadable</a></li>
-                                <li class="last"><a href="#">Newsletter Subscriptions</a></li>
+                                <li><a href="@routes.Messages.listOfMessages(user.id)">Poruke</a></li>
+
                             </ul>
                         </div>
                     </div>

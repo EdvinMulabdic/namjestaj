@@ -28,6 +28,9 @@ public class Image extends Model {
     @JsonBackReference
     public Item item;
 
+    @ManyToOne
+    @JsonBackReference
+    public News news;
 
 
     public static Cloudinary cloudinary;
@@ -84,10 +87,13 @@ public class Image extends Model {
         return image;
     }
 
+    /* ------------------- all images ------------------ */
+
     public static List<Image> all() {
         return finder.all();
     }
 
+    /* ------------------- get image size ------------------ */
 
     public String getSize(int width, int height) {
         try {
@@ -103,14 +109,7 @@ public class Image extends Model {
         }
     }
 
-    public String getThumbnail(){
-        String url = cloudinary.url().format("png")
-                .transformation(
-                        new Transformation().width(150).height(150).crop("thumb").gravity("face").radius("max")
-                )
-                .generate(public_id);
-        return url;
-    }
+    /* ------------------- delete image ------------------ */
 
     public static Integer deleteImage(Image image) {
         Integer itemId = image.item.id;
@@ -126,12 +125,57 @@ public class Image extends Model {
 
     }
 
+    /* ------------------- find images by item id ------------------ */
+
     public static List<Image> findImagesByItemId(Integer itemId){
         return finder.where().eq("item_id", itemId).findList();
     }
 
+    /* ------------------- find images by news id ------------------ */
+
+    public static List<Image> findImagesByNewsId(Integer newsId){
+        return finder.where().eq("news_id", newsId).findList();
+    }
+
+
+
+    /* ------------------- find images by id ------------------ */
+
     public static Image findImageById(String public_id){
         return finder.where().eq("public_id", public_id).findUnique();
+    }
+
+
+    /* ------------------- create image for news ------------------ */
+
+    public static Image createNews(File image, Integer newsId) {
+        Map result;
+
+        try {
+            result = cloudinary.uploader().upload(image, null);
+            return createNews(result, newsId);
+
+        } catch (IOException e) {
+            Logger.debug("Failed to save image.", e.getMessage());
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public static Image createNews(Map uploadResult, Integer newsId) {
+        Image image = new Image();
+
+        image.public_id = (String) uploadResult.get("public_id");
+        Logger.debug(image.public_id);
+        image.image_url = (String) uploadResult.get("url");
+        Logger.debug(image.image_url);
+        image.secret_image_url = (String) uploadResult.get("secure_url");
+        Logger.debug(image.secret_image_url);
+        if(newsId != null) {
+            image.news = News.findNewsById(newsId);
+        }
+        image.save();
+        return image;
     }
 
 }

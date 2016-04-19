@@ -1,0 +1,84 @@
+@import helpers.UserAccessLevel
+@(news: java.util.List[News])
+@main {
+    <!-- Main Container -->
+    <section class="main-container col2-left-layout bounceInUp animated">
+        <div class="container">
+            <div class="row">
+                <div class="col-main col-md-12">
+                    <article class="col-main">
+                        <div class="page-title">
+                            <h2>Vijesti</h2>
+                        </div>
+                        <div class="toolbar">
+                            <div class="pager">
+                                <div class="pages">
+                                    <label>Page:</label>
+                                    <ul class="pagination">
+                                        <li><a href="#">&laquo;</a></li>
+                                        <li class="active"><a href="#">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">5</a></li>
+                                        <li><a href="#">&raquo;</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="category-products">
+                            <ol class="products-list" id="products-list">
+                                @for(n <- news) {
+                                    <li class="item first">
+                                        <div class="product-image"><img class="small-image" src='@n.images.get(0).getSize(285,345)' alt="HTC Rhyme Sense"></div>
+                                        <div class="product-shop">
+                                            <h2 class="product-name"><a href="product_detail.html" title="Naslov">@n.title</a></h2>
+                                            <div class="desc std">
+                                                <p>@n.text.substring(0,50) ... </p>
+                                            </div>
+                                            <form method="GET" role="form" action="@routes.NewsController.newsRender(n.id)">
+                                                <div class="actions">
+                                                    <button class="button" title="Pročitaj"><i class="fa fa-eye"></i> <span>Pročitaj</span></button>
+                                                        @if(n.user.userAccessLevel.equals(UserAccessLevel.ADMIN)) {
+                                                            <span class="add-to-links">
+                                                                <a title="Uredi" class="button link-wishlist" href="@routes.NewsController.updateNewsRender(n.id)">
+                                                                    <i class="fa fa-pencil"></i> <span>
+                                                                    Uredi
+                                                                </span>
+                                                                </a>
+                                                                <a title="Obriši" class="button link-compare" href="@routes.NewsController.deleteNews(n.id)">
+                                                                    <i class="fa fa-trash-o"></i> <span>
+                                                                    Obriši
+                                                                </span>
+                                                                </a>
+                                                            </span>
+                                                        }
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </li>
+                                }
+                            </ol>
+                        </div>
+                    </article>
+                        <!--	///*///======    End article  ========= //*/// -->
+                </div>
+                @*@if(UserAccessLevel.getCurrentUser(ctx()).userAccessLevel.equals(UserAccessLevel.ADMIN)) {*@
+                    @*<section>*@
+                        @*<div class="col-md-6 col-md-offset-5" id="margin-bottom-30">*@
+                            @*<form method="GET" role="form" action="@routes.NewsController.createNewsRender()" >*@
+                                @*<div class="buttons-set">*@
+                                    @*<button class="button "><i class="fa fa-check"> </i> <span>*@
+                                        @*DODAJ VIJEST</span></button>*@
+                                @*</div>*@
+                            @*</form>*@
+
+                        @*</div>*@
+                    @*</section>*@
+                @*}*@
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Container End -->
+}

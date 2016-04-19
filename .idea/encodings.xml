@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/app/views/Admin/listOfAllItems.scala.html" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/views/Category/createSubCategory.scala.html" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/views/Category/listOfSubCategories.scala.html" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/views/Category/updateSubCategory.scala.html" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/views/Item/categoryItems.scala.html" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/views/Item/createItem.scala.html" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/views/Item/listOfImages.scala.html" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/views/index.scala.html" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/views/main.scala.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/models/Item.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/news/createNews.scala.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/news/news.scala.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/javascripts/paginacija.js" charset="UTF-8" />
   </component>
 </project>

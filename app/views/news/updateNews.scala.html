@@ -1,0 +1,55 @@
+@(news: News)
+@main{
+    <!-- Main Container -->
+    <section class="main-container col2-right-layout wow bounceInUp animated">
+        <div class="main container">
+            <div class="row">
+                <section class="col-main col-md-12">
+                    <div class="page-title">
+                        <h2>Ažuriraj vijest</h2>
+                    </div>
+                    <div class="static-contain">
+                        <fieldset class="group-select">
+                            <form  method="POST" role="form" action="@routes.NewsController.updateNews(news.id)" >
+                                <ul>
+                                    <li id="billing-new-address-form">
+                                        <fieldset>
+                                            <ul>
+                                                <li>
+                                                    <div class="customer-name">
+                                                        <div class="input-box name-firstname">
+                                                            <label for="title">Naslov  <span class="required">*</span></label>
+                                                            <br>
+                                                            <input type="text" id="title" name="title" title="Naslov" class="input-text" value="@news.title" required>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="input-box">
+                                                        <label for="text">Tekst <em class="required">*</em></label>
+                                                        <br>
+                                                        <div class="">
+                                                            <textarea name="text" id="text" title="Opis" class="input-text" cols="20" rows="10" style="resize: vertical">@news.text</textarea>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </fieldset>
+                                    </li>
+                                    <li><span class="require"><em class="required">* </em>Obavezna polja</span></li>
+                                    <li>
+                                        <div class="buttons-set">
+                                            <button type="submit" title="Submit" class="button submit"> <span> Ažuriraj vijest </span> </button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </form>
+                        </fieldset>
+
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+    <!-- Main Container End -->
+}

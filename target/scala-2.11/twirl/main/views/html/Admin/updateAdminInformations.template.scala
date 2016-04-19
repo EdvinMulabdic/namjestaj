@@ -114,7 +114,7 @@ Seq[Any](format.raw/*1.17*/("""
 object updateAdminInformations extends updateAdminInformations_Scope0.updateAdminInformations
               /*
                   -- GENERATED --
-                  DATE: Thu Mar 24 21:27:52 CET 2016
+                  DATE: Mon Apr 18 19:38:53 CEST 2016
                   SOURCE: E:/namjestaj/app/views/Admin/updateAdminInformations.scala.html
                   HASH: c81df9d5a840b1c2059b16488422a8c8c93c6a18
                   MATRIX: 788->1|898->16|925->18|936->22|973->23|1004->28|1553->550|1568->556|1632->598|2434->1372|2448->1376|2475->1381|3150->2028|3164->2032|3191->2037|3810->2628|3824->2632|3854->2640|4462->3220|4476->3224|4504->3230

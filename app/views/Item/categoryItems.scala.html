@@ -53,49 +53,20 @@
 
                         <div class="toolbar">
 
-                            <div id="sort-by">
-                                <label class="left">Sort By: </label>
-                                <ul>
-                                    <li><a href="#">Position<span class="right-arrow"></span></a>
-                                        <ul>
-                                            <li><a href="#">Name</a></li>
-                                            <li><a href="#">Price</a></li>
-                                            <li><a href="#">Position</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                                <a class="button-asc left" href="#" title="Set Descending Direction"><span class="top_arrow"></span></a> </div>
+
                             <div class="pager">
-                                <div id="limiter">
-                                    <label>View: </label>
-                                    <ul>
-                                        <li><a href="#">15<span class="right-arrow"></span></a>
-                                            <ul>
-                                                <li><a href="#">20</a></li>
-                                                <li><a href="#">30</a></li>
-                                                <li><a href="#">35</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
+
                                 <div class="pages">
-                                    <label>Page:</label>
                                     <ul class="pagination">
-                                        <li><a href="#">&laquo;</a></li>
-                                        <li class="active"><a href="#">1</a></li>
-                                        <li><a href="#">2</a></li>
-                                        <li><a href="#">3</a></li>
-                                        <li><a href="#">4</a></li>
-                                        <li><a href="#">5</a></li>
-                                        <li><a href="#">&raquo;</a></li>
+                                        <div id='page_navigation' class="pagination-custom"></div>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                         <div class="category-products">
-                            <ul class="products-grid">
+                            <ul class="products-grid" id="easyPaginate">
                                 @for(item <- items) {
-                                    <li class="item col-lg-4 col-md-3 col-sm-4 col-xs-6">
+                                    <li class="item col-md-3 col-sm-4 col-xs-6">
                                         <div class="item-inner">
 
                                             <div class="item-img">
@@ -105,7 +76,7 @@
                                                         <a class="quickview-btn" ><span>Quick View</span></a> </div>
                                                 }else{
                                                     <div class="item-img-info"> <a class="product-image" title="@item.name" href='@routes.Items.itemRender(item.id)'> <img alt="Retis lapen casen" src='@routes.Assets.versioned("images/product.png")'> </a>
-                                                        <div class="new-label new-top-left">new</div>
+                                                        <div class="new-label new-top-left">AKCIJA</div>
                                                         <a class="quickview-btn" ><span>Quick View</span></a> </div>
                                                 }
 
@@ -114,23 +85,9 @@
                                                 <div class="info-inner">
                                                     <div class="item-title"> <a title="Retis lapen casen" href="@routes.Items.itemRender(item.id)"> @item.name </a> </div>
                                                     <div class="item-content">
-                                                        @*<div class="rating">*@
-                                                            @*<div class="ratings">*@
-                                                                @*<div class="rating-box">*@
-                                                                    @*<div class="rating"></div>*@
-                                                                @*</div>*@
-                                                                @*<p class="rating-links"> <a href="#">1 Review(s)</a> <span class="separator">|</span> <a href="#">Add Review</a> </p>*@
-                                                            @*</div>*@
-                                                        @*</div>*@
                                                         <div class="item-price">
                                                             <div class="price-box"> <span class="regular-price"> <span class="price">@item.price KM</span> </span> </div>
                                                         </div>
-                                                        @*<div class="actions"><a href="wishlist.html" class="link-wishlist" title="Add to Wishlist"></a>*@
-                                                            @*<div class="add_cart">*@
-                                                                @*<button class="button btn-cart" type="button"><span>Add to Cart</span></button>*@
-                                                            @*</div>*@
-                                                            @*<a href="compare.html" class="link-compare" title="Add to Compare"></a>*@
-                                                        @*</div>*@
                                                     </div>
                                                 </div>
                                             </div>
@@ -174,10 +131,10 @@
                                 <dl id="narrow-by-list">
                                     <dd class="odd">
                                         <ol>
-                                            <li> <a href="#"><span class="price">0.00 KM</span> - <span class="price"> 99.00 KM</span></a> </li>
-                                            <li> <a href="#"><span class="price"> 100.00 KM</span> - <span class="price"> 149.00 KM</span></a>  </li>
-                                            <li> <a href="#"><span class="price"> 150.00 KM</span> - <span class="price"> 199.00 KM</span></a>  </li>
-                                            <li> <a href="#"><span class="price"> preko 200.00 KM</span></a>  </li>
+                                            <li> <a href="@routes.Items.getItemsWithPriceRange1()"><span class="price">do 99.00 KM</span></a> </li>
+                                            <li> <a href="@routes.Items.getItemsWithPriceRange2()"><span class="price"> 100.00 KM</span> - <span class="price"> 149.00 KM</span></a>  </li>
+                                            <li> <a href="@routes.Items.getItemsWithPriceRange3()"><span class="price"> 150.00 KM</span> - <span class="price"> 199.00 KM</span></a>  </li>
+                                            <li> <a href="@routes.Items.getItemsWithPriceRange4()"><span class="price"> preko 200.00 KM</span></a>  </li>
                                         </ol>
                                     </dd>
                                 </dl>
@@ -190,4 +147,9 @@
         </div>
     </section>
     <!-- Main Container End -->
+    <input type='hidden' id='current_page' />
+    <input type='hidden' id='show_per_page' />
+
+    <script src='@routes.Assets.versioned("javascripts/paginacija.js")'></script>
+
 }

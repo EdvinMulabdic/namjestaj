@@ -7,7 +7,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for blankproject#blankproject_2.11;1.0-SNAPSHOT [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies blankproject#blankproject_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.6 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.11.6 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@62733748[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@2136de[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.11.6[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.11.6 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m	[2.11.6] org.scala-lang#scala-library;2.11.6[0m
@@ -431,7 +431,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/google/inject/extensions/guice-assistedinject/4.0/guice-assistedinject-4.0.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/google/inject/extensions/guice-assistedinject/4.0/guice-assistedinject-4.0.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/com/google/inject/extensions/guice-assistedinject/4.0/guice-assistedinject-4.0.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.google.inject.extensions#guice-assistedinject;4.0!guice-assistedinject.pom(pom.original) (216ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.google.inject.extensions#guice-assistedinject;4.0!guice-assistedinject.pom(pom.original) (333ms)[0m
 [0m[[0minfo[0m] [0mResolving com.google.inject.extensions#extensions-parent;4.0 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.google.inject.extensions#extensions-parent;4.0 {}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.google.inject.extensions#extensions-parent;4.0[0m
@@ -8739,7 +8739,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.3!scala-xml_2.11.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-parser-combinators_2.11;1.0.3!scala-parser-combinators_2.11.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] jline#jline;2.12.1!jline.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 5001ms :: artifacts dl 170ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 10269ms :: artifacts dl 152ms[0m
 [0m[[0mdebug[0m] [0m	report for blankproject#blankproject_2.11;1.0-SNAPSHOT compile produced in E:\namjestaj\target\resolution-cache\reports\blankproject-blankproject_2.11-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for blankproject#blankproject_2.11;1.0-SNAPSHOT runtime produced in E:\namjestaj\target\resolution-cache\reports\blankproject-blankproject_2.11-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for blankproject#blankproject_2.11;1.0-SNAPSHOT test produced in E:\namjestaj\target\resolution-cache\reports\blankproject-blankproject_2.11-test.xml[0m
@@ -8753,5 +8753,5 @@
 [0m[[0mdebug[0m] [0m	report for blankproject#blankproject_2.11;1.0-SNAPSHOT docs produced in E:\namjestaj\target\resolution-cache\reports\blankproject-blankproject_2.11-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for blankproject#blankproject_2.11;1.0-SNAPSHOT pom produced in E:\namjestaj\target\resolution-cache\reports\blankproject-blankproject_2.11-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for blankproject#blankproject_2.11;1.0-SNAPSHOT scala-tool produced in E:\namjestaj\target\resolution-cache\reports\blankproject-blankproject_2.11-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (5001ms resolve - 170ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (10269ms resolve - 152ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

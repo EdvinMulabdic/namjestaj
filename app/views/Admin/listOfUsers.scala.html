@@ -36,6 +36,8 @@
                                 <th class="text-center">Telefon</th>
                                 <th class="text-center">Grad</th>
                                 <th class="text-center">Adresa</th>
+                                <th class="text-center">Poruke</th>
+                                <th class="text-center">Blokiraj</th>
                                 <th class="text-center">Obriši</th>
                             </tr>
                         </thead>
@@ -48,6 +50,22 @@
                                     <td class="text-center">@user.phone</td>
                                     <td class="text-center">@user.city</td>
                                     <td class="text-center">@user.address</td>
+                                    <td class="text-center">
+                                        <a class="fa-buttons" title="Poruke korisnika" href="@routes.Messages.listOfMessagesForAdmin(user.id)" role="button">
+                                            <i class=" fa fa-envelope-o fa-lg"></i>
+                                        </a>
+                                    </td>
+                                    <td class="text-center">
+                                    @if(user.isActive == null || user.isActive == false) {
+                                        <a class="fa-buttons"  title="AKTIVIRAJ" href="@routes.AppUsers.isUserActive(user.id)" role="button">
+                                            <button id="send2"  type="submit" class="button"><i class="fa fa-check"></i> <span>AKTIVIRAJ</span></button>
+                                        </a>
+                                    } else {
+                                        <a class="fa-buttons" title="BLOKIRAJ" href="@routes.AppUsers.isUserActive(user.id)" role="button">
+                                            <button id="send2" type="submit" class="button"><i class="fa fa-close"></i> <span>BLOKIRAJ</span></button>
+                                        </a>
+                                    }
+                                    </td>
                                     <td class="text-center">
                                         <a class="fa-buttons" data-role="delete-user" title="Obriši korisnika" href="@routes.AppUsers.deleteUser(user.id)" role="button">
                                             <i class=" fa fa-trash-o fa-lg"></i>

@@ -31,7 +31,25 @@ class item extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format
 
 Seq[Any](format.raw/*1.111*/("""
 """),_display_(/*2.2*/main/*2.6*/ {_display_(Seq[Any](format.raw/*2.8*/("""
-    """),format.raw/*3.5*/("""<!-- Main Container -->
+    """),format.raw/*3.5*/("""<div class="container">
+        <div>
+            """),_display_(/*5.14*/if(flash.containsKey("success"))/*5.46*/ {_display_(Seq[Any](format.raw/*5.48*/("""
+                """),format.raw/*6.17*/("""<div class="alert alert-success" role="alert">
+                    <i class="fa fa-check-square-o" style="font-size:30px"></i>
+                    <span  aria-hidden="true" class="flash-font">"""),_display_(/*8.67*/flash/*8.72*/.get("success")),format.raw/*8.87*/("""</span>
+
+                </div>
+            """)))}),format.raw/*11.14*/("""
+            """),_display_(/*12.14*/if(flash.containsKey("error"))/*12.44*/ {_display_(Seq[Any](format.raw/*12.46*/("""
+                """),format.raw/*13.17*/("""<div class="alert alert-danger" role="alert">
+                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                    <span class="sr-only">Error:</span>
+                    """),_display_(/*16.22*/flash/*16.27*/.get("error")),format.raw/*16.40*/("""
+                """),format.raw/*17.17*/("""</div>
+            """)))}),format.raw/*18.14*/("""
+        """),format.raw/*19.9*/("""</div>
+    </div>
+    <!-- Main Container -->
     <section class="main-container col1-layout wow bounceInUp animated">
         <div class="main container">
             <div class="col-main">
@@ -45,67 +63,68 @@ Seq[Any](format.raw/*1.111*/("""
                                 <div class="product-img-box col-sm-5 col-xs-12">
                                     <div class="new-label new-top-left"> New </div>
                                     <div class="product-image">
-                                    """),_display_(/*17.38*/if(item.images.size() > 0)/*17.64*/ {_display_(Seq[Any](format.raw/*17.66*/("""
-                                        """),format.raw/*18.41*/("""<div class="large-image">
-                                            <a href='"""),_display_(/*19.55*/item/*19.59*/.images.get(0).getSize(768, 1024)),format.raw/*19.92*/("""' class="cloud-zoom" id="zoom1" rel="useWrapper: false, adjustY:0, adjustX:20" >
-                                                <img src='"""),_display_(/*20.60*/item/*20.64*/.images.get(0).getSize(465, 563)),format.raw/*20.96*/("""' alt="">
+                                    """),_display_(/*35.38*/if(item.images.size() > 0)/*35.64*/ {_display_(Seq[Any](format.raw/*35.66*/("""
+                                        """),format.raw/*36.41*/("""<div class="large-image">
+                                            <a href='"""),_display_(/*37.55*/item/*37.59*/.images.get(0).getSize(768, 1024)),format.raw/*37.92*/("""' class="cloud-zoom" id="zoom1" rel="useWrapper: false, adjustY:0, adjustX:20" >
+                                                <img src='"""),_display_(/*38.60*/item/*38.64*/.images.get(0).getSize(465, 563)),format.raw/*38.96*/("""' alt="">
                                             </a>
                                         </div>
                                         <div class="flexslider flexslider-thumb">
                                             <ul class="previews-list slides">
-                                            """),_display_(/*25.46*/for(image <- item.images) yield /*25.71*/ {_display_(Seq[Any](format.raw/*25.73*/("""
-                                                """),format.raw/*26.49*/("""<li><a href='"""),_display_(/*26.63*/image/*26.68*/.getSize(2000, 3000)),format.raw/*26.88*/("""' class='cloud-zoom-gallery' rel="useZoom: 'zoom1', smallImage: '"""),_display_(/*26.154*/image/*26.159*/.getSize(465, 563)),format.raw/*26.177*/("""' "><img src='"""),_display_(/*26.192*/image/*26.197*/.getSize(75, 90)),format.raw/*26.213*/("""' alt = "Thumbnail 1"/></a></li>
+                                            """),_display_(/*43.46*/for(image <- item.images) yield /*43.71*/ {_display_(Seq[Any](format.raw/*43.73*/("""
+                                                """),format.raw/*44.49*/("""<li><a href='"""),_display_(/*44.63*/image/*44.68*/.getSize(2000, 3000)),format.raw/*44.88*/("""' class='cloud-zoom-gallery' rel="useZoom: 'zoom1', smallImage: '"""),_display_(/*44.154*/image/*44.159*/.getSize(465, 563)),format.raw/*44.177*/("""' "><img src='"""),_display_(/*44.192*/image/*44.197*/.getSize(75, 90)),format.raw/*44.213*/("""' alt = "Thumbnail 1"/></a></li>
 
-                                            """)))}),format.raw/*28.46*/("""
-                                            """),format.raw/*29.45*/("""</ul>
+                                            """)))}),format.raw/*46.46*/("""
+                                            """),format.raw/*47.45*/("""</ul>
                                         </div>
-                                    """)))}/*31.38*/else/*31.42*/{_display_(Seq[Any](format.raw/*31.43*/("""
-                                        """),format.raw/*32.41*/("""<div class="large-image">
-                                            <img src='"""),_display_(/*33.56*/routes/*33.62*/.Assets.versioned("images/product.png")),format.raw/*33.101*/("""' alt="">
+                                    """)))}/*49.38*/else/*49.42*/{_display_(Seq[Any](format.raw/*49.43*/("""
+                                        """),format.raw/*50.41*/("""<div class="large-image">
+                                            <img src='"""),_display_(/*51.56*/routes/*51.62*/.Assets.versioned("images/product.png")),format.raw/*51.101*/("""' alt="">
                                         </div>
-                                        """)))}),format.raw/*35.42*/("""
-                                    """),format.raw/*36.37*/("""</div>
+                                        """)))}),format.raw/*53.42*/("""
+                                    """),format.raw/*54.37*/("""</div>
                                         <!-- end: more-images -->
                                 </div>
                             <div class="product-shop col-sm-7 col-xs-12">
                                 <div class="product-name">
-                                    <h1>"""),_display_(/*41.42*/item/*41.46*/.name),format.raw/*41.51*/("""</h1>
+                                    <h1>"""),_display_(/*59.42*/item/*59.46*/.name),format.raw/*59.51*/("""</h1>
                                 </div>
 
                                 <div class="price-block">
                                     <div class="price-box">
-                                        <p class="special-price"> <span class="price-label"></span> <span id="product-price-48" class="price"> """),_display_(/*46.145*/item/*46.149*/.price),format.raw/*46.155*/(""" """),format.raw/*46.156*/("""KM </span> </p>
-                                        """),_display_(/*47.42*/if(item.oldPrice != null && item.oldPrice != "" )/*47.91*/{_display_(Seq[Any](format.raw/*47.92*/("""
-                                            """),format.raw/*48.45*/("""<p class="old-price"> <span class="price-label"></span> <span class="price"> """),_display_(/*48.123*/item/*48.127*/.oldPrice),format.raw/*48.136*/(""" """),format.raw/*48.137*/("""KM </span>
-                                        """)))}),format.raw/*49.42*/("""
-                                        """),format.raw/*50.41*/("""</div>
+                                        <p class="special-price"> <span class="price-label"></span> <span id="product-price-48" class="price"> """),_display_(/*64.145*/item/*64.149*/.price),format.raw/*64.155*/(""" """),format.raw/*64.156*/("""KM </span> </p>
+                                        """),_display_(/*65.42*/if(item.oldPrice != null && item.oldPrice != "" )/*65.91*/{_display_(Seq[Any](format.raw/*65.92*/("""
+                                            """),format.raw/*66.45*/("""<p class="old-price"> <span class="price-label"></span> <span class="price"> """),_display_(/*66.123*/item/*66.127*/.oldPrice),format.raw/*66.136*/(""" """),format.raw/*66.137*/("""KM </span>
+                                        """)))}),format.raw/*67.42*/("""
+                                        """),format.raw/*68.41*/("""</div>
                                     </div>
 
                                     <div class="short-description">
                                         <h2>Opis proizvoda</h2>
-                                        <p> """),_display_(/*55.46*/item/*55.50*/.description),format.raw/*55.62*/(""" """),format.raw/*55.63*/("""</p>
+                                        <p> """),_display_(/*73.46*/item/*73.50*/.description),format.raw/*73.62*/(""" """),format.raw/*73.63*/("""</p>
                                     </div>
 
                                     <div class="short-description">
                                         <h2>Informacije o prodavaču</h2>
-                                        <p> Prodavač: """),_display_(/*60.56*/item/*60.60*/.user.name),format.raw/*60.70*/("""</p>
-                                        <p> Adresa:   """),_display_(/*61.56*/item/*61.60*/.user.address),format.raw/*61.73*/(""", """),_display_(/*61.76*/item/*61.80*/.user.city),format.raw/*61.90*/("""</p>
-                                        <p> Email:    """),_display_(/*62.56*/item/*62.60*/.user.email),format.raw/*62.71*/("""</p>
-                                        <p> Telefon:  """),_display_(/*63.56*/item/*63.60*/.user.phone),format.raw/*63.71*/("""</p>
+                                        <p> Prodavač: """),_display_(/*78.56*/item/*78.60*/.user.name),format.raw/*78.70*/("""</p>
+                                        <p> Adresa:   """),_display_(/*79.56*/item/*79.60*/.user.address),format.raw/*79.73*/(""", """),_display_(/*79.76*/item/*79.80*/.user.city),format.raw/*79.90*/("""</p>
+                                        <p> Email:    """),_display_(/*80.56*/item/*80.60*/.user.email),format.raw/*80.71*/("""</p>
+                                        <p> Telefon:  """),_display_(/*81.56*/item/*81.60*/.user.phone),format.raw/*81.71*/("""</p>
+                                        <p> Radno vrijeme:  """),_display_(/*82.62*/item/*82.66*/.user.workTime),format.raw/*82.80*/("""</p>
                                     </div>
 
-                                    """),_display_(/*66.38*/if(currentUser != null && item.user.id == currentUser.id)/*66.95*/{_display_(Seq[Any](format.raw/*66.96*/("""
-                                        """),format.raw/*67.41*/("""<div class="short-description">
+                                    """),_display_(/*85.38*/if(currentUser != null && item.user.id == currentUser.id)/*85.95*/{_display_(Seq[Any](format.raw/*85.96*/("""
+                                        """),format.raw/*86.41*/("""<div class="short-description">
                                             <h2>Dodaj slike za proizvod</h2>
-                                            <form  method="GET" role="form" action=""""),_display_(/*69.86*/routes/*69.92*/.Images.imagesUploadRender(item.id)),format.raw/*69.127*/("""" >
+                                            <form  method="GET" role="form" action=""""),_display_(/*88.86*/routes/*88.92*/.Images.imagesUploadRender(item.id)),format.raw/*88.127*/("""" >
                                                 <div class="buttons-set">
                                                     <button class="button create-account"><span>Dodaj slike</span></button>
                                                 </div>
                                             </form>
                                         </div>
-                                    """)))}),format.raw/*75.38*/("""
+                                    """)))}),format.raw/*94.38*/("""
 
-                                    """),format.raw/*77.37*/("""<div class="social">
+                                    """),format.raw/*96.37*/("""<div class="social">
                                         <ul class="link">
                                             <li class="fb"><a href="#"></a></li>
                                             <li class="tw"><a href="#"></a></li>
@@ -121,7 +140,7 @@ Seq[Any](format.raw/*1.111*/("""
                             <div class="add_info">
                                 <ul id="product-detail-tab" class="nav nav-tabs product-tabs">
                                     <li class="active"> <a href="#product_tabs_description" data-toggle="tab"> Lokacije objekata </a> </li>
-                                    <li><a href="#product_tabs_tags" data-toggle="tab">Tags</a></li>
+                                    <li><a href="#product_tabs_tags" data-toggle="tab">Kontaktiraj prodavača</a></li>
                                     <li> <a href="#reviews_tabs" data-toggle="tab">Reviews</a> </li>
                                     <li> <a href="#product_tabs_custom" data-toggle="tab">Custom Tab</a> </li>
                                     <li> <a href="#product_tabs_custom1" data-toggle="tab">Custom Tab1</a> </li>
@@ -131,27 +150,55 @@ Seq[Any](format.raw/*1.111*/("""
                                         <div class="std">
                                             <p>Pogledajte lokacije naših objekata i posjetite nas u najbližem objektu</p>
                                             <div id="map" class="map2"></div>
-                                            <input id="locations" name="lat" value=""""),_display_(/*103.86*/locations),format.raw/*103.95*/("""" style="display: none">
+                                            <input id="locations" name="lat" value=""""),_display_(/*122.86*/locations),format.raw/*122.95*/("""" style="display: none">
                                         </div>
                                     </div>
+
                                     <div class="tab-pane fade" id="product_tabs_tags">
-                                        <div class="box-collateral box-tags">
-                                            <div class="tags">
-                                                <form id="addTagForm" action="#" method="get">
-                                                    <div class="form-add-tags">
-                                                        <label for="productTagName">Add Tags:</label>
-                                                        <div class="input-box">
-                                                            <input class="input-text" name="productTagName" id="productTagName" type="text">
-                                                            <button type="button" title="Add Tags" class=" button btn-add" onClick="submitTagForm()"> <span>Add Tags</span> </button>
-                                                        </div>
-                                                            <!--input-box-->
-                                                    </div>
-                                                </form>
-                                            </div>
-                                                <!--tags-->
-                                            <p class="note">Use spaces to separate tags. Use single quotes (') for phrases.</p>
-                                        </div>
-                                    </div>
+                                        """),format.raw/*127.82*/("""
+                                            """),format.raw/*128.45*/("""<section class="col-main col-sm-9">
+                                                <div class="static-contain">
+                                                    <form  method="POST" role="form" action=""""),_display_(/*130.95*/routes/*130.101*/.Messages.sendMessage(item.id)),format.raw/*130.131*/("""" >
+                                                        <fieldset class="group-select">
+                                                            <ul>
+                                                                <li id="billing-new-address-form">
+                                                                    <fieldset>
+                                                                        <ul>
+                                                                            <li>
+                                                                                <div class="input-box">
+                                                                                    <label for="email">Email<span class="required">*</span></label>
+                                                                                    <br>
+                                                                                    <input type="text" id="email" name="email" title="Email" class="input-text" required>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="input-box">
+                                                                                    <label for="subject">Naslov<span class="required">*</span></label>
+                                                                                    <br>
+                                                                                    <input type="text" id="subject" name="subject" title="Naslov" class="input-text" required>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li class="">
+                                                                                <label for="message">Poruka <em class="required">*</em></label>
+                                                                                <br>
+                                                                                <div class="">
+                                                                                    <textarea name="message" id="message" title="Poruka" class="input-text" cols="2" rows="3" required></textarea>
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </fieldset>
+                                                                </li>
+                                                                <li><span class="require"><em class="required">* </em>Obavezna polja</span></li>
+                                                                <li><div class="buttons-set">
+                                                                    <button type="submit" title="Pošalji" class="button submit"> <span> POŠALJI </span> </button>
+                                                                </div></li>
+                                                            </ul>
+                                                        </fieldset>
+                                                    </form>
+                                                </div>
+                                            </section>
+                                        """),format.raw/*169.51*/("""
+                                    """),format.raw/*170.37*/("""</div>
                                     <div class="tab-pane fade" id="reviews_tabs">
                                         <div class="box-collateral box-reviews" id="customer-reviews">
                                             <div class="box-reviews1">
@@ -362,8 +409,7 @@ Seq[Any](format.raw/*1.111*/("""
                                                 Lorem Ipsumis
                                                 simply dummy text of the printing and typesetting industry. Lorem Ipsum
                                                 has been the industry's standard dummy text ever since the 1500s, when
-                              """),
-format.raw("""                  an unknown printer took a galley of type and scrambled it to make a type
+                                                an unknown printer took a galley of type and scrambled it to make a type
                                                 specimen book. It has survived not only five centuries, but also the
                                                 leap into electronic typesetting, remaining essentially unchanged. It
                                                 was popularised in the 1960s with the release of Letraset sheets
@@ -391,25 +437,25 @@ format.raw("""                  an unknown printer took a galley of type and scr
                 </div>
                 <div id="related-products-slider" class="product-flexslider hidden-buttons">
                     <div class="slider-items slider-width-col4 products-grid">
-                        """),_display_(/*362.26*/for(item <- itemsToRecommend) yield /*362.55*/ {_display_(Seq[Any](format.raw/*362.57*/("""
-                            """),format.raw/*363.29*/("""<div class="item">
+                        """),_display_(/*409.26*/for(item <- itemsToRecommend) yield /*409.55*/ {_display_(Seq[Any](format.raw/*409.57*/("""
+                            """),format.raw/*410.29*/("""<div class="item">
                                 <div class="item-inner">
                                     <div class="item-img">
-                                    """),_display_(/*366.38*/if(item.images.size() > 0)/*366.64*/{_display_(Seq[Any](format.raw/*366.65*/("""
-                                        """),format.raw/*367.41*/("""<div class="item-img-info"> <a class="product-image" title=""""),_display_(/*367.102*/item/*367.106*/.name),format.raw/*367.111*/("""" href=""""),_display_(/*367.120*/routes/*367.126*/.Items.itemRender(item.id)),format.raw/*367.152*/(""""> <img alt="Retis lapen casen" src='"""),_display_(/*367.190*/models/*367.196*/.Item.getFirstItemImage(item.id).getSize(179,217)),format.raw/*367.245*/("""'> </a>
+                                    """),_display_(/*413.38*/if(item.images.size() > 0)/*413.64*/{_display_(Seq[Any](format.raw/*413.65*/("""
+                                        """),format.raw/*414.41*/("""<div class="item-img-info"> <a class="product-image" title=""""),_display_(/*414.102*/item/*414.106*/.name),format.raw/*414.111*/("""" href=""""),_display_(/*414.120*/routes/*414.126*/.Items.itemRender(item.id)),format.raw/*414.152*/(""""> <img alt="Retis lapen casen" src='"""),_display_(/*414.190*/models/*414.196*/.Item.getFirstItemImage(item.id).getSize(179,217)),format.raw/*414.245*/("""'> </a>
                                             <a class="quickview-btn" ><span>Quick View</span></a> </div>
-                                    """)))}/*369.38*/else/*369.42*/{_display_(Seq[Any](format.raw/*369.43*/("""
-                                        """),format.raw/*370.41*/("""<div class="item-img-info"> <a class="product-image" title=""""),_display_(/*370.102*/item/*370.106*/.name),format.raw/*370.111*/("""" href='"""),_display_(/*370.120*/routes/*370.126*/.Items.itemRender(item.id)),format.raw/*370.152*/("""'> <img alt="Retis lapen casen" src='"""),_display_(/*370.190*/routes/*370.196*/.Assets.versioned("images/product.png")),format.raw/*370.235*/("""'> </a>
+                                    """)))}/*416.38*/else/*416.42*/{_display_(Seq[Any](format.raw/*416.43*/("""
+                                        """),format.raw/*417.41*/("""<div class="item-img-info"> <a class="product-image" title=""""),_display_(/*417.102*/item/*417.106*/.name),format.raw/*417.111*/("""" href='"""),_display_(/*417.120*/routes/*417.126*/.Items.itemRender(item.id)),format.raw/*417.152*/("""'> <img alt="Retis lapen casen" src='"""),_display_(/*417.190*/routes/*417.196*/.Assets.versioned("images/product.png")),format.raw/*417.235*/("""'> </a>
                                             <a class="quickview-btn" ><span>Quick View</span></a> </div>
-                                    """)))}),format.raw/*372.38*/("""
-                                    """),format.raw/*373.37*/("""</div>
+                                    """)))}),format.raw/*419.38*/("""
+                                    """),format.raw/*420.37*/("""</div>
                                     <div class="item-info">
                                         <div class="info-inner">
-                                            <div class="item-title"> <a title="Retis lapen casen" href='"""),_display_(/*376.106*/routes/*376.112*/.Items.itemRender(item.id)),format.raw/*376.138*/("""'> """),_display_(/*376.142*/item/*376.146*/.name),format.raw/*376.151*/(""" """),format.raw/*376.152*/("""</a> </div>
+                                            <div class="item-title"> <a title="Retis lapen casen" href='"""),_display_(/*423.106*/routes/*423.112*/.Items.itemRender(item.id)),format.raw/*423.138*/("""'> """),_display_(/*423.142*/item/*423.146*/.name),format.raw/*423.151*/(""" """),format.raw/*423.152*/("""</a> </div>
                                             <div class="item-content">
 
                                                 <div class="item-price">
-                                                    <div class="price-box"> <span class="regular-price"> <span class="price"> """),_display_(/*380.128*/item/*380.132*/.price),format.raw/*380.138*/(""" """),format.raw/*380.139*/("""KM</span> </span> </div>
+                                                    <div class="price-box"> <span class="regular-price"> <span class="price"> """),_display_(/*427.128*/item/*427.132*/.price),format.raw/*427.138*/(""" """),format.raw/*427.139*/("""KM</span> </span> </div>
                                                 </div>
 
                                             </div>
@@ -417,8 +463,8 @@ format.raw("""                  an unknown printer took a galley of type and scr
                                     </div>
                                 </div>
                             </div>
-                        """)))}),format.raw/*388.26*/("""
-                    """),format.raw/*389.21*/("""</div>
+                        """)))}),format.raw/*435.26*/("""
+                    """),format.raw/*436.21*/("""</div>
                 </div>
             </div>
         </div>
@@ -433,48 +479,48 @@ format.raw("""                  an unknown printer took a galley of type and scr
             </div>
             <div id="featured-slider" class="product-flexslider hidden-buttons">
                 <div class="slider-items slider-width-col4 products-grid">
-                """),_display_(/*404.18*/for(item <- models.Item.getLastTenProducts()) yield /*404.63*/{_display_(Seq[Any](format.raw/*404.64*/("""
-                    """),format.raw/*405.21*/("""<div class="item">
+                """),_display_(/*451.18*/for(item <- models.Item.getLastTenProducts()) yield /*451.63*/{_display_(Seq[Any](format.raw/*451.64*/("""
+                    """),format.raw/*452.21*/("""<div class="item">
                         <div class="item-inner">
                             <div class="item-img">
-                            """),_display_(/*408.30*/if(item.images.size() > 0)/*408.56*/{_display_(Seq[Any](format.raw/*408.57*/("""
-                                """),format.raw/*409.33*/("""<div class="item-img-info"> <a class="product-image" title=""""),_display_(/*409.94*/item/*409.98*/.name),format.raw/*409.103*/("""" href=""""),_display_(/*409.112*/routes/*409.118*/.Items.itemRender(item.id)),format.raw/*409.144*/(""""> <img alt="Retis lapen casen" src='"""),_display_(/*409.182*/models/*409.188*/.Item.getFirstItemImage(item.id).getSize(179,217)),format.raw/*409.237*/("""'> </a>
+                            """),_display_(/*455.30*/if(item.images.size() > 0)/*455.56*/{_display_(Seq[Any](format.raw/*455.57*/("""
+                                """),format.raw/*456.33*/("""<div class="item-img-info"> <a class="product-image" title=""""),_display_(/*456.94*/item/*456.98*/.name),format.raw/*456.103*/("""" href=""""),_display_(/*456.112*/routes/*456.118*/.Items.itemRender(item.id)),format.raw/*456.144*/(""""> <img alt="Retis lapen casen" src='"""),_display_(/*456.182*/models/*456.188*/.Item.getFirstItemImage(item.id).getSize(179,217)),format.raw/*456.237*/("""'> </a>
                                     <div class="new-label new-top-left">new</div>
                                     <a class="quickview-btn" ><span>Quick View</span></a> </div>
-                            """)))}/*412.30*/else/*412.34*/{_display_(Seq[Any](format.raw/*412.35*/("""
-                                """),format.raw/*413.33*/("""<div class="item-img-info"> <a class="product-image" title=""""),_display_(/*413.94*/item/*413.98*/.name),format.raw/*413.103*/("""" href='"""),_display_(/*413.112*/routes/*413.118*/.Items.itemRender(item.id)),format.raw/*413.144*/("""'> <img alt="Retis lapen casen" src='"""),_display_(/*413.182*/routes/*413.188*/.Assets.versioned("images/product.png")),format.raw/*413.227*/("""'> </a>
+                            """)))}/*459.30*/else/*459.34*/{_display_(Seq[Any](format.raw/*459.35*/("""
+                                """),format.raw/*460.33*/("""<div class="item-img-info"> <a class="product-image" title=""""),_display_(/*460.94*/item/*460.98*/.name),format.raw/*460.103*/("""" href='"""),_display_(/*460.112*/routes/*460.118*/.Items.itemRender(item.id)),format.raw/*460.144*/("""'> <img alt="Retis lapen casen" src='"""),_display_(/*460.182*/routes/*460.188*/.Assets.versioned("images/product.png")),format.raw/*460.227*/("""'> </a>
                                     <div class="new-label new-top-left">new</div>
                                     <a class="quickview-btn" ><span>Quick View</span></a> </div>
-                            """)))}),format.raw/*416.30*/("""
-                            """),format.raw/*417.29*/("""</div>
+                            """)))}),format.raw/*463.30*/("""
+                            """),format.raw/*464.29*/("""</div>
                             <div class="item-info">
                                 <div class="info-inner">
-                                    <div class="item-title"> <a title="Retis lapen casen" href=""""),_display_(/*420.98*/routes/*420.104*/.Items.itemRender(item.id)),format.raw/*420.130*/(""""> """),_display_(/*420.134*/item/*420.138*/.name),format.raw/*420.143*/(""" """),format.raw/*420.144*/("""</a> </div>
+                                    <div class="item-title"> <a title="Retis lapen casen" href=""""),_display_(/*467.98*/routes/*467.104*/.Items.itemRender(item.id)),format.raw/*467.130*/(""""> """),_display_(/*467.134*/item/*467.138*/.name),format.raw/*467.143*/(""" """),format.raw/*467.144*/("""</a> </div>
                                     <div class="item-content">
-                                        """),format.raw/*422.65*/("""
-                                        """),format.raw/*423.66*/("""
-                                        """),format.raw/*424.69*/("""
-                                        """),format.raw/*425.71*/("""
-                                        """),format.raw/*426.51*/("""
-                                        """),format.raw/*427.162*/("""
-                                        """),format.raw/*428.51*/("""
-                                        """),format.raw/*429.51*/("""
-                                    """),format.raw/*430.37*/("""<div class="item-price">
-                                        <div class="price-box"> <span class="regular-price"> <span class="price">"""),_display_(/*431.115*/item/*431.119*/.price),format.raw/*431.125*/(""" """),format.raw/*431.126*/("""KM </span> </span> </div>
+                                        """),format.raw/*469.65*/("""
+                                        """),format.raw/*470.66*/("""
+                                        """),format.raw/*471.69*/("""
+                                        """),format.raw/*472.71*/("""
+                                        """),format.raw/*473.51*/("""
+                                        """),format.raw/*474.162*/("""
+                                        """),format.raw/*475.51*/("""
+                                        """),format.raw/*476.51*/("""
+                                    """),format.raw/*477.37*/("""<div class="item-price">
+                                        <div class="price-box"> <span class="regular-price"> <span class="price">"""),_display_(/*478.115*/item/*478.119*/.price),format.raw/*478.125*/(""" """),format.raw/*478.126*/("""KM </span> </span> </div>
                                     </div>
-                                        """),format.raw/*433.140*/("""
-                                        """),format.raw/*434.67*/("""
-                                        """),format.raw/*435.124*/("""
-                                        """),format.raw/*436.51*/("""
-                                        """),format.raw/*437.123*/("""
-                                    """),format.raw/*438.37*/("""</div>
+                                        """),format.raw/*480.140*/("""
+                                        """),format.raw/*481.67*/("""
+                                        """),format.raw/*482.124*/("""
+                                        """),format.raw/*483.51*/("""
+                                        """),format.raw/*484.123*/("""
+                                    """),format.raw/*485.37*/("""</div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                """)))}),format.raw/*443.18*/("""
+                """)))}),format.raw/*490.18*/("""
 
-                """),format.raw/*445.17*/("""</div>
+                """),format.raw/*492.17*/("""</div>
             </div>
         </div>
     </section>
@@ -491,7 +537,7 @@ format.raw("""                  an unknown printer took a galley of type and scr
             <li>
                 <div class="feature-box">
                     <div class="icon-support"></div>
-                    <div class="content">Trebate pomoć """),_display_(/*462.57*/item/*462.61*/.user.phone),format.raw/*462.72*/("""</div>
+                    <div class="content">Trebate pomoć """),_display_(/*509.57*/item/*509.61*/.user.phone),format.raw/*509.72*/("""</div>
                 </div>
             </li>
             <li>
@@ -511,8 +557,8 @@ format.raw("""                  an unknown printer took a galley of type and scr
     <!-- end service -->
     <!--GOOGLE -->
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfCf4BKPmFsOCDcyc1sq-5OWwn1O4F2Rg&callback=initialize"></script>
-    <script src='"""),_display_(/*482.19*/routes/*482.25*/.Assets.versioned("javascripts/map.js")),format.raw/*482.64*/("""'></script>
-    <script type="text/javascript" src='"""),_display_(/*483.42*/routes/*483.48*/.Assets.versioned("javascripts/googleAnalytics.js")),format.raw/*483.99*/("""'></script>
+    <script src='"""),_display_(/*529.19*/routes/*529.25*/.Assets.versioned("javascripts/map.js")),format.raw/*529.64*/("""'></script>
+    <script type="text/javascript" src='"""),_display_(/*530.42*/routes/*530.48*/.Assets.versioned("javascripts/googleAnalytics.js")),format.raw/*530.99*/("""'></script>
 
 """)))}))
       }
@@ -534,11 +580,11 @@ format.raw("""                  an unknown printer took a galley of type and scr
 object item extends item_Scope0.item
               /*
                   -- GENERATED --
-                  DATE: Thu Mar 31 17:19:43 CEST 2016
+                  DATE: Tue Apr 19 10:36:08 CEST 2016
                   SOURCE: E:/namjestaj/app/views/Item/item.scala.html
-                  HASH: feba77ff99790658d3b77dec7defc4080c85dea0
-                  MATRIX: 798->1|1003->110|1030->112|1041->116|1079->118|1110->123|1971->957|2006->983|2046->985|2115->1026|2222->1106|2235->1110|2289->1143|2456->1283|2469->1287|2522->1319|2860->1630|2901->1655|2941->1657|3018->1706|3059->1720|3073->1725|3114->1745|3208->1811|3223->1816|3263->1834|3306->1849|3321->1854|3359->1870|3469->1949|3542->1994|3651->2084|3664->2088|3703->2089|3772->2130|3880->2211|3895->2217|3956->2256|4085->2354|4150->2391|4463->2677|4476->2681|4502->2686|4838->2994|4852->2998|4880->3004|4910->3005|4994->3062|5052->3111|5091->3112|5164->3157|5270->3235|5284->3239|5315->3248|5345->3249|5428->3301|5497->3342|5752->3570|5765->3574|5798->3586|5827->3587|6099->3832|6112->3836|6143->3846|6230->3906|6243->3910|6277->3923|6307->3926|6320->3930|6351->3940|6438->4000|6451->4004|6483->4015|6570->4075|6583->4079|6615->4090|6728->4176|6794->4233|6833->4234|6902->4275|7123->4469|7138->4475|7195->4510|7619->4903|7685->4941|9676->6904|9707->6913|31296->28454|31342->28483|31383->28485|31441->28514|31641->28686|31677->28712|31717->28713|31787->28754|31877->28815|31892->28819|31920->28824|31958->28833|31975->28839|32024->28865|32091->28903|32108->28909|32180->28958|32350->29108|32364->29112|32404->29113|32474->29154|32564->29215|32579->29219|32607->29224|32645->29233|32662->29239|32711->29265|32778->29303|32795->29309|32857->29348|33039->29498|33105->29535|33371->29772|33388->29778|33437->29804|33470->29808|33485->29812|33513->29817|33544->29818|33857->30102|33872->30106|33901->30112|33932->30113|34285->30434|34335->30455|34906->30998|34968->31043|35008->31044|35058->31065|35234->31213|35270->31239|35310->31240|35372->31273|35461->31334|35475->31338|35503->31343|35541->31352|35558->31358|35607->31384|35674->31422|35691->31428|35763->31477|35999->31693|36013->31697|36053->31698|36115->31731|36204->31792|36218->31796|36246->31801|36284->31810|36301->31816|36350->31842|36417->31880|36434->31886|36496->31925|36744->32141|36802->32170|37043->32383|37060->32389|37109->32415|37142->32419|37157->32423|37185->32428|37216->32429|37360->32568|37430->32634|37500->32703|37570->32774|37640->32825|37711->32987|37781->33038|37851->33089|37917->33126|38085->33265|38100->33269|38129->33275|38160->33276|38299->33484|38369->33551|38440->33675|38510->33726|38581->33849|38647->33886|38835->34042|38882->34060|39481->34631|39495->34635|39528->34646|40299->35389|40315->35395|40376->35434|40457->35487|40473->35493|40546->35544
-                  LINES: 27->1|32->1|33->2|33->2|33->2|34->3|48->17|48->17|48->17|49->18|50->19|50->19|50->19|51->20|51->20|51->20|56->25|56->25|56->25|57->26|57->26|57->26|57->26|57->26|57->26|57->26|57->26|57->26|57->26|59->28|60->29|62->31|62->31|62->31|63->32|64->33|64->33|64->33|66->35|67->36|72->41|72->41|72->41|77->46|77->46|77->46|77->46|78->47|78->47|78->47|79->48|79->48|79->48|79->48|79->48|80->49|81->50|86->55|86->55|86->55|86->55|91->60|91->60|91->60|92->61|92->61|92->61|92->61|92->61|92->61|93->62|93->62|93->62|94->63|94->63|94->63|97->66|97->66|97->66|98->67|100->69|100->69|100->69|106->75|108->77|134->103|134->103|394->362|394->362|394->362|395->363|398->366|398->366|398->366|399->367|399->367|399->367|399->367|399->367|399->367|399->367|399->367|399->367|399->367|401->369|401->369|401->369|402->370|402->370|402->370|402->370|402->370|402->370|402->370|402->370|402->370|402->370|404->372|405->373|408->376|408->376|408->376|408->376|408->376|408->376|408->376|412->380|412->380|412->380|412->380|420->388|421->389|436->404|436->404|436->404|437->405|440->408|440->408|440->408|441->409|441->409|441->409|441->409|441->409|441->409|441->409|441->409|441->409|441->409|444->412|444->412|444->412|445->413|445->413|445->413|445->413|445->413|445->413|445->413|445->413|445->413|445->413|448->416|449->417|452->420|452->420|452->420|452->420|452->420|452->420|452->420|454->422|455->423|456->424|457->425|458->426|459->427|460->428|461->429|462->430|463->431|463->431|463->431|463->431|465->433|466->434|467->435|468->436|469->437|470->438|475->443|477->445|494->462|494->462|494->462|514->482|514->482|514->482|515->483|515->483|515->483
+                  HASH: c97ef945504ce37b181b8b6c2d43e909607c4d44
+                  MATRIX: 798->1|1003->110|1030->112|1041->116|1079->118|1110->123|1187->174|1227->206|1266->208|1310->225|1529->418|1542->423|1577->438|1653->483|1694->497|1733->527|1773->529|1818->546|2066->767|2080->772|2114->785|2159->802|2210->822|2246->831|3129->1687|3164->1713|3204->1715|3273->1756|3380->1836|3393->1840|3447->1873|3614->2013|3627->2017|3680->2049|4018->2360|4059->2385|4099->2387|4176->2436|4217->2450|4231->2455|4272->2475|4366->2541|4381->2546|4421->2564|4464->2579|4479->2584|4517->2600|4627->2679|4700->2724|4809->2814|4822->2818|4861->2819|4930->2860|5038->2941|5053->2947|5114->2986|5243->3084|5308->3121|5621->3407|5634->3411|5660->3416|5996->3724|6010->3728|6038->3734|6068->3735|6152->3792|6210->3841|6249->3842|6322->3887|6428->3965|6442->3969|6473->3978|6503->3979|6586->4031|6655->4072|6910->4300|6923->4304|6956->4316|6985->4317|7257->4562|7270->4566|7301->4576|7388->4636|7401->4640|7435->4653|7465->4656|7478->4660|7509->4670|7596->4730|7609->4734|7641->4745|7728->4805|7741->4809|7773->4820|7866->4886|7879->4890|7914->4904|8027->4990|8093->5047|8132->5048|8201->5089|8422->5283|8437->5289|8494->5324|8918->5717|8984->5755|10992->7735|11023->7744|11295->8028|11369->8073|11604->8280|11621->8286|11674->8316|15472->12095|15538->12132|35507->32073|35553->32102|35594->32104|35652->32133|35852->32305|35888->32331|35928->32332|35998->32373|36088->32434|36103->32438|36131->32443|36169->32452|36186->32458|36235->32484|36302->32522|36319->32528|36391->32577|36561->32727|36575->32731|36615->32732|36685->32773|36775->32834|36790->32838|36818->32843|36856->32852|36873->32858|36922->32884|36989->32922|37006->32928|37068->32967|37250->33117|37316->33154|37582->33391|37599->33397|37648->33423|37681->33427|37696->33431|37724->33436|37755->33437|38068->33721|38083->33725|38112->33731|38143->33732|38496->34053|38546->34074|39117->34617|39179->34662|39219->34663|39269->34684|39445->34832|39481->34858|39521->34859|39583->34892|39672->34953|39686->34957|39714->34962|39752->34971|39769->34977|39818->35003|39885->35041|39902->35047|39974->35096|40210->35312|40224->35316|40264->35317|40326->35350|40415->35411|40429->35415|40457->35420|40495->35429|40512->35435|40561->35461|40628->35499|40645->35505|40707->35544|40955->35760|41013->35789|41254->36002|41271->36008|41320->36034|41353->36038|41368->36042|41396->36047|41427->36048|41571->36187|41641->36253|41711->36322|41781->36393|41851->36444|41922->36606|41992->36657|42062->36708|42128->36745|42296->36884|42311->36888|42340->36894|42371->36895|42510->37103|42580->37170|42651->37294|42721->37345|42792->37468|42858->37505|43046->37661|43093->37679|43692->38250|43706->38254|43739->38265|44510->39008|44526->39014|44587->39053|44668->39106|44684->39112|44757->39163
+                  LINES: 27->1|32->1|33->2|33->2|33->2|34->3|36->5|36->5|36->5|37->6|39->8|39->8|39->8|42->11|43->12|43->12|43->12|44->13|47->16|47->16|47->16|48->17|49->18|50->19|66->35|66->35|66->35|67->36|68->37|68->37|68->37|69->38|69->38|69->38|74->43|74->43|74->43|75->44|75->44|75->44|75->44|75->44|75->44|75->44|75->44|75->44|75->44|77->46|78->47|80->49|80->49|80->49|81->50|82->51|82->51|82->51|84->53|85->54|90->59|90->59|90->59|95->64|95->64|95->64|95->64|96->65|96->65|96->65|97->66|97->66|97->66|97->66|97->66|98->67|99->68|104->73|104->73|104->73|104->73|109->78|109->78|109->78|110->79|110->79|110->79|110->79|110->79|110->79|111->80|111->80|111->80|112->81|112->81|112->81|113->82|113->82|113->82|116->85|116->85|116->85|117->86|119->88|119->88|119->88|125->94|127->96|153->122|153->122|158->127|159->128|161->130|161->130|161->130|200->169|201->170|440->409|440->409|440->409|441->410|444->413|444->413|444->413|445->414|445->414|445->414|445->414|445->414|445->414|445->414|445->414|445->414|445->414|447->416|447->416|447->416|448->417|448->417|448->417|448->417|448->417|448->417|448->417|448->417|448->417|448->417|450->419|451->420|454->423|454->423|454->423|454->423|454->423|454->423|454->423|458->427|458->427|458->427|458->427|466->435|467->436|482->451|482->451|482->451|483->452|486->455|486->455|486->455|487->456|487->456|487->456|487->456|487->456|487->456|487->456|487->456|487->456|487->456|490->459|490->459|490->459|491->460|491->460|491->460|491->460|491->460|491->460|491->460|491->460|491->460|491->460|494->463|495->464|498->467|498->467|498->467|498->467|498->467|498->467|498->467|500->469|501->470|502->471|503->472|504->473|505->474|506->475|507->476|508->477|509->478|509->478|509->478|509->478|511->480|512->481|513->482|514->483|515->484|516->485|521->490|523->492|540->509|540->509|540->509|560->529|560->529|560->529|561->530|561->530|561->530
                   -- GENERATED --
               */
           

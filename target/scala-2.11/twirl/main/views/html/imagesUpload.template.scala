@@ -72,7 +72,7 @@ Seq[Any](format.raw/*1.19*/("""
 object imagesUpload extends imagesUpload_Scope0.imagesUpload
               /*
                   -- GENERATED --
-                  DATE: Sun Mar 27 16:03:46 CEST 2016
+                  DATE: Mon Apr 18 19:38:50 CEST 2016
                   SOURCE: E:/namjestaj/app/views/imagesUpload.scala.html
                   HASH: 4d1a2b0d335418c1193ef23cfc47e627ccc79388
                   MATRIX: 760->1|872->18|900->21|911->25|949->27|981->33|1179->205|1193->211|1241->239

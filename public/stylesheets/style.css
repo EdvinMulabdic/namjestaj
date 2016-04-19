@@ -2451,6 +2451,7 @@ ul.products-grid {
 	position: relative;
 	overflow: hidden;
 	border-radius: 3px;
+	padding: 10px;
 }
 .products-grid .item .item-inner .item-img .item-img-info a.product-image {
 	width: 100%;
@@ -3550,7 +3551,7 @@ li .list {
 	float: right;
 	width: 68%;
 	text-align: left;
-	margin-left: 25px;
+	/*margin-left: 25px;*/
 }
 .products-list .product-shop .desc {
 	font-size: 14px;
@@ -3636,10 +3637,10 @@ li .list {
 	background: none
 }
 .products-list .actions .add-to-links a.link-wishlist:before {
-	content: "\f004";
+	/*content: "\f004";*/
 }
 .products-list .actions .add-to-links a.link-compare:before {
-	content: "\f012";
+	/*content: "\f012";*/
 }
 .products-list .actions .add-to-links a.link-wishlist {
 	color: #000;
@@ -7470,7 +7471,7 @@ ol#compare-items li.last {
 	padding: 0;
 	position: relative;
 	z-index: 1;
-	background-color: #f5f5f5;
+	/*background-color: #f5f5f5;*/
 	margin-top: 0px;
 	height: 40px;
 	text-align: left;
@@ -7517,7 +7518,7 @@ ol#compare-items li.last {
 .tab-content {
 	background-color: #FFFFFF;
 	padding: 5px 0px 20px 0px;
-	overflow: hidden;
+	/*overflow: hidden;*/
 	font-size: 14px;
 	line-height: 19px;
 	margin-top: 5px;
@@ -9025,10 +9026,10 @@ footer .footer-inner h3 {
 	padding-right: 30px;
 }
 .footer-column {
-	margin-right: 20px;
-	margin-bottom: 15px;
-	min-height: 220px;
-	width: 30%;
+	/*margin-right: 20px;*/
+	margin-bottom: 10px;
+	min-height: 100px;
+	/*width: 30%;*/
 }
 footer .footer-column a {
 	transition: color 300ms ease-in-out 0s, background-color 300ms ease-in-out 0s, background-position 300ms ease-in-out 0s;
@@ -9957,6 +9958,25 @@ button.button span span {
 	float: none;
 	padding: 0px 0px;
 }
+.top-banner-section2 > div a {
+	display: block;
+	overflow: hidden;
+}
+.top-banner-section2 > div a img {
+	-webkit-transition-duration: 500ms;
+	transition-duration: 500ms;
+	-webkit-transition-property: transform;
+	transition-property: transform;
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	transform: translateZ(0);
+}
+.top-banner-section2 > div a:hover img {
+	-webkit-transform: scale(1.11);
+	transform: scale(1.11);
+	-moz-transform: scale(1.11);
+}
+
 .add-banner1 {
 	background: url(../images/offer-bg.png) no-repeat top left;
 	padding: 20% 0px!important;
@@ -12912,4 +12932,20 @@ div#fancybox-wrap {
 }
 .margin-bottom-20 {
 	margin-bottom: 40px;
+}
+
+#margin-bottom-30 {
+    margin-bottom: 30px;
+}
+
+@media (max-width: 479px) and (min-width: 320px) {
+	#main-categories {
+		margin-top: 50%;
+	}
+}
+#page_navigation li{
+	margin-right: 10px;
+}
+#page_navigation a{
+	margin-right: 10px;
 }

@@ -121,7 +121,7 @@ Seq[Any](format.raw/*1.19*/("""
 object createItem extends createItem_Scope0.createItem
               /*
                   -- GENERATED --
-                  DATE: Thu Mar 31 01:03:04 CEST 2016
+                  DATE: Mon Apr 18 19:38:53 CEST 2016
                   SOURCE: E:/namjestaj/app/views/Item/createItem.scala.html
                   HASH: 4c2dbd6370f507bab513b16adb786d8bb6ac87de
                   MATRIX: 761->1|873->18|900->20|911->24|948->25|979->30|1525->549|1540->555|1587->580|3503->2469|3572->2521|3612->2522|3713->2595|3756->2611|3773->2619|3798->2622|3829->2625|3847->2633|3874->2638|3984->2717|4077->2782

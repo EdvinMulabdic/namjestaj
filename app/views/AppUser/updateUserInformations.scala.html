@@ -45,6 +45,17 @@
                                                         <input type="text" id="phone" name="phone" title="Phone" class="input-text" value="@user.phone" required>
                                                     </div>
                                                 </li>
+                                                <li>
+                                                    <div class="input-box">
+                                                        <label for="workTime">Radno vrijeme  <span class="required">*</span>  </label>
+                                                        <br>
+                                                        @if(user.workTime != null) {
+                                                            <input type="text" id="workTime" name="workTime" title="Radno vrijeme" class="input-text" placeholder="npr. 08 h - 16 h" value="@user.workTime" required>
+                                                        }else {
+                                                            <input type="text" id="workTime" name="workTime" title="Radno vrijeme" class="input-text" value="" placeholder="npr. 08 h - 16 h" required>
+                                                            }
+                                                        </div>
+                                                </li>
                                             </ul>
                                         </fieldset>
                                     </li>

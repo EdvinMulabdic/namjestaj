@@ -3,6 +3,7 @@ package controllers;
 import helpers.Authenticator;
 import models.Image;
 import models.Item;
+import models.News;
 import play.Logger;
 import play.mvc.*;
 import views.html.imagesUpload;
@@ -53,4 +54,5 @@ public class Images extends Controller {
         Integer itemId =  Image.deleteImage(image);
         return redirect(routes.Images.listOfPicturesRender(itemId));
     }
+
 }

@@ -53,7 +53,7 @@ public class Items extends Controller {
 
         Integer itemId = Item.createItem(name, price, description, category, user);
 
-        return redirect(routes.Items.itemRender(itemId));
+        return redirect(routes.Items.updateItemRender(itemId));
     }
     
         /* ------------------- update item render ------------------ */
@@ -79,7 +79,7 @@ public class Items extends Controller {
 
         Integer userId = Item.updateItem(name, oldPrice, price, description, category,subCategory, itemId);
 
-        return redirect(routes.Items.listOfItems(userId));
+        return redirect(routes.Items.itemRender(itemId));
     }
 
             /* ------------------- delete item  ------------------ */
@@ -140,4 +140,42 @@ public class Items extends Controller {
         List<Item> itemsWithSubCategory = Item.itemsWithSubCategory(subcategoryId);
         return ok(views.html.Item.categoryItems.render(itemsWithSubCategory));
     }
+
+     /* ------------------- return items with price range 1  ------------------ */
+
+    public Result getItemsWithPriceRange1() {
+        List<Item> itemsWithPriceRange1 = Item.itemsWithPriceRange1();
+        return ok(views.html.Item.categoryItems.render(itemsWithPriceRange1));
+    }
+
+    /* ------------------- return items with price range 2  ------------------ */
+
+    public Result getItemsWithPriceRange2() {
+        List<Item> itemsWithPriceRange2 = Item.itemsWithPriceRange2();
+        return ok(views.html.Item.categoryItems.render(itemsWithPriceRange2));
+    }
+
+    /* ------------------- return items with price range 3  ------------------ */
+
+    public Result getItemsWithPriceRange3() {
+        List<Item> itemsWithPriceRange3 = Item.itemsWithPriceRange3();
+        return ok(views.html.Item.categoryItems.render(itemsWithPriceRange3));
+    }
+
+    /* ------------------- return items with price range 4  ------------------ */
+
+    public Result getItemsWithPriceRange4() {
+        List<Item> itemsWithPriceRange4 = Item.itemsWithPriceRange4();
+        return ok(views.html.Item.categoryItems.render(itemsWithPriceRange4));
+    }
+
+
+    /* -------------------  items with sale price ------------------ */
+
+    public Result itemsOnSale() {
+        List<Item> itemsOnSale = Item.itemsOnSale();
+        return ok(views.html.Item.categoryItems.render(itemsOnSale));
+    }
+
+
 }

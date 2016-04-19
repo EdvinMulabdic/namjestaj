@@ -140,7 +140,6 @@ website:   	http://www.magikcommerce.com/
 .tp-caption.ExtraLargeTitle {
 	line-height: 70px;
 	font-weight: bold;
-	font-family: 'Shadows Into Light';
 	color: #fff;
 	text-decoration: none;
 	background-color: transparent;
@@ -390,7 +389,7 @@ website:   	http://www.magikcommerce.com/
 	width: 40px;
 	height: 45px;
 	left: 0px !important;
-	margin-left: -50px;
+	/*margin-left: -50px;*/
 	opacity: 0
 }
 .tp-rightarrow.default {
@@ -401,7 +400,7 @@ website:   	http://www.magikcommerce.com/
 	width: 40px;
 	height: 45px;
 	right: 0 !important;
-	margin-right: -50px;
+	/*margin-right: -50px;*/
 	opacity: 0
 }
 #rev_slider_4_wrapper:hover .tp-rightarrow.default {
