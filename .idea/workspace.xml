@@ -43,8 +43,8 @@
       <file leaf-file-name="application.conf" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/conf/application.conf">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7234637">
-              <caret line="55" column="0" selection-start-line="55" selection-start-column="2" selection-end-line="58" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.66201115">
+              <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -828,12 +828,12 @@
       <option name="number" value="Default" />
       <updated>1461000212194</updated>
       <workItem from="1461000216729" duration="7433000" />
-      <workItem from="1461052893584" duration="26666000" />
+      <workItem from="1461052893584" duration="27124000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34099000" />
+    <option name="totallyTimeSpent" value="34557000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1293,8 +1293,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/conf/application.conf">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7234637">
-          <caret line="55" column="0" selection-start-line="55" selection-start-column="2" selection-end-line="58" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.66201115">
+          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
           <folding />
         </state>
       </provider>
