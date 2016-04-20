@@ -1,4 +1,5 @@
 @import helpers.UserAccessLevel
+@import helpers.Constants
 @(content: Html)(implicit currentUser: AppUser = UserAccessLevel.getCurrentUser(ctx()))
 <!DOCTYPE html>
 
@@ -185,24 +186,28 @@
                                             <!--level0-wrapper2-->
                                         <div class="nav-add">
                                             <div class="push_item">
-                                                <div class="push_img"><a href="#"><img alt="phone" src='@routes.Assets.versioned("images/menu_ele_phone1.png")'></a></div>
+                                                <div class="push_img"><a href="@routes.Items.getItemsWithCategory(Constants.DNEVNI_BORAVAK)"><img alt="phone" src='@routes.Assets.versioned("images/menu_ele_phone1.png")'></a></div>
                                                 <div class="push_text">
-                                                    Lorem Ipsum is simply dummy text of the printing</div>
+                                                   DNEVNI BORAVAK
+                                                </div>
                                             </div>
                                             <div class="push_item">
-                                                <div class="push_img"><a href="#"><img alt="camera" src='@routes.Assets.versioned("images/menu_ele_phone2.png")'></a></div>
+                                                <div class="push_img"><a href="@routes.Items.getItemsWithCategory(Constants.KUHINJE)"><img alt="camera" src='@routes.Assets.versioned("images/kuhinja.jpg")'></a></div>
                                                 <div class="push_text">
-                                                    Lorem Ipsum is simply dummy text of the printing</div>
+                                                    KUHINJA
+                                                </div>
                                             </div>
                                             <div class="push_item">
-                                                <div class="push_img"><a href="#"><img alt="ipod" src='@routes.Assets.versioned("images/menu_ele_phone3.png")'></a></div>
+                                                <div class="push_img"><a href="@routes.Items.getItemsWithCategory(Constants.SPAVACA_SOBA)"><img alt="ipod" src='@routes.Assets.versioned("images/spavacaSoba.jpg")'></a></div>
                                                 <div class="push_text">
-                                                    Lorem Ipsum is simply dummy text of the printing</div>
+                                                    SPAVAĆA SOBA
+                                                </div>
                                             </div>
                                             <div class="push_item push_item_last">
-                                                <div class="push_img"><a href="#"><img alt="laptop" src='@routes.Assets.versioned("images/menu_ele_phone4.png")'></a></div>
+                                                <div class="push_img"><a href="@routes.Items.getItemsWithCategory(Constants.KUPATILO)"><img alt="laptop" src='@routes.Assets.versioned("images/kupatilo.jpg")'></a></div>
                                                 <div class="push_text">
-                                                    Lorem Ipsum is simply dummy text of the printing</div>
+                                                    KUPATILO
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -279,7 +284,7 @@
                                     </li>
                                 } else {
                                     @if(currentUser.userAccessLevel.equals(UserAccessLevel.USER)) {
-                                        <script type="text/javascript" src="@routes.Assets.versioned("javascripts/messageNotifications.js")"></script>
+                                        @*<script type="text/javascript" src="@routes.Assets.versioned("javascripts/messageNotifications.js")"></script>*@
                                         <li class="mega-menu"><a class="level-top" href="#"><span>@currentUser.name</span></a>
                                             <div class="level0-wrapper dropdown-6col">
                                                 <div class="container">

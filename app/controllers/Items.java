@@ -174,8 +174,14 @@ public class Items extends Controller {
 
     public Result itemsOnSale() {
         List<Item> itemsOnSale = Item.itemsOnSale();
-        return ok(views.html.Item.categoryItems.render(itemsOnSale));
+        return ok(views.html.Item.saleItems.render(itemsOnSale));
     }
 
 
+    /* --------------- Item  block/unblock  ---------------*/
+
+    public Result blockUnblockItem(Integer itemId) {
+        Item.isItemBlocked(itemId);
+        return redirect(routes.Items.allItems());
+    }
 }

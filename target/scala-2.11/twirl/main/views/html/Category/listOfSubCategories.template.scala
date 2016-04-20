@@ -34,7 +34,7 @@ Seq[Any](format.raw/*1.67*/("""
     """),format.raw/*3.5*/("""<div class="container">
         <div class="row">
             <div class="text-center" id="margin-bottom-admin">
-                <h1>Lista podkategorija</h1>
+                <h1>Lista potkategorija</h1>
             </div>
         </div>
         <div>
@@ -59,7 +59,7 @@ Seq[Any](format.raw/*1.67*/("""
                     <table class="table table-striped table-bordered table-responsive" id="sort">
                         <thead>
                             <tr class="about">
-                                <th>Naziv podkategorije</th>
+                                <th>Naziv potkategorije</th>
                                 <th class="text-center">Uredi</th>
                                 <th class="text-center">Obriši</th>
                             </tr>
@@ -69,12 +69,12 @@ Seq[Any](format.raw/*1.67*/("""
                             """),format.raw/*38.29*/("""<tr class="about" >
                                 <td>"""),_display_(/*39.38*/subcategory/*39.49*/.name),format.raw/*39.54*/("""</td>
                                 <td class="text-center">
-                                    <a class="fa-buttons" title="Uredi podkategoriju" href=""""),_display_(/*41.94*/routes/*41.100*/.Categories.updateSubCategory(subcategory.id)),format.raw/*41.145*/("""" role="button">
+                                    <a class="fa-buttons" title="Uredi potkategoriju" href=""""),_display_(/*41.94*/routes/*41.100*/.Categories.updateSubCategory(subcategory.id)),format.raw/*41.145*/("""" role="button">
                                         <i class=" fa fa-pencil fa-lg"></i>
                                     </a>
                                 </td>
                                 <td class="text-center">
-                                    <a class="fa-buttons" data-role="delete-item" title="Obriši podkategoriju" href=""""),_display_(/*46.119*/routes/*46.125*/.Categories.deleteSubCategory(subcategory.id)),format.raw/*46.170*/("""" role="button">
+                                    <a class="fa-buttons" data-role="delete-item" title="Obriši potkategoriju" href=""""),_display_(/*46.119*/routes/*46.125*/.Categories.deleteSubCategory(subcategory.id)),format.raw/*46.170*/("""" role="button">
                                         <i class=" fa fa-trash-o fa-lg"></i>
                                     </a>
                                 </td>
@@ -88,7 +88,7 @@ Seq[Any](format.raw/*1.67*/("""
                     <div class="col-md-6 col-md-offset-5" id="margin-bottom-header">
                         <form  method="GET" role="form" action=""""),_display_(/*58.66*/routes/*58.72*/.Categories.createSubCategoryRender(categoryId)),format.raw/*58.119*/("""" >
                             <div class="buttons-set">
-                                <button class="button create-account"><span>DODAJ PODKATEGORIJU</span></button>
+                                <button class="button"><i class="fa fa-check"></i> <span>DODAJ POTKATEGORIJU</span></button>
                             </div>
                         </form>
 
@@ -122,10 +122,10 @@ Seq[Any](format.raw/*1.67*/("""
 object listOfSubCategories extends listOfSubCategories_Scope0.listOfSubCategories
               /*
                   -- GENERATED --
-                  DATE: Mon Apr 18 19:38:53 CEST 2016
+                  DATE: Wed Apr 20 11:17:49 CEST 2016
                   SOURCE: E:/namjestaj/app/views/Category/listOfSubCategories.scala.html
-                  HASH: 35c9a36563a19d88b3c398ebe06fd88f39b8d439
-                  MATRIX: 811->1|971->66|998->68|1009->72|1047->74|1078->79|1324->298|1365->330|1405->332|1450->349|1670->542|1684->547|1720->562|1795->606|1836->620|1875->650|1915->652|1960->669|2179->861|2193->866|2227->879|2302->923|2338->932|3088->1655|3137->1688|3177->1690|3234->1719|3318->1776|3338->1787|3364->1792|3547->1948|3563->1954|3630->1999|4005->2346|4021->2352|4088->2397|4351->2629|4404->2654|4673->2896|4688->2902|4757->2949|5146->3311|5161->3317|5222->3357|5279->3387|5294->3393|5364->3442
+                  HASH: e677469eb98b787e03c3f8b4c5de7aaf9e40dc55
+                  MATRIX: 811->1|971->66|998->68|1009->72|1047->74|1078->79|1324->298|1365->330|1405->332|1450->349|1670->542|1684->547|1720->562|1795->606|1836->620|1875->650|1915->652|1960->669|2179->861|2193->866|2227->879|2302->923|2338->932|3088->1655|3137->1688|3177->1690|3234->1719|3318->1776|3338->1787|3364->1792|3547->1948|3563->1954|3630->1999|4005->2346|4021->2352|4088->2397|4351->2629|4404->2654|4673->2896|4688->2902|4757->2949|5159->3324|5174->3330|5235->3370|5292->3400|5307->3406|5377->3455
                   LINES: 27->1|32->1|33->2|33->2|33->2|34->3|41->10|41->10|41->10|42->11|44->13|44->13|44->13|46->15|47->16|47->16|47->16|48->17|50->19|50->19|50->19|52->21|53->22|68->37|68->37|68->37|69->38|70->39|70->39|70->39|72->41|72->41|72->41|77->46|77->46|77->46|82->51|83->52|89->58|89->58|89->58|103->72|103->72|103->72|104->73|104->73|104->73
                   -- GENERATED --
               */

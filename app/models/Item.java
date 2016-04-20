@@ -21,6 +21,7 @@ public class Item extends Model {
     public String description;
     public Boolean isActive;
     public Boolean isVisible;
+    public Boolean isBlocked;
 
     @ManyToOne
     public AppUser user;
@@ -57,6 +58,7 @@ public class Item extends Model {
         item.user = user;
         item.category = category;
         item.isActive = true;
+        item.isBlocked = false;
         item.save();
         return item.id;
     }
@@ -115,7 +117,7 @@ public class Item extends Model {
         /* ------------------- find all active items  ------------------ */
 
     public static List<Item> allActiveItems() {
-        return finder.where().eq("is_active",  1).findList();
+        return finder.where().eq("is_active",  1).eq("is_blocked", 0).findList();
     }
 
     /* ------------------- get last 10 products from database ------------------ */
@@ -168,14 +170,26 @@ public class Item extends Model {
         item.update();
     }
 
+     /* --------------- Item  block/unblock  ---------------*/
 
-          /* --------------- List of items for homepage slider ---------------*/
+    public static void isItemBlocked(Integer itemId){
+        Item  item = findItemById(itemId);
+        if(item.isBlocked == false) {
+            item.isBlocked = true;
+        }else if(item.isBlocked == true){
+            item.isBlocked = false;
+        }
+        item.update();
+    }
+
+
+    /* --------------- List of items for homepage slider ---------------*/
 
     public static List<Item> itemsForHomepageSlider(){
         List<Item> itemsForHomepageSlider = new ArrayList<>();
         List<Item> items = finder.where().eq("isVisible", true).findList();
         for(int i = 0; i < items.size(); i ++) {
-            if(items.get(i).isActive == true) {
+            if(items.get(i).isActive == true && items.get(i).isBlocked == false) {
                 itemsForHomepageSlider.add(items.get(i));
             }
         }
@@ -195,7 +209,7 @@ public class Item extends Model {
         List<Item> items = finder.where().eq("sub_category_id", subcategoryId).findList();
 
             for(int i = 0; i < items.size(); i ++ ) {
-                if(items.get(i).isActive == true) {
+                if(items.get(i).isActive == true && items.get(i).isBlocked == false) {
                     itemsToRecommend.add(items.get(i));
                 }
             }
@@ -231,7 +245,7 @@ public class Item extends Model {
         List<Item> items = finder.where().eq("category_id", categoryId).findList();
 
         for(int i = 0; i < items.size(); i ++ ) {
-            if(items.get(i).isActive == true) {
+            if(items.get(i).isActive == true && items.get(i).isBlocked == false) {
                 itemsWithCategory.add(items.get(i));
             }
         }
@@ -243,7 +257,7 @@ public class Item extends Model {
         List<Item> itemsWithSubCategory = new ArrayList<>();
         List<Item> items = finder.where().eq("sub_category_id", subCategoryId).findList();
         for(int i = 0; i < items.size(); i ++ ) {
-            if(items.get(i).isActive == true) {
+            if(items.get(i).isActive == true && items.get(i).isBlocked == false) {
                 itemsWithSubCategory.add(items.get(i));
             }
         }
@@ -302,13 +316,16 @@ public class Item extends Model {
         /* ------------------- return items with action price ------------------ */
 
     public static List<Item> itemsOnSale () {
-        List<Item> allItems = finder.all();
+        List<Item> allItems = allActiveItems();
         List<Item> itemsToReturn = new LinkedList<>();
         for(int i = 0; i < allItems.size(); i++) {
-            if(allItems.get(i).oldPrice != null ){
+            if(allItems.get(i).oldPrice != null || allItems.get(i).oldPrice != " " ){
                 itemsToReturn.add(allItems.get(i));
             }
         }
         return itemsToReturn;
+//        List<Item> allItems = finder.where().isNotNull("old_price").findList();
+//        return allItems;
+
     }
 }

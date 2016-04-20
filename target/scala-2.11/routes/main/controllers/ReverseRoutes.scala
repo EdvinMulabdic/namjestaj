@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:E:/namjestaj/conf/routes
-// @DATE:Mon Apr 18 21:39:33 CEST 2016
+// @DATE:Wed Apr 20 11:47:23 CEST 2016
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -28,25 +28,25 @@ package controllers {
   
   }
 
-  // @LINE:61
+  // @LINE:64
   class ReverseCategories(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:71
+    // @LINE:74
     def createSubCategory(categoryId:Integer): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "podkategorija/" + implicitly[PathBindable[Integer]].unbind("categoryId", categoryId))
     }
   
-    // @LINE:75
+    // @LINE:78
     def deleteSubCategory(subcategoryId:Integer): Call = {
     
       (subcategoryId: @unchecked) match {
       
-        // @LINE:75
+        // @LINE:78
         case (subcategoryId)  =>
           import ReverseRouteContext.empty
           Call("GET", _prefix + { _defaultPrefix } + "brisanjepodkategorije/" + implicitly[PathBindable[Integer]].unbind("subcategoryId", subcategoryId))
@@ -55,42 +55,42 @@ package controllers {
     
     }
   
-    // @LINE:61
+    // @LINE:64
     def listOfCategories(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "kategorije")
     }
   
-    // @LINE:72
+    // @LINE:75
     def listOfSubCategories(categoryId:Integer): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "listapodkategorija/" + implicitly[PathBindable[Integer]].unbind("categoryId", categoryId))
     }
   
-    // @LINE:65
+    // @LINE:68
     def createCategory(): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "kreiranjekategorije")
     }
   
-    // @LINE:64
+    // @LINE:67
     def createCategoryRender(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "kreiranjekategorije")
     }
   
-    // @LINE:67
+    // @LINE:70
     def updateCategory(categoryId:Integer): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "azuriranjekategorije/" + implicitly[PathBindable[Integer]].unbind("categoryId", categoryId))
     }
   
-    // @LINE:62
+    // @LINE:65
     def deleteCategory(categoryId:Integer): Call = {
     
       (categoryId: @unchecked) match {
       
-        // @LINE:62
+        // @LINE:65
         case (categoryId)  =>
           import ReverseRouteContext.empty
           Call("GET", _prefix + { _defaultPrefix } + "brisanjekategorije/" + implicitly[PathBindable[Integer]].unbind("categoryId", categoryId))
@@ -99,25 +99,25 @@ package controllers {
     
     }
   
-    // @LINE:74
+    // @LINE:77
     def updateSubCategory(subcategoryId:Integer): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "azuriranjepodkategorije/" + implicitly[PathBindable[Integer]].unbind("subcategoryId", subcategoryId))
     }
   
-    // @LINE:73
+    // @LINE:76
     def updateSubCategoryRender(subcategoryId:Integer): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "azuriranjepodkategorije/" + implicitly[PathBindable[Integer]].unbind("subcategoryId", subcategoryId))
     }
   
-    // @LINE:70
+    // @LINE:73
     def createSubCategoryRender(categoryId:Integer): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "podkategorija/" + implicitly[PathBindable[Integer]].unbind("categoryId", categoryId))
     }
   
-    // @LINE:66
+    // @LINE:69
     def updateCategoryRender(categoryId:Integer): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "azuriranjekategorije/" + implicitly[PathBindable[Integer]].unbind("categoryId", categoryId))
@@ -125,55 +125,55 @@ package controllers {
   
   }
 
-  // @LINE:113
+  // @LINE:116
   class ReverseNewsController(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:120
+    // @LINE:123
     def updateNews(newsId:Integer): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "azurirajvijest/" + implicitly[PathBindable[Integer]].unbind("newsId", newsId))
     }
   
-    // @LINE:113
+    // @LINE:116
     def newsRender(newsId:Integer): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "vijest/" + implicitly[PathBindable[Integer]].unbind("newsId", newsId))
     }
   
-    // @LINE:119
+    // @LINE:122
     def updateNewsRender(newsId:Integer): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "azurirajvijest/" + implicitly[PathBindable[Integer]].unbind("newsId", newsId))
     }
   
-    // @LINE:115
+    // @LINE:118
     def createNewsRender(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "kreirajvijest")
     }
   
-    // @LINE:116
+    // @LINE:119
     def createNews(): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "kreirajvijest")
     }
   
-    // @LINE:114
+    // @LINE:117
     def newsPanelRender(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "vijestpanel")
     }
   
-    // @LINE:117
+    // @LINE:120
     def deleteNews(newsId:Integer): Call = {
     
       (newsId: @unchecked) match {
       
-        // @LINE:117
+        // @LINE:120
         case (newsId)  =>
           import ReverseRouteContext.empty
           Call("GET", _prefix + { _defaultPrefix } + "brisivijest/" + implicitly[PathBindable[Integer]].unbind("newsId", newsId))
@@ -211,44 +211,44 @@ package controllers {
   
   }
 
-  // @LINE:105
+  // @LINE:108
   class ReverseMessages(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:108
+    // @LINE:111
     def deleteMessage(messageId:Integer): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "brisanjeporuke/" + implicitly[PathBindable[Integer]].unbind("messageId", messageId))
     }
   
-    // @LINE:109
+    // @LINE:112
     def notifications(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "messagenotif")
     }
   
-    // @LINE:107
+    // @LINE:110
     def message(messageId:Integer): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "poruka/" + implicitly[PathBindable[Integer]].unbind("messageId", messageId))
     }
   
-    // @LINE:105
+    // @LINE:108
     def sendMessage(itemId:Integer): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "poruka/" + implicitly[PathBindable[Integer]].unbind("itemId", itemId))
     }
   
-    // @LINE:106
+    // @LINE:109
     def listOfMessages(userId:Integer): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "poruke/" + implicitly[PathBindable[Integer]].unbind("userId", userId))
     }
   
-    // @LINE:110
+    // @LINE:113
     def listOfMessagesForAdmin(userId:Integer): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "porukekoisnika/" + implicitly[PathBindable[Integer]].unbind("userId", userId))
@@ -256,19 +256,19 @@ package controllers {
   
   }
 
-  // @LINE:79
+  // @LINE:82
   class ReverseStores(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:83
+    // @LINE:86
     def deleteStore(storeId:Integer): Call = {
     
       (storeId: @unchecked) match {
       
-        // @LINE:83
+        // @LINE:86
         case (storeId)  =>
           import ReverseRouteContext.empty
           Call("GET", _prefix + { _defaultPrefix } + "brisanjeobjekta/" + implicitly[PathBindable[Integer]].unbind("storeId", storeId))
@@ -277,31 +277,31 @@ package controllers {
     
     }
   
-    // @LINE:85
+    // @LINE:88
     def listOfStores(userId:Integer): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "listaobjekata/" + implicitly[PathBindable[Integer]].unbind("userId", userId))
     }
   
-    // @LINE:79
+    // @LINE:82
     def createStoreRender(userId:Integer): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "dodajobjekat/" + implicitly[PathBindable[Integer]].unbind("userId", userId))
     }
   
-    // @LINE:81
+    // @LINE:84
     def updateStoreRender(storeId:Integer): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "azuriranjeobjekta/" + implicitly[PathBindable[Integer]].unbind("storeId", storeId))
     }
   
-    // @LINE:80
+    // @LINE:83
     def createStore(userId:Integer): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "dodajobjekat/" + implicitly[PathBindable[Integer]].unbind("userId", userId))
     }
   
-    // @LINE:82
+    // @LINE:85
     def updateStore(storeId:Integer): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "azuriranjeobjekta/" + implicitly[PathBindable[Integer]].unbind("storeId", storeId))
@@ -417,7 +417,7 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "pogresanunos")
     }
   
-    // @LINE:92
+    // @LINE:95
     def faqRender(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "faq")
@@ -431,20 +431,20 @@ package controllers {
   
   }
 
-  // @LINE:88
+  // @LINE:91
   class ReverseContactUs(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:88
+    // @LINE:91
     def contactUsRender(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "kontakt")
     }
   
-    // @LINE:89
+    // @LINE:92
     def contactUs(): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "kontakt")
@@ -459,13 +459,13 @@ package controllers {
     }
 
   
-    // @LINE:52
+    // @LINE:55
     def getItemsWithPriceRange2(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "proizvodi150")
     }
   
-    // @LINE:57
+    // @LINE:60
     def itemsOnSale(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "akcija")
@@ -477,7 +477,7 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "proizvodi/" + implicitly[PathBindable[Integer]].unbind("itemId", itemId))
     }
   
-    // @LINE:102
+    // @LINE:105
     def lastTenProducts(): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix)
@@ -513,13 +513,19 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "kreiranjeproizvoda/" + implicitly[PathBindable[Integer]].unbind("userId", userId))
     }
   
-    // @LINE:53
+    // @LINE:56
     def getItemsWithPriceRange3(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "proizvodi200")
     }
   
-    // @LINE:54
+    // @LINE:51
+    def blockUnblockItem(itemId:Integer): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "blokiraj/" + implicitly[PathBindable[Integer]].unbind("itemId", itemId))
+    }
+  
+    // @LINE:57
     def getItemsWithPriceRange4(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "proizvodipreko200")
@@ -557,7 +563,7 @@ package controllers {
       Call("POST", _prefix + { _defaultPrefix } + "kreiranjeproizvoda/" + implicitly[PathBindable[Integer]].unbind("userId", userId))
     }
   
-    // @LINE:51
+    // @LINE:54
     def getItemsWithPriceRange1(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "proizvodi100")
@@ -571,25 +577,25 @@ package controllers {
   
   }
 
-  // @LINE:95
+  // @LINE:98
   class ReverseImages(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:96
+    // @LINE:99
     def imagesUpload(itemId:Integer): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "uploadslika/" + implicitly[PathBindable[Integer]].unbind("itemId", itemId))
     }
   
-    // @LINE:98
+    // @LINE:101
     def deleteImage(imageId:String): Call = {
     
       (imageId: @unchecked) match {
       
-        // @LINE:98
+        // @LINE:101
         case (imageId)  =>
           import ReverseRouteContext.empty
           Call("GET", _prefix + { _defaultPrefix } + "brisanjeslike/" + implicitly[PathBindable[String]].unbind("imageId", dynamicString(imageId)))
@@ -598,13 +604,13 @@ package controllers {
     
     }
   
-    // @LINE:95
+    // @LINE:98
     def imagesUploadRender(itemId:Integer): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "uploadslika/" + implicitly[PathBindable[Integer]].unbind("itemId", itemId))
     }
   
-    // @LINE:97
+    // @LINE:100
     def listOfPicturesRender(itemId:Integer): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "listaslika/" + implicitly[PathBindable[Integer]].unbind("itemId", itemId))

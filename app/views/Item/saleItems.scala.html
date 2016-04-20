@@ -1,0 +1,155 @@
+@(items: java.util.List[Item])
+@main {
+
+    <!-- Main Container -->
+    <section class="main-container col2-left-layout bounceInUp animated">
+        <div class="category-description std">
+            <div class="container">
+                <div class="slider-items-products">
+                    <div id="category-desc-slider" class="product-flexslider hidden-buttons">
+                        <div class="slider-items slider-width-col1 owl-carousel owl-theme">
+
+                                <!-- Item -->
+                            <div class="item"> <a href="#"><img alt="" src='@routes.Assets.versioned("images/categoryItems-slider1.jpg")'></a>
+                                <div class="cat-img-title cat-bg cat-box">
+                                    <div class="small-tag"><span>Namjestaj.ba</span></div>
+                                    <h2 class="cat-heading">Odaberite savrsen proizvod</h2>
+                                    <p>Najkvalitetniji proizvodi </p>
+                                </div>
+                            </div>
+                                <!-- End Item -->
+                                <!-- Item -->
+                            <div class="item"> <a href="#"><img alt="" src='@routes.Assets.versioned("images/categoryItems-slider2.jpg")'></a>
+                                <div class="cat-img-title cat-bg cat-box">
+                                    <div class="small-tag"><span>Sale</span>  10% OFF</div>
+                                    <h2 class="cat-heading">Women Collection</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                                </div>
+                            </div>
+                                <!-- End Item -->
+                                <!-- Item -->
+                            <div class="item"> <a href="#"><img alt="" src='@routes.Assets.versioned("images/categoryItems-slider3.jpg")'></a>
+                                <div class="cat-img-title cat-bg cat-box">
+                                    <div class="small-tag"><span>Sale</span>  10% OFF</div>
+                                    <h2 class="cat-heading">Women Collection</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                                </div>
+                            </div>
+                                <!-- End Item -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-main col-sm-9 col-sm-push-3">
+                    <article class="col-main">
+                        <div class="page-title">
+                            <h2>Proizvodi iz odabrane kategorije</h2>
+                        </div>
+
+                        <div class="toolbar">
+
+
+                            <div class="pager">
+
+                                <div class="pages">
+                                    <ul class="pagination">
+                                        <div id='page_navigation' class="pagination-custom"></div>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="category-products">
+                            <ul class="products-grid" id="easyPaginate">
+                            @for(item <- items) {
+                                <li class="item col-md-3 col-sm-4 col-xs-6">
+                                    <div class="item-inner">
+
+                                        <div class="item-img">
+                                        @if(item.images.size() > 0){
+                                            <div class="item-img-info"> <a class="product-image" title="@item.name" href="@routes.Items.itemRender(item.id)"> <img alt="Retis lapen casen" src='@models.Item.getFirstItemImage(item.id).getSize(179,217)'> </a>
+                                                <div class="new-label new-top-left">new</div>
+                                                <a class="quickview-btn" ><span>Quick View</span></a> </div>
+                                        }else{
+                                            <div class="item-img-info"> <a class="product-image" title="@item.name" href='@routes.Items.itemRender(item.id)'> <img alt="Retis lapen casen" src='@routes.Assets.versioned("images/product.png")'> </a>
+                                                <div class="new-label new-top-left">AKCIJA</div>
+                                                <a class="quickview-btn" ><span>Quick View</span></a> </div>
+                                        }
+
+                                        </div>
+                                        <div class="item-info">
+                                            <div class="info-inner">
+                                                <div class="item-title"> <a title="Retis lapen casen" href="@routes.Items.itemRender(item.id)"> @item.name </a> </div>
+                                                <div class="item-content">
+                                                    <div class="item-price">
+                                                        <div class="price-box"> <span class="regular-price"> <span class="price">@item.price KM</span> </span> </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            }
+                            </ul>
+                        </div>
+                    </article>
+                        <!--	///*///======    End article  ========= //*/// -->
+                </div>
+                <div class="col-left sidebar col-sm-3 col-xs-12 col-sm-pull-9">
+                    <aside class="col-left sidebar">
+
+                        <div class="side-nav-categories">
+                            <div class="block-title"> Kategorije </div>
+                                <!--block-title-->
+                                <!-- BEGIN BOX-CATEGORY -->
+                            <div class="box-content box-category">
+                                <ul>
+                                @for(category <- models.Category.findAllCategories()) {
+                                    <li> <a href="@routes.Items.getItemsWithCategory(category.id)">@category.name</a> <span class="subDropdown plus"></span>
+                                        <ul class="level0_455">
+                                        @for(subcategory <- models.SubCategory.allSubCategories(category.id)) {
+                                            <li> <a href="@routes.Items.getItemsWithSubCategory(subcategory.id)"> @subcategory.name </a></li>
+                                        }
+                                        </ul>
+                                            <!--level0-->
+                                    </li>
+                                }
+                                </ul>
+                            </div>
+                                <!--box-content box-category-->
+                        </div>
+
+
+                        <div class="block block-layered-nav">
+                            <div class="block-title">Pretraga po cijeni</div>
+                            <div class="block-content">
+                                <p class="block-subtitle">Odaberite željeni raspon</p>
+                                <dl id="narrow-by-list">
+                                    <dd class="odd">
+                                        <ol>
+                                            <li> <a href="@routes.Items.getItemsWithPriceRange1()"><span class="price">do 99.00 KM</span></a> </li>
+                                            <li> <a href="@routes.Items.getItemsWithPriceRange2()"><span class="price"> 100.00 KM</span> - <span class="price"> 149.00 KM</span></a>  </li>
+                                            <li> <a href="@routes.Items.getItemsWithPriceRange3()"><span class="price"> 150.00 KM</span> - <span class="price"> 199.00 KM</span></a>  </li>
+                                            <li> <a href="@routes.Items.getItemsWithPriceRange4()"><span class="price"> preko 200.00 KM</span></a>  </li>
+                                        </ol>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Main Container End -->
+    <input type='hidden' id='current_page' />
+    <input type='hidden' id='show_per_page' />
+
+    <script src='@routes.Assets.versioned("javascripts/paginacija.js")'></script>
+
+}

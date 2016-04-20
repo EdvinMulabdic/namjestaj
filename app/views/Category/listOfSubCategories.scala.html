@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="text-center" id="margin-bottom-admin">
-                <h1>Lista podkategorija</h1>
+                <h1>Lista potkategorija</h1>
             </div>
         </div>
         <div>
@@ -28,7 +28,7 @@
                     <table class="table table-striped table-bordered table-responsive" id="sort">
                         <thead>
                             <tr class="about">
-                                <th>Naziv podkategorije</th>
+                                <th>Naziv potkategorije</th>
                                 <th class="text-center">Uredi</th>
                                 <th class="text-center">Obriši</th>
                             </tr>
@@ -38,12 +38,12 @@
                             <tr class="about" >
                                 <td>@subcategory.name</td>
                                 <td class="text-center">
-                                    <a class="fa-buttons" title="Uredi podkategoriju" href="@routes.Categories.updateSubCategory(subcategory.id)" role="button">
+                                    <a class="fa-buttons" title="Uredi potkategoriju" href="@routes.Categories.updateSubCategory(subcategory.id)" role="button">
                                         <i class=" fa fa-pencil fa-lg"></i>
                                     </a>
                                 </td>
                                 <td class="text-center">
-                                    <a class="fa-buttons" data-role="delete-item" title="Obriši podkategoriju" href="@routes.Categories.deleteSubCategory(subcategory.id)" role="button">
+                                    <a class="fa-buttons" data-role="delete-item" title="Obriši potkategoriju" href="@routes.Categories.deleteSubCategory(subcategory.id)" role="button">
                                         <i class=" fa fa-trash-o fa-lg"></i>
                                     </a>
                                 </td>
@@ -57,7 +57,7 @@
                     <div class="col-md-6 col-md-offset-5" id="margin-bottom-header">
                         <form  method="GET" role="form" action="@routes.Categories.createSubCategoryRender(categoryId)" >
                             <div class="buttons-set">
-                                <button class="button create-account"><span>DODAJ PODKATEGORIJU</span></button>
+                                <button class="button"><i class="fa fa-check"></i> <span>DODAJ POTKATEGORIJU</span></button>
                             </div>
                         </form>
 

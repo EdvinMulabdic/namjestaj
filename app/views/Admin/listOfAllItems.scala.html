@@ -19,7 +19,8 @@
                                 <th>Proizvod</th>
                                 <th>Cijena</th>
                                 <th class="text-center">Prikazi na početnom slideru</th>
-                                <th class="text-center">Blokiran</th>
+                                <th class="text-center">Blokiran proizvod</th>
+                                <th class="text-center">Blokiran korisnik</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -40,12 +41,24 @@
                                             </a>
                                         }
                                     </td>
-                                    @if(item.isActive == null || item.isActive == false) {
-                                         <td class="text-center"> DA </td>
+
+                                    <td class="text-center">
+                                    @if(item.isBlocked == null || item.isBlocked == false) {
+                                        <a class="fa-buttons" title="NE" href="@routes.Items.blockUnblockItem(item.id)" role="button">
+                                            <button id="send2" type="submit" class="button"><i class="fa fa-close"></i> <span>NE</span></button>
+                                        </a>
+                                    } else {
+                                        <a class="fa-buttons"  title="DA" href="@routes.Items.blockUnblockItem(item.id)" role="button">
+                                            <button id="send2"  type="submit" class="button"><i class="fa fa-check"></i> <span>DA</span></button>
+                                        </a>
+                                    }
+                                    </td>
+
+                                    @if(item.user.isActive == null || item.user.isActive == false) {
+                                        <td class="text-center"> DA </td>
                                     } else {
                                         <td class="text-center"> NE </td>
                                     }
-
                                 </tr>
                         }
                         </tbody>

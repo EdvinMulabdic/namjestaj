@@ -9,6 +9,8 @@ import play.mvc.Controller;
 import play.mvc.Result;
 import play.mvc.Security;
 
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -90,6 +92,7 @@ public class Categories extends Controller {
 
     public Result listOfSubCategories(Integer categoryId){
         List<SubCategory> subCategories = SubCategory.allSubCategories(categoryId);
+
         return ok(views.html.Category.listOfSubCategories.render(subCategories, categoryId));
     }
 

@@ -50,36 +50,49 @@ Seq[Any](format.raw/*1.31*/("""
                                 <th>Proizvod</th>
                                 <th>Cijena</th>
                                 <th class="text-center">Prikazi na početnom slideru</th>
-                                <th class="text-center">Blokiran</th>
+                                <th class="text-center">Blokiran proizvod</th>
+                                <th class="text-center">Blokiran korisnik</th>
                             </tr>
                         </thead>
                         <tbody>
-                        """),_display_(/*26.26*/for(item <- items) yield /*26.44*/ {_display_(Seq[Any](format.raw/*26.46*/("""
-                                """),format.raw/*27.33*/("""<tr class="about" >
-                                    <td>"""),_display_(/*28.42*/item/*28.46*/.id),format.raw/*28.49*/("""</td>
-                                    <td>"""),_display_(/*29.42*/item/*29.46*/.user.name),format.raw/*29.56*/("""</td>
-                                    <td>"""),_display_(/*30.42*/item/*30.46*/.name),format.raw/*30.51*/("""</td>
-                                    <td class="text-center">"""),_display_(/*31.62*/item/*31.66*/.price),format.raw/*31.72*/("""</td>
+                        """),_display_(/*27.26*/for(item <- items) yield /*27.44*/ {_display_(Seq[Any](format.raw/*27.46*/("""
+                                """),format.raw/*28.33*/("""<tr class="about" >
+                                    <td>"""),_display_(/*29.42*/item/*29.46*/.id),format.raw/*29.49*/("""</td>
+                                    <td>"""),_display_(/*30.42*/item/*30.46*/.user.name),format.raw/*30.56*/("""</td>
+                                    <td>"""),_display_(/*31.42*/item/*31.46*/.name),format.raw/*31.51*/("""</td>
+                                    <td class="text-center">"""),_display_(/*32.62*/item/*32.66*/.price),format.raw/*32.72*/("""</td>
                                     <td class="text-center">
-                                        """),_display_(/*33.42*/if(item.isVisible == null || item.isVisible == false)/*33.95*/ {_display_(Seq[Any](format.raw/*33.97*/("""
-                                            """),format.raw/*34.45*/("""<a class="fa-buttons"  title="DA" href=""""),_display_(/*34.86*/routes/*34.92*/.Items.showOnHomepage(item.id)),format.raw/*34.122*/("""" role="button">
+                                        """),_display_(/*34.42*/if(item.isVisible == null || item.isVisible == false)/*34.95*/ {_display_(Seq[Any](format.raw/*34.97*/("""
+                                            """),format.raw/*35.45*/("""<a class="fa-buttons"  title="DA" href=""""),_display_(/*35.86*/routes/*35.92*/.Items.showOnHomepage(item.id)),format.raw/*35.122*/("""" role="button">
                                                 <button id="send2"  type="submit" class="button"><i class="fa fa-check"></i> <span>DA</span></button>
                                             </a>
-                                        """)))}/*37.43*/else/*37.48*/{_display_(Seq[Any](format.raw/*37.49*/("""
-                                            """),format.raw/*38.45*/("""<a class="fa-buttons" title="NE" href=""""),_display_(/*38.85*/routes/*38.91*/.Items.showOnHomepage(item.id)),format.raw/*38.121*/("""" role="button">
+                                        """)))}/*38.43*/else/*38.48*/{_display_(Seq[Any](format.raw/*38.49*/("""
+                                            """),format.raw/*39.45*/("""<a class="fa-buttons" title="NE" href=""""),_display_(/*39.85*/routes/*39.91*/.Items.showOnHomepage(item.id)),format.raw/*39.121*/("""" role="button">
                                                 <button id="send2" type="submit" class="button"><i class="fa fa-close"></i> <span>NE</span></button>
                                             </a>
-                                        """)))}),format.raw/*41.42*/("""
-                                    """),format.raw/*42.37*/("""</td>
-                                    """),_display_(/*43.38*/if(item.isActive == null || item.isActive == false)/*43.89*/ {_display_(Seq[Any](format.raw/*43.91*/("""
-                                         """),format.raw/*44.42*/("""<td class="text-center"> DA </td>
-                                    """)))}/*45.39*/else/*45.44*/{_display_(Seq[Any](format.raw/*45.45*/("""
-                                        """),format.raw/*46.41*/("""<td class="text-center"> NE </td>
-                                    """)))}),format.raw/*47.38*/("""
+                                        """)))}),format.raw/*42.42*/("""
+                                    """),format.raw/*43.37*/("""</td>
 
-                                """),format.raw/*49.33*/("""</tr>
-                        """)))}),format.raw/*50.26*/("""
-                        """),format.raw/*51.25*/("""</tbody>
+                                    <td class="text-center">
+                                    """),_display_(/*46.38*/if(item.isBlocked == null || item.isBlocked == false)/*46.91*/ {_display_(Seq[Any](format.raw/*46.93*/("""
+                                        """),format.raw/*47.41*/("""<a class="fa-buttons" title="NE" href=""""),_display_(/*47.81*/routes/*47.87*/.Items.blockUnblockItem(item.id)),format.raw/*47.119*/("""" role="button">
+                                            <button id="send2" type="submit" class="button"><i class="fa fa-close"></i> <span>NE</span></button>
+                                        </a>
+                                    """)))}/*50.39*/else/*50.44*/{_display_(Seq[Any](format.raw/*50.45*/("""
+                                        """),format.raw/*51.41*/("""<a class="fa-buttons"  title="DA" href=""""),_display_(/*51.82*/routes/*51.88*/.Items.blockUnblockItem(item.id)),format.raw/*51.120*/("""" role="button">
+                                            <button id="send2"  type="submit" class="button"><i class="fa fa-check"></i> <span>DA</span></button>
+                                        </a>
+                                    """)))}),format.raw/*54.38*/("""
+                                    """),format.raw/*55.37*/("""</td>
+
+                                    """),_display_(/*57.38*/if(item.user.isActive == null || item.user.isActive == false)/*57.99*/ {_display_(Seq[Any](format.raw/*57.101*/("""
+                                        """),format.raw/*58.41*/("""<td class="text-center"> DA </td>
+                                    """)))}/*59.39*/else/*59.44*/{_display_(Seq[Any](format.raw/*59.45*/("""
+                                        """),format.raw/*60.41*/("""<td class="text-center"> NE </td>
+                                    """)))}),format.raw/*61.38*/("""
+                                """),format.raw/*62.33*/("""</tr>
+                        """)))}),format.raw/*63.26*/("""
+                        """),format.raw/*64.25*/("""</tbody>
                     </table>
                 </section>
             </div>
@@ -87,7 +100,7 @@ Seq[Any](format.raw/*1.31*/("""
         </div>
     </section>
 
-    <script src=""""),_display_(/*59.19*/routes/*59.25*/.Assets.versioned("javascripts/sort.js")),format.raw/*59.65*/(""""></script>
+    <script src=""""),_display_(/*72.19*/routes/*72.25*/.Assets.versioned("javascripts/sort.js")),format.raw/*72.65*/(""""></script>
 """)))}))
       }
     }
@@ -108,11 +121,11 @@ Seq[Any](format.raw/*1.31*/("""
 object listOfAllItems extends listOfAllItems_Scope0.listOfAllItems
               /*
                   -- GENERATED --
-                  DATE: Mon Apr 18 20:01:48 CEST 2016
+                  DATE: Wed Apr 20 11:58:37 CEST 2016
                   SOURCE: E:/namjestaj/app/views/Admin/listOfAllItems.scala.html
-                  HASH: f630aa9e850dabde42a9b3a00bc6b1ae42c2cc5a
-                  MATRIX: 783->1|907->30|935->33|946->37|984->39|1016->45|2130->1132|2164->1150|2204->1152|2266->1186|2355->1248|2368->1252|2392->1255|2467->1303|2480->1307|2511->1317|2586->1365|2599->1369|2625->1374|2720->1442|2733->1446|2760->1452|2897->1562|2959->1615|2999->1617|3073->1663|3141->1704|3156->1710|3208->1740|3487->2001|3500->2006|3539->2007|3613->2053|3680->2093|3695->2099|3747->2129|4037->2388|4103->2426|4174->2470|4234->2521|4274->2523|4345->2566|4436->2639|4449->2644|4488->2645|4558->2687|4661->2759|4725->2795|4788->2827|4842->2853|5011->2995|5026->3001|5087->3041
-                  LINES: 27->1|32->1|33->2|33->2|33->2|34->3|57->26|57->26|57->26|58->27|59->28|59->28|59->28|60->29|60->29|60->29|61->30|61->30|61->30|62->31|62->31|62->31|64->33|64->33|64->33|65->34|65->34|65->34|65->34|68->37|68->37|68->37|69->38|69->38|69->38|69->38|72->41|73->42|74->43|74->43|74->43|75->44|76->45|76->45|76->45|77->46|78->47|80->49|81->50|82->51|90->59|90->59|90->59
+                  HASH: 06317ae5766a5020a0e5f67aa88794fa5c469ea2
+                  MATRIX: 783->1|907->30|935->33|946->37|984->39|1016->45|2219->1221|2253->1239|2293->1241|2355->1275|2444->1337|2457->1341|2481->1344|2556->1392|2569->1396|2600->1406|2675->1454|2688->1458|2714->1463|2809->1531|2822->1535|2849->1541|2986->1651|3048->1704|3088->1706|3162->1752|3230->1793|3245->1799|3297->1829|3576->2090|3589->2095|3628->2096|3702->2142|3769->2182|3784->2188|3836->2218|4126->2477|4192->2515|4327->2623|4389->2676|4429->2678|4499->2720|4566->2760|4581->2766|4635->2798|4901->3046|4914->3051|4953->3052|5023->3094|5091->3135|5106->3141|5160->3173|5439->3421|5505->3459|5578->3505|5648->3566|5689->3568|5759->3610|5850->3683|5863->3688|5902->3689|5972->3731|6075->3803|6137->3837|6200->3869|6254->3895|6423->4037|6438->4043|6499->4083
+                  LINES: 27->1|32->1|33->2|33->2|33->2|34->3|58->27|58->27|58->27|59->28|60->29|60->29|60->29|61->30|61->30|61->30|62->31|62->31|62->31|63->32|63->32|63->32|65->34|65->34|65->34|66->35|66->35|66->35|66->35|69->38|69->38|69->38|70->39|70->39|70->39|70->39|73->42|74->43|77->46|77->46|77->46|78->47|78->47|78->47|78->47|81->50|81->50|81->50|82->51|82->51|82->51|82->51|85->54|86->55|88->57|88->57|88->57|89->58|90->59|90->59|90->59|91->60|92->61|93->62|94->63|95->64|103->72|103->72|103->72
                   -- GENERATED --
               */
           

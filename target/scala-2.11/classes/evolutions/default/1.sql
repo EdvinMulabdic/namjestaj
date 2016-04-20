@@ -41,6 +41,7 @@ create table item (
   description               TEXT,
   is_active                 tinyint(1) default 0,
   is_visible                tinyint(1) default 0,
+  is_blocked                tinyint(1) default 0,
   user_id                   integer,
   category_id               integer,
   sub_category_id           integer,

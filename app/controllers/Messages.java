@@ -2,6 +2,7 @@ package controllers;
 
 import helpers.Authenticator;
 import helpers.Constants;
+import helpers.UserAccessLevel;
 import models.AppUser;
 import models.Item;
 import models.Message;
@@ -12,6 +13,7 @@ import play.mvc.Controller;
 import play.mvc.Result;
 import play.mvc.Security;
 
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -42,6 +44,7 @@ public class Messages extends Controller {
         @Security.Authenticated(Authenticator.AdminUserFilter.class)
     public Result listOfMessages(Integer userId) {
         List<Message> messages = Message.userMessages(userId);
+            Collections.reverse(messages);
         return ok(views.html.messages.listOfMessages.render(messages));
     }
 
@@ -49,7 +52,9 @@ public class Messages extends Controller {
         @Security.Authenticated(Authenticator.AdminUserFilter.class)
     public Result message(Integer messageId) {
         Message message = Message.findMessageById(messageId);
-        message.status = Constants.READ_MESSAGE;
+            if(UserAccessLevel.getCurrentUser(ctx()).userAccessLevel.equals(UserAccessLevel.USER)) {
+                message.status = Constants.READ_MESSAGE;
+            }
         message.update();
         return ok(views.html.messages.message.render(message));
     }
@@ -75,7 +80,8 @@ public class Messages extends Controller {
         @Security.Authenticated(Authenticator.AdminFilter.class)
     public Result listOfMessagesForAdmin(Integer userId) {
         List<Message> messages = Message.userMessages(userId);
-        return ok(views.html.messages.listOfMessagesForAdmin.render(messages));
+            Collections.reverse(messages);
+            return ok(views.html.messages.listOfMessagesForAdmin.render(messages));
     }
 
 }

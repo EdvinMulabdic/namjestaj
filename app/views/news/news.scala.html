@@ -1,9 +1,9 @@
 @(news: News)
 @main {
-    <div style="background-image: @news.images.get(0)">
+    <div style="background-image:url(@news.images.get(0).getSize(1600,600))">
         <!-- Main Container -->
         <section class="main-container col2-right-layout bounceInUp animated">
-            <div class="main container">
+            <div class="main container"  style="background-color: white">
                 <div class="row">
                     <div class="col-main col-sm-9">
                         <div class="blog-wrapper" id="main">
@@ -35,8 +35,8 @@
                         <div role="complementary" class="widget_wrapper13" id="secondary">
                                 <!-- Banner Ad Block -->
                             <div class="ad-spots widget widget__sidebar">
-                                <a target="_self" href="#" title=""><img alt="offer banner" src='@routes.Assets.versioned("images/block1.jpg")'></a>
-                                <a target="_self" href="#" title=""><img alt="offer banner" src='@routes.Assets.versioned("images/block1.jpg")'></a>
+                                <a target="_self" href="#" title=""><img alt="offer banner" src='@routes.Assets.versioned("images/block1.jpg")' style="width : 280px;"></a>
+                                <a target="_self" href="#" title=""><img alt="offer banner" src='@routes.Assets.versioned("images/block1.jpg")' style="width : 280px;"></a>
                             </div>
                                 <!-- Banner Text Block -->
                             <div class="text-widget widget widget__sidebar">

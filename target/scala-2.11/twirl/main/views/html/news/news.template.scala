@@ -31,10 +31,10 @@ class news extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format
 
 Seq[Any](format.raw/*1.14*/("""
 """),_display_(/*2.2*/main/*2.6*/ {_display_(Seq[Any](format.raw/*2.8*/("""
-    """),format.raw/*3.5*/("""<div style="background-image: """),_display_(/*3.36*/news/*3.40*/.images.get(0)),format.raw/*3.54*/("""">
+    """),format.raw/*3.5*/("""<div style="background-image:url("""),_display_(/*3.39*/news/*3.43*/.images.get(0).getSize(1600,600)),format.raw/*3.75*/(""")">
         <!-- Main Container -->
         <section class="main-container col2-right-layout bounceInUp animated">
-            <div class="main container">
+            <div class="main container"  style="background-color: white">
                 <div class="row">
                     <div class="col-main col-sm-9">
                         <div class="blog-wrapper" id="main">
@@ -66,8 +66,8 @@ Seq[Any](format.raw/*1.14*/("""
                         <div role="complementary" class="widget_wrapper13" id="secondary">
                                 <!-- Banner Ad Block -->
                             <div class="ad-spots widget widget__sidebar">
-                                <a target="_self" href="#" title=""><img alt="offer banner" src='"""),_display_(/*38.99*/routes/*38.105*/.Assets.versioned("images/block1.jpg")),format.raw/*38.143*/("""'></a>
-                                <a target="_self" href="#" title=""><img alt="offer banner" src='"""),_display_(/*39.99*/routes/*39.105*/.Assets.versioned("images/block1.jpg")),format.raw/*39.143*/("""'></a>
+                                <a target="_self" href="#" title=""><img alt="offer banner" src='"""),_display_(/*38.99*/routes/*38.105*/.Assets.versioned("images/block1.jpg")),format.raw/*38.143*/("""' style="width : 280px;"></a>
+                                <a target="_self" href="#" title=""><img alt="offer banner" src='"""),_display_(/*39.99*/routes/*39.105*/.Assets.versioned("images/block1.jpg")),format.raw/*39.143*/("""' style="width : 280px;"></a>
                             </div>
                                 <!-- Banner Text Block -->
                             <div class="text-widget widget widget__sidebar">
@@ -105,10 +105,10 @@ Seq[Any](format.raw/*1.14*/("""
 object news extends news_Scope0.news
               /*
                   -- GENERATED --
-                  DATE: Tue Apr 19 10:06:09 CEST 2016
+                  DATE: Wed Apr 20 12:41:03 CEST 2016
                   SOURCE: E:/namjestaj/app/views/news/news.scala.html
-                  HASH: 06543c00f12f0b1df5f906789f41051d5f8c12fa
-                  MATRIX: 746->1|853->13|881->16|892->20|930->22|962->28|1019->59|1031->63|1065->77|1857->842|1870->846|1897->852|1926->853|2337->1237|2350->1241|2376->1246|2697->1539|2711->1543|2738->1548|3404->2187|3420->2193|3480->2231|3613->2337|3629->2343|3689->2381|4628->3290
+                  HASH: c406f4d10e1bdea3bbe45612577ad1668e4a0b93
+                  MATRIX: 746->1|853->13|881->16|892->20|930->22|962->28|1022->62|1034->66|1086->98|1912->897|1925->901|1952->907|1981->908|2392->1292|2405->1296|2431->1301|2752->1594|2766->1598|2793->1603|3459->2242|3475->2248|3535->2286|3691->2415|3707->2421|3767->2459|4729->3391
                   LINES: 27->1|32->1|33->2|33->2|33->2|34->3|34->3|34->3|34->3|47->16|47->16|47->16|47->16|53->22|53->22|53->22|57->26|57->26|57->26|69->38|69->38|69->38|70->39|70->39|70->39|87->56
                   -- GENERATED --
               */

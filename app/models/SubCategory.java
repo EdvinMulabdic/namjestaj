@@ -3,6 +3,8 @@ package models;
 import com.avaje.ebean.Model;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -36,10 +38,11 @@ public class SubCategory extends Model {
         subCategory.save();
     }
 
-    /* ------------------- all subcategories  ------------------ */
+    /* ------------------- all subcategories of specific category  ------------------ */
 
     public static List<SubCategory> allSubCategories (Integer categoryId) {
-        return finder.where().eq("category_id", categoryId).findList();
+        return  finder.where().eq("category_id", categoryId).orderBy("id").findList();
+
     }
 
 

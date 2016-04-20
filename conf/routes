@@ -47,6 +47,9 @@ GET           /proizvod/:itemId                              @controllers.Items.
 GET           /kategorije/:categoryId                        @controllers.Items.getItemsWithCategory(categoryId: Integer)
 GET           /potkategorije/:subcategoryId                  @controllers.Items.getItemsWithSubCategory(subcategoryId: Integer)
 
+#ITEM BLOCK/UNBLOCK
+GET           /blokiraj/:itemId                              @controllers.Items.blockUnblockItem(itemId: Integer)
+
 #ITEM PRICE RANGE
 GET           /proizvodi100                                  @controllers.Items.getItemsWithPriceRange1()
 GET           /proizvodi150                                  @controllers.Items.getItemsWithPriceRange2()
