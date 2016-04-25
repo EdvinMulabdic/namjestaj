@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:E:/namjestaj/conf/routes
-// @DATE:Wed Apr 20 11:47:23 CEST 2016
+// @DATE:Fri Apr 22 20:05:54 CEST 2016
 
 
 package router {

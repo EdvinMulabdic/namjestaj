@@ -116,16 +116,53 @@ Seq[Any](format.raw/*1.31*/("""
                                             <div class="info-inner">
                                                 <div class="item-title"> <a title="Retis lapen casen" href=""""),_display_(/*86.110*/routes/*86.116*/.Items.itemRender(item.id)),format.raw/*86.142*/(""""> """),_display_(/*86.146*/item/*86.150*/.name),format.raw/*86.155*/(""" """),format.raw/*86.156*/("""</a> </div>
                                                 <div class="item-content">
+                                                    <div class="rating">
+                                                        <div class="ratings">
+                                                            """),_display_(/*90.62*/if(item.average_Grade == 1)/*90.89*/ {_display_(Seq[Any](format.raw/*90.91*/("""
+                                                                """),format.raw/*91.65*/("""<div class="rating-box">
+                                                                    <div class="rating1"></div>
+                                                                </div>
+                                                            """)))}),format.raw/*94.62*/("""
+                                                            """),_display_(/*95.62*/if(item.average_Grade == 2)/*95.89*/ {_display_(Seq[Any](format.raw/*95.91*/("""
+                                                                """),format.raw/*96.65*/("""<div class="rating-box">
+                                                                    <div class="rating2"></div>
+                                                                </div>
+                                                            """)))}),format.raw/*99.62*/("""
+                                                            """),_display_(/*100.62*/if(item.average_Grade == 3)/*100.89*/ {_display_(Seq[Any](format.raw/*100.91*/("""
+                                                                """),format.raw/*101.65*/("""<div class="rating-box">
+                                                                    <div class="rating3"></div>
+                                                                </div>
+                                                            """)))}),format.raw/*104.62*/("""
+                                                            """),_display_(/*105.62*/if(item.average_Grade == 4)/*105.89*/ {_display_(Seq[Any](format.raw/*105.91*/("""
+                                                                """),format.raw/*106.65*/("""<div class="rating-box">
+                                                                    <div class="rating4"></div>
+                                                                </div>
+                                                            """)))}),format.raw/*109.62*/("""
+                                                            """),_display_(/*110.62*/if(item.average_Grade == 5)/*110.89*/ {_display_(Seq[Any](format.raw/*110.91*/("""
+                                                                """),format.raw/*111.65*/("""<div class="rating-box">
+                                                                    <div class="rating5"></div>
+                                                                </div>
+                                                            """)))}),format.raw/*114.62*/("""
+                                                            """),_display_(/*115.62*/if(item.average_Grade == 0)/*115.89*/ {_display_(Seq[Any](format.raw/*115.91*/("""
+                                                                """),format.raw/*116.65*/("""<div class="rating-box">
+                                                                    <div class="rating0"></div>
+                                                                </div>
+                                                            """)))}),format.raw/*119.62*/("""
+
+                                                        """),format.raw/*121.57*/("""<p class="rating-links">Ukupno """),_display_(/*121.89*/Review/*121.95*/.getNumberOfReviews(item.id)),format.raw/*121.123*/(""" """),format.raw/*121.124*/("""ocjena</p>
+
+                                                        </div>
+                                                    </div>
                                                     <div class="item-price">
-                                                        <div class="price-box"> <span class="regular-price"> <span class="price">"""),_display_(/*89.131*/item/*89.135*/.price),format.raw/*89.141*/(""" """),format.raw/*89.142*/("""KM</span> </span> </div>
+                                                        <div class="price-box"> <span class="regular-price"> <span class="price">"""),_display_(/*126.131*/item/*126.135*/.price),format.raw/*126.141*/(""" """),format.raw/*126.142*/("""KM</span> </span> </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </li>
-                            """)))}),format.raw/*96.30*/("""
-                            """),format.raw/*97.29*/("""</ul>
+                            """)))}),format.raw/*133.30*/("""
+                            """),format.raw/*134.29*/("""</ul>
                         </div>
                     </article>
                         <!--	///*///======    End article  ========= //*/// -->
@@ -139,17 +176,17 @@ Seq[Any](format.raw/*1.31*/("""
                                 <!-- BEGIN BOX-CATEGORY -->
                             <div class="box-content box-category">
                                 <ul>
-                                """),_display_(/*111.34*/for(category <- models.Category.findAllCategories()) yield /*111.86*/ {_display_(Seq[Any](format.raw/*111.88*/("""
-                                    """),format.raw/*112.37*/("""<li> <a href=""""),_display_(/*112.52*/routes/*112.58*/.Items.getItemsWithCategory(category.id)),format.raw/*112.98*/("""">"""),_display_(/*112.101*/category/*112.109*/.name),format.raw/*112.114*/("""</a> <span class="subDropdown plus"></span>
+                                """),_display_(/*148.34*/for(category <- models.Category.findAllCategories()) yield /*148.86*/ {_display_(Seq[Any](format.raw/*148.88*/("""
+                                    """),format.raw/*149.37*/("""<li> <a href=""""),_display_(/*149.52*/routes/*149.58*/.Items.getItemsWithCategory(category.id)),format.raw/*149.98*/("""">"""),_display_(/*149.101*/category/*149.109*/.name),format.raw/*149.114*/("""</a> <span class="subDropdown plus"></span>
                                         <ul class="level0_455">
-                                        """),_display_(/*114.42*/for(subcategory <- models.SubCategory.allSubCategories(category.id)) yield /*114.110*/ {_display_(Seq[Any](format.raw/*114.112*/("""
-                                            """),format.raw/*115.45*/("""<li> <a href=""""),_display_(/*115.60*/routes/*115.66*/.Items.getItemsWithSubCategory(subcategory.id)),format.raw/*115.112*/(""""> """),_display_(/*115.116*/subcategory/*115.127*/.name),format.raw/*115.132*/(""" """),format.raw/*115.133*/("""</a></li>
-                                        """)))}),format.raw/*116.42*/("""
-                                        """),format.raw/*117.41*/("""</ul>
+                                        """),_display_(/*151.42*/for(subcategory <- models.SubCategory.allSubCategories(category.id)) yield /*151.110*/ {_display_(Seq[Any](format.raw/*151.112*/("""
+                                            """),format.raw/*152.45*/("""<li> <a href=""""),_display_(/*152.60*/routes/*152.66*/.Items.getItemsWithSubCategory(subcategory.id)),format.raw/*152.112*/(""""> """),_display_(/*152.116*/subcategory/*152.127*/.name),format.raw/*152.132*/(""" """),format.raw/*152.133*/("""</a></li>
+                                        """)))}),format.raw/*153.42*/("""
+                                        """),format.raw/*154.41*/("""</ul>
                                             <!--level0-->
                                     </li>
-                                """)))}),format.raw/*120.34*/("""
-                                """),format.raw/*121.33*/("""</ul>
+                                """)))}),format.raw/*157.34*/("""
+                                """),format.raw/*158.33*/("""</ul>
                             </div>
                                 <!--box-content box-category-->
                         </div>
@@ -158,14 +195,14 @@ Seq[Any](format.raw/*1.31*/("""
                         <div class="block block-layered-nav">
                             <div class="block-title">Pretraga po cijeni</div>
                             <div class="block-content">
-                                <p class="block-subtitle">Odaberite �eljeni raspon</p>
+                                <p class="block-subtitle">Odaberite željeni raspon</p>
                                 <dl id="narrow-by-list">
                                     <dd class="odd">
                                         <ol>
-                                            <li> <a href=""""),_display_(/*134.60*/routes/*134.66*/.Items.getItemsWithPriceRange1()),format.raw/*134.98*/(""""><span class="price">do 99.00 KM</span></a> </li>
-                                            <li> <a href=""""),_display_(/*135.60*/routes/*135.66*/.Items.getItemsWithPriceRange2()),format.raw/*135.98*/(""""><span class="price"> 100.00 KM</span> - <span class="price"> 149.00 KM</span></a>  </li>
-                                            <li> <a href=""""),_display_(/*136.60*/routes/*136.66*/.Items.getItemsWithPriceRange3()),format.raw/*136.98*/(""""><span class="price"> 150.00 KM</span> - <span class="price"> 199.00 KM</span></a>  </li>
-                                            <li> <a href=""""),_display_(/*137.60*/routes/*137.66*/.Items.getItemsWithPriceRange4()),format.raw/*137.98*/(""""><span class="price"> preko 200.00 KM</span></a>  </li>
+                                            <li> <a href=""""),_display_(/*171.60*/routes/*171.66*/.Items.getItemsWithPriceRange1()),format.raw/*171.98*/(""""><span class="price">do 99.00 KM</span></a> </li>
+                                            <li> <a href=""""),_display_(/*172.60*/routes/*172.66*/.Items.getItemsWithPriceRange2()),format.raw/*172.98*/(""""><span class="price"> 100.00 KM</span> - <span class="price"> 149.00 KM</span></a>  </li>
+                                            <li> <a href=""""),_display_(/*173.60*/routes/*173.66*/.Items.getItemsWithPriceRange3()),format.raw/*173.98*/(""""><span class="price"> 150.00 KM</span> - <span class="price"> 199.00 KM</span></a>  </li>
+                                            <li> <a href=""""),_display_(/*174.60*/routes/*174.66*/.Items.getItemsWithPriceRange4()),format.raw/*174.98*/(""""><span class="price"> preko 200.00 KM</span></a>  </li>
                                         </ol>
                                     </dd>
                                 </dl>
@@ -181,7 +218,7 @@ Seq[Any](format.raw/*1.31*/("""
     <input type='hidden' id='current_page' />
     <input type='hidden' id='show_per_page' />
 
-    <script src='"""),_display_(/*153.19*/routes/*153.25*/.Assets.versioned("javascripts/paginacija.js")),format.raw/*153.71*/("""'></script>
+    <script src='"""),_display_(/*190.19*/routes/*190.25*/.Assets.versioned("javascripts/paginacija.js")),format.raw/*190.71*/("""'></script>
 
 """)))}))
       }
@@ -203,11 +240,11 @@ Seq[Any](format.raw/*1.31*/("""
 object saleItems extends saleItems_Scope0.saleItems
               /*
                   -- GENERATED --
-                  DATE: Tue Apr 19 14:43:57 CEST 2016
+                  DATE: Fri Apr 22 13:52:58 CEST 2016
                   SOURCE: E:/namjestaj/app/views/Item/saleItems.scala.html
-                  HASH: ad0ac6ee4f57a87bef3f76bb7ef012abf8dcc4e9
-                  MATRIX: 772->1|896->30|924->33|935->37|973->39|1007->47|1586->599|1601->605|1676->658|2294->1249|2309->1255|2384->1308|3024->1921|3039->1927|3114->1980|4711->3550|4745->3568|4785->3570|4847->3604|5089->3819|5124->3845|5163->3846|5237->3892|5326->3953|5340->3957|5367->3962|5404->3971|5420->3977|5468->4003|5534->4041|5550->4047|5621->4096|5895->4351|5908->4355|5947->4356|6021->4402|6110->4463|6124->4467|6151->4472|6188->4481|6204->4487|6252->4513|6318->4551|6334->4557|6395->4596|6684->4854|6756->4898|7036->5150|7052->5156|7100->5182|7132->5186|7146->5190|7173->5195|7203->5196|7528->5493|7542->5497|7570->5503|7600->5504|7985->5858|8043->5888|8768->6585|8837->6637|8878->6639|8945->6677|8988->6692|9004->6698|9066->6738|9098->6741|9117->6749|9145->6754|9324->6905|9410->6973|9452->6975|9527->7021|9570->7036|9586->7042|9655->7088|9688->7092|9710->7103|9738->7108|9769->7109|9853->7161|9924->7203|10098->7345|10161->7379|10837->8027|10853->8033|10907->8065|11046->8176|11062->8182|11116->8214|11295->8365|11311->8371|11365->8403|11544->8554|11560->8560|11614->8592|12153->9103|12169->9109|12237->9155
-                  LINES: 27->1|32->1|33->2|33->2|33->2|35->4|44->13|44->13|44->13|53->22|53->22|53->22|62->31|62->31|62->31|99->68|99->68|99->68|100->69|104->73|104->73|104->73|105->74|105->74|105->74|105->74|105->74|105->74|105->74|105->74|105->74|105->74|108->77|108->77|108->77|109->78|109->78|109->78|109->78|109->78|109->78|109->78|109->78|109->78|109->78|112->81|114->83|117->86|117->86|117->86|117->86|117->86|117->86|117->86|120->89|120->89|120->89|120->89|127->96|128->97|142->111|142->111|142->111|143->112|143->112|143->112|143->112|143->112|143->112|143->112|145->114|145->114|145->114|146->115|146->115|146->115|146->115|146->115|146->115|146->115|146->115|147->116|148->117|151->120|152->121|165->134|165->134|165->134|166->135|166->135|166->135|167->136|167->136|167->136|168->137|168->137|168->137|184->153|184->153|184->153
+                  HASH: d0a66c4c274ba5a506421de3e21889026076f288
+                  MATRIX: 772->1|896->30|923->32|934->36|972->38|1004->44|1574->587|1589->593|1664->646|2273->1228|2288->1234|2363->1287|2994->1891|3009->1897|3084->1950|4644->3483|4678->3501|4718->3503|4779->3536|5017->3747|5052->3773|5091->3774|5164->3819|5253->3880|5267->3884|5294->3889|5331->3898|5347->3904|5395->3930|5461->3968|5477->3974|5548->4023|5819->4275|5832->4279|5871->4280|5944->4325|6033->4386|6047->4390|6074->4395|6111->4404|6127->4410|6175->4436|6241->4474|6257->4480|6318->4519|6604->4774|6674->4816|6951->5065|6967->5071|7015->5097|7047->5101|7061->5105|7088->5110|7118->5111|7444->5410|7480->5437|7520->5439|7613->5504|7897->5757|7986->5819|8022->5846|8062->5848|8155->5913|8439->6166|8529->6228|8566->6255|8607->6257|8701->6322|8986->6575|9076->6637|9113->6664|9154->6666|9248->6731|9533->6984|9623->7046|9660->7073|9701->7075|9795->7140|10080->7393|10170->7455|10207->7482|10248->7484|10342->7549|10627->7802|10714->7860|10774->7892|10790->7898|10841->7926|10872->7927|11242->8268|11257->8272|11286->8278|11317->8279|11696->8626|11754->8655|12465->9338|12534->9390|12575->9392|12641->9429|12684->9444|12700->9450|12762->9490|12794->9493|12813->9501|12841->9506|13018->9655|13104->9723|13146->9725|13220->9770|13263->9785|13279->9791|13348->9837|13381->9841|13403->9852|13431->9857|13462->9858|13545->9909|13615->9950|13786->10089|13848->10122|14511->10757|14527->10763|14581->10795|14719->10905|14735->10911|14789->10943|14967->11093|14983->11099|15037->11131|15215->11281|15231->11287|15285->11319|15808->11814|15824->11820|15892->11866
+                  LINES: 27->1|32->1|33->2|33->2|33->2|35->4|44->13|44->13|44->13|53->22|53->22|53->22|62->31|62->31|62->31|99->68|99->68|99->68|100->69|104->73|104->73|104->73|105->74|105->74|105->74|105->74|105->74|105->74|105->74|105->74|105->74|105->74|108->77|108->77|108->77|109->78|109->78|109->78|109->78|109->78|109->78|109->78|109->78|109->78|109->78|112->81|114->83|117->86|117->86|117->86|117->86|117->86|117->86|117->86|121->90|121->90|121->90|122->91|125->94|126->95|126->95|126->95|127->96|130->99|131->100|131->100|131->100|132->101|135->104|136->105|136->105|136->105|137->106|140->109|141->110|141->110|141->110|142->111|145->114|146->115|146->115|146->115|147->116|150->119|152->121|152->121|152->121|152->121|152->121|157->126|157->126|157->126|157->126|164->133|165->134|179->148|179->148|179->148|180->149|180->149|180->149|180->149|180->149|180->149|180->149|182->151|182->151|182->151|183->152|183->152|183->152|183->152|183->152|183->152|183->152|183->152|184->153|185->154|188->157|189->158|202->171|202->171|202->171|203->172|203->172|203->172|204->173|204->173|204->173|205->174|205->174|205->174|221->190|221->190|221->190
                   -- GENERATED --
               */
           

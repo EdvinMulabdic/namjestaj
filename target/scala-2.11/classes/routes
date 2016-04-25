@@ -28,6 +28,9 @@ POST          /adminpanel/:userId                            @controllers.AppUse
 GET           /proizvodi                                     @controllers.Items.allItems()
 GET           /proizvodi/:itemId                             @controllers.Items.showOnHomepage(itemId: Integer)
 GET           /korisnici/:userId                             @controllers.AppUsers.isUserActive(userId: Integer)
+GET           /proizvodikorisnika/:userId                    @controllers.Items.usersItems(userId: Integer)
+
+
 
 #USER
 GET           /userpanel/:userId                             @controllers.AppUsers.userPanelRender(userId: Integer)
@@ -49,6 +52,7 @@ GET           /potkategorije/:subcategoryId                  @controllers.Items.
 
 #ITEM BLOCK/UNBLOCK
 GET           /blokiraj/:itemId                              @controllers.Items.blockUnblockItem(itemId: Integer)
+GET           /aktiviraj/:itemId                             @controllers.Items.activateDeactivateItem(itemId: Integer)
 
 #ITEM PRICE RANGE
 GET           /proizvodi100                                  @controllers.Items.getItemsWithPriceRange1()
@@ -121,3 +125,10 @@ GET           /brisivijest/:newsId                           @controllers.NewsCo
 DELETE        /brisivijest/:newsId                           @controllers.NewsController.deleteNews(newsId: Integer)
 GET           /azurirajvijest/:newsId                        @controllers.NewsController.updateNewsRender(newsId: Integer)
 POST          /azurirajvijest/:newsId                        @controllers.NewsController.updateNews(newsId: Integer)
+
+#REVIEWS
+POST          /review/:itemId                                @controllers.Reviews.saveReview(itemId: Integer)
+GET           /ocjene/:itemId                                @controllers.Reviews.itemReviews(itemId: Integer)
+GET           /brisanjeocjene/:reviewId                      @controllers.Reviews.deleteReview(reviewId: Integer)
+DELETE        /brisanjeocjene/:reviewId                      @controllers.Reviews.deleteReview(reviewId: Integer)
+

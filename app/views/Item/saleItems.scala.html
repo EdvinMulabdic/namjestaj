@@ -85,6 +85,43 @@
                                             <div class="info-inner">
                                                 <div class="item-title"> <a title="Retis lapen casen" href="@routes.Items.itemRender(item.id)"> @item.name </a> </div>
                                                 <div class="item-content">
+                                                    <div class="rating">
+                                                        <div class="ratings">
+                                                            @if(item.average_Grade == 1) {
+                                                                <div class="rating-box">
+                                                                    <div class="rating1"></div>
+                                                                </div>
+                                                            }
+                                                            @if(item.average_Grade == 2) {
+                                                                <div class="rating-box">
+                                                                    <div class="rating2"></div>
+                                                                </div>
+                                                            }
+                                                            @if(item.average_Grade == 3) {
+                                                                <div class="rating-box">
+                                                                    <div class="rating3"></div>
+                                                                </div>
+                                                            }
+                                                            @if(item.average_Grade == 4) {
+                                                                <div class="rating-box">
+                                                                    <div class="rating4"></div>
+                                                                </div>
+                                                            }
+                                                            @if(item.average_Grade == 5) {
+                                                                <div class="rating-box">
+                                                                    <div class="rating5"></div>
+                                                                </div>
+                                                            }
+                                                            @if(item.average_Grade == 0) {
+                                                                <div class="rating-box">
+                                                                    <div class="rating0"></div>
+                                                                </div>
+                                                            }
+
+                                                        <p class="rating-links">Ukupno @Review.getNumberOfReviews(item.id) ocjena</p>
+
+                                                        </div>
+                                                    </div>
                                                     <div class="item-price">
                                                         <div class="price-box"> <span class="regular-price"> <span class="price">@item.price KM</span> </span> </div>
                                                     </div>
@@ -127,7 +164,7 @@
                         <div class="block block-layered-nav">
                             <div class="block-title">Pretraga po cijeni</div>
                             <div class="block-content">
-                                <p class="block-subtitle">Odaberite željeni raspon</p>
+                                <p class="block-subtitle">Odaberite Å¾eljeni raspon</p>
                                 <dl id="narrow-by-list">
                                     <dd class="odd">
                                         <ol>

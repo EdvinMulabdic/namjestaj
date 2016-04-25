@@ -18,6 +18,7 @@
                                 <th>Ime korisnika</th>
                                 <th>Proizvod</th>
                                 <th>Cijena</th>
+                                <th class="text-center">Ocjene</th>
                                 <th class="text-center">Prikazi na početnom slideru</th>
                                 <th class="text-center">Blokiran proizvod</th>
                                 <th class="text-center">Blokiran korisnik</th>
@@ -30,6 +31,11 @@
                                     <td>@item.user.name</td>
                                     <td>@item.name</td>
                                     <td class="text-center">@item.price</td>
+                                    <td class="text-center">
+                                        <a class="fa-buttons"  title="Ocjene" href="@routes.Reviews.itemReviews(item.id)" role="button">
+                                            <button  type="submit" class="button"><i class="fa fa-list"></i></button>
+                                        </a>
+                                    </td>
                                     <td class="text-center">
                                         @if(item.isVisible == null || item.isVisible == false) {
                                             <a class="fa-buttons"  title="DA" href="@routes.Items.showOnHomepage(item.id)" role="button">

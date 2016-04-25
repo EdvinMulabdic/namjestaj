@@ -50,7 +50,7 @@ Seq[Any](_display_(/*1.2*/main/*1.6*/{_display_(Seq[Any](format.raw/*1.7*/("""
                                                         <div class="input-box name-firstname">
                                                             <label for="name">Naziv firme <span class="required">*</span></label>
                                                             <br>
-                                                            <input type="text" id="name" name="name" title="First Name" class="input-text" required>
+                                                            <input type="text" id="name" name="name" title="Naziv firme" class="input-text" required>
                                                         </div>
                                                         <div class="input-box name-lastname">
                                                             <label for="email"> Email  <span class="required">*</span> </label>
@@ -121,9 +121,9 @@ Seq[Any](_display_(/*1.2*/main/*1.6*/{_display_(Seq[Any](format.raw/*1.7*/("""
 object createUser extends createUser_Scope0.createUser
               /*
                   -- GENERATED --
-                  DATE: Mon Apr 18 19:38:53 CEST 2016
+                  DATE: Fri Apr 22 10:03:47 CEST 2016
                   SOURCE: E:/namjestaj/app/views/Admin/createUser.scala.html
-                  HASH: c1a48fb41cc6d121901134cec768a7b0dff9bcf9
+                  HASH: f0885151cfef86d562d2ca72a01a8062d18ee5ca
                   MATRIX: 843->1|854->5|891->6|923->12|1480->542|1495->548|1538->570
                   LINES: 32->1|32->1|32->1|33->2|43->12|43->12|43->12
                   -- GENERATED --

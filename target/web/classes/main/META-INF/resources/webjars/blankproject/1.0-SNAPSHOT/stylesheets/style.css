@@ -4381,12 +4381,43 @@ a.button.detail-bnt span {
 	text-indent: -999em;
 	overflow: hidden;
 }
-.rating-box .rating {
+.rating-box .rating4 {
 	float: left;
 	height: 9px;
 	background: url(../images/bkg_rating.png) 0 100% repeat-x;
 	width:80%
 }
+.rating-box .rating1 {
+	float: left;
+	height: 9px;
+	background: url(../images/bkg_rating.png) 0 100% repeat-x;
+	width:20%
+}
+.rating-box .rating2 {
+	float: left;
+	height: 9px;
+	background: url(../images/bkg_rating.png) 0 100% repeat-x;
+	width:40%
+}
+.rating-box .rating3 {
+	float: left;
+	height: 9px;
+	background: url(../images/bkg_rating.png) 0 100% repeat-x;
+	width:60%
+}
+.rating-box .rating5 {
+	float: left;
+	height: 9px;
+	background: url(../images/bkg_rating.png) 0 100% repeat-x;
+	width:100%
+}
+.rating-box .rating5 {
+	float: left;
+	height: 9px;
+	background: url(../images/bkg_rating.png) 0 100% repeat-x;
+	width:0%
+}
+
 .ratings .rating-box {
 	margin-right: 8px;
 	display: inline-block;
@@ -8268,8 +8299,8 @@ button.button#empty_cart_button:before {
 	clear: both;
 	margin-bottom: 0;
 }
-.input-box .input-text {
-	display:none;}
+/*.input-box .input-text {*/
+	/*display:none;}*/
 .form-list select {
 	margin: 5px 0 2px;
 	width: 100%;

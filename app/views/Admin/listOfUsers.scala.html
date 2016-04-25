@@ -36,6 +36,7 @@
                                 <th class="text-center">Telefon</th>
                                 <th class="text-center">Grad</th>
                                 <th class="text-center">Adresa</th>
+                                <th class="text-center">Proizvodi</th>
                                 <th class="text-center">Poruke</th>
                                 <th class="text-center">Blokiraj</th>
                                 <th class="text-center">Obriši</th>
@@ -50,6 +51,11 @@
                                     <td class="text-center">@user.phone</td>
                                     <td class="text-center">@user.city</td>
                                     <td class="text-center">@user.address</td>
+                                    <td class="text-center">
+                                        <a class="fa-buttons" title="Proizvodi" href="@routes.Items.usersItems(user.id)" role="button">
+                                            <i class=" fa fa-list fa-lg"></i>
+                                        </a>
+                                    </td>
                                     <td class="text-center">
                                         <a class="fa-buttons" title="Poruke korisnika" href="@routes.Messages.listOfMessagesForAdmin(user.id)" role="button">
                                             <i class=" fa fa-envelope-o fa-lg"></i>

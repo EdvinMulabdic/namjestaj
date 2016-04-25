@@ -25,7 +25,6 @@ public class Items extends Controller {
         List<Store> stores = Store.userStores(item.user.id);
         List<Item> itemsToRecommend = Item.itemsToRecommend(itemId);
         AppUser currentUser = UserAccessLevel.getCurrentUser(ctx());
-
         List<String> locations = new ArrayList<>();
         for(int i = 0; i < stores.size(); i ++){
             locations.add(stores.get(i).toString());
@@ -77,7 +76,7 @@ public class Items extends Controller {
         Category category = Category.findCategoryById(categoryId);
         SubCategory  subCategory = SubCategory.findSubCategoryById(subCategoryId);
 
-        Integer userId = Item.updateItem(name, oldPrice, price, description, category,subCategory, itemId);
+        Integer userId = Item.updateItem(name, oldPrice, price, description, category, subCategory, itemId);
 
         return redirect(routes.Items.itemRender(itemId));
     }
@@ -179,9 +178,27 @@ public class Items extends Controller {
 
 
     /* --------------- Item  block/unblock  ---------------*/
+    @Security.Authenticated(Authenticator.AdminFilter.class)
 
     public Result blockUnblockItem(Integer itemId) {
         Item.isItemBlocked(itemId);
         return redirect(routes.Items.allItems());
     }
+
+        /* --------------- users Items  ---------------*/
+        @Security.Authenticated(Authenticator.AdminFilter.class)
+
+    public Result usersItems(Integer userId) {
+        List<Item> items = Item.findAllUserItems(userId);
+        return ok(views.html.Admin.usersItems.render(items));
+    }
+
+        /* --------------- Item  activate/deactivate  ---------------*/
+    @Security.Authenticated(Authenticator.UserFilter.class)
+
+    public Result activateDeactivateItem(Integer itemId) {
+        Integer userId = Item.isItemActive(itemId);
+        return redirect(routes.Items.listOfItems(userId));
+    }
+
 }

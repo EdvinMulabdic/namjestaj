@@ -30,7 +30,7 @@
                             <ol class="products-list" id="products-list">
                                 @for(n <- news) {
                                     <li class="item first">
-                                        <div class="product-image"><img class="small-image" src='@n.images.get(0).getSize(285,345)' alt="HTC Rhyme Sense"></div>
+                                        <div class="product-image"><img class="small-image" src='@n.images.get(0).getSize(285,200)' alt="Vijesti"></div>
                                         <div class="product-shop">
                                             <h2 class="product-name"><a href="product_detail.html" title="Naslov">@n.title</a></h2>
                                             <div class="desc std">
@@ -63,19 +63,6 @@
                     </article>
                         <!--	///*///======    End article  ========= //*/// -->
                 </div>
-                @*@if(UserAccessLevel.getCurrentUser(ctx()).userAccessLevel.equals(UserAccessLevel.ADMIN)) {*@
-                    @*<section>*@
-                        @*<div class="col-md-6 col-md-offset-5" id="margin-bottom-30">*@
-                            @*<form method="GET" role="form" action="@routes.NewsController.createNewsRender()" >*@
-                                @*<div class="buttons-set">*@
-                                    @*<button class="button "><i class="fa fa-check"> </i> <span>*@
-                                        @*DODAJ VIJEST</span></button>*@
-                                @*</div>*@
-                            @*</form>*@
-
-                        @*</div>*@
-                    @*</section>*@
-                @*}*@
             </div>
         </div>
     </section>

@@ -1,0 +1,62 @@
+@(items: java.util.List[Item])
+@main {
+    <div class="container">
+        <div class="row">
+            <div class="text-center" id="margin-bottom-admin">
+                <h1>Izvještaj o prozvodima</h1>
+            </div>
+        </div>
+    </div>
+    <section class="main-container col2-right-layout wow bounceInUp animated">
+        <div class="main container">
+            <div class="row">
+                <section class="col-md-12" id="tablemargins">
+                    <table class="table table-striped table-bordered table-responsive" id="sort">
+                        <thead>
+                            <tr class="about">
+                                <th>Naziv proizvoda</th>
+                                <th>Aktivan</th>
+                                <th class="text-center">Datum dodavanja</th>
+                                <th class="text-center">Datum deaktivacije</th>
+                                <th class="text-center">Datum blokiranja</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        @for(item <- items ) {
+                            <tr class="about" >
+                                <td>@item.name</td>
+                                @if(item.isActive == true && item.isBlocked == false) {
+                                    <td class="text-center">DA</td>
+                                }
+                                @if(item.isActive == false || item.isBlocked == true) {
+                                    <td clas="text-center">NE</td>
+                                }
+
+                                <td class="text-center">@item.dateOfActivation</td>
+                                @if(item.isActive == true) {
+                                    <td class="text-center">Proizvod je aktivan</td>
+                                }
+                                @if(item.isActive == false) {
+                                    <td class="text-center">@item.dateOfDeActivation</td>
+                                }
+
+                                @if(item.isBlocked == false) {
+                                    <td class="text-center">Proizvod nije blokiran</td>
+                                }
+                                @if(item.isBlocked == true) {
+                                    <td class="text-center">@item.blockingDate</td>
+                                }
+
+                            </tr>
+
+                        }
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <script src="@routes.Assets.versioned("javascripts/sort.js")"></script>
+
+}

@@ -19,6 +19,10 @@ public class Item extends Model {
     public String oldPrice;
     @Column(columnDefinition = "TEXT")
     public String description;
+    public Integer average_Grade;
+    public Date dateOfActivation;
+    public Date dateOfDeActivation;
+    public Date blockingDate;
     public Boolean isActive;
     public Boolean isVisible;
     public Boolean isBlocked;
@@ -35,6 +39,8 @@ public class Item extends Model {
     @OneToMany(cascade = CascadeType.ALL, mappedBy="item")
     public List<Image> images;
 
+    @OneToMany
+    public List<Review> reviews;
 
     public Item(){
     }
@@ -54,6 +60,8 @@ public class Item extends Model {
         item.name = name;
         item.price = price;
         item.description = description;
+        item.average_Grade = 0;
+        item.dateOfActivation = new Date();
         item.isVisible = false;
         item.user = user;
         item.category = category;
@@ -160,14 +168,16 @@ public class Item extends Model {
 
      /* --------------- Item  activate/deactivate  ---------------*/
 
-    public static void isItemActive(Integer itemId){
+    public static Integer isItemActive(Integer itemId){
         Item  item = findItemById(itemId);
         if(item.isActive == false) {
             item.isActive = true;
         }else if(item.isActive == true){
             item.isActive = false;
+            item.dateOfDeActivation = new Date();
         }
         item.update();
+        return item.user.id;
     }
 
      /* --------------- Item  block/unblock  ---------------*/
@@ -176,6 +186,7 @@ public class Item extends Model {
         Item  item = findItemById(itemId);
         if(item.isBlocked == false) {
             item.isBlocked = true;
+            item.blockingDate = new Date();
         }else if(item.isBlocked == true){
             item.isBlocked = false;
         }
@@ -317,9 +328,9 @@ public class Item extends Model {
 
     public static List<Item> itemsOnSale () {
         List<Item> allItems = allActiveItems();
-        List<Item> itemsToReturn = new LinkedList<>();
+        List<Item> itemsToReturn = new ArrayList<>();
         for(int i = 0; i < allItems.size(); i++) {
-            if(allItems.get(i).oldPrice != null || allItems.get(i).oldPrice != " " ){
+            if(!allItems.get(i).oldPrice.equals("") ){
                 itemsToReturn.add(allItems.get(i));
             }
         }
@@ -328,4 +339,13 @@ public class Item extends Model {
 //        return allItems;
 
     }
+
+
+        /* ------------------- items review ------------------ */
+//
+//    public static Integer itemGrade(Integer itemId) {
+//
+//
+//    }
+
 }

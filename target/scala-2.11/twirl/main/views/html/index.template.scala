@@ -137,9 +137,7 @@ Seq[Any](_display_(/*2.2*/main/*2.6*/ {_display_(Seq[Any](format.raw/*2.8*/("""
                 <ul id="product-detail-tab" class="nav nav-tabs product-tabs">
                     <li class="active"> <a href="#product_tabs_description" data-toggle="tab">IZDVOJENI PROIZVODI</a> </li>
                     <li><a href="#product_tabs_tags" data-toggle="tab">NAJNOVIJI</a></li>
-                    <li> <a href="#reviews_tabs" data-toggle="tab">Reviews</a> </li>
                     <li> <a href="#product_tabs_custom" data-toggle="tab">Custom Tab</a> </li>
-                    <li> <a href="#product_tabs_custom1" data-toggle="tab">Custom Tab1</a> </li>
                 </ul>
 
 
@@ -150,50 +148,77 @@ Seq[Any](_display_(/*2.2*/main/*2.6*/ {_display_(Seq[Any](format.raw/*2.8*/("""
                             <div class="slider-items-products">
                                 <div id="best-seller-slider" class="product-flexslider hidden-buttons">
                                     <div class="slider-items slider-width-col4 products-grid">
-                                    """),_display_(/*120.38*/for(item <- models.Item.itemsForHomepageSlider()) yield /*120.87*/ {_display_(Seq[Any](format.raw/*120.89*/("""
-                                            """),format.raw/*121.45*/("""<!-- Item -->
+                                    """),_display_(/*118.38*/for(item <- models.Item.itemsForHomepageSlider()) yield /*118.87*/ {_display_(Seq[Any](format.raw/*118.89*/("""
+                                            """),format.raw/*119.45*/("""<!-- Item -->
                                         <div class="col-md-12 item">
                                             <div class="item-inner">
                                                 <div class="item-img">
-                                                """),_display_(/*125.50*/if(item.images.size() > 0)/*125.76*/{_display_(Seq[Any](format.raw/*125.77*/("""
-                                                    """),format.raw/*126.53*/("""<div class="item-img-info"> <a class="product-image" title=""""),_display_(/*126.114*/item/*126.118*/.name),format.raw/*126.123*/("""" href=""""),_display_(/*126.132*/routes/*126.138*/.Items.itemRender(item.id)),format.raw/*126.164*/(""""> <img alt="Retis lapen casen" src='"""),_display_(/*126.202*/models/*126.208*/.Item.getFirstItemImage(item.id).getSize(179,217)),format.raw/*126.257*/("""'> </a>
+                                                """),_display_(/*123.50*/if(item.images.size() > 0)/*123.76*/{_display_(Seq[Any](format.raw/*123.77*/("""
+                                                    """),format.raw/*124.53*/("""<div class="item-img-info"> <a class="product-image" title=""""),_display_(/*124.114*/item/*124.118*/.name),format.raw/*124.123*/("""" href=""""),_display_(/*124.132*/routes/*124.138*/.Items.itemRender(item.id)),format.raw/*124.164*/(""""> <img alt="Retis lapen casen" src='"""),_display_(/*124.202*/models/*124.208*/.Item.getFirstItemImage(item.id).getSize(179,217)),format.raw/*124.257*/("""'> </a>
                                                         <div class="new-label new-top-left">new</div>
                                                         <a class="quickview-btn" ><span>Quick View</span></a> </div>
-                                                """)))}/*129.50*/else/*129.54*/{_display_(Seq[Any](format.raw/*129.55*/("""
-                                                    """),format.raw/*130.53*/("""<div class="item-img-info"> <a class="product-image" title=""""),_display_(/*130.114*/item/*130.118*/.name),format.raw/*130.123*/("""" href='"""),_display_(/*130.132*/routes/*130.138*/.Items.itemRender(item.id)),format.raw/*130.164*/("""'> <img alt="Retis lapen casen" src='"""),_display_(/*130.202*/routes/*130.208*/.Assets.versioned("images/product.png")),format.raw/*130.247*/("""'> </a>
+                                                """)))}/*127.50*/else/*127.54*/{_display_(Seq[Any](format.raw/*127.55*/("""
+                                                    """),format.raw/*128.53*/("""<div class="item-img-info"> <a class="product-image" title=""""),_display_(/*128.114*/item/*128.118*/.name),format.raw/*128.123*/("""" href='"""),_display_(/*128.132*/routes/*128.138*/.Items.itemRender(item.id)),format.raw/*128.164*/("""'> <img alt="Retis lapen casen" src='"""),_display_(/*128.202*/routes/*128.208*/.Assets.versioned("images/product.png")),format.raw/*128.247*/("""'> </a>
                                                         <div class="new-label new-top-left">new</div>
                                                         <a class="quickview-btn" ><span>Quick View</span></a> </div>
-                                                """)))}),format.raw/*133.50*/("""
-                                                """),format.raw/*134.49*/("""</div>
+                                                """)))}),format.raw/*131.50*/("""
+                                                """),format.raw/*132.49*/("""</div>
                                                 <div class="item-info">
                                                     <div class="info-inner">
-                                                        <div class="item-title"> <a title="Retis lapen casen" href=""""),_display_(/*137.118*/routes/*137.124*/.Items.itemRender(item.id)),format.raw/*137.150*/(""""> """),_display_(/*137.154*/item/*137.158*/.name),format.raw/*137.163*/(""" """),format.raw/*137.164*/("""</a> </div>
+                                                        <div class="item-title"> <a title="Retis lapen casen" href=""""),_display_(/*135.118*/routes/*135.124*/.Items.itemRender(item.id)),format.raw/*135.150*/(""""> """),_display_(/*135.154*/item/*135.158*/.name),format.raw/*135.163*/(""" """),format.raw/*135.164*/("""</a> </div>
                                                         <div class="item-content">
-                                                            """),format.raw/*139.85*/("""
-                                                            """),format.raw/*140.86*/("""
-                                                            """),format.raw/*141.89*/("""
-                                                            """),format.raw/*142.91*/("""
-                                                            """),format.raw/*143.71*/("""
-                                                            """),format.raw/*144.182*/("""
-                                                            """),format.raw/*145.71*/("""
-                                                            """),format.raw/*146.71*/("""
-                                                        """),format.raw/*147.57*/("""<div class="item-price">
-                                                            <div class="price-box"> <span class="regular-price"> <span class="price">"""),_display_(/*148.135*/item/*148.139*/.price),format.raw/*148.145*/("""</span> </span> </div>
-                                                        </div>
-                                                            """),format.raw/*150.160*/("""
-                                                            """),format.raw/*151.87*/("""
-                                                            """),format.raw/*152.144*/("""
-                                                            """),format.raw/*153.71*/("""
-                                                            """),format.raw/*154.137*/("""
-                                                            """),format.raw/*155.71*/("""
-                                                        """),format.raw/*156.57*/("""</div>
+                                                            <div class="rating">
+                                                                <div class="ratings">
+                                                                    """),_display_(/*139.70*/if(item.average_Grade == 1)/*139.97*/ {_display_(Seq[Any](format.raw/*139.99*/("""
+                                                                        """),format.raw/*140.73*/("""<div class="rating-box">
+                                                                            <div class="rating1"></div>
+                                                                        </div>
+                                                                    """)))}),format.raw/*143.70*/("""
+                                                                    """),_display_(/*144.70*/if(item.average_Grade == 2)/*144.97*/ {_display_(Seq[Any](format.raw/*144.99*/("""
+                                                                        """),format.raw/*145.73*/("""<div class="rating-box">
+                                                                            <div class="rating2"></div>
+                                                                        </div>
+                                                                    """)))}),format.raw/*148.70*/("""
+                                                                    """),_display_(/*149.70*/if(item.average_Grade == 3)/*149.97*/ {_display_(Seq[Any](format.raw/*149.99*/("""
+                                                                        """),format.raw/*150.73*/("""<div class="rating-box">
+                                                                            <div class="rating3"></div>
+                                                                        </div>
+                                                                    """)))}),format.raw/*153.70*/("""
+                                                                    """),_display_(/*154.70*/if(item.average_Grade == 4)/*154.97*/ {_display_(Seq[Any](format.raw/*154.99*/("""
+                                                                        """),format.raw/*155.73*/("""<div class="rating-box">
+                                                                            <div class="rating4"></div>
+                                                                        </div>
+                                                                    """)))}),format.raw/*158.70*/("""
+                                                                    """),_display_(/*159.70*/if(item.average_Grade == 5)/*159.97*/ {_display_(Seq[Any](format.raw/*159.99*/("""
+                                                                        """),format.raw/*160.73*/("""<div class="rating-box">
+                                                                            <div class="rating5"></div>
+                                                                        </div>
+                                                                    """)))}),format.raw/*163.70*/("""
+                                                                    """),_display_(/*164.70*/if(item.average_Grade == 0)/*164.97*/ {_display_(Seq[Any](format.raw/*164.99*/("""
+                                                                        """),format.raw/*165.73*/("""<div class="rating-box">
+                                                                            <div class="rating0"></div>
+                                                                        </div>
+                                                                    """)))}),format.raw/*168.70*/("""
+
+                                                                    """),format.raw/*170.69*/("""</div>
+                                                            </div>
+                                                            <div class="item-price">
+                                                                <div class="price-box"> <span class="regular-price"> <span class="price">"""),_display_(/*173.139*/item/*173.143*/.price),format.raw/*173.149*/("""</span> </span> </div>
+                                                            </div>
+                                                            """),format.raw/*175.160*/("""
+                                                            """),format.raw/*176.87*/("""
+                                                            """),format.raw/*177.144*/("""
+                                                            """),format.raw/*178.71*/("""
+                                                            """),format.raw/*179.137*/("""
+                                                            """),format.raw/*180.71*/("""
+                                                        """),format.raw/*181.57*/("""</div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                             <!-- End Item -->
-                                    """)))}),format.raw/*162.38*/("""
-                                    """),format.raw/*163.37*/("""</div>
+                                    """)))}),format.raw/*187.38*/("""
+                                    """),format.raw/*188.37*/("""</div>
                                 </div>
                             </div>
                         </section>
@@ -201,210 +226,12 @@ Seq[Any](_display_(/*2.2*/main/*2.6*/ {_display_(Seq[Any](format.raw/*2.8*/("""
 
                     <div class="tab-pane fade" id="product_tabs_tags">
                         <div class="box-collateral box-tags">
-                            <div class="tags">
-                                <form id="addTagForm" action="#" method="get">
-                                    <div class="form-add-tags">
-                                        <label for="productTagName">Add Tags:</label>
-                                        <div class="input-box">
-                                            <input class="input-text" name="productTagName" id="productTagName" type="text">
-                                            <button type="button" title="Add Tags" class=" button btn-add" onClick="submitTagForm()"> <span>Add Tags</span> </button>
-                                        </div>
-                                            <!--input-box-->
-                                    </div>
-                                </form>
-                            </div>
-                                <!--tags-->
-                            <p class="note">Use spaces to separate tags. Use single quotes (') for phrases.</p>
+                                                            <!--tags-->
+                            <p class="note">Odluciti sta ce ici ovdje</p>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="reviews_tabs">
-                        <div class="box-collateral box-reviews" id="customer-reviews">
-                            <div class="box-reviews1">
-                                <div class="form-add">
-                                    <form id="review-form" method="post" action="">
-                                        <h3>Write Your Own Review</h3>
-                                        <fieldset>
-                                            <h4>How do you rate this product? <em class="required">*</em></h4>
-                                            <span id="input-message-box"></span>
-                                            <table id="product-review-table" class="data-table">
 
-
-                                                <thead>
-                                                    <tr class="first last">
-                                                        <th>&nbsp;</th>
-                                                        <th><span class="nobr">1 *</span></th>
-                                                        <th><span class="nobr">2 *</span></th>
-                                                        <th><span class="nobr">3 *</span></th>
-                                                        <th><span class="nobr">4 *</span></th>
-                                                        <th><span class="nobr">5 *</span></th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr class="first odd">
-                                                        <th>Price</th>
-                                                        <td class="value"><input type="radio" class="radio" value="11" id="Price_1" name="ratings[3]"></td>
-                                                        <td class="value"><input type="radio" class="radio" value="12" id="Price_2" name="ratings[3]"></td>
-                                                        <td class="value"><input type="radio" class="radio" value="13" id="Price_3" name="ratings[3]"></td>
-                                                        <td class="value"><input type="radio" class="radio" value="14" id="Price_4" name="ratings[3]"></td>
-                                                        <td class="value last"><input type="radio" class="radio" value="15" id="Price_5" name="ratings[3]"></td>
-                                                    </tr>
-                                                    <tr class="even">
-                                                        <th>Value</th>
-                                                        <td class="value"><input type="radio" class="radio" value="6" id="Value_1" name="ratings[2]"></td>
-                                                        <td class="value"><input type="radio" class="radio" value="7" id="Value_2" name="ratings[2]"></td>
-                                                        <td class="value"><input type="radio" class="radio" value="8" id="Value_3" name="ratings[2]"></td>
-                                                        <td class="value"><input type="radio" class="radio" value="9" id="Value_4" name="ratings[2]"></td>
-                                                        <td class="value last"><input type="radio" class="radio" value="10" id="Value_5" name="ratings[2]"></td>
-                                                    </tr>
-                                                    <tr class="last odd">
-                                                        <th>Quality</th>
-                                                        <td class="value"><input type="radio" class="radio" value="1" id="Quality_1" name="ratings[1]"></td>
-                                                        <td class="value"><input type="radio" class="radio" value="2" id="Quality_2" name="ratings[1]"></td>
-                                                        <td class="value"><input type="radio" class="radio" value="3" id="Quality_3" name="ratings[1]"></td>
-                                                        <td class="value"><input type="radio" class="radio" value="4" id="Quality_4" name="ratings[1]"></td>
-                                                        <td class="value last"><input type="radio" class="radio" value="5" id="Quality_5" name="ratings[1]"></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                            <input type="hidden" value="" class="validate-rating" name="validate_rating">
-                                            <div class="review1">
-                                                <ul class="form-list">
-                                                    <li>
-                                                        <label class="required" for="nickname_field">Nickname<em>*</em></label>
-                                                        <div class="input-box">
-                                                            <input type="text" class="input-text" id="nickname_field" name="nickname">
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <label class="required" for="summary_field">Summary<em>*</em></label>
-                                                        <div class="input-box">
-                                                            <input type="text" class="input-text" id="summary_field" name="title">
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="review2">
-                                                <ul>
-                                                    <li>
-                                                        <label class="required " for="review_field">Review<em>*</em></label>
-                                                        <div class="input-box">
-                                                            <textarea rows="3" cols="5" id="review_field" name="detail"></textarea>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                                <div class="buttons-set">
-                                                    <button class="button submit" title="Submit Review" type="submit"><span>Submit Review</span></button>
-                                                </div>
-                                            </div>
-                                        </fieldset>
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="box-reviews2">
-                                <h3>Customer Reviews</h3>
-                                <div class="box visible">
-                                    <ul>
-                                        <li>
-                                            <table class="ratings-table">
-
-
-                                                <tbody>
-                                                    <tr>
-                                                        <th>Value</th>
-                                                        <td><div class="rating-box">
-                                                            <div class="rating"></div>
-                                                        </div></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>Quality</th>
-                                                        <td><div class="rating-box">
-                                                            <div class="rating"></div>
-                                                        </div></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>Price</th>
-                                                        <td><div class="rating-box">
-                                                            <div class="rating"></div>
-                                                        </div></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                            <div class="review">
-                                                <h6><a href="#">Excellent</a></h6>
-                                                <small>Review by <span>Leslie Prichard </span>on 1/3/2014 </small>
-                                                <div class="review-txt"> I have purchased shirts from Minimalism a few times and am never disappointed. The quality is excellent and the shipping is amazing. It seems like it's at your front door the minute you get off your pc. I have received my purchases within two days - amazing.</div>
-                                            </div>
-                                        </li>
-                                        <li class="even">
-                                            <table class="ratings-table">
-
-
-                                                <tbody>
-                                                    <tr>
-                                                        <th>Value</th>
-                                                        <td><div class="rating-box">
-                                                            <div class="rating"></div>
-                                                        </div></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>Quality</th>
-                                                        <td><div class="rating-box">
-                                                            <div class="rating"></div>
-                                                        </div></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>Price</th>
-                                                        <td><div class="rating-box">
-                                                            <div class="rating"></div>
-                                                        </div></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                            <div class="review">
-                                                <h6><a href="#/catalog/product/view/id/60/">Amazing</a></h6>
-                                                <small>Review by <span>Sandra Parker</span>on 1/3/2014 </small>
-                                                <div class="review-txt"> Minimalism is the online ! </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <table class="ratings-table">
-
-
-                                                <tbody>
-                                                    <tr>
-                                                        <th>Value</th>
-                                                        <td><div class="rating-box">
-                                                            <div class="rating"></div>
-                                                        </div></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>Quality</th>
-                                                        <td><div class="rating-box">
-                                                            <div class="rating"></div>
-                                                        </div></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>Price</th>
-                                                        <td><div class="rating-box">
-                                                            <div class="rating"></div>
-                                                        </div></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                            <div class="review">
-                                                <h6><a href="#/catalog/product/view/id/59/">Nicely</a></h6>
-                                                <small>Review by <span>Anthony  Lewis</span>on 1/3/2014 </small>
-                                                <div class="review-txt"> Unbeatable service and selection. This store has the best business model I have seen on the net. They are true to their word, and go the extra mile for their customers. I felt like a purchasing partner more than a customer. You have a lifetime client in me. </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="actions"> <a class="button view-all" id="revies-button" href="#"><span><span>View all</span></span></a> </div>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="product_tabs_custom1">
+                    <div class="tab-pane fade" id="product_tabs_custom">
                         <div class="product-tabs-content-inner clearfix">
                             <p> <strong> Comfortable </strong><span>&nbsp;preshrunk shirts. Highest Quality Printing.  6.1 oz. 100% preshrunk heavyweight cotton Shoulder-to-shoulder taping Double-needle sleeves and bottom hem
 
@@ -427,7 +254,7 @@ Seq[Any](_display_(/*2.2*/main/*2.6*/ {_display_(Seq[Any](format.raw/*2.8*/("""
         <div class="top-banner-section2 ">
             <div class="container">
                 <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12  ">
-                    <div class="col"><a href="#"><img src='"""),_display_(/*397.61*/routes/*397.67*/.Assets.versioned("images/slika1.jpeg")),format.raw/*397.106*/("""' alt="offer banner3"></a></div>
+                    <div class="col"><a href="#"><img src='"""),_display_(/*224.61*/routes/*224.67*/.Assets.versioned("images/slika1.jpeg")),format.raw/*224.106*/("""' alt="offer banner3"></a></div>
                 </div>
             </div>
         </div>
@@ -466,49 +293,78 @@ Seq[Any](_display_(/*2.2*/main/*2.6*/ {_display_(Seq[Any](format.raw/*2.8*/("""
                     </div>
                     <div id="featured-slider" class="product-flexslider hidden-buttons">
                         <div class="slider-items slider-width-col4 products-grid">
-                        """),_display_(/*436.26*/for(item <- models.Item.getLastTenProducts()) yield /*436.71*/{_display_(Seq[Any](format.raw/*436.72*/("""
-                            """),format.raw/*437.29*/("""<div class="item">
+                        """),_display_(/*263.26*/for(item <- models.Item.getLastTenProducts()) yield /*263.71*/{_display_(Seq[Any](format.raw/*263.72*/("""
+                            """),format.raw/*264.29*/("""<div class="item">
                                 <div class="item-inner">
                                     <div class="item-img">
-                                    """),_display_(/*440.38*/if(item.images.size() > 0)/*440.64*/{_display_(Seq[Any](format.raw/*440.65*/("""
-                                        """),format.raw/*441.41*/("""<div class="item-img-info"> <a class="product-image" title=""""),_display_(/*441.102*/item/*441.106*/.name),format.raw/*441.111*/("""" href=""""),_display_(/*441.120*/routes/*441.126*/.Items.itemRender(item.id)),format.raw/*441.152*/(""""> <img alt="Retis lapen casen" src='"""),_display_(/*441.190*/models/*441.196*/.Item.getFirstItemImage(item.id).getSize(179,217)),format.raw/*441.245*/("""'> </a>
+                                    """),_display_(/*267.38*/if(item.images.size() > 0)/*267.64*/{_display_(Seq[Any](format.raw/*267.65*/("""
+                                        """),format.raw/*268.41*/("""<div class="item-img-info"> <a class="product-image" title=""""),_display_(/*268.102*/item/*268.106*/.name),format.raw/*268.111*/("""" href=""""),_display_(/*268.120*/routes/*268.126*/.Items.itemRender(item.id)),format.raw/*268.152*/(""""> <img alt="Retis lapen casen" src='"""),_display_(/*268.190*/models/*268.196*/.Item.getFirstItemImage(item.id).getSize(179,217)),format.raw/*268.245*/("""'> </a>
                                             <div class="new-label new-top-left">new</div>
                                             <a class="quickview-btn" ><span>Quick View</span></a> </div>
-                                    """)))}/*444.38*/else/*444.42*/{_display_(Seq[Any](format.raw/*444.43*/("""
-                                        """),format.raw/*445.41*/("""<div class="item-img-info"> <a class="product-image" title=""""),_display_(/*445.102*/item/*445.106*/.name),format.raw/*445.111*/("""" href='"""),_display_(/*445.120*/routes/*445.126*/.Items.itemRender(item.id)),format.raw/*445.152*/("""'> <img alt="Retis lapen casen" src='"""),_display_(/*445.190*/routes/*445.196*/.Assets.versioned("images/product.png")),format.raw/*445.235*/("""'> </a>
+                                    """)))}/*271.38*/else/*271.42*/{_display_(Seq[Any](format.raw/*271.43*/("""
+                                        """),format.raw/*272.41*/("""<div class="item-img-info"> <a class="product-image" title=""""),_display_(/*272.102*/item/*272.106*/.name),format.raw/*272.111*/("""" href='"""),_display_(/*272.120*/routes/*272.126*/.Items.itemRender(item.id)),format.raw/*272.152*/("""'> <img alt="Retis lapen casen" src='"""),_display_(/*272.190*/routes/*272.196*/.Assets.versioned("images/product.png")),format.raw/*272.235*/("""'> </a>
                                             <div class="new-label new-top-left">new</div>
                                             <a class="quickview-btn" ><span>Quick View</span></a> </div>
-                                    """)))}),format.raw/*448.38*/("""
-                                    """),format.raw/*449.37*/("""</div>
+                                    """)))}),format.raw/*275.38*/("""
+                                    """),format.raw/*276.37*/("""</div>
                                     <div class="item-info">
                                         <div class="info-inner">
-                                            <div class="item-title"> <a title="Retis lapen casen" href=""""),_display_(/*452.106*/routes/*452.112*/.Items.itemRender(item.id)),format.raw/*452.138*/(""""> """),_display_(/*452.142*/item/*452.146*/.name),format.raw/*452.151*/(""" """),format.raw/*452.152*/("""</a> </div>
+                                            <div class="item-title"> <a title="Retis lapen casen" href=""""),_display_(/*279.106*/routes/*279.112*/.Items.itemRender(item.id)),format.raw/*279.138*/(""""> """),_display_(/*279.142*/item/*279.146*/.name),format.raw/*279.151*/(""" """),format.raw/*279.152*/("""</a> </div>
                                             <div class="item-content">
-                                                """),format.raw/*454.73*/("""
-                                                """),format.raw/*455.74*/("""
-                                                """),format.raw/*456.77*/("""
-                                                """),format.raw/*457.79*/("""
-                                                """),format.raw/*458.59*/("""
-                                                """),format.raw/*459.170*/("""
-                                                """),format.raw/*460.59*/("""
-                                                """),format.raw/*461.59*/("""
-                                            """),format.raw/*462.45*/("""<div class="item-price">
-                                                <div class="price-box"> <span class="regular-price"> <span class="price">"""),_display_(/*463.123*/item/*463.127*/.price),format.raw/*463.133*/(""" """),format.raw/*463.134*/("""KM </span> </span> </div>
+                                                <div class="rating">
+                                                    <div class="ratings">
+                                                        """),_display_(/*283.58*/if(item.average_Grade == 1)/*283.85*/ {_display_(Seq[Any](format.raw/*283.87*/("""
+                                                            """),format.raw/*284.61*/("""<div class="rating-box">
+                                                                <div class="rating1"></div>
+                                                            </div>
+                                                        """)))}),format.raw/*287.58*/("""
+                                                        """),_display_(/*288.58*/if(item.average_Grade == 2)/*288.85*/ {_display_(Seq[Any](format.raw/*288.87*/("""
+                                                            """),format.raw/*289.61*/("""<div class="rating-box">
+                                                                <div class="rating2"></div>
+                                                            </div>
+                                                        """)))}),format.raw/*292.58*/("""
+                                                        """),_display_(/*293.58*/if(item.average_Grade == 3)/*293.85*/ {_display_(Seq[Any](format.raw/*293.87*/("""
+                                                            """),format.raw/*294.61*/("""<div class="rating-box">
+                                                                <div class="rating3"></div>
+                                                            </div>
+                                                        """)))}),format.raw/*297.58*/("""
+                                                        """),_display_(/*298.58*/if(item.average_Grade == 4)/*298.85*/ {_display_(Seq[Any](format.raw/*298.87*/("""
+                                                            """),format.raw/*299.61*/("""<div class="rating-box">
+                                                                <div class="rating4"></div>
+                                                            </div>
+                                                        """)))}),format.raw/*302.58*/("""
+                                                        """),_display_(/*303.58*/if(item.average_Grade == 5)/*303.85*/ {_display_(Seq[Any](format.raw/*303.87*/("""
+                                                            """),format.raw/*304.61*/("""<div class="rating-box">
+                                                                <div class="rating5"></div>
+                                                            </div>
+                                                        """)))}),format.raw/*307.58*/("""
+                                                        """),_display_(/*308.58*/if(item.average_Grade == 0)/*308.85*/ {_display_(Seq[Any](format.raw/*308.87*/("""
+                                                            """),format.raw/*309.61*/("""<div class="rating-box">
+                                                                <div class="rating0"></div>
+                                                            </div>
+                                                        """)))}),format.raw/*312.58*/("""
+
+                                                    """),format.raw/*314.53*/("""<p class="rating-links">Ukupno """),_display_(/*314.85*/Review/*314.91*/.getNumberOfReviews(item.id)),format.raw/*314.119*/(""" """),format.raw/*314.120*/("""ocjena</p>
+
+                                                    </div>
+                                                </div>
+                                            <div class="item-price">
+                                                <div class="price-box"> <span class="regular-price"> <span class="price">"""),_display_(/*319.123*/item/*319.127*/.price),format.raw/*319.133*/(""" """),format.raw/*319.134*/("""KM </span> </span> </div>
                                             </div>
 
-                                                """),format.raw/*466.148*/("""
-                                                """),format.raw/*467.75*/("""
-                                                """),format.raw/*468.132*/("""
-                                                """),format.raw/*469.59*/("""
-                                                """),format.raw/*470.131*/("""
-                                            """),format.raw/*471.45*/("""</div>
+                                                """),format.raw/*322.148*/("""
+                                                """),format.raw/*323.75*/("""
+                                                """),format.raw/*324.132*/("""
+                                                """),format.raw/*325.59*/("""
+                                                """),format.raw/*326.131*/("""
+                                            """),format.raw/*327.45*/("""</div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        """)))}),format.raw/*476.26*/("""
+                        """)))}),format.raw/*332.26*/("""
 
-                        """),format.raw/*478.25*/("""</div>
+                        """),format.raw/*334.25*/("""</div>
                     </div>
                 </div>
             </section>
@@ -516,7 +372,7 @@ Seq[Any](_display_(/*2.2*/main/*2.6*/ {_display_(Seq[Any](format.raw/*2.8*/("""
         <div class="top-banner-section2 ">
             <div class="container">
                 <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12  ">
-                    <div class="col"><a href="#"><img src='"""),_display_(/*486.61*/routes/*486.67*/.Assets.versioned("images/slika2.png")),format.raw/*486.105*/("""' alt="offer banner3"></a></div>
+                    <div class="col"><a href="#"><img src='"""),_display_(/*342.61*/routes/*342.67*/.Assets.versioned("images/slika2.png")),format.raw/*342.105*/("""' alt="offer banner3"></a></div>
                 </div>
             </div>
         </div>
@@ -536,35 +392,35 @@ Seq[Any](_display_(/*2.2*/main/*2.6*/ {_display_(Seq[Any](format.raw/*2.8*/("""
                     <div class="slider-items slider-width-col6">
 
                             <!-- Item -->
-                        <div class="item"><a href="#"><img src='"""),_display_(/*506.66*/routes/*506.72*/.Assets.versioned("images/b-logo3.png")),format.raw/*506.111*/("""' alt="Image"></a> </div>
+                        <div class="item"><a href="#"><img src='"""),_display_(/*362.66*/routes/*362.72*/.Assets.versioned("images/b-logo3.png")),format.raw/*362.111*/("""' alt="Image"></a> </div>
                             <!-- End Item -->
 
                             <!-- Item -->
-                        <div class="item"><a href="#"><img src='"""),_display_(/*510.66*/routes/*510.72*/.Assets.versioned("images/b-logo2.png")),format.raw/*510.111*/("""' alt="Image"></a> </div>
+                        <div class="item"><a href="#"><img src='"""),_display_(/*366.66*/routes/*366.72*/.Assets.versioned("images/b-logo2.png")),format.raw/*366.111*/("""' alt="Image"></a> </div>
                             <!-- End Item -->
 
                             <!-- Item -->
-                        <div class="item"><a href="#"><img src='"""),_display_(/*514.66*/routes/*514.72*/.Assets.versioned("images/b-logo1.png")),format.raw/*514.111*/("""' alt="Image"></a> </div>
+                        <div class="item"><a href="#"><img src='"""),_display_(/*370.66*/routes/*370.72*/.Assets.versioned("images/b-logo1.png")),format.raw/*370.111*/("""' alt="Image"></a> </div>
                             <!-- End Item -->
 
                             <!-- Item -->
-                        <div class="item"><a href="#"><img src='"""),_display_(/*518.66*/routes/*518.72*/.Assets.versioned("images/b-logo4.png")),format.raw/*518.111*/("""' alt="Image"></a> </div>
+                        <div class="item"><a href="#"><img src='"""),_display_(/*374.66*/routes/*374.72*/.Assets.versioned("images/b-logo4.png")),format.raw/*374.111*/("""' alt="Image"></a> </div>
                             <!-- End Item -->
 
                             <!-- Item -->
-                        <div class="item"><a href="#"><img src='"""),_display_(/*522.66*/routes/*522.72*/.Assets.versioned("images/b-logo5.png")),format.raw/*522.111*/("""' alt="Image"></a> </div>
+                        <div class="item"><a href="#"><img src='"""),_display_(/*378.66*/routes/*378.72*/.Assets.versioned("images/b-logo5.png")),format.raw/*378.111*/("""' alt="Image"></a> </div>
                             <!-- End Item -->
 
                             <!-- Item -->
-                        <div class="item"><a href="#"><img src='"""),_display_(/*526.66*/routes/*526.72*/.Assets.versioned("images/b-logo6.png")),format.raw/*526.111*/("""' alt="Image"></a> </div>
+                        <div class="item"><a href="#"><img src='"""),_display_(/*382.66*/routes/*382.72*/.Assets.versioned("images/b-logo6.png")),format.raw/*382.111*/("""' alt="Image"></a> </div>
                             <!-- End Item -->
 
                             <!-- Item -->
-                        <div class="item"><a href="#"><img src='"""),_display_(/*530.66*/routes/*530.72*/.Assets.versioned("images/b-logo1.png")),format.raw/*530.111*/("""' alt="Image"></a> </div>
+                        <div class="item"><a href="#"><img src='"""),_display_(/*386.66*/routes/*386.72*/.Assets.versioned("images/b-logo1.png")),format.raw/*386.111*/("""' alt="Image"></a> </div>
                             <!-- End Item -->
 
                             <!-- Item -->
-                        <div class="item"><a href="#"><img src='"""),_display_(/*534.66*/routes/*534.72*/.Assets.versioned("images/b-logo4.png")),format.raw/*534.111*/("""' alt="Image"></a> </div>
+                        <div class="item"><a href="#"><img src='"""),_display_(/*390.66*/routes/*390.72*/.Assets.versioned("images/b-logo4.png")),format.raw/*390.111*/("""' alt="Image"></a> </div>
                             <!-- End Item -->
                     </div>
                 </div>
@@ -579,24 +435,24 @@ Seq[Any](_display_(/*2.2*/main/*2.6*/ {_display_(Seq[Any](format.raw/*2.8*/("""
                 <h2>Najnovije vijesti</h2>
             </div>
             <div class="row">
-                """),_display_(/*549.18*/for(news <- models.News.lastNews) yield /*549.51*/ {_display_(Seq[Any](format.raw/*549.53*/("""
-                    """),format.raw/*550.21*/("""<div class="col-lg-4 col-md-4 col-xs-12 col-sm-4">
+                """),_display_(/*405.18*/for(news <- models.News.lastNews) yield /*405.51*/ {_display_(Seq[Any](format.raw/*405.53*/("""
+                    """),format.raw/*406.21*/("""<div class="col-lg-4 col-md-4 col-xs-12 col-sm-4">
                         <div class="blog_inner">
-                            <div class="blog-img"> <img src='"""),_display_(/*552.63*/news/*552.67*/.images.get(0).getSize(780,420)),format.raw/*552.98*/("""' alt="Blog image">
-                                <div class="mask"> <a class="info" href=""""),_display_(/*553.75*/routes/*553.81*/.NewsController.newsRender(news.id)),format.raw/*553.116*/("""">Pročitaj više</a> </div>
+                            <div class="blog-img"> <img src='"""),_display_(/*408.63*/news/*408.67*/.images.get(0).getSize(780,420)),format.raw/*408.98*/("""' alt="Blog image">
+                                <div class="mask"> <a class="info" href=""""),_display_(/*409.75*/routes/*409.81*/.NewsController.newsRender(news.id)),format.raw/*409.116*/("""">Pročitaj više</a> </div>
                             </div>
-                            <h3><a href="blog_detail.html">"""),_display_(/*555.61*/news/*555.65*/.title),format.raw/*555.71*/("""</a> </h3>
-                            <div class="post-date"><i class="icon-calendar"></i>"""),_display_(/*556.82*/news/*556.86*/.date),format.raw/*556.91*/(""" """),format.raw/*556.92*/("""</div>
-                            <p>"""),_display_(/*557.33*/news/*557.37*/.text.substring(0,70)),format.raw/*557.58*/("""  """),format.raw/*557.60*/("""... </p>
-                            <a class="readmore" href=""""),_display_(/*558.56*/routes/*558.62*/.NewsController.newsRender(news.id)),format.raw/*558.97*/("""">Pročitaj više</a> </div>
+                            <h3><a href="blog_detail.html">"""),_display_(/*411.61*/news/*411.65*/.title),format.raw/*411.71*/("""</a> </h3>
+                            <div class="post-date"><i class="icon-calendar"></i>"""),_display_(/*412.82*/news/*412.86*/.date),format.raw/*412.91*/(""" """),format.raw/*412.92*/("""</div>
+                            <p>"""),_display_(/*413.33*/news/*413.37*/.text.substring(0,70)),format.raw/*413.58*/("""  """),format.raw/*413.60*/("""... </p>
+                            <a class="readmore" href=""""),_display_(/*414.56*/routes/*414.62*/.NewsController.newsRender(news.id)),format.raw/*414.97*/("""">Pročitaj više</a> </div>
                     </div>
-                """)))}),format.raw/*560.18*/("""
-            """),format.raw/*561.13*/("""</div>
+                """)))}),format.raw/*416.18*/("""
+            """),format.raw/*417.13*/("""</div>
         </div>
     </section>
     <!-- End Latest Blog -->
 
-""")))}),format.raw/*566.2*/("""
+""")))}),format.raw/*422.2*/("""
 """))
       }
     }
@@ -618,11 +474,11 @@ Seq[Any](_display_(/*2.2*/main/*2.6*/ {_display_(Seq[Any](format.raw/*2.8*/("""
 object index extends index_Scope0.index_Scope1.index
               /*
                   -- GENERATED --
-                  DATE: Mon Apr 18 21:19:40 CEST 2016
+                  DATE: Fri Apr 22 13:44:41 CEST 2016
                   SOURCE: E:/namjestaj/app/views/index.scala.html
-                  HASH: 448358742f400fd1320768817b3d2779b7785afe
-                  MATRIX: 886->33|897->37|935->39|966->44|1029->81|1043->87|1114->138|1966->963|2034->1015|2074->1017|2143->1058|2185->1073|2200->1079|2265->1122|2297->1126|2315->1134|2342->1139|2372->1140|2450->1187|2515->1224|3686->2367|3702->2373|3766->2415|3807->2428|3823->2434|3887->2476|5949->4510|5965->4516|6029->4558|6070->4571|6086->4577|6150->4619|8207->6648|8223->6654|8287->6696|8328->6709|8344->6715|8408->6757|10465->8786|10481->8792|10545->8834|10586->8847|10602->8853|10666->8895|13061->11263|13076->11269|13137->11308|13368->11512|13383->11518|13443->11556|13675->11761|13690->11767|13750->11805|13982->12010|13997->12016|14057->12054|15525->13494|15591->13543|15632->13545|15706->13590|16006->13862|16042->13888|16082->13889|16164->13942|16254->14003|16269->14007|16297->14012|16335->14021|16352->14027|16401->14053|16468->14091|16485->14097|16557->14146|16853->14422|16867->14426|16907->14427|16989->14480|17079->14541|17094->14545|17122->14550|17160->14559|17177->14565|17226->14591|17293->14629|17310->14635|17372->14674|17680->14950|17758->14999|18060->15272|18077->15278|18126->15304|18159->15308|18174->15312|18202->15317|18233->15318|18417->15497|18507->15583|18597->15672|18687->15763|18777->15834|18868->16016|18958->16087|19048->16158|19134->16215|19322->16374|19337->16378|19366->16384|19542->16629|19632->16716|19723->16860|19813->16931|19904->17068|19994->17139|20080->17196|20430->17514|20496->17551|37970->34997|37986->35003|38048->35042|39981->36947|40043->36992|40083->36993|40141->37022|40341->37194|40377->37220|40417->37221|40487->37262|40577->37323|40592->37327|40620->37332|40658->37341|40675->37347|40724->37373|40791->37411|40808->37417|40880->37466|41140->37706|41154->37710|41194->37711|41264->37752|41354->37813|41369->37817|41397->37822|41435->37831|41452->37837|41501->37863|41568->37901|41585->37907|41647->37946|41919->38186|41985->38223|42251->38460|42268->38466|42317->38492|42350->38496|42365->38500|42393->38505|42424->38506|42584->38661|42662->38735|42740->38812|42818->38891|42896->38950|42975->39120|43053->39179|43131->39238|43205->39283|43381->39430|43396->39434|43425->39440|43456->39441|43612->39666|43690->39741|43769->39873|43847->39932|43926->40063|44000->40108|44228->40304|44283->40330|44600->40619|44616->40625|44677->40663|45334->41292|45350->41298|45412->41337|45620->41517|45636->41523|45698->41562|45906->41742|45922->41748|45984->41787|46192->41967|46208->41973|46270->42012|46478->42192|46494->42198|46556->42237|46764->42417|46780->42423|46842->42462|47050->42642|47066->42648|47128->42687|47336->42867|47352->42873|47414->42912|47877->43347|47927->43380|47968->43382|48018->43403|48208->43565|48222->43569|48275->43600|48397->43694|48413->43700|48471->43735|48621->43857|48635->43861|48663->43867|48783->43959|48797->43963|48824->43968|48854->43969|48921->44008|48935->44012|48978->44033|49009->44035|49101->44099|49117->44105|49174->44140|49277->44211|49319->44224|49418->44292
-                  LINES: 35->2|35->2|35->2|36->3|36->3|36->3|36->3|51->18|51->18|51->18|52->19|52->19|52->19|52->19|52->19|52->19|52->19|52->19|53->20|54->21|73->40|73->40|73->40|73->40|73->40|73->40|81->48|81->48|81->48|81->48|81->48|81->48|89->56|89->56|89->56|89->56|89->56|89->56|97->64|97->64|97->64|97->64|97->64|97->64|118->85|118->85|118->85|121->88|121->88|121->88|124->91|124->91|124->91|127->94|127->94|127->94|153->120|153->120|153->120|154->121|158->125|158->125|158->125|159->126|159->126|159->126|159->126|159->126|159->126|159->126|159->126|159->126|159->126|162->129|162->129|162->129|163->130|163->130|163->130|163->130|163->130|163->130|163->130|163->130|163->130|163->130|166->133|167->134|170->137|170->137|170->137|170->137|170->137|170->137|170->137|172->139|173->140|174->141|175->142|176->143|177->144|178->145|179->146|180->147|181->148|181->148|181->148|183->150|184->151|185->152|186->153|187->154|188->155|189->156|195->162|196->163|430->397|430->397|430->397|469->436|469->436|469->436|470->437|473->440|473->440|473->440|474->441|474->441|474->441|474->441|474->441|474->441|474->441|474->441|474->441|474->441|477->444|477->444|477->444|478->445|478->445|478->445|478->445|478->445|478->445|478->445|478->445|478->445|478->445|481->448|482->449|485->452|485->452|485->452|485->452|485->452|485->452|485->452|487->454|488->455|489->456|490->457|491->458|492->459|493->460|494->461|495->462|496->463|496->463|496->463|496->463|499->466|500->467|501->468|502->469|503->470|504->471|509->476|511->478|519->486|519->486|519->486|539->506|539->506|539->506|543->510|543->510|543->510|547->514|547->514|547->514|551->518|551->518|551->518|555->522|555->522|555->522|559->526|559->526|559->526|563->530|563->530|563->530|567->534|567->534|567->534|582->549|582->549|582->549|583->550|585->552|585->552|585->552|586->553|586->553|586->553|588->555|588->555|588->555|589->556|589->556|589->556|589->556|590->557|590->557|590->557|590->557|591->558|591->558|591->558|593->560|594->561|599->566
+                  HASH: 8228632d5caccacdaf653f021c227e6aec043c95
+                  MATRIX: 886->33|897->37|935->39|966->44|1029->81|1043->87|1114->138|1966->963|2034->1015|2074->1017|2143->1058|2185->1073|2200->1079|2265->1122|2297->1126|2315->1134|2342->1139|2372->1140|2450->1187|2515->1224|3686->2367|3702->2373|3766->2415|3807->2428|3823->2434|3887->2476|5949->4510|5965->4516|6029->4558|6070->4571|6086->4577|6150->4619|8207->6648|8223->6654|8287->6696|8328->6709|8344->6715|8408->6757|10465->8786|10481->8792|10545->8834|10586->8847|10602->8853|10666->8895|13061->11263|13076->11269|13137->11308|13368->11512|13383->11518|13443->11556|13675->11761|13690->11767|13750->11805|13982->12010|13997->12016|14057->12054|15343->13312|15409->13361|15450->13363|15524->13408|15824->13680|15860->13706|15900->13707|15982->13760|16072->13821|16087->13825|16115->13830|16153->13839|16170->13845|16219->13871|16286->13909|16303->13915|16375->13964|16671->14240|16685->14244|16725->14245|16807->14298|16897->14359|16912->14363|16940->14368|16978->14377|16995->14383|17044->14409|17111->14447|17128->14453|17190->14492|17498->14768|17576->14817|17878->15090|17895->15096|17944->15122|17977->15126|17992->15130|18020->15135|18051->15136|18410->15467|18447->15494|18488->15496|18590->15569|18899->15846|18997->15916|19034->15943|19075->15945|19177->16018|19486->16295|19584->16365|19621->16392|19662->16394|19764->16467|20073->16744|20171->16814|20208->16841|20249->16843|20351->16916|20660->17193|20758->17263|20795->17290|20836->17292|20938->17365|21247->17642|21345->17712|21382->17739|21423->17741|21525->17814|21834->18091|21933->18161|22259->18458|22274->18462|22303->18468|22483->18717|22573->18804|22664->18948|22754->19019|22845->19156|22935->19227|23021->19284|23371->19602|23437->19639|25550->21724|25566->21730|25628->21769|27561->23674|27623->23719|27663->23720|27721->23749|27921->23921|27957->23947|27997->23948|28067->23989|28157->24050|28172->24054|28200->24059|28238->24068|28255->24074|28304->24100|28371->24138|28388->24144|28460->24193|28720->24433|28734->24437|28774->24438|28844->24479|28934->24540|28949->24544|28977->24549|29015->24558|29032->24564|29081->24590|29148->24628|29165->24634|29227->24673|29499->24913|29565->24950|29831->25187|29848->25193|29897->25219|29930->25223|29945->25227|29973->25232|30004->25233|30315->25516|30352->25543|30393->25545|30483->25606|30756->25847|30842->25905|30879->25932|30920->25934|31010->25995|31283->26236|31369->26294|31406->26321|31447->26323|31537->26384|31810->26625|31896->26683|31933->26710|31974->26712|32064->26773|32337->27014|32423->27072|32460->27099|32501->27101|32591->27162|32864->27403|32950->27461|32987->27488|33028->27490|33118->27551|33391->27792|33474->27846|33534->27878|33550->27884|33601->27912|33632->27913|33978->28230|33993->28234|34022->28240|34053->28241|34209->28466|34287->28541|34366->28673|34444->28732|34523->28863|34597->28908|34825->29104|34880->29130|35197->29419|35213->29425|35274->29463|35931->30092|35947->30098|36009->30137|36217->30317|36233->30323|36295->30362|36503->30542|36519->30548|36581->30587|36789->30767|36805->30773|36867->30812|37075->30992|37091->30998|37153->31037|37361->31217|37377->31223|37439->31262|37647->31442|37663->31448|37725->31487|37933->31667|37949->31673|38011->31712|38474->32147|38524->32180|38565->32182|38615->32203|38805->32365|38819->32369|38872->32400|38994->32494|39010->32500|39068->32535|39218->32657|39232->32661|39260->32667|39380->32759|39394->32763|39421->32768|39451->32769|39518->32808|39532->32812|39575->32833|39606->32835|39698->32899|39714->32905|39771->32940|39874->33011|39916->33024|40015->33092
+                  LINES: 35->2|35->2|35->2|36->3|36->3|36->3|36->3|51->18|51->18|51->18|52->19|52->19|52->19|52->19|52->19|52->19|52->19|52->19|53->20|54->21|73->40|73->40|73->40|73->40|73->40|73->40|81->48|81->48|81->48|81->48|81->48|81->48|89->56|89->56|89->56|89->56|89->56|89->56|97->64|97->64|97->64|97->64|97->64|97->64|118->85|118->85|118->85|121->88|121->88|121->88|124->91|124->91|124->91|127->94|127->94|127->94|151->118|151->118|151->118|152->119|156->123|156->123|156->123|157->124|157->124|157->124|157->124|157->124|157->124|157->124|157->124|157->124|157->124|160->127|160->127|160->127|161->128|161->128|161->128|161->128|161->128|161->128|161->128|161->128|161->128|161->128|164->131|165->132|168->135|168->135|168->135|168->135|168->135|168->135|168->135|172->139|172->139|172->139|173->140|176->143|177->144|177->144|177->144|178->145|181->148|182->149|182->149|182->149|183->150|186->153|187->154|187->154|187->154|188->155|191->158|192->159|192->159|192->159|193->160|196->163|197->164|197->164|197->164|198->165|201->168|203->170|206->173|206->173|206->173|208->175|209->176|210->177|211->178|212->179|213->180|214->181|220->187|221->188|257->224|257->224|257->224|296->263|296->263|296->263|297->264|300->267|300->267|300->267|301->268|301->268|301->268|301->268|301->268|301->268|301->268|301->268|301->268|301->268|304->271|304->271|304->271|305->272|305->272|305->272|305->272|305->272|305->272|305->272|305->272|305->272|305->272|308->275|309->276|312->279|312->279|312->279|312->279|312->279|312->279|312->279|316->283|316->283|316->283|317->284|320->287|321->288|321->288|321->288|322->289|325->292|326->293|326->293|326->293|327->294|330->297|331->298|331->298|331->298|332->299|335->302|336->303|336->303|336->303|337->304|340->307|341->308|341->308|341->308|342->309|345->312|347->314|347->314|347->314|347->314|347->314|352->319|352->319|352->319|352->319|355->322|356->323|357->324|358->325|359->326|360->327|365->332|367->334|375->342|375->342|375->342|395->362|395->362|395->362|399->366|399->366|399->366|403->370|403->370|403->370|407->374|407->374|407->374|411->378|411->378|411->378|415->382|415->382|415->382|419->386|419->386|419->386|423->390|423->390|423->390|438->405|438->405|438->405|439->406|441->408|441->408|441->408|442->409|442->409|442->409|444->411|444->411|444->411|445->412|445->412|445->412|445->412|446->413|446->413|446->413|446->413|447->414|447->414|447->414|449->416|450->417|455->422
                   -- GENERATED --
               */
           

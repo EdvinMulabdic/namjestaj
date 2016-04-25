@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:E:/namjestaj/conf/routes
-// @DATE:Wed Apr 20 11:47:23 CEST 2016
+// @DATE:Fri Apr 22 20:05:54 CEST 2016
 
 package controllers;
 
@@ -17,6 +17,7 @@ public class routes {
   public static final controllers.ReverseStores Stores = new controllers.ReverseStores(RoutesPrefix.byNamePrefix());
   public static final controllers.ReverseAppUsers AppUsers = new controllers.ReverseAppUsers(RoutesPrefix.byNamePrefix());
   public static final controllers.ReverseApplication Application = new controllers.ReverseApplication(RoutesPrefix.byNamePrefix());
+  public static final controllers.ReverseReviews Reviews = new controllers.ReverseReviews(RoutesPrefix.byNamePrefix());
   public static final controllers.ReverseContactUs ContactUs = new controllers.ReverseContactUs(RoutesPrefix.byNamePrefix());
   public static final controllers.ReverseItems Items = new controllers.ReverseItems(RoutesPrefix.byNamePrefix());
   public static final controllers.ReverseImages Images = new controllers.ReverseImages(RoutesPrefix.byNamePrefix());
@@ -31,6 +32,7 @@ public class routes {
     public static final controllers.javascript.ReverseStores Stores = new controllers.javascript.ReverseStores(RoutesPrefix.byNamePrefix());
     public static final controllers.javascript.ReverseAppUsers AppUsers = new controllers.javascript.ReverseAppUsers(RoutesPrefix.byNamePrefix());
     public static final controllers.javascript.ReverseApplication Application = new controllers.javascript.ReverseApplication(RoutesPrefix.byNamePrefix());
+    public static final controllers.javascript.ReverseReviews Reviews = new controllers.javascript.ReverseReviews(RoutesPrefix.byNamePrefix());
     public static final controllers.javascript.ReverseContactUs ContactUs = new controllers.javascript.ReverseContactUs(RoutesPrefix.byNamePrefix());
     public static final controllers.javascript.ReverseItems Items = new controllers.javascript.ReverseItems(RoutesPrefix.byNamePrefix());
     public static final controllers.javascript.ReverseImages Images = new controllers.javascript.ReverseImages(RoutesPrefix.byNamePrefix());

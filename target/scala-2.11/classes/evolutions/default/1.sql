@@ -39,6 +39,10 @@ create table item (
   price                     varchar(255),
   old_price                 varchar(255),
   description               TEXT,
+  average_grade             integer,
+  date_of_activation        datetime(6),
+  date_of_de_activation     datetime(6),
+  blocking_date             datetime(6),
   is_active                 tinyint(1) default 0,
   is_visible                tinyint(1) default 0,
   is_blocked                tinyint(1) default 0,
@@ -67,6 +71,16 @@ create table news (
   date                      datetime(6),
   user_id                   integer,
   constraint pk_news primary key (id))
+;
+
+create table review (
+  id                        integer auto_increment not null,
+  mark                      integer,
+  name                      varchar(255),
+  email                     varchar(255),
+  phone                     varchar(255),
+  item_id                   integer,
+  constraint pk_review primary key (id))
 ;
 
 create table store (
@@ -99,10 +113,12 @@ alter table message add constraint fk_message_user_6 foreign key (user_id) refer
 create index ix_message_user_6 on message (user_id);
 alter table news add constraint fk_news_user_7 foreign key (user_id) references app_user (id) on delete restrict on update restrict;
 create index ix_news_user_7 on news (user_id);
-alter table store add constraint fk_store_user_8 foreign key (user_id) references app_user (id) on delete restrict on update restrict;
-create index ix_store_user_8 on store (user_id);
-alter table sub_category add constraint fk_sub_category_category_9 foreign key (category_id) references category (id) on delete restrict on update restrict;
-create index ix_sub_category_category_9 on sub_category (category_id);
+alter table review add constraint fk_review_item_8 foreign key (item_id) references item (id) on delete restrict on update restrict;
+create index ix_review_item_8 on review (item_id);
+alter table store add constraint fk_store_user_9 foreign key (user_id) references app_user (id) on delete restrict on update restrict;
+create index ix_store_user_9 on store (user_id);
+alter table sub_category add constraint fk_sub_category_category_10 foreign key (category_id) references category (id) on delete restrict on update restrict;
+create index ix_sub_category_category_10 on sub_category (category_id);
 
 
 
@@ -121,6 +137,8 @@ drop table item;
 drop table message;
 
 drop table news;
+
+drop table review;
 
 drop table store;
 

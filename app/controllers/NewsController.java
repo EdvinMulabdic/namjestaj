@@ -12,6 +12,7 @@ import play.mvc.Result;
 import play.mvc.Security;
 
 import java.io.File;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -23,6 +24,7 @@ public class NewsController extends Controller {
 
     public Result newsPanelRender() {
         List<News> newsList = News.findAllNews();
+        Collections.reverse(newsList);
         return ok(views.html.news.newsPanel.render(newsList));
     }
 

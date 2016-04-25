@@ -66,45 +66,57 @@ Seq[Any](format.raw/*1.48*/("""
                                 <th class="text-center">Pogledaj</th>
                                 <th class="text-center">Uredi</th>
                                 <th class="text-center">Galerija</th>
+                                <th class="text-center">Aktivan</th>
                                 <th class="text-center">Obriši</th>
                             </tr>
                         </thead>
                         <tbody>
-                        """),_display_(/*42.26*/for(item <- items) yield /*42.44*/ {_display_(Seq[Any](format.raw/*42.46*/("""
-                            """),format.raw/*43.29*/("""<tr class="about" >
-                                <td>"""),_display_(/*44.38*/item/*44.42*/.name),format.raw/*44.47*/("""</td>
-                                <td>"""),_display_(/*45.38*/item/*45.42*/.description),format.raw/*45.54*/("""</td>
-                                <td class="text-center">"""),_display_(/*46.58*/item/*46.62*/.price),format.raw/*46.68*/("""</td>
-                                <td class="text-center">"""),_display_(/*47.58*/item/*47.62*/.category.name),format.raw/*47.76*/("""</td>
+                        """),_display_(/*43.26*/for(item <- items) yield /*43.44*/ {_display_(Seq[Any](format.raw/*43.46*/("""
+                            """),format.raw/*44.29*/("""<tr class="about" >
+                                <td>"""),_display_(/*45.38*/item/*45.42*/.name),format.raw/*45.47*/("""</td>
+                                <td>"""),_display_(/*46.38*/item/*46.42*/.description),format.raw/*46.54*/("""</td>
+                                <td class="text-center">"""),_display_(/*47.58*/item/*47.62*/.price),format.raw/*47.68*/("""</td>
+                                <td class="text-center">"""),_display_(/*48.58*/item/*48.62*/.category.name),format.raw/*48.76*/("""</td>
                                 <td class="text-center">
-                                    <a class="fa-buttons" title="Uredi proizvod" href=""""),_display_(/*49.89*/routes/*49.95*/.Items.itemRender(item.id)),format.raw/*49.121*/("""" role="button">
+                                    <a class="fa-buttons" title="Uredi proizvod" href=""""),_display_(/*50.89*/routes/*50.95*/.Items.itemRender(item.id)),format.raw/*50.121*/("""" role="button">
                                         <i class=" fa fa-eye fa-lg"></i>
                                     </a>
                                 </td>
                                 <td class="text-center">
-                                    <a class="fa-buttons" title="Uredi proizvod" href=""""),_display_(/*54.89*/routes/*54.95*/.Items.updateItem(item.id)),format.raw/*54.121*/("""" role="button">
+                                    <a class="fa-buttons" title="Uredi proizvod" href=""""),_display_(/*55.89*/routes/*55.95*/.Items.updateItem(item.id)),format.raw/*55.121*/("""" role="button">
                                         <i class=" fa fa-pencil fa-lg"></i>
                                     </a>
                                 </td>
                                 <td class="text-center">
-                                    <a class="fa-buttons" title="Uredi proizvod" href=""""),_display_(/*59.89*/routes/*59.95*/.Images.listOfPicturesRender(item.id)),format.raw/*59.132*/("""" role="button">
+                                    <a class="fa-buttons" title="Uredi proizvod" href=""""),_display_(/*60.89*/routes/*60.95*/.Images.listOfPicturesRender(item.id)),format.raw/*60.132*/("""" role="button">
                                         <i class=" fa fa-picture-o fa-lg"></i>
                                     </a>
                                 </td>
                                 <td class="text-center">
-                                    <a class="fa-buttons" data-role="delete-item" title="Obriši proizvod" href=""""),_display_(/*64.114*/routes/*64.120*/.Items.deleteItem(item.id)),format.raw/*64.146*/("""" role="button">
+                                """),_display_(/*65.34*/if(item.isActive == true)/*65.59*/ {_display_(Seq[Any](format.raw/*65.61*/("""
+                                    """),format.raw/*66.37*/("""<a class="fa-buttons"  title="Aktivan" href=""""),_display_(/*66.83*/routes/*66.89*/.Items.activateDeactivateItem(item.id)),format.raw/*66.127*/("""" role="button">
+                                        <button id="send2"  type="submit" class="button"><i class="fa fa-check"></i> <span>DA</span></button>
+                                    </a>
+                                """)))}/*69.35*/else/*69.40*/{_display_(Seq[Any](format.raw/*69.41*/("""
+                                    """),format.raw/*70.37*/("""<a class="fa-buttons" title="Neaktivan" href=""""),_display_(/*70.84*/routes/*70.90*/.Items.activateDeactivateItem(item.id)),format.raw/*70.128*/("""" role="button">
+                                        <button id="send2" type="submit" class="button"><i class="fa fa-close"></i> <span>NE</span></button>
+                                    </a>
+                                """)))}),format.raw/*73.34*/("""
+                                """),format.raw/*74.33*/("""</td>
+                                <td class="text-center">
+                                    <a class="fa-buttons" data-role="delete-item" title="Obriši proizvod" href=""""),_display_(/*76.114*/routes/*76.120*/.Items.deleteItem(item.id)),format.raw/*76.146*/("""" role="button">
                                         <i class=" fa fa-trash-o fa-lg"></i>
                                     </a>
                                 </td>
                             </tr>
-                        """)))}),format.raw/*69.26*/("""
-                        """),format.raw/*70.25*/("""</tbody>
+                        """)))}),format.raw/*81.26*/("""
+                        """),format.raw/*82.25*/("""</tbody>
                     </table>
                 </section>
 
                 <section>
                     <div class="col-md-6 col-md-offset-5" id="margin-bottom-header">
-                        <form  method="GET" role="form" action=""""),_display_(/*76.66*/routes/*76.72*/.Items.createItem(userId)),format.raw/*76.97*/("""" >
+                        <form  method="GET" role="form" action=""""),_display_(/*88.66*/routes/*88.72*/.Items.createItem(userId)),format.raw/*88.97*/("""" >
                             <div class="buttons-set">
                                 <button class="button submit"> <span> DODAJ PROIZVOD </span></button>
                             </div>
@@ -118,8 +130,8 @@ Seq[Any](format.raw/*1.48*/("""
         </div>
     </section>
 
-    <script src=""""),_display_(/*90.19*/routes/*90.25*/.Assets.versioned("javascripts/sort.js")),format.raw/*90.65*/(""""></script>
-    <script src='"""),_display_(/*91.19*/routes/*91.25*/.Assets.versioned("javascripts/deleteConfirm.js")),format.raw/*91.74*/("""'></script>
+    <script src=""""),_display_(/*102.19*/routes/*102.25*/.Assets.versioned("javascripts/sort.js")),format.raw/*102.65*/(""""></script>
+    <script src='"""),_display_(/*103.19*/routes/*103.25*/.Assets.versioned("javascripts/deleteConfirm.js")),format.raw/*103.74*/("""'></script>
 """)))}))
       }
     }
@@ -140,11 +152,11 @@ Seq[Any](format.raw/*1.48*/("""
 object listOfItems extends listOfItems_Scope0.listOfItems
               /*
                   -- GENERATED --
-                  DATE: Mon Apr 18 19:38:53 CEST 2016
+                  DATE: Fri Apr 22 20:06:25 CEST 2016
                   SOURCE: E:/namjestaj/app/views/Item/listOfItems.scala.html
-                  HASH: ccfa462644e483a7ba82b57529d56d88321c2060
-                  MATRIX: 784->1|925->47|952->49|963->53|1000->54|1031->59|1273->274|1314->306|1354->308|1399->325|1619->518|1633->523|1669->538|1744->582|1785->596|1824->626|1864->628|1909->645|2128->837|2142->842|2176->855|2251->899|2287->908|3359->1953|3393->1971|3433->1973|3490->2002|3574->2059|3587->2063|3613->2068|3683->2111|3696->2115|3729->2127|3819->2190|3832->2194|3859->2200|3949->2263|3962->2267|3997->2281|4175->2432|4190->2438|4238->2464|4579->2778|4594->2784|4642->2810|4986->3127|5001->3133|5060->3170|5433->3515|5449->3521|5497->3547|5760->3779|5813->3804|6082->4046|6097->4052|6143->4077|6522->4429|6537->4435|6598->4475|6655->4505|6670->4511|6740->4560
-                  LINES: 27->1|32->1|33->2|33->2|33->2|34->3|41->10|41->10|41->10|42->11|44->13|44->13|44->13|46->15|47->16|47->16|47->16|48->17|50->19|50->19|50->19|52->21|53->22|73->42|73->42|73->42|74->43|75->44|75->44|75->44|76->45|76->45|76->45|77->46|77->46|77->46|78->47|78->47|78->47|80->49|80->49|80->49|85->54|85->54|85->54|90->59|90->59|90->59|95->64|95->64|95->64|100->69|101->70|107->76|107->76|107->76|121->90|121->90|121->90|122->91|122->91|122->91
+                  HASH: 5d354b70abdc832b65f6a79512c9ced7e88c43ac
+                  MATRIX: 784->1|925->47|952->49|963->53|1000->54|1031->59|1273->274|1314->306|1354->308|1399->325|1619->518|1633->523|1669->538|1744->582|1785->596|1824->626|1864->628|1909->645|2128->837|2142->842|2176->855|2251->899|2287->908|3428->2022|3462->2040|3502->2042|3559->2071|3643->2128|3656->2132|3682->2137|3752->2180|3765->2184|3798->2196|3888->2259|3901->2263|3928->2269|4018->2332|4031->2336|4066->2350|4244->2501|4259->2507|4307->2533|4648->2847|4663->2853|4711->2879|5055->3196|5070->3202|5129->3239|5421->3504|5455->3529|5495->3531|5560->3568|5633->3614|5648->3620|5708->3658|5960->3892|5973->3897|6012->3898|6077->3935|6151->3982|6166->3988|6226->4026|6489->4258|6550->4291|6754->4467|6770->4473|6818->4499|7081->4731|7134->4756|7403->4998|7418->5004|7464->5029|7844->5381|7860->5387|7922->5427|7980->5457|7996->5463|8067->5512
+                  LINES: 27->1|32->1|33->2|33->2|33->2|34->3|41->10|41->10|41->10|42->11|44->13|44->13|44->13|46->15|47->16|47->16|47->16|48->17|50->19|50->19|50->19|52->21|53->22|74->43|74->43|74->43|75->44|76->45|76->45|76->45|77->46|77->46|77->46|78->47|78->47|78->47|79->48|79->48|79->48|81->50|81->50|81->50|86->55|86->55|86->55|91->60|91->60|91->60|96->65|96->65|96->65|97->66|97->66|97->66|97->66|100->69|100->69|100->69|101->70|101->70|101->70|101->70|104->73|105->74|107->76|107->76|107->76|112->81|113->82|119->88|119->88|119->88|133->102|133->102|133->102|134->103|134->103|134->103
                   -- GENERATED --
               */
           
