@@ -10298,9 +10298,22 @@ a#fancybox-close {
 /*=================== 21. Sliders ====================*/
 
 /*  offer-slider   **/
-
+#slider-custom {
+    height: 230px;
+    overflow: hidden;
+}
 .parallax {
 	height: 400px;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.parallax-3 {
+	/*height: 400px;*/
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -10318,6 +10331,12 @@ a#fancybox-close {
 	display: block;
 	text-align: center;
 	margin: 0px auto 30px;
+	font-family: 'Montserrat', sans-serif;
+}
+.offer-slider-3 {
+	display: block;
+	text-align: center;
+	margin: 0px auto 0px;
 	font-family: 'Montserrat', sans-serif;
 }
 .offer-slider h1 {

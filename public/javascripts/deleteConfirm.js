@@ -7,7 +7,7 @@ $('body').on('click', 'a[data-role="delete-item"]', function (e) {
     $toDelete = $(this);
     swal({
         title: 'BRISANJE!!!',
-        text: 'Da li sigurno želite obrisati proizvod?',
+        text: 'Da li sigurno želite obrisati ?',
         type: 'warning',
         showCancelButton: true,
         showConfirmButton: true,

@@ -3,89 +3,31 @@
 
 <!-- Main Container -->
     <section class="main-container col2-left-layout bounceInUp animated">
-        @*<div class="category-description std">*@
-            <div class="container">
+
+            <div class="container" id="slider-custom">
                 <div class="slider-items-products">
                     <div id="category-desc-slider" class="product-flexslider hidden-buttons">
                         <div class="slider-items slider-width-col1 owl-carousel owl-theme">
-                            <div class="col-lg-12 col-sm-12 col-md-12 bounceInUp animated">
-                                <div style="position:relative;width:100%;height:250;margin-top:0px;margin-bottom:0px">
-                                    <div id='rev_slider_4_wrapper' class='rev_slider_wrapper fullwidthbanner-container' >
-                                        <div id='rev_slider_4' class='rev_slider fullwidthabanner'>
-                                            <ul>
-                                                <li data-transition='random' data-slotamount='7' data-masterspeed='1000' data-thumb='@routes.Assets.versioned("images/categoryItems-slider1.jpg")'><img src='@routes.Assets.versioned("images/categoryItems-slider1.jpg")' data-bgposition='left top'  data-bgfit='cover' data-bgrepeat='no-repeat' alt="" />
-                                                    <div class="info">
-                                                        <div class='tp-caption ExtraLargeTitle sft  tp-resizeme ' data-x='0'  data-y='165'  data-endspeed='500'  data-speed='500' data-start='1100' data-easing='Linear.easeNone' data-splitin='none' data-splitout='none' data-elementdelay='0.1' data-endelementdelay='0.1' style='z-index:2;max-width:auto;max-height:auto;white-space:nowrap;'><span>New Season</span></div>
-                                                        <div class='tp-caption LargeTitle sfl  tp-resizeme ' data-x='0'  data-y='220'  data-endspeed='500'  data-speed='500' data-start='1300' data-easing='Linear.easeNone' data-splitin='none' data-splitout='none' data-elementdelay='0.1' data-endelementdelay='0.1' style='z-index:3; max-width:auto;max-height:auto;white-space:nowrap;'><span>Summer Sale</span></div>
-                                                        <div class='tp-caption sfb  tp-resizeme ' data-x='0'  data-y='410'  data-endspeed='500'  data-speed='500' data-start='1500' data-easing='Linear.easeNone' data-splitin='none' data-splitout='none' data-elementdelay='0.1' data-endelementdelay='0.1' style='z-index:4;max-width:auto;max-height:auto;white-space:nowrap;'><a href='#' class="buy-btn">Shop Now</a></div>
-                                                        <div class='tp-caption Title sft  tp-resizeme ' data-x='0'  data-y='320'  data-endspeed='500'  data-speed='500' data-start='1500' data-easing='Power2.easeInOut' data-splitin='none' data-splitout='none' data-elementdelay='0.1' data-endelementdelay='0.1' style='z-index:4;max-width:auto;max-height:auto;white-space:nowrap;'><h4 class="banner-text">In augue urna, nunc, tincidunt, augue, augue facilisis facilisis</h4></div>
-                                                    </div>
-                                                </li>
-                                                <li data-transition='random' data-slotamount='7' data-masterspeed='1000' data-thumb='@routes.Assets.versioned("images/slide-img2.jpg")'><img src='@routes.Assets.versioned("images/categoryItems-slider2.jpg")'  data-bgposition='left top'  data-bgfit='cover' data-bgrepeat='no-repeat'  alt=""/>
-                                                    <div class="info">
-                                                        <div class='tp-caption ExtraLargeTitle sft slide2  tp-resizeme ' data-x='45'  data-y='165'  data-endspeed='500'  data-speed='500' data-start='1100' data-easing='Linear.easeNone' data-splitin='none' data-splitout='none' data-elementdelay='0.1' data-endelementdelay='0.1' style='z-index:2;max-width:auto;max-height:auto;white-space:nowrap;padding-right:0px'>laptop Sale</div>
-                                                        <div class='tp-caption LargeTitle sfl  tp-resizeme ' data-x='45'  data-y='220'  data-endspeed='500'  data-speed='500' data-start='1300' data-easing='Linear.easeNone' data-splitin='none' data-splitout='none' data-elementdelay='0.1' data-endelementdelay='0.1' style='z-index:3;max-width:auto;max-height:auto;white-space:nowrap;'>Go Lightly</div>
-                                                        <div    class='tp-caption sfb  tp-resizeme ' data-x='45'  data-y='400'  data-endspeed='500'  data-speed='500' data-start='1500' data-easing='Linear.easeNone' data-splitin='none' data-splitout='none' data-elementdelay='0.1' data-endelementdelay='0.1' style='z-index:4;max-width:auto;max-height:auto;white-space:nowrap;'><a href='#' class="buy-btn">Buy Now</a></div>
-                                                        <div class='tp-caption Title sft  tp-resizeme ' data-x='45'  data-y='320'  data-endspeed='500'  data-speed='500' data-start='1500' data-easing='Power2.easeInOut' data-splitin='none' data-splitout='none' data-elementdelay='0.1' data-endelementdelay='0.1' style='z-index:4;max-width:auto;max-height:auto;white-space:nowrap;'><h4 class="banner-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4></div>
-                                                    </div>
-                                                </li>
-                                                <li data-transition='random' data-slotamount='7' data-masterspeed='1000' data-thumb='@routes.Assets.versioned("images/slide-img3.jpg")'><img src='@routes.Assets.versioned("images/slide-img3.jpg")'  data-bgposition='left top'  data-bgfit='cover' data-bgrepeat='no-repeat'  alt=""/>
-                                                    <div class="info">
-                                                        <div class='tp-caption ExtraLargeTitle sft slide2  tp-resizeme ' data-x='45'  data-y='165'  data-endspeed='500'  data-speed='500' data-start='1100' data-easing='Linear.easeNone' data-splitin='none' data-splitout='none' data-elementdelay='0.1' data-endelementdelay='0.1' style='z-index:2;max-width:auto;max-height:auto;white-space:nowrap;padding-right:0px'>laptop Sale</div>
-                                                        <div class='tp-caption LargeTitle sfl  tp-resizeme ' data-x='45'  data-y='220'  data-endspeed='500'  data-speed='500' data-start='1300' data-easing='Linear.easeNone' data-splitin='none' data-splitout='none' data-elementdelay='0.1' data-endelementdelay='0.1' style='z-index:3;max-width:auto;max-height:auto;white-space:nowrap;'>Go Lightly</div>
-                                                        <div    class='tp-caption sfb  tp-resizeme ' data-x='45'  data-y='400'  data-endspeed='500'  data-speed='500' data-start='1500' data-easing='Linear.easeNone' data-splitin='none' data-splitout='none' data-elementdelay='0.1' data-endelementdelay='0.1' style='z-index:4;max-width:auto;max-height:auto;white-space:nowrap;'><a href='#' class="buy-btn">Buy Now</a></div>
-                                                        <div class='tp-caption Title sft  tp-resizeme ' data-x='45'  data-y='320'  data-endspeed='500'  data-speed='500' data-start='1500' data-easing='Power2.easeInOut' data-splitin='none' data-splitout='none' data-elementdelay='0.1' data-endelementdelay='0.1' style='z-index:4;max-width:auto;max-height:auto;white-space:nowrap;'><h4 class="banner-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4></div>
-                                                    </div>
-                                                </li>
-                                                <li data-transition='random' data-slotamount='7' data-masterspeed='1000' data-thumb='@routes.Assets.versioned("images/slide-img4.jpg")'><img src='@routes.Assets.versioned("images/slide-img4.jpg")'  data-bgposition='left top'  data-bgfit='cover' data-bgrepeat='no-repeat'  alt=""/>
-                                                    <div class="info">
-                                                        <div class='tp-caption ExtraLargeTitle sft slide2  tp-resizeme ' data-x='45'  data-y='165'  data-endspeed='500'  data-speed='500' data-start='1100' data-easing='Linear.easeNone' data-splitin='none' data-splitout='none' data-elementdelay='0.1' data-endelementdelay='0.1' style='z-index:2;max-width:auto;max-height:auto;white-space:nowrap;padding-right:0px'>laptop Sale</div>
-                                                        <div class='tp-caption LargeTitle sfl  tp-resizeme ' data-x='45'  data-y='220'  data-endspeed='500'  data-speed='500' data-start='1300' data-easing='Linear.easeNone' data-splitin='none' data-splitout='none' data-elementdelay='0.1' data-endelementdelay='0.1' style='z-index:3;max-width:auto;max-height:auto;white-space:nowrap;'>Go Lightly</div>
-                                                        <div    class='tp-caption sfb  tp-resizeme ' data-x='45'  data-y='400'  data-endspeed='500'  data-speed='500' data-start='1500' data-easing='Linear.easeNone' data-splitin='none' data-splitout='none' data-elementdelay='0.1' data-endelementdelay='0.1' style='z-index:4;max-width:auto;max-height:auto;white-space:nowrap;'><a href='#' class="buy-btn">Buy Now</a></div>
-                                                        <div class='tp-caption Title sft  tp-resizeme ' data-x='45'  data-y='320'  data-endspeed='500'  data-speed='500' data-start='1500' data-easing='Power2.easeInOut' data-splitin='none' data-splitout='none' data-elementdelay='0.1' data-endelementdelay='0.1' style='z-index:4;max-width:auto;max-height:auto;white-space:nowrap;'><h4 class="banner-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4></div>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                            <div class="offer-slider-3 wow animated parallax parallax-3">
+                                <div class="container">
+                                    <ul class="bxslider">
+                                        <li>
+                                            <img alt="" src='@routes.Assets.versioned("images/categoryItems-slider1.jpg")'>
+                                        </li>
+                                        <li>
+                                            <img alt="" src='@routes.Assets.versioned("images/categoryItems-slider2.jpg")'>
+                                        </li>
+                                        <li>
+                                            <img alt="" src='@routes.Assets.versioned("images/categoryItems-slider3.jpg")'>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
-                            @*<!-- Item -->*@
-                            @*<div class="item">*@
-                            @*<a href="#"><img alt="" src='@routes.Assets.versioned("images/categoryItems-slider1.jpg")'></a>*@
-                            @*<div class="cat-img-title cat-bg cat-box">*@
-                            @*<div class="small-tag"><span>Namjestaj.ba</span></div>*@
-                            @*<h2 class="cat-heading">Odaberite savrsen proizvod</h2>*@
-                            @*<p>Najkvalitetniji proizvodi </p>*@
-                            @*</div>*@
-                            @*</div>*@
-                            @*<!-- End Item -->*@
-                            @*<!-- Item -->*@
-                            @*<div class="item">*@
-                            @*<a href="#"><img alt="" src='@routes.Assets.versioned("images/categoryItems-slider2.jpg")'></a>*@
-                            @*<div class="cat-img-title cat-bg cat-box">*@
-                            @*<div class="small-tag"><span>Sale</span>  10% OFF</div>*@
-                            @*<h2 class="cat-heading">Women Collection</h2>*@
-                            @*<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>*@
-                            @*</div>*@
-                            @*</div>*@
-                            @*<!-- End Item -->*@
-                            @*<!-- Item -->*@
-                            @*<div class="item">*@
-                            @*<a href="#"><img alt="" src='@routes.Assets.versioned("images/categoryItems-slider3.jpg")'></a>*@
-                            @*<div class="cat-img-title cat-bg cat-box">*@
-                            @*<div class="small-tag"><span>Sale</span>  10% OFF</div>*@
-                            @*<h2 class="cat-heading">Women Collection</h2>*@
-                            @*<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>*@
-                            @*</div>*@
-                            @*</div>*@
-                            @*<!-- End Item -->*@
 
                         </div>
                     </div>
                 </div>
             </div>
-        @*</div>*@
 
         <div class="container">
             <div class="row">
@@ -233,5 +175,11 @@
     <input type='hidden' id='show_per_page' />
 
     <script src='@routes.Assets.versioned("javascripts/paginacija.js")'></script>
+    <style>
+        .bx-pager{
+            display: none;
+            padding-top: 0px;
+        }
+    </style>
 
 }

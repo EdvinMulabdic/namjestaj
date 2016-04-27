@@ -59,7 +59,7 @@ Seq[Any](_display_(/*1.2*/main/*1.6*/{_display_(Seq[Any](format.raw/*1.7*/("""
                                                         <label for="text">Tekst <em class="required">*</em></label>
                                                         <br>
                                                         <div class="">
-                                                            <textarea name="text" id="text" title="Opis" class="input-text" cols="20" rows="10" style="resize: vertical"></textarea>
+                                                            <textarea name="text" id="text" title="Tekst" class="input-text" minlength="500" cols="20" rows="10" style="resize: vertical"></textarea>
                                                         </div>
                                                     </div>
                                                 </li>
@@ -67,7 +67,8 @@ Seq[Any](_display_(/*1.2*/main/*1.6*/{_display_(Seq[Any](format.raw/*1.7*/("""
                                             <div col-md-6>
                                                 <div class="form-group">
                                                     <div class="col-md-6">
-                                                        <input id="height" type="file" name="image" class="form-control" multiple accept="image/*"/>
+                                                        <label for="image">Dodaj sliku <em class="required">*</em></label>
+                                                        <input id="height" type="file" name="image" class="form-control" multiple accept="image/*" required/>
                                                     </div>
                                                 </div>
                                             </div>
@@ -90,6 +91,17 @@ Seq[Any](_display_(/*1.2*/main/*1.6*/{_display_(Seq[Any](format.raw/*1.7*/("""
         </div>
     </section>
     <!-- Main Container End -->
+
+    <script>
+        $(document).ready(function()"""),format.raw/*65.37*/("""{"""),format.raw/*65.38*/("""
+  """),format.raw/*66.3*/("""$('form textarea[minlength]').on('keyup', function()"""),format.raw/*66.55*/("""{"""),format.raw/*66.56*/("""
+    """),format.raw/*67.5*/("""e_len = $(this).val().trim().length;
+    e_min_len = Number($(this).attr('minlength'));
+    message = e_min_len <= e_len ? '' : e_min_len + ' karaktera minimalno';
+    this.setCustomValidity(message)
+  """),format.raw/*71.3*/("""}"""),format.raw/*71.4*/(""")
+"""),format.raw/*72.1*/("""}"""),format.raw/*72.2*/(""")
+    </script>
 """)))}))
       }
     }
@@ -110,11 +122,11 @@ Seq[Any](_display_(/*1.2*/main/*1.6*/{_display_(Seq[Any](format.raw/*1.7*/("""
 object createNews extends createNews_Scope0.createNews
               /*
                   -- GENERATED --
-                  DATE: Mon Apr 18 19:38:53 CEST 2016
+                  DATE: Mon Apr 25 23:00:25 CEST 2016
                   SOURCE: E:/namjestaj/app/views/news/createNews.scala.html
-                  HASH: e09e2d95fa4d5bd52ce1f50ea82bc1754a47e8f8
-                  MATRIX: 842->1|853->5|890->6|922->12|1477->540|1492->546|1542->574
-                  LINES: 32->1|32->1|32->1|33->2|43->12|43->12|43->12
+                  HASH: 2bed6228a546f6d85fec3d5848a5a1a78b834c0e
+                  MATRIX: 842->1|853->5|890->6|922->12|1477->540|1492->546|1542->574|4908->3912|4937->3913|4968->3917|5048->3969|5077->3970|5110->3976|5343->4182|5371->4183|5401->4186|5429->4187
+                  LINES: 32->1|32->1|32->1|33->2|43->12|43->12|43->12|96->65|96->65|97->66|97->66|97->66|98->67|102->71|102->71|103->72|103->72
                   -- GENERATED --
               */
           

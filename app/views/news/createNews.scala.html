@@ -28,7 +28,7 @@
                                                         <label for="text">Tekst <em class="required">*</em></label>
                                                         <br>
                                                         <div class="">
-                                                            <textarea name="text" id="text" title="Opis" class="input-text" cols="20" rows="10" style="resize: vertical"></textarea>
+                                                            <textarea name="text" id="text" title="Tekst" class="input-text" minlength="500" cols="20" rows="10" style="resize: vertical"></textarea>
                                                         </div>
                                                     </div>
                                                 </li>
@@ -36,7 +36,8 @@
                                             <div col-md-6>
                                                 <div class="form-group">
                                                     <div class="col-md-6">
-                                                        <input id="height" type="file" name="image" class="form-control" multiple accept="image/*"/>
+                                                        <label for="image">Dodaj sliku <em class="required">*</em></label>
+                                                        <input id="height" type="file" name="image" class="form-control" multiple accept="image/*" required/>
                                                     </div>
                                                 </div>
                                             </div>
@@ -59,4 +60,15 @@
         </div>
     </section>
     <!-- Main Container End -->
+
+    <script>
+        $(document).ready(function(){
+  $('form textarea[minlength]').on('keyup', function(){
+    e_len = $(this).val().trim().length;
+    e_min_len = Number($(this).attr('minlength'));
+    message = e_min_len <= e_len ? '' : e_min_len + ' karaktera minimalno';
+    this.setCustomValidity(message)
+  })
+})
+    </script>
 }
