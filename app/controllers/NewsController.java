@@ -1,6 +1,8 @@
 package controllers;
 
 import helpers.Authenticator;
+import helpers.UserAccessLevel;
+import models.AppUser;
 import models.Image;
 import models.News;
 import play.Logger;
@@ -25,7 +27,8 @@ public class NewsController extends Controller {
     public Result newsPanelRender() {
         List<News> newsList = News.findAllNews();
         Collections.reverse(newsList);
-        return ok(views.html.news.newsPanel.render(newsList));
+        AppUser currentUser = UserAccessLevel.getCurrentUser(ctx());
+        return ok(views.html.news.newsPanel.render(newsList, currentUser));
     }
 
 

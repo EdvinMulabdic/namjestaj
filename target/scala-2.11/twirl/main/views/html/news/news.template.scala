@@ -54,8 +54,6 @@ Seq[Any](format.raw/*1.14*/("""
                                             </div>
 
                                         </div>
-                                        <footer class="entry-meta" style="background-color: white">Vrijeme objave vijesti <time datetime="2014-07-10T07:09:31+00:00" class="entry-date">"""),_display_(/*26.186*/news/*26.190*/.date),format.raw/*26.195*/("""</time>
-                                            . </footer>
                                     </article>
                                 </div>
                             </div>
@@ -66,8 +64,8 @@ Seq[Any](format.raw/*1.14*/("""
                         <div role="complementary" class="widget_wrapper13" id="secondary">
                                 <!-- Banner Ad Block -->
                             <div class="ad-spots widget widget__sidebar">
-                                <a target="_self" href="#" title=""><img alt="offer banner" src='"""),_display_(/*38.99*/routes/*38.105*/.Assets.versioned("images/block1.jpg")),format.raw/*38.143*/("""' style="width : 280px;"></a>
-                                <a target="_self" href="#" title=""><img alt="offer banner" src='"""),_display_(/*39.99*/routes/*39.105*/.Assets.versioned("images/block1.jpg")),format.raw/*39.143*/("""' style="width : 280px;"></a>
+                                <a target="_self" href="#" title=""><img alt="offer banner" src='"""),_display_(/*36.99*/routes/*36.105*/.Assets.versioned("images/block1.jpg")),format.raw/*36.143*/("""' style="width : 280px;"></a>
+                                <a target="_self" href="#" title=""><img alt="offer banner" src='"""),_display_(/*37.99*/routes/*37.105*/.Assets.versioned("images/block1.jpg")),format.raw/*37.143*/("""' style="width : 280px;"></a>
                             </div>
                                 <!-- Banner Text Block -->
                             <div class="text-widget widget widget__sidebar">
@@ -84,7 +82,7 @@ Seq[Any](format.raw/*1.14*/("""
         </section>
         <!-- Main Container End -->
     </div>
-""")))}),format.raw/*56.2*/("""
+""")))}),format.raw/*54.2*/("""
 """))
       }
     }
@@ -105,11 +103,11 @@ Seq[Any](format.raw/*1.14*/("""
 object news extends news_Scope0.news
               /*
                   -- GENERATED --
-                  DATE: Wed Apr 20 12:41:03 CEST 2016
+                  DATE: Wed Apr 27 21:17:02 CEST 2016
                   SOURCE: E:/namjestaj/app/views/news/news.scala.html
-                  HASH: c406f4d10e1bdea3bbe45612577ad1668e4a0b93
-                  MATRIX: 746->1|853->13|881->16|892->20|930->22|962->28|1022->62|1034->66|1086->98|1912->897|1925->901|1952->907|1981->908|2392->1292|2405->1296|2431->1301|2752->1594|2766->1598|2793->1603|3459->2242|3475->2248|3535->2286|3691->2415|3707->2421|3767->2459|4729->3391
-                  LINES: 27->1|32->1|33->2|33->2|33->2|34->3|34->3|34->3|34->3|47->16|47->16|47->16|47->16|53->22|53->22|53->22|57->26|57->26|57->26|69->38|69->38|69->38|70->39|70->39|70->39|87->56
+                  HASH: 091b417f234b87aff31aef4e783eebdaa2338d52
+                  MATRIX: 746->1|853->13|881->16|892->20|930->22|962->28|1022->62|1034->66|1086->98|1912->897|1925->901|1952->907|1981->908|2392->1292|2405->1296|2431->1301|3139->1982|3155->1988|3215->2026|3371->2155|3387->2161|3447->2199|4409->3131
+                  LINES: 27->1|32->1|33->2|33->2|33->2|34->3|34->3|34->3|34->3|47->16|47->16|47->16|47->16|53->22|53->22|53->22|67->36|67->36|67->36|68->37|68->37|68->37|85->54
                   -- GENERATED --
               */
           
