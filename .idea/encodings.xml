@@ -6,9 +6,13 @@
     <file url="file://$PROJECT_DIR$/app/models/Review.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/views/Admin/itemsReviews.scala.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/views/Admin/usersItems.scala.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/AppUser/logo.scala.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/views/Item/saleItems.scala.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/views/news/createNews.scala.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/views/news/news.scala.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/partner/partnerMain.scala.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/partner/userProfilePage.scala.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/search.scala.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/public/javascripts/paginacija.js" charset="UTF-8" />
   </component>
 </project>

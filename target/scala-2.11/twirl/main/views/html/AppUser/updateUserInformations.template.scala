@@ -125,7 +125,7 @@ Seq[Any](format.raw/*1.17*/("""
 object updateUserInformations extends updateUserInformations_Scope0.updateUserInformations
               /*
                   -- GENERATED --
-                  DATE: Mon Apr 18 19:38:53 CEST 2016
+                  DATE: Fri May 13 17:14:18 CEST 2016
                   SOURCE: E:/namjestaj/app/views/AppUser/updateUserInformations.scala.html
                   HASH: f14590bd76c9e47ea06ba33552756dc99fb4d7b0
                   MATRIX: 788->1|898->16|925->18|936->22|974->24|1005->29|1554->551|1569->557|1632->598|2434->1372|2448->1376|2475->1381|3150->2028|3164->2032|3191->2037|3810->2628|3824->2632|3854->2640|4462->3220|4476->3224|4504->3230|5038->3737|5072->3762|5112->3764|5201->3825|5358->3954|5372->3958|5403->3967|5491->4036|5504->4041|5543->4042|5632->4103|5864->4304|5949->4361

@@ -45,6 +45,15 @@ public class Item extends Model {
     public Item(){
     }
 
+    @Override
+    public String toString() {
+        return   name + ' ' +
+                price + ' ' +
+                description + ' ' +
+                category.name + ' ' +
+                subCategory.name;
+    }
+
     public Item(String name, String description, String price) {
         this.name = name;
         this.description = description;
@@ -59,6 +68,7 @@ public class Item extends Model {
         Item item = new Item();
         item.name = name;
         item.price = price;
+        item.oldPrice = "0";
         item.description = description;
         item.average_Grade = 0;
         item.dateOfActivation = new Date();
@@ -128,6 +138,14 @@ public class Item extends Model {
         return finder.where().eq("is_active",  1).eq("is_blocked", 0).findList();
     }
 
+     /* ------------------- find all active items for home page shuffle  ------------------ */
+
+    public static List<Item> allActiveItemsShuffled() {
+        List<Item> items = allActiveItems();
+        Collections.shuffle(items);
+        return items;
+    }
+
     /* ------------------- get last 10 products from database ------------------ */
 
     public static List<Item> getLastTenProducts(){
@@ -172,6 +190,7 @@ public class Item extends Model {
         Item  item = findItemById(itemId);
         if(item.isActive == false) {
             item.isActive = true;
+            item.dateOfActivation = new Date();
         }else if(item.isActive == true){
             item.isActive = false;
             item.dateOfDeActivation = new Date();
@@ -217,7 +236,8 @@ public class Item extends Model {
         Integer subcategoryId = item.subCategory.id;
         List<Item> itemsToRecommend = new ArrayList<>();
 
-        List<Item> items = finder.where().eq("sub_category_id", subcategoryId).findList();
+
+            List<Item> items = finder.where().eq("sub_category_id", subcategoryId).findList();
 
             for(int i = 0; i < items.size(); i ++ ) {
                 if(items.get(i).isActive == true && items.get(i).isBlocked == false) {
@@ -226,19 +246,6 @@ public class Item extends Model {
             }
 
 
-//        for(int i = 0; i < itemsWithSameCategory.size(); i++) {
-//            prices.add(Integer.parseInt(itemsWithSameCategory.get(i).price));
-//        }
-//
-//        for(int k=0; k < prices.size(); k++) {
-//            for (int j = price - 50; j <= price + 50; j++) {
-//
-//                if (itemsWithSameCategory.size() != 0 && Integer.parseInt(itemsWithSameCategory.get(k).price) == j) {
-//                    itemsToRecommend.add(itemsWithSameCategory.get(k));
-//                }
-//
-//            }
-//        }
         if(items.size() > 10 ) {
             itemsToRecommend = items.subList(0 , 10);
         }else{
@@ -329,11 +336,16 @@ public class Item extends Model {
     public static List<Item> itemsOnSale () {
         List<Item> allItems = allActiveItems();
         List<Item> itemsToReturn = new ArrayList<>();
-        for(int i = 0; i < allItems.size(); i++) {
-            if(!allItems.get(i).oldPrice.equals("") ){
-                itemsToReturn.add(allItems.get(i));
+        for(Item item: allItems) {
+            if(!item.oldPrice.equals("0")) {
+                itemsToReturn.add(item);
             }
         }
+//        for(int i = 0; i < allItems.size(); i++) {
+//            if(!allItems.get(i).oldPrice.equals("") ){
+//                itemsToReturn.add(allItems.get(i));
+//            }
+//        }
         return itemsToReturn;
 //        List<Item> allItems = finder.where().isNotNull("old_price").findList();
 //        return allItems;
@@ -341,11 +353,53 @@ public class Item extends Model {
     }
 
 
-        /* ------------------- items review ------------------ */
-//
-//    public static Integer itemGrade(Integer itemId) {
-//
-//
-//    }
+    public static List<Item> searchBox(String term) {
+        List<Item> items = finder.all();
+        List<Item> itemsToReturn = new ArrayList<>();
 
+        for(int i = 0; i < items.size(); i ++) {
+            if(items.get(i).toString().toLowerCase().contains(term.toLowerCase())) {
+                itemsToReturn.add(items.get(i));
+            }
+        }
+        return itemsToReturn;
+
+
+    }
+
+        /* ------------------- top rated items  ------------------ */
+
+    public static List<Item> topRatedItems() {
+        List<Item> itemsToShuffle = new ArrayList<>();
+        List<Item> itemsToReturn = new ArrayList<>();
+        List<Item> fiveStarItems = finder.where().eq("average_grade",5).findList();
+        if(fiveStarItems.size() < 10) {
+            for(Item item: fiveStarItems) {
+                itemsToShuffle.add(item);
+            }
+        }
+        List<Item> fourStarItems = finder.where().eq("average_grade",4).findList();
+        for(Item item: fourStarItems) {
+            itemsToShuffle.add(item);
+        }
+        if(itemsToShuffle.size() > 10 ) {
+            itemsToReturn = itemsToShuffle.subList(0, 10);
+            Collections.shuffle(itemsToReturn);
+            return itemsToReturn;
+        }else{
+            List<Item> threeStarItems = finder.where().eq("average_grade",3).findList();
+            for(Item item: threeStarItems) {
+                itemsToShuffle.add(item);
+            }
+            if(itemsToShuffle.size() > 10) {
+                itemsToReturn = itemsToShuffle.subList(0,10);
+                Collections.shuffle(itemsToReturn);
+                return itemsToReturn;
+            }else{
+                Collections.shuffle(itemsToReturn);
+
+                return fiveStarItems;
+            }
+        }
+    }
 }

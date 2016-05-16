@@ -1,0 +1,186 @@
+@(items: java.util.List[Item])
+@main {
+
+    <!-- Main Container -->
+    <section class="main-container col2-left-layout bounceInUp animated">
+
+        <div class="container" id="slider-custom">
+            <div class="slider-items-products">
+                <div id="category-desc-slider" class="product-flexslider hidden-buttons">
+                    <div class="slider-items slider-width-col1 owl-carousel owl-theme">
+                        <div class="offer-slider-3 wow animated parallax parallax-3">
+                            <div class="container">
+                                <ul class="bxslider">
+                                    <li>
+                                        <img alt="" src='@routes.Assets.versioned("images/categoryItems-slider1.jpg")'>
+                                    </li>
+                                    <li>
+                                        <img alt="" src='@routes.Assets.versioned("images/categoryItems-slider2.jpg")'>
+                                    </li>
+                                    <li>
+                                        <img alt="" src='@routes.Assets.versioned("images/categoryItems-slider3.jpg")'>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-main col-sm-9 col-sm-push-3">
+                    <article class="col-main">
+                        <div class="page-title">
+                            <h2>Rezultati pretrage</h2>
+                        </div>
+
+                        <div class="toolbar">
+                            <div class="pager">
+                                <div class="pages">
+                                    <ul class="pagination">
+                                        <div id='page_navigation' class="pagination-custom"></div>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="category-products">
+                            <ul class="products-grid" id="easyPaginate">
+                            @for(item <- items) {
+                                <li class="item col-md-3 col-sm-4 col-xs-6">
+                                    <div class="item-inner">
+
+                                        <div class="item-img">
+                                        @if(item.images.size() > 0){
+                                            <div class="item-img-info"> <a class="product-image" title="@item.name" href="@routes.Items.itemRender(item.id)"> <img alt="Retis lapen casen" src='@models.Item.getFirstItemImage(item.id).getSize(179,217)'> </a>
+                                                <a class="quickview-btn" ><span>Quick View</span></a> </div>
+                                        }else{
+                                            <div class="item-img-info"> <a class="product-image" title="@item.name" href='@routes.Items.itemRender(item.id)'> <img alt="Retis lapen casen" src='@routes.Assets.versioned("images/product.png")'> </a>
+                                                <a class="quickview-btn" ><span>Quick View</span></a> </div>
+                                        }
+
+                                        </div>
+                                        <div class="item-info">
+                                            <div class="info-inner">
+                                                <div class="item-title"> <a title="Retis lapen casen" href="@routes.Items.itemRender(item.id)"> @item.name </a> </div>
+                                                <div class="item-content">
+                                                    <div class="rating">
+                                                        <div class="ratings">
+                                                            @if(item.average_Grade == 1) {
+                                                                <div class="rating-box">
+                                                                    <div class="rating1"></div>
+                                                                </div>
+                                                            }
+                                                            @if(item.average_Grade == 2) {
+                                                                <div class="rating-box">
+                                                                    <div class="rating2"></div>
+                                                                </div>
+                                                            }
+                                                            @if(item.average_Grade == 3) {
+                                                                <div class="rating-box">
+                                                                    <div class="rating3"></div>
+                                                                </div>
+                                                            }
+                                                            @if(item.average_Grade == 4) {
+                                                                <div class="rating-box">
+                                                                    <div class="rating4"></div>
+                                                                </div>
+                                                            }
+                                                            @if(item.average_Grade == 5) {
+                                                                <div class="rating-box">
+                                                                    <div class="rating5"></div>
+                                                                </div>
+                                                            }
+                                                            @if(item.average_Grade == 0) {
+                                                                <div class="rating-box">
+                                                                    <div class="rating0"></div>
+                                                                </div>
+                                                            }
+
+                                                        <p class="rating-links">Ukupno @Review.getNumberOfReviews(item.id) ocjena</p>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-price">
+                                                        <div class="price-box"> <span class="regular-price"> <span class="price">@item.price KM</span> </span> </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            }
+                            </ul>
+                        </div>
+                    </article>
+                        <!--	///*///======    End article  ========= //*/// -->
+                </div>
+                <div class="col-left sidebar col-sm-3 col-xs-12 col-sm-pull-9">
+                    <aside class="col-left sidebar">
+
+                        <div class="side-nav-categories">
+                            <div class="block-title"> Kategorije </div>
+                                <!--block-title-->
+                                <!-- BEGIN BOX-CATEGORY -->
+                            <div class="box-content box-category">
+                                <ul>
+                                @for(category <- models.Category.findAllCategories()) {
+                                    <li> <a href="@routes.Items.getItemsWithCategory(category.id)">@category.name <i class="fa fa-angle-down"></i></a>
+                                        <ul class="level0_455">
+                                        @for(subcategory <- models.SubCategory.allSubCategories(category.id)) {
+                                            <li> <a href="@routes.Items.getItemsWithSubCategory(subcategory.id)"> @subcategory.name </a></li>
+                                        }
+                                        </ul>
+                                            <!--level0-->
+                                    </li>
+                                }
+                                </ul>
+                            </div>
+                                <!--box-content box-category-->
+                        </div>
+
+
+                        <div class="block block-layered-nav">
+                            <div class="block-title">Pretraga po cijeni</div>
+                            <div class="block-content">
+                                <p class="block-subtitle">Odaberite željeni raspon</p>
+                                <dl id="narrow-by-list">
+                                    <dd class="odd">
+                                        <ol>
+                                            <li> <a href="@routes.Items.getItemsWithPriceRange1()"><span class="price">do 99.00 KM</span></a> </li>
+                                            <li> <a href="@routes.Items.getItemsWithPriceRange2()"><span class="price"> 100.00 KM</span> - <span class="price"> 149.00 KM</span></a>  </li>
+                                            <li> <a href="@routes.Items.getItemsWithPriceRange3()"><span class="price"> 150.00 KM</span> - <span class="price"> 199.00 KM</span></a>  </li>
+                                            <li> <a href="@routes.Items.getItemsWithPriceRange4()"><span class="price"> preko 200.00 KM</span></a>  </li>
+                                        </ol>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Main Container End -->
+    <input type='hidden' id='current_page' />
+    <input type='hidden' id='show_per_page' />
+
+    <script src='@routes.Assets.versioned("javascripts/paginacija.js")'></script>
+    <style>
+    .bx-pager{
+    display: none;
+    padding-top: 0px;
+    }
+
+    .box-content li:hover .level0_455{
+    display: block;
+    }
+
+
+    </style>
+
+}

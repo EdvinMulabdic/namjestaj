@@ -1,0 +1,57 @@
+@(user: AppUser)
+@main{
+  <!-- Main Container -->
+    <section class="main-container col2-right-layout wow bounceInUp animated">
+        <div class="main container">
+            <div class="row">
+                <section class="col-main col-md-12">
+                    <div class="page-title">
+                        <h2>Kratki opis firme</h2>
+                    </div>
+                    <div class="static-contain">
+                        <fieldset class="group-select">
+                            <form  method="POST" role="form" action="@routes.AppUsers.userDescription(user.id)" enctype="multipart/form-data" >
+                                <ul>
+                                    <li id="billing-new-address-form">
+                                        <fieldset>
+                                            <ul>
+                                                <li>
+                                                    <div class="input-box">
+                                                        <label for="text">Tekst <em class="required">*</em></label>
+                                                        <br>
+                                                        <div class="">
+                                                            <textarea name="text" id="text" title="Tekst" class="input-text" minlength="350" cols="50" rows="10" style="resize: vertical">@user.description</textarea>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </fieldset>
+                                    </li>
+                                    <li><span class="require"><em class="required">* </em>Obavezna polja</span></li>
+                                    <li>
+                                        <div class="buttons-set">
+                                            <button type="submit" title="Submit" class="button submit"> <span> Dodaj opis </span> </button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </form>
+                        </fieldset>
+
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+    <!-- Main Container End -->
+
+    <script>
+        $(document).ready(function(){
+  $('form textarea[minlength]').on('keyup', function(){
+    e_len = $(this).val().trim().length;
+    e_min_len = Number($(this).attr('minlength'));
+    message = e_min_len <= e_len ? '' : e_min_len + ' karaktera minimalno';
+    this.setCustomValidity(message)
+  })
+})
+    </script>
+}

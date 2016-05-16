@@ -91,7 +91,7 @@ Seq[Any](format.raw/*1.23*/("""
 object createSubCategory extends createSubCategory_Scope0.createSubCategory
               /*
                   -- GENERATED --
-                  DATE: Mon Apr 18 19:38:53 CEST 2016
+                  DATE: Fri May 13 17:14:18 CEST 2016
                   SOURCE: E:/namjestaj/app/views/Category/createSubCategory.scala.html
                   HASH: 220d5bfd74c61944149e51cb8f58fe833c0affb5
                   MATRIX: 779->1|895->22|923->25|934->29|972->31|1004->37|1536->542|1551->548|1614->589

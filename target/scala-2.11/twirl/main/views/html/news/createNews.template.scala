@@ -122,7 +122,7 @@ Seq[Any](_display_(/*1.2*/main/*1.6*/{_display_(Seq[Any](format.raw/*1.7*/("""
 object createNews extends createNews_Scope0.createNews
               /*
                   -- GENERATED --
-                  DATE: Mon Apr 25 23:00:25 CEST 2016
+                  DATE: Fri May 13 17:14:19 CEST 2016
                   SOURCE: E:/namjestaj/app/views/news/createNews.scala.html
                   HASH: 2bed6228a546f6d85fec3d5848a5a1a78b834c0e
                   MATRIX: 842->1|853->5|890->6|922->12|1477->540|1492->546|1542->574|4908->3912|4937->3913|4968->3917|5048->3969|5077->3970|5110->3976|5343->4182|5371->4183|5401->4186|5429->4187

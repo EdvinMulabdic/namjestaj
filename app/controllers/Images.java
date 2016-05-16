@@ -1,6 +1,7 @@
 package controllers;
 
 import helpers.Authenticator;
+import helpers.UserAccessLevel;
 import models.Image;
 import models.Item;
 import models.News;
@@ -55,4 +56,13 @@ public class Images extends Controller {
         return redirect(routes.Images.listOfPicturesRender(itemId));
     }
 
+    /* ------------------- delete user logo image ------------------ */
+    @Security.Authenticated(Authenticator.UserFilter.class)
+    public Result deleteLogo(String image_public_id){
+
+        Image image = Image.findImageById(image_public_id);
+        Integer userId = UserAccessLevel.getCurrentUser(ctx()).id;
+        Image.deleteLogo(image, userId);
+        return redirect(routes.AppUsers.imagesUploadRender(userId));
+    }
 }

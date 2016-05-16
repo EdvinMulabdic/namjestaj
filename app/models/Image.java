@@ -10,8 +10,10 @@ import play.Play;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -32,6 +34,10 @@ public class Image extends Model {
     @JsonBackReference
     public News news;
 
+
+    @ManyToOne
+    @JsonBackReference
+    public AppUser user;
 
     public static Cloudinary cloudinary;
 
@@ -125,6 +131,21 @@ public class Image extends Model {
 
     }
 
+    /* ------------------- delete logo ------------------ */
+
+    public static void deleteLogo(Image image, Integer userId) {
+        AppUser user = AppUser.findUserById(userId);
+        try {
+            cloudinary.uploader().destroy(image.public_id, null);
+        } catch (IOException e) {
+            Logger.debug("Failed to delete image.", e.getMessage());
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        image.delete();
+
+    }
+
     /* ------------------- find images by item id ------------------ */
 
     public static List<Image> findImagesByItemId(Integer itemId){
@@ -135,6 +156,12 @@ public class Image extends Model {
 
     public static List<Image> findImagesByNewsId(Integer newsId){
         return finder.where().eq("news_id", newsId).findList();
+    }
+
+     /* ------------------- find images by user id ------------------ */
+
+    public static List<Image> findImagesByUserId(Integer userId){
+        return finder.where().eq("user_id", userId).findList();
     }
 
 
@@ -177,5 +204,48 @@ public class Image extends Model {
         image.save();
         return image;
     }
+
+
+
+     /* ------------------- create image for user ------------------ */
+
+    public static Image createUserImage(File image, Integer userId) {
+        Map result;
+
+        try {
+            result = cloudinary.uploader().upload(image, null);
+            return createUserImage(result, userId);
+
+        } catch (IOException e) {
+            Logger.debug("Failed to save image.", e.getMessage());
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public static Image createUserImage(Map uploadResult, Integer userId) {
+        AppUser user = AppUser.findUserById(userId);
+        Image image = new Image();
+
+        image.public_id = (String) uploadResult.get("public_id");
+        Logger.debug(image.public_id);
+        image.image_url = (String) uploadResult.get("url");
+        Logger.debug(image.image_url);
+        image.secret_image_url = (String) uploadResult.get("secure_url");
+        Logger.debug(image.secret_image_url);
+
+        if(user != null) {
+            if(user.images.size() > 0) {
+               Image imageToDelete =  AppUser.findUserById(userId).images.get(0);
+                deleteLogo(imageToDelete, userId);
+            }
+            image.user = user;
+        }
+
+        image.save();
+        return image;
+    }
+
+
 
 }

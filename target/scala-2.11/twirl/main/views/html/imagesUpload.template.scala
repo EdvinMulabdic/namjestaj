@@ -42,7 +42,7 @@ Seq[Any](format.raw/*1.19*/("""
                                 <input id="height" type="file" name="image" class="form-control" multiple accept="image/*"/>
                             </div>
                             <div class="buttons-set">
-                                <button class="button create-account"><span>Dodaj</span></button>
+                                <button class="button submit"><span>Dodaj</span></button>
                             </div>
                         </div>
                     </div>
@@ -72,9 +72,9 @@ Seq[Any](format.raw/*1.19*/("""
 object imagesUpload extends imagesUpload_Scope0.imagesUpload
               /*
                   -- GENERATED --
-                  DATE: Mon Apr 18 19:38:50 CEST 2016
+                  DATE: Mon May 16 18:37:52 CEST 2016
                   SOURCE: E:/namjestaj/app/views/imagesUpload.scala.html
-                  HASH: 4d1a2b0d335418c1193ef23cfc47e627ccc79388
+                  HASH: bebb06e9eb6384a621c8203e7dbb32dcbb2b870d
                   MATRIX: 760->1|872->18|900->21|911->25|949->27|981->33|1179->205|1193->211|1241->239
                   LINES: 27->1|32->1|33->2|33->2|33->2|34->3|37->6|37->6|37->6
                   -- GENERATED --

@@ -5,6 +5,7 @@ import org.mindrot.jbcrypt.BCrypt;
 import play.Logger;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -21,6 +22,8 @@ public class AppUser extends Model {
     public String city;
     public String address;
     public String workTime;
+    @Column(columnDefinition = "TEXT")
+    public String description;
     public String password;
     public Integer userAccessLevel;
     public Boolean isActive;
@@ -33,6 +36,9 @@ public class AppUser extends Model {
 
     @OneToMany(cascade = CascadeType.ALL)
     public Message message;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy="user")
+    public List<Image> images;
 
     public AppUser(){
     }
@@ -78,7 +84,7 @@ public class AppUser extends Model {
 
     public static List<AppUser> getAllUsers(){
         Finder<String, AppUser> finder = new Finder<>(AppUser.class);
-        List<AppUser> users = finder.all();
+        List<AppUser> users = finder.where().eq("user_access_level", 2).findList();
         return users;
     }
 
@@ -221,4 +227,26 @@ public class AppUser extends Model {
             }
         user.update();
     }
+
+
+         /* ------------------- user description  ------------------ */
+
+    public static void userDescription(Integer userId, String description) {
+        AppUser user = findUserById(userId);
+        user.description = description;
+        user.update();
+    }
+
+
+    public static List<AppUser> usersWithLogo() {
+        List<AppUser> users = new ArrayList<>();
+        List<AppUser> allUsers = finder.all();
+        for(AppUser user: allUsers) {
+            if(user.images.size() != 0) {
+                users.add(user);
+            }
+        }
+        return users;
+    }
+
 }

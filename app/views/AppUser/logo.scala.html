@@ -1,0 +1,89 @@
+@(user: AppUser)
+@*\@main {*@
+    @*<div class="container">*@
+        @*<div class="row">*@
+            @*<div style="margin-top: 20%; margin-bottom: 20%">*@
+                @*<form method="POST" role="form" action="@routes.AppUsers.imagesUpload(userId)" enctype="multipart/form-data"  >*@
+
+                    @*<div col-md-6>*@
+                        @*<div class="form-group">*@
+                            @*<div class="col-md-6 col-md-offset-3">*@
+                                @*<input id="height" type="file" name="image" class="form-control" multiple accept="image/*"/>*@
+                            @*</div>*@
+                            @*<div class="buttons-set">*@
+                                @*<button class="button create-account"><span>Dodaj</span></button>*@
+                            @*</div>*@
+                        @*</div>*@
+                    @*</div>*@
+
+                @*</form>*@
+            @*</div>*@
+
+        @*</div>*@
+    @*</div>*@
+@*}*@
+@main {
+    <div class="container">
+        <div class="row">
+            <div class="text-center" id="margin-bottom-admin">
+                <h1>Logo</h1>
+            </div>
+        </div>
+    </div>
+    <section class="main-container col2-right-layout wow bounceInUp animated">
+        <div class="main container">
+            <div class="row">
+                <section class="col-md-12" id="tablemargins">
+                    <table class="table table-striped table-bordered table-responsive" id="sort">
+                        <thead>
+                            <tr class="about">
+                                <th>Logo</th>
+                                <th class="text-center">Obriši</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr class="about" >
+                                @if(user.images.size() != 0) {
+                                <td><img src="@user.images.get(0).getSize(100,100)"></td>
+                                }
+
+                                <td class="text-center">
+                                @if(user.images.size() != 0) {
+                                    <a class="fa-buttons" title="Obriši logo" href="@routes.Images.deleteLogo(user.images.get(0).public_id)" role="button">
+                                        <i class=" fa fa-trash-o fa-lg"></i>
+                                    </a>
+                                }
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </section>
+
+                <section>
+                    <div class="col-md-12 " id="margin-bottom-header">
+
+                        <form method="POST" role="form" action="@routes.AppUsers.imagesUpload(user.id)" enctype="multipart/form-data"  >
+
+                            <div col-md-6>
+                                <div class="form-group">
+                                    <div class="col-md-6 col-md-offset-3">
+                                        <input id="height" type="file" name="image" class="form-control" multiple accept="image/*"/>
+                                    </div>
+                                    <div class="buttons-set">
+                                        <button class="button check"><span>Dodaj</span></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </section>
+
+            </div>
+
+        </div>
+    </section>
+}

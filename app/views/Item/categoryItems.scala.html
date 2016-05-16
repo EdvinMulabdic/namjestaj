@@ -55,11 +55,9 @@
                                         <div class="item-img">
                                         @if(item.images.size() > 0){
                                             <div class="item-img-info"> <a class="product-image" title="@item.name" href="@routes.Items.itemRender(item.id)"> <img alt="Retis lapen casen" src='@models.Item.getFirstItemImage(item.id).getSize(179,217)'> </a>
-                                                <div class="new-label new-top-left">new</div>
                                                 <a class="quickview-btn" ><span>Quick View</span></a> </div>
                                         }else{
                                             <div class="item-img-info"> <a class="product-image" title="@item.name" href='@routes.Items.itemRender(item.id)'> <img alt="Retis lapen casen" src='@routes.Assets.versioned("images/product.png")'> </a>
-                                                <div class="new-label new-top-left">AKCIJA</div>
                                                 <a class="quickview-btn" ><span>Quick View</span></a> </div>
                                         }
 
@@ -130,7 +128,7 @@
                             <div class="box-content box-category">
                                 <ul>
                                 @for(category <- models.Category.findAllCategories()) {
-                                    <li> <a href="@routes.Items.getItemsWithCategory(category.id)">@category.name</a> <span class="subDropdown plus"></span>
+                                    <li> <a href="@routes.Items.getItemsWithCategory(category.id)">@category.name <i class="fa fa-angle-down"></i></a>
                                         <ul class="level0_455">
                                         @for(subcategory <- models.SubCategory.allSubCategories(category.id)) {
                                             <li> <a href="@routes.Items.getItemsWithSubCategory(subcategory.id)"> @subcategory.name </a></li>
@@ -177,6 +175,12 @@
             display: none;
             padding-top: 0px;
         }
+
+        .box-content li:hover .level0_455{
+        display: block;
+        }
+
+
     </style>
 
 }

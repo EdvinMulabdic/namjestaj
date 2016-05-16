@@ -13,7 +13,7 @@
         <entry key="myProject">
           <value>
             <ProjectSettingsEntry>
-              <option name="confDir" value="E:\namjestaj\app" />
+              <option name="sourceDir" value="E:\namjestaj\app" />
               <option name="templateImports">
                 <list>
                   <option value="models._" />

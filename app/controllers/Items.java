@@ -9,6 +9,7 @@ import play.data.Form;
 import play.mvc.Controller;
 import play.mvc.Result;
 import play.mvc.Security;
+import play.twirl.api.Content;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -49,6 +50,10 @@ public class Items extends Controller {
         Integer categoryId =Integer.parseInt(form.field("category").value());
         String description = form.field("description").value();
         Category category = Category.findCategoryById(categoryId);
+        if(categoryId == 0){
+            flash("error", "Molimo Vas da popunite obavezna polja!");
+            return ok(views.html.Item.createItem.render(userId));
+        }
 
         Integer itemId = Item.createItem(name, price, description, category, user);
 
@@ -65,6 +70,7 @@ public class Items extends Controller {
             /* ------------------- update item  ------------------ */
             @Security.Authenticated(Authenticator.UserFilter.class)
     public Result updateItem(Integer itemId){
+                Item item = Item.findItemById(itemId);
         DynamicForm form = Form.form().bindFromRequest();
 
         String name = form.field("name").value();
@@ -75,6 +81,10 @@ public class Items extends Controller {
         String description = form.field("description").value();
         Category category = Category.findCategoryById(categoryId);
         SubCategory  subCategory = SubCategory.findSubCategoryById(subCategoryId);
+                if(subCategory.id == 0){
+                    flash("error", "Molimo Vas da odeberete potkategoriju za proizvod!");
+                    return ok(views.html.Item.updateItem.render(item));
+                }
 
         Integer userId = Item.updateItem(name, oldPrice, price, description, category, subCategory, itemId);
 
@@ -201,4 +211,22 @@ public class Items extends Controller {
         return redirect(routes.Items.listOfItems(userId));
     }
 
+
+    /* --------------- search ---------------*/
+
+    public Result searchBox() {
+        DynamicForm form = Form.form().bindFromRequest();
+        String inputTerm = form.field("search").value();
+        List<Item> items = Item.searchBox(inputTerm);
+        return ok(views.html.search.render(items));
+    }
+
+    /* --------------- search mobile---------------*/
+
+    public Result searchBoxMobile() {
+        DynamicForm form = Form.form().bindFromRequest();
+        String inputTerm = form.field("search-mobile").value();
+        List<Item> items = Item.searchBox(inputTerm);
+        return ok(views.html.search.render(items));
+    }
 }

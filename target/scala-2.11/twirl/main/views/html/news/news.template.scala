@@ -103,7 +103,7 @@ Seq[Any](format.raw/*1.14*/("""
 object news extends news_Scope0.news
               /*
                   -- GENERATED --
-                  DATE: Wed Apr 27 21:17:02 CEST 2016
+                  DATE: Fri May 13 17:14:19 CEST 2016
                   SOURCE: E:/namjestaj/app/views/news/news.scala.html
                   HASH: 091b417f234b87aff31aef4e783eebdaa2338d52
                   MATRIX: 746->1|853->13|881->16|892->20|930->22|962->28|1022->62|1034->66|1086->98|1912->897|1925->901|1952->907|1981->908|2392->1292|2405->1296|2431->1301|3139->1982|3155->1988|3215->2026|3371->2155|3387->2161|3447->2199|4409->3131

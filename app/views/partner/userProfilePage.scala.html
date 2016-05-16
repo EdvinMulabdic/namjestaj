@@ -1,0 +1,225 @@
+@(user: AppUser)(locations: java.util.List[String])(items: java.util.List[Item])
+@main {
+    <div class="container">
+        <div>
+            @if(flash.containsKey("success")) {
+                <div class="alert alert-success" role="alert">
+                    <i class="fa fa-check-square-o" style="font-size:30px"></i>
+                    <span  aria-hidden="true" class="flash-font">@flash.get("success")</span>
+
+                </div>
+            }
+            @if(flash.containsKey("error")) {
+                <div class="alert alert-danger" role="alert">
+                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                    <span class="sr-only">Error:</span>
+                    @flash.get("error")
+                </div>
+            }
+        </div>
+    </div>
+    <!-- Main Container -->
+    <section class="main-container col1-layout wow bounceInUp animated">
+        <div class="main container">
+            <div class="col-main">
+                <div class="row">
+
+                    <div class="product-view">
+                        <div class="product-essential">
+
+                            <input name="form_key" value="6UbXroakyQlbfQzK" type="hidden">
+                            <div class="product-img-box col-sm-5 col-xs-12">
+                                <div class="product-image">
+                                    <div class="large-image">
+                                        <a href='' rel="useWrapper: false, adjustY:0, adjustX:20" >
+                                            <img src='@user.images.get(0).getSize(200, 100)' alt="LOGO">
+                                        </a>
+                                    </div>
+                                </div>
+                                    <!-- end: more-images -->
+                            </div>
+                            <div class="product-shop col-sm-7 col-xs-12">
+                                <div class="product-name">
+                                    <h1>@user.name</h1>
+                                </div>
+
+                                <div class="short-description">
+                                    <h2>Informacije o prodavaču</h2>
+                                    <p> Adresa:   @user.address, @user.city</p>
+                                    <p> Email:   <a href="#billing-new-address-form">@user.email</a></p>
+                                    <p> Telefon:  @user.phone</p>
+                                    <p> Radno vrijeme:  @user.workTime</p>
+                                </div>
+
+
+                                <div class="social">
+                                    <ul class="link">
+                                        <li class="fb"><a href="#"></a></li>
+                                        <li class="tw"><a href="#"></a></li>
+                                        <li class="googleplus"><a href="#"></a></li>
+                                        <li class="linkedin"><a href="#"></a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-sm-12 col-xs-12 bounceInUp animated">
+                            <div class="short-description">
+                                <h2>Ukratko o prodavaču </h2>
+                                <p> @user.description </p>
+                            </div>
+                        </div>
+                        <div class="product-collateral col-lg-12 col-sm-12 col-xs-12 bounceInUp animated">
+
+                            <div class="add_info">
+                                <ul id="product-detail-tab" class="nav nav-tabs product-tabs">
+                                    <li class="active"> <a href="#product_tabs_description" data-toggle="tab"> Lokacije objekata </a> </li>
+                                    <li><a href="#product_tabs_tags" data-toggle="tab" id="product_tabs_tags1">Kontaktiraj prodavača</a></li>
+                                    <li> <a href="#reviews_tabs" data-toggle="tab">Svi proizvodi </a> </li>
+                                </ul>
+
+                                <div id="productTabContent" class="tab-content">
+
+                                    <div class="tab-pane fade in active" id="product_tabs_description">
+                                        <div class="std">
+                                            <p>Pogledajte lokacije naših objekata i posjetite nas u najbližem objektu</p>
+                                            <div id="map" class="map2"></div>
+                                            <input id="locations" name="lat" value="@locations" style="display: none">
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane fade" id="product_tabs_tags">
+                                        <section class="col-main col-sm-9" id="send_message">
+                                            <div class="static-contain">
+                                                <form  method="POST" role="form" action="@routes.Messages.sendMessage2(user.id)" >
+                                                    <fieldset class="group-select">
+                                                        <ul>
+                                                            <li id="billing-new-address-form">
+                                                                <fieldset>
+                                                                    <ul>
+                                                                        <li>
+                                                                            <div class="input-box">
+                                                                                <label for="email">Email<span class="required">*</span></label>
+                                                                                <br>
+                                                                                <input type="text" id="email" name="email" title="Email" class="input-text" required>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li>
+                                                                            <div class="input-box">
+                                                                                <label for="subject">Naslov<span class="required">*</span></label>
+                                                                                <br>
+                                                                                <input type="text" id="subject" name="subject" title="Naslov" class="input-text" required>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="">
+                                                                            <label for="message">Poruka <em class="required">*</em></label>
+                                                                            <br>
+                                                                            <div class="">
+                                                                                <textarea name="message" id="message" title="Poruka" class="input-text" style="width: 50%; resize: vertical" required></textarea>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </fieldset>
+                                                            </li>
+                                                            <li><span class="require"><em class="required">* </em>Obavezna polja</span></li>
+                                                            <li><div class="buttons-set">
+                                                                <button type="submit" title="Pošalji" class="button submit"> <span> POŠALJI </span> </button>
+                                                            </div></li>
+                                                        </ul>
+                                                    </fieldset>
+                                                </form>
+                                            </div>
+                                        </section>
+                                    </div>
+
+                                    <div class="tab-pane fade" id="reviews_tabs">
+                                        <section class="featured-pro  wow bounceInUp animated">
+                                            <div class="slider-items-products">
+                                                <div id="best-seller-slider" class="product-flexslider hidden-buttons">
+                                                    <div class="slider-items slider-width-col4 products-grid">
+                                                    @for(item <- items) {
+                                                            <!-- Item -->
+                                                        <div class="col-md-12 item">
+                                                            <div class="item-inner">
+                                                                <div class="item-img">
+                                                                @if(item.images.size() > 0){
+                                                                    <div class="item-img-info"> <a class="product-image" title="@item.name" href="@routes.Items.itemRender(item.id)"> <img alt="Retis lapen casen" src='@models.Item.getFirstItemImage(item.id).getSize(179,217)'> </a>
+                                                                        <a class="quickview-btn" ><span>Quick View</span></a> </div>
+                                                                }else{
+                                                                    <div class="item-img-info"> <a class="product-image" title="@item.name" href='@routes.Items.itemRender(item.id)'> <img alt="Retis lapen casen" src='@routes.Assets.versioned("images/product.png")'> </a>
+                                                                        <a class="quickview-btn" ><span>Quick View</span></a> </div>
+                                                                }
+                                                                </div>
+                                                                <div class="item-info">
+                                                                    <div class="info-inner">
+                                                                        <div class="item-title"> <a title="Retis lapen casen" href="@routes.Items.itemRender(item.id)"> @item.name </a> </div>
+                                                                        <div class="item-content">
+                                                                            <div class="rating">
+                                                                                <div class="ratings">
+                                                                                    @if(item.average_Grade == 1) {
+                                                                                        <div class="rating-box">
+                                                                                            <div class="rating1"></div>
+                                                                                        </div>
+                                                                                    }
+                                                                                    @if(item.average_Grade == 2) {
+                                                                                        <div class="rating-box">
+                                                                                            <div class="rating2"></div>
+                                                                                        </div>
+                                                                                    }
+                                                                                    @if(item.average_Grade == 3) {
+                                                                                        <div class="rating-box">
+                                                                                            <div class="rating3"></div>
+                                                                                        </div>
+                                                                                    }
+                                                                                    @if(item.average_Grade == 4) {
+                                                                                        <div class="rating-box">
+                                                                                            <div class="rating4"></div>
+                                                                                        </div>
+                                                                                    }
+                                                                                    @if(item.average_Grade == 5) {
+                                                                                        <div class="rating-box">
+                                                                                            <div class="rating5"></div>
+                                                                                        </div>
+                                                                                    }
+                                                                                    @if(item.average_Grade == 0) {
+                                                                                        <div class="rating-box">
+                                                                                            <div class="rating0"></div>
+                                                                                        </div>
+                                                                                    }
+
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="item-price">
+                                                                                <div class="price-box"> <span class="regular-price"> <span class="price">@item.price</span> </span> </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                            <!-- End Item -->
+                                                    }
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div></div>
+    </section>
+    <!-- Main Container End -->
+
+    <!-- end service -->
+    <!--GOOGLE -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfCf4BKPmFsOCDcyc1sq-5OWwn1O4F2Rg&callback=initialize"></script>
+    <script src='@routes.Assets.versioned("javascripts/map.js")'></script>
+
+
+
+}

@@ -3,12 +3,16 @@ package controllers;
 import helpers.Authenticator;
 import models.AppUser;
 import models.Email;
+import models.Image;
+import models.Item;
 import play.data.DynamicForm;
 import play.data.Form;
 import play.mvc.Controller;
+import play.mvc.Http;
 import play.mvc.Result;
 import play.mvc.Security;
 
+import java.io.File;
 import java.util.List;
 
 /**
@@ -178,5 +182,54 @@ public class AppUsers extends Controller {
     public Result isUserActive(Integer userId) {
         AppUser.isUserActive(userId);
         return redirect(routes.AppUsers.listOfUsersRender());
+    }
+
+
+    /* ------------------- user description  ------------------ */
+    @Security.Authenticated(Authenticator.UserFilter.class)
+
+    public Result userDescriptionRender(Integer userId) {
+        AppUser user = AppUser.findUserById(userId);
+        return ok(views.html.AppUser.description.render(user));
+    }
+
+
+    /* ------------------- user description  ------------------ */
+    @Security.Authenticated(Authenticator.UserFilter.class)
+
+    public Result userDescription(Integer userId) {
+        DynamicForm form = Form.form().bindFromRequest();
+        String description = form.field("text").value();
+        AppUser.userDescription(userId, description);
+        return redirect(routes.AppUsers.userPanelRender(userId));
+    }
+
+
+            /* ------------------- user image redner ------------------ */
+
+    @Security.Authenticated(Authenticator.UserFilter.class)
+    public Result imagesUploadRender(Integer userId) {
+        AppUser user = AppUser.findUserById(userId);
+        return ok(views.html.AppUser.logo.render(user));
+    }
+
+
+        /* ------------------- user image  ------------------ */
+
+    @Security.Authenticated(Authenticator.UserFilter.class)
+    public Result imagesUpload(Integer userId) {
+        AppUser user = AppUser.findUserById(userId);
+
+        Http.MultipartFormData body1 = request().body().asMultipartFormData();
+        List<Http.MultipartFormData.FilePart> fileParts = body1.getFiles();
+        if (fileParts != null) {
+            for (Http.MultipartFormData.FilePart filePart1 : fileParts) {
+                File file = filePart1.getFile();
+                Image image = Image.createUserImage (file, user.id);
+                user.images.add(image);
+            }
+        }
+        user.update();
+        return redirect(routes.AppUsers.userPanelRender(user.id));
     }
 }

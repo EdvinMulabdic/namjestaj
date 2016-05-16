@@ -1,0 +1,65 @@
+@import helpers.UserAccessLevel
+@(users: java.util.List[AppUser])
+@main {
+    <!-- Main Container -->
+    <section class="main-container col2-left-layout bounceInUp animated">
+        <div class="container">
+            <div class="row">
+                <div class="col-main col-md-12">
+                    <article class="col-main">
+                        <div class="page-title">
+                            <h2>Partneri</h2>
+                        </div>
+                        <div class="toolbar">
+                            <div class="pager">
+                                <div class="pages">
+                                    <ul class="pagination">
+                                        <div id='page_navigation' class="pagination-custom"></div>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="category-products">
+                            <ol class="products-list" id="easyPaginate">
+                                @for(user <- users) {
+                                    <li class="item first">
+                                        <div class="product-image">
+                                            @if(user.images.size() != 0 ) {
+                                                <img class="small-image" src='@user.images.get(0).getSize(200,100)' alt="300X200">
+                                            }
+                                            @if(user.images.size() == 0) {
+                                                <img class="small-image" src='' alt="@user.name">
+                                            }
+
+                                        </div>
+                                        <div class="product-shop">
+                                            <h2 class="product-name"><a href="product_detail.html" title="Naziv">@user.name</a></h2>
+                                            <div class="desc std">
+                                                <p>Adresa: @user.address, @user.city </p>
+                                                <p>Email: @user.email</p>
+                                                <p>Radno vrijeme: @user.workTime</p>
+                                                @*<p>@user.description.substring(0,300) ... </p>*@
+                                            </div>
+                                            <form method="GET" role="form" action="@routes.Partners.partnerPageRender(user.id)">
+                                                <div class="actions">
+                                                    <button class="button" title="Pročitaj"><i class="fa fa-eye"></i> <span>Pročitaj</span></button>
+
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </li>
+                                }
+                            </ol>
+                        </div>
+                    </article>
+                        <!--	///*///======    End article  ========= //*/// -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <input type='hidden' id='current_page' />
+    <input type='hidden' id='show_per_page' />
+
+    <script src='@routes.Assets.versioned("javascripts/paginacija.js")'></script>
+    <!-- Main Container End -->
+}

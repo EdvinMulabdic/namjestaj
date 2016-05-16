@@ -221,7 +221,7 @@
                                    IDEJE</span></a></li>
                             <li class="level0 nav-8 level-top"><a href="@routes.NewsController.newsPanelRender()" class="level-top"><span>
                                    VIJESTI</span></a></li>
-                            <li class="level0 nav-8 level-top"><a href="@routes.Application.index()" class="level-top"><span>
+                            <li class="level0 nav-8 level-top"><a href="@routes.Partners.partnerPanel()" class="level-top"><span>
                                    PARTNERI</span></a></li>
                             @if(currentUser == null) {
                                 <li class="level0 nav-8 level-top"><a href="@routes.Login.loginPageRender()" class="level-top"><span>
@@ -341,14 +341,16 @@
                                     }
                                 }
                             }
-                                @*<!-- Search-col -->*@
-                            @*<div class="search-box pull-right">*@
-                                @*<form action="cat" method="POST" id="search_mini_form" name="Categories">*@
-                                    @*<input type="text" placeholder="Search entire store here..."  maxlength="70" name="search" id="search" >*@
-                                    @*<button type="button" class="search-btn-bg"><span class="fa fa-search"></span>&nbsp;</button>*@
-                                @*</form>*@
-                            @*</div>*@
-                                @*<!-- End Search-col -->*@
+                                <!-- Search-col -->
+                            <div class="search-box pull-right">
+                                <form action="@routes.Items.searchBox()" method="POST" id="search_mini_form" name="Categories">
+                                    <input type="text" placeholder="Pretražite po nazivu, cijeni, kategoriji ..."  maxlength="70" name="search" id="search">
+                                    <button type="button" class="search-btn-bg"><span class="fa fa-search"></span>&nbsp;</button>
+                                    <div name="results"></div>
+                                </form>
+                            </div>
+                                <!-- End Search-col -->
+
                         </ul>
                     </div>
                 </div>
@@ -360,7 +362,6 @@
             <div style="margin-top: 60px">
                 @content
             </div>
-
                 <!-- Footer -->
             <footer>
                 <div class="footer-inner">
@@ -432,18 +433,18 @@
         </div>
         <div id="mobile-menu">
             <ul>
-                @*<li>*@
-                    @*<div class="mm-search">*@
-                        @*<form name="search">*@
-                            @*<div class="input-group">*@
-                                @*<div class="input-group-btn">*@
-                                    @*<button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>*@
-                                @*</div>*@
-                                @*<input type="text" class="form-control simple" placeholder="Search ..." name="srch-term" id="srch-term">*@
-                            @*</div>*@
-                        @*</form>*@
-                    @*</div>*@
-                @*</li>*@
+                <li>
+                    <div class="mm-search">
+                        <form action="@routes.Items.searchBoxMobile()" method="POST">
+                            <div class="input-group">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+                                </div>
+                                <input type="text" class="form-control simple" placeholder="Pretraga ..." name="search-mobile" id="srch-term">
+                            </div>
+                        </form>
+                    </div>
+                </li>
             <li><a href="">POČETNA</a></li>
                 <li><a href="#">NAMJEŠTAJ</a>
                     <ul>
@@ -463,11 +464,11 @@
 
                     </ul>
                 </li>
-                <li><a href="#">AKCIJA</a></li>
+                <li><a href="@routes.Items.itemsOnSale()">AKCIJA</a></li>
                 <li><a href="#">TOP PONUDA</a></li>
                 <li><a href="#">IDEJE</a></li>
                 <li><a href="@routes.NewsController.newsPanelRender()">VIJESTI</a></li>
-                <li><a href="#">PARTNERI</a></li>
+                <li><a href="@routes.Partners.partnerPanel()">PARTNERI</a></li>
                 @if(currentUser == null) {
                     <li><a href="@routes.Login.loginPageRender()" class="level-top"><span>Log In</span></a></li>
                 } else {

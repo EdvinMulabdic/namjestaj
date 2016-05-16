@@ -61,7 +61,7 @@
                                 <div class="price-block">
                                     <div class="price-box">
                                         <p class="special-price"> <span class="price-label"></span> <span id="product-price-48" class="price"> @item.price KM </span> </p>
-                                        @if(item.oldPrice != null && item.oldPrice != "" ){
+                                        @if(item.oldPrice != null && item.oldPrice != "0" ){
                                             <p class="old-price"> <span class="price-label"></span> <span class="price"> @item.oldPrice KM </span>
                                                 }
                                     </div>
@@ -232,12 +232,12 @@
                                                                         <td class="value"><input type="radio" class="radio" value="2" id="Price_2" name="ratings" onclick="gg()"></td>
                                                                         <td class="value"><input type="radio" class="radio" value="3" id="Price_3" name="ratings" onclick="gg()"></td>
                                                                         <td class="value"><input type="radio" class="radio" value="4" id="Price_4" name="ratings" onclick="gg()"></td>
-                                                                        <td class="value last"><input type="radio" class="radio" value="5" id="Price_5" name="ratings" onclick="gg()"></td>
+                                                                        <td class="value last"><input type="radio" class="radio" value="5" id="Price_5" name="ratings" onclick="gg()" checked></td>
                                                                     </tr>
 
                                                                 </tbody>
                                                             </table>
-                                                            <input type="text" id="ocjena" name="mark" hidden>
+                                                            <input type="text" id="ocjena" name="mark" value="5" hidden>
                                                             <div class="review1">
                                                                     <div class="input-box name-firstname">
                                                                         <label for="name">Ime i prezime: <span class="required">*</span></label>

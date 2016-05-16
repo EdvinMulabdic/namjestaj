@@ -37,6 +37,11 @@ GET           /userpanel/:userId                             @controllers.AppUse
 GET           /azuriranjepodatakauser/:userId                @controllers.AppUsers.updateUserInformationsRender(userId: Integer)
 POST          /azuriranjepodatakauser/:userId                @controllers.AppUsers.updateUserInformations(userId: Integer)
 POST          /userpanel/:userId                             @controllers.AppUsers.updateUserPassword(userId: Integer)
+GET           /opis/:userId                                  @controllers.AppUsers.userDescriptionRender(userId: Integer)
+POST          /opis/:userId                                  @controllers.AppUsers.userDescription(userId: Integer)
+GET           /logo/:userId                                  @controllers.AppUsers.imagesUploadRender(userId: Integer)
+POST          /logo/:userId                                  @controllers.AppUsers.imagesUpload(userId: Integer)
+
 
 #ITEM
 GET           /listaproizvoda/:userId                        @controllers.Items.listOfItems(userId: Integer)
@@ -104,6 +109,8 @@ POST          /uploadslika/:itemId                           @controllers.Images
 GET           /listaslika/:itemId                            @controllers.Images.listOfPicturesRender(itemId: Integer)
 GET           /brisanjeslike/:imageId                        @controllers.Images.deleteImage(imageId: String)
 DELETE        /brisanjeslike/:imageId                        @controllers.Images.deleteImage(imageId: String)
+GET           /brisanjelogo/:imageId                         @controllers.Images.deleteLogo(imageId: String)
+DELETE        /brisanjelogo/:imageId                         @controllers.Images.deleteLogo(imageId: String)
 
 #AJAX LAST TEN PRODUCTS
 POST          /                                              @controllers.Items.lastTenProducts()
@@ -115,6 +122,8 @@ GET           /poruka/:messageId                             @controllers.Messag
 GET           /brisanjeporuke/:messageId                     @controllers.Messages.deleteMessage(messageId: Integer)
 GET           /messagenotif                                  @controllers.Messages.notifications()
 GET           /porukekoisnika/:userId                        @controllers.Messages.listOfMessagesForAdmin(userId: Integer)
+POST          /porukauseru/:userId                           @controllers.Messages.sendMessage2(userId: Integer)
+
 
 #NEWS
 GET           /vijest/:newsId                                @controllers.NewsController.newsRender(newsId: Integer)
@@ -132,3 +141,10 @@ GET           /ocjene/:itemId                                @controllers.Review
 GET           /brisanjeocjene/:reviewId                      @controllers.Reviews.deleteReview(reviewId: Integer)
 DELETE        /brisanjeocjene/:reviewId                      @controllers.Reviews.deleteReview(reviewId: Integer)
 
+#PARTNERI
+GET           /partneri                                      @controllers.Partners.partnerPanel()
+GET           /partner/:userId                               @controllers.Partners.partnerPageRender(userId: Integer)
+
+#SEARCH
+POST          /pretraga                                      @controllers.Items.searchBox()
+POST          /pretragatelefon                               @controllers.Items.searchBoxMobile()

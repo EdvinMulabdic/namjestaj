@@ -73,7 +73,19 @@ public class Review extends Model{
     public static Integer deleteReview(Integer reviewId) {
         Review review = findReviewById(reviewId);
         review.delete();
-        return review.item.id;
+        Item item = Item.findItemById(review.item.id);
+        List<Integer> itemsGrades = allItemsGrades(item.id);
+        Integer sum = 0;
+        Integer averageGrade = 0;
+        if(itemsGrades.size() > 0 ) {
+            for (int i = 0; i < itemsGrades.size(); i++) {
+                sum += itemsGrades.get(i);
+            }
+            averageGrade = sum / itemsGrades.size();
+            item.average_Grade = averageGrade;
+            item.update();
+        }
+        return item.id;
     }
 
 

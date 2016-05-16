@@ -13,23 +13,36 @@
                             <!-- BEGIN BOX-CATEGORY -->
                         <div class="box-content box-category">
                             <ul>
-                                <li> <a href="">NAMEŠTAJ</a><span class="subDropdown plus"></span>
-                                    <ul class="level0_455">
-                                    @for(category <- models.Category.findAllCategories()) {
-                                        <li> <a href="@routes.Items.getItemsWithSubCategory(category.id)"> @category.name </a></li>
-                                    }
-                                    </ul>
-                                        <!--level0-->
+                                <li> <a>NAMEŠTAJ <i class="fa fa-angle-down"></i></a>
+                                  <ul class="level0_455">
+                                  @for(category <- models.Category.findAllCategories()) {
+                                      <li> <a href="@routes.Items.getItemsWithSubCategory(category.id)"> @category.name </a></li>
+                                  }
+                                  </ul>
+                                      <!--level0-->
                                 </li>
 
-                                <li> <a href="">AKCIJA</a></li>
+                                <li> <a href="@routes.Items.itemsOnSale()">AKCIJA</a></li>
                                 <li> <a href="">TOP PONUDA</a></li>
                                 <li> <a href="">IDEJE</a></li>
-                                <li> <a href="">VIJESTI</a></li>
-                                <li> <a href="">PARTNERI</a></li>
+                                <li> <a href="@routes.NewsController.newsPanelRender()">VIJESTI</a></li>
+                                <li> <a href="@routes.Partners.partnerPanel()">PARTNERI</a></li>
                             </ul>
                         </div>
                             <!--box-content box-category-->
+                        @*<div class="dropdown">*@
+                            @*<a  class="dropbtn">NAMJEŠTAJ</a><span class="subDropdown plus"></span>*@
+                            @*<div class="dropdown-content">*@
+                            @*/@for(category <- models.Category.findAllCategories()) {*@
+                                @*<a href="@routes.Items.getItemsWithSubCategory(category.id)">@category.name</a>*@
+                            @*}*@
+
+                            @*</div>*@
+                            @*<div class="dropdown-content">*@
+
+                            @*</div>*@
+                        @*</div>*@
+
                     </div>
                 </div>
                 <div class="col-lg-9 col-sm-12 col-md-8 bounceInUp animated">
@@ -91,7 +104,15 @@
                     <div class="col"><a href="#"><img src='@routes.Assets.versioned("images/block3.jpg")' alt="offer banner3"></a></div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 wow bounceup animated">
-                    <div class="col"><a href="#"><img src='@routes.Assets.versioned("images/block3.jpg")' alt="offer banner3"></a></div>
+                    <div class="col">
+                        <a href="@routes.Items.itemRender(1)">
+                            @if(models.Item.findItemById(1).images.size() > 0 ) {
+                                <img src='@models.Item.findItemById(1).images.get(0).getSize(370,220)' alt="offer banner3">
+                            }else {
+                                <img src='@routes.Assets.versioned("images/product.png")' style="width: 370px; height: 220px" alt="">
+                            }
+                        </a>
+                    </div>
                 </div>
 
         </div>
@@ -103,8 +124,8 @@
             <div class="add_info">
                 <ul id="product-detail-tab" class="nav nav-tabs product-tabs">
                     <li class="active"> <a href="#product_tabs_description" data-toggle="tab">IZDVOJENI PROIZVODI</a> </li>
-                    <li><a href="#product_tabs_tags" data-toggle="tab">NAJNOVIJI</a></li>
-                    <li> <a href="#product_tabs_custom" data-toggle="tab">Custom Tab</a> </li>
+                    <li> <a href="#product_tabs_toprated" data-toggle="tab">NAJBOLJE OCIJENJENI</a> </li>
+                    <li><a href="#product_tabs_tags" data-toggle="tab">SVI PROIZVODI</a></li>
                 </ul>
 
 
@@ -122,11 +143,11 @@
                                                 <div class="item-img">
                                                 @if(item.images.size() > 0){
                                                     <div class="item-img-info"> <a class="product-image" title="@item.name" href="@routes.Items.itemRender(item.id)"> <img alt="Retis lapen casen" src='@models.Item.getFirstItemImage(item.id).getSize(179,217)'> </a>
-                                                        <div class="new-label new-top-left">new</div>
+
                                                         <a class="quickview-btn" ><span>Quick View</span></a> </div>
                                                 }else{
                                                     <div class="item-img-info"> <a class="product-image" title="@item.name" href='@routes.Items.itemRender(item.id)'> <img alt="Retis lapen casen" src='@routes.Assets.versioned("images/product.png")'> </a>
-                                                        <div class="new-label new-top-left">new</div>
+
                                                         <a class="quickview-btn" ><span>Quick View</span></a> </div>
                                                 }
                                                 </div>
@@ -191,29 +212,175 @@
                         </section>
                     </div>
 
+                    <div class="tab-pane fade" id="product_tabs_toprated">
+                        <div class="box-collateral box-tags">
+
+                            <section class="featured-pro">
+                                <div class="slider-items-products">
+                                    <div id="best-seller-slider" class="product-flexslider hidden-buttons">
+                                        <div class="slider-items slider-width-col4 products-grid">
+                                        @for(item <- models.Item.topRatedItems()) {
+                                                <!-- Item -->
+                                            <div class="col-md-12 item">
+                                                <div class="item-inner">
+                                                    <div class="item-img">
+                                                    @if(item.images.size() > 0){
+                                                        <div class="item-img-info"> <a class="product-image" title="@item.name" href="@routes.Items.itemRender(item.id)"> <img alt="Retis lapen casen" src='@models.Item.getFirstItemImage(item.id).getSize(179,217)'> </a>
+                                                            <div class="new-label new-top-left">new</div>
+                                                            <a class="quickview-btn" ><span>Quick View</span></a> </div>
+                                                    }else{
+                                                        <div class="item-img-info"> <a class="product-image" title="@item.name" href='@routes.Items.itemRender(item.id)'> <img alt="Retis lapen casen" src='@routes.Assets.versioned("images/product.png")'> </a>
+                                                            <div class="new-label new-top-left">new</div>
+                                                            <a class="quickview-btn" ><span>Quick View</span></a> </div>
+                                                    }
+                                                    </div>
+                                                    <div class="item-info">
+                                                        <div class="info-inner">
+                                                            <div class="item-title"> <a title="Retis lapen casen" href="@routes.Items.itemRender(item.id)"> @item.name </a> </div>
+                                                            <div class="item-content">
+                                                                <div class="rating">
+                                                                    <div class="ratings">
+                                                                        @if(item.average_Grade == 1) {
+                                                                            <div class="rating-box">
+                                                                                <div class="rating1"></div>
+                                                                            </div>
+                                                                        }
+                                                                        @if(item.average_Grade == 2) {
+                                                                            <div class="rating-box">
+                                                                                <div class="rating2"></div>
+                                                                            </div>
+                                                                        }
+                                                                        @if(item.average_Grade == 3) {
+                                                                            <div class="rating-box">
+                                                                                <div class="rating3"></div>
+                                                                            </div>
+                                                                        }
+                                                                        @if(item.average_Grade == 4) {
+                                                                            <div class="rating-box">
+                                                                                <div class="rating4"></div>
+                                                                            </div>
+                                                                        }
+                                                                        @if(item.average_Grade == 5) {
+                                                                            <div class="rating-box">
+                                                                                <div class="rating5"></div>
+                                                                            </div>
+                                                                        }
+                                                                        @if(item.average_Grade == 0) {
+                                                                            <div class="rating-box">
+                                                                                <div class="rating0"></div>
+                                                                            </div>
+                                                                        }
+
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item-price">
+                                                                    <div class="price-box"> <span class="regular-price"> <span class="price">@item.price</span> </span> </div>
+                                                                </div>
+                                                                @*<div class="actions"><a href="wishlist.html" class="link-wishlist" title="Add to Wishlist"></a>*@
+                                                                @*<div class="add_cart">*@
+                                                                @*<button class="button btn-cart" type="button"><span>Add to Cart</span></button>*@
+                                                                @*</div>*@
+                                                                @*<a href="compare.html" class="link-compare" title="Add to Compare"></a> *@
+                                                                @*</div>*@
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                                <!-- End Item -->
+                                        }
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+
+
                     <div class="tab-pane fade" id="product_tabs_tags">
                         <div class="box-collateral box-tags">
                                                             <!--tags-->
-                            <p class="note">Odluciti sta ce ici ovdje</p>
+                            <section class="featured-pro">
+                                <div class="slider-items-products">
+                                    <div id="best-seller-slider" class="product-flexslider hidden-buttons">
+                                        <div class="slider-items slider-width-col4 products-grid">
+                                        @for(item <- models.Item.allActiveItemsShuffled()) {
+                                                <!-- Item -->
+                                            <div class="col-md-12 item">
+                                                <div class="item-inner">
+                                                    <div class="item-img">
+                                                    @if(item.images.size() > 0){
+                                                        <div class="item-img-info"> <a class="product-image" title="@item.name" href="@routes.Items.itemRender(item.id)"> <img alt="Retis lapen casen" src='@models.Item.getFirstItemImage(item.id).getSize(179,217)'> </a>
+
+                                                            <a class="quickview-btn" ><span>Quick View</span></a> </div>
+                                                    }else{
+                                                        <div class="item-img-info"> <a class="product-image" title="@item.name" href='@routes.Items.itemRender(item.id)'> <img alt="Retis lapen casen" src='@routes.Assets.versioned("images/product.png")'> </a>
+
+                                                            <a class="quickview-btn" ><span>Quick View</span></a> </div>
+                                                    }
+                                                    </div>
+                                                    <div class="item-info">
+                                                        <div class="info-inner">
+                                                            <div class="item-title"> <a title="Retis lapen casen" href="@routes.Items.itemRender(item.id)"> @item.name </a> </div>
+                                                            <div class="item-content">
+                                                                <div class="rating">
+                                                                    <div class="ratings">
+                                                                        @if(item.average_Grade == 1) {
+                                                                            <div class="rating-box">
+                                                                                <div class="rating1"></div>
+                                                                            </div>
+                                                                        }
+                                                                        @if(item.average_Grade == 2) {
+                                                                            <div class="rating-box">
+                                                                                <div class="rating2"></div>
+                                                                            </div>
+                                                                        }
+                                                                        @if(item.average_Grade == 3) {
+                                                                            <div class="rating-box">
+                                                                                <div class="rating3"></div>
+                                                                            </div>
+                                                                        }
+                                                                        @if(item.average_Grade == 4) {
+                                                                            <div class="rating-box">
+                                                                                <div class="rating4"></div>
+                                                                            </div>
+                                                                        }
+                                                                        @if(item.average_Grade == 5) {
+                                                                            <div class="rating-box">
+                                                                                <div class="rating5"></div>
+                                                                            </div>
+                                                                        }
+                                                                        @if(item.average_Grade == 0) {
+                                                                            <div class="rating-box">
+                                                                                <div class="rating0"></div>
+                                                                            </div>
+                                                                        }
+
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item-price">
+                                                                    <div class="price-box"> <span class="regular-price"> <span class="price">@item.price</span> </span> </div>
+                                                                </div>
+                                                                @*<div class="actions"><a href="wishlist.html" class="link-wishlist" title="Add to Wishlist"></a>*@
+                                                                @*<div class="add_cart">*@
+                                                                @*<button class="button btn-cart" type="button"><span>Add to Cart</span></button>*@
+                                                                @*</div>*@
+                                                                @*<a href="compare.html" class="link-compare" title="Add to Compare"></a> *@
+                                                                @*</div>*@
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                                <!-- End Item -->
+                                        }
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
                         </div>
                     </div>
 
-                    <div class="tab-pane fade" id="product_tabs_custom">
-                        <div class="product-tabs-content-inner clearfix">
-                            <p> <strong> Comfortable </strong><span>&nbsp;preshrunk shirts. Highest Quality Printing.  6.1 oz. 100% preshrunk heavyweight cotton Shoulder-to-shoulder taping Double-needle sleeves and bottom hem
-
-                                Lorem Ipsumis
-                                simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                                has been the industry's standard dummy text ever since the 1500s, when
-                                an unknown printer took a galley of type and scrambled it to make a type
-                                specimen book. It has survived not only five centuries, but also the
-                                leap into electronic typesetting, remaining essentially unchanged. It
-                                was popularised in the 1960s with the release of Letraset sheets
-                                containing Lorem Ipsum passages, and more recently with desktop
-                                publishing software like Aldus PageMaker including versions of Lorem
-                                Ipsum.</span></p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -357,38 +524,11 @@
             <div class="slider-items-products">
                 <div id="brand-logo-slider" class="product-flexslider hidden-buttons">
                     <div class="slider-items slider-width-col6">
-
+                        @for(user <- models.AppUser.usersWithLogo()){
                             <!-- Item -->
-                        <div class="item"><a href="#"><img src='@routes.Assets.versioned("images/b-logo3.png")' alt="Image"></a> </div>
-                            <!-- End Item -->
-
-                            <!-- Item -->
-                        <div class="item"><a href="#"><img src='@routes.Assets.versioned("images/b-logo2.png")' alt="Image"></a> </div>
-                            <!-- End Item -->
-
-                            <!-- Item -->
-                        <div class="item"><a href="#"><img src='@routes.Assets.versioned("images/b-logo1.png")' alt="Image"></a> </div>
-                            <!-- End Item -->
-
-                            <!-- Item -->
-                        <div class="item"><a href="#"><img src='@routes.Assets.versioned("images/b-logo4.png")' alt="Image"></a> </div>
-                            <!-- End Item -->
-
-                            <!-- Item -->
-                        <div class="item"><a href="#"><img src='@routes.Assets.versioned("images/b-logo5.png")' alt="Image"></a> </div>
-                            <!-- End Item -->
-
-                            <!-- Item -->
-                        <div class="item"><a href="#"><img src='@routes.Assets.versioned("images/b-logo6.png")' alt="Image"></a> </div>
-                            <!-- End Item -->
-
-                            <!-- Item -->
-                        <div class="item"><a href="#"><img src='@routes.Assets.versioned("images/b-logo1.png")' alt="Image"></a> </div>
-                            <!-- End Item -->
-
-                            <!-- Item -->
-                        <div class="item"><a href="#"><img src='@routes.Assets.versioned("images/b-logo4.png")' alt="Image"></a> </div>
-                            <!-- End Item -->
+                            <div class="item"><a href="@routes.Partners.partnerPageRender(user.id)"><img src='@user.images.get(0).getSize(178,77)' alt="Image"></a> </div>
+                                <!-- End Item -->
+                        }
                     </div>
                 </div>
             </div>
@@ -414,8 +554,16 @@
                     </div>
                 }
             </div>
+
         </div>
     </section>
     <!-- End Latest Blog -->
+<style>
 
+
+    .box-content li:hover .level0_455{
+    display: block;
+    }
+
+</style>
 }

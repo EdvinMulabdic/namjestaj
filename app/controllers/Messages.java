@@ -21,7 +21,7 @@ import java.util.List;
  */
 public class Messages extends Controller {
 
-        /* ------------------- send  message  ------------------ */
+        /* ------------------- send  message by from item view  ------------------ */
 
     public Result sendMessage (Integer itemId) {
         Item item = Item.findItemById(itemId);
@@ -40,6 +40,23 @@ public class Messages extends Controller {
         }
     }
 
+    /* ------------------- send  message by from user view  ------------------ */
+
+    public Result sendMessage2 (Integer userId) {
+        DynamicForm form = Form.form().bindFromRequest();
+        String customerEmail = form.field("email").value();
+        String subject = form.field("subject").value();
+        String messageText = form.field("message").value();
+
+        Boolean sent = Message.saveMessage(customerEmail,subject, messageText, userId);
+        if(sent) {
+            flash("success", "Poruka uspješno poslana. Potrudit ćemo se da odgovorimo u najkraćem roku. Hvala!");
+            return redirect(routes.Partners.partnerPageRender(userId));
+        } else {
+            flash("error", "Došlo je do greške. Poruka nije poslana.Molimo pokušajte ponovo. Hvala!");
+            return redirect(routes.Partners.partnerPageRender(userId));
+        }
+    }
         /* ------------------- list of  messages  ------------------ */
         @Security.Authenticated(Authenticator.AdminUserFilter.class)
     public Result listOfMessages(Integer userId) {

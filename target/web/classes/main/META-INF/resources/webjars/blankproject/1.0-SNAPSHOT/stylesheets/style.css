@@ -370,6 +370,7 @@ a {
 	border-radius: 20px;
 	border-top: 1px #ddd solid;
 	text-align:left;
+    margin-right: 50px;
 }
 #search {
 	margin: 0;
@@ -930,6 +931,7 @@ nav {
 
 .nav-inner {
 	position: relative;
+	margin-top: 15px;
 }
 #nav > li > a.active:nth-child(1) {
 	color: #fff;
@@ -3536,6 +3538,7 @@ ol.products-list {
 	margin: 0;
 	float: left;
 	margin-top: 10px;
+	width: 90%;
 }
 li .list {
 	border-bottom: none;
@@ -4411,7 +4414,7 @@ a.button.detail-bnt span {
 	background: url(../images/bkg_rating.png) 0 100% repeat-x;
 	width:100%
 }
-.rating-box .rating5 {
+.rating-box .rating0 {
 	float: left;
 	height: 9px;
 	background: url(../images/bkg_rating.png) 0 100% repeat-x;

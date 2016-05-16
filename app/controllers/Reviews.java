@@ -22,9 +22,10 @@ public class Reviews extends Controller {
         String email = form.field("email").value();
         String phone = form.field("phone").value();
 
-        Review.saveReview(mark, name, email, phone, itemId);
-        flash("success", "Hvala Vam što se odvojili vrijeme i ocijenili proizvod.");
-        return redirect(routes.Items.itemRender(itemId));
+            Review.saveReview(mark, name, email, phone, itemId);
+            flash("success", "Hvala Vam što se odvojili vrijeme i ocijenili proizvod.");
+            return redirect(routes.Items.itemRender(itemId));
+
     }
 
 

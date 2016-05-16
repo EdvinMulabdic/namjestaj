@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:E:/namjestaj/conf/routes
-// @DATE:Fri Apr 22 20:05:54 CEST 2016
+// @DATE:Sun May 15 23:50:58 CEST 2016
 
 package controllers;
 
@@ -14,6 +14,7 @@ public class routes {
   public static final controllers.ReverseNewsController NewsController = new controllers.ReverseNewsController(RoutesPrefix.byNamePrefix());
   public static final controllers.ReverseLogin Login = new controllers.ReverseLogin(RoutesPrefix.byNamePrefix());
   public static final controllers.ReverseMessages Messages = new controllers.ReverseMessages(RoutesPrefix.byNamePrefix());
+  public static final controllers.ReversePartners Partners = new controllers.ReversePartners(RoutesPrefix.byNamePrefix());
   public static final controllers.ReverseStores Stores = new controllers.ReverseStores(RoutesPrefix.byNamePrefix());
   public static final controllers.ReverseAppUsers AppUsers = new controllers.ReverseAppUsers(RoutesPrefix.byNamePrefix());
   public static final controllers.ReverseApplication Application = new controllers.ReverseApplication(RoutesPrefix.byNamePrefix());
@@ -29,6 +30,7 @@ public class routes {
     public static final controllers.javascript.ReverseNewsController NewsController = new controllers.javascript.ReverseNewsController(RoutesPrefix.byNamePrefix());
     public static final controllers.javascript.ReverseLogin Login = new controllers.javascript.ReverseLogin(RoutesPrefix.byNamePrefix());
     public static final controllers.javascript.ReverseMessages Messages = new controllers.javascript.ReverseMessages(RoutesPrefix.byNamePrefix());
+    public static final controllers.javascript.ReversePartners Partners = new controllers.javascript.ReversePartners(RoutesPrefix.byNamePrefix());
     public static final controllers.javascript.ReverseStores Stores = new controllers.javascript.ReverseStores(RoutesPrefix.byNamePrefix());
     public static final controllers.javascript.ReverseAppUsers AppUsers = new controllers.javascript.ReverseAppUsers(RoutesPrefix.byNamePrefix());
     public static final controllers.javascript.ReverseApplication Application = new controllers.javascript.ReverseApplication(RoutesPrefix.byNamePrefix());

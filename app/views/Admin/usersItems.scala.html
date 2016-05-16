@@ -16,7 +16,7 @@
                             <tr class="about">
                                 <th>Naziv proizvoda</th>
                                 <th>Aktivan</th>
-                                <th class="text-center">Datum dodavanja</th>
+                                <th class="text-center">Datum aktivacije</th>
                                 <th class="text-center">Datum deaktivacije</th>
                                 <th class="text-center">Datum blokiranja</th>
                             </tr>
@@ -33,6 +33,7 @@
                                 }
 
                                 <td class="text-center">@item.dateOfActivation</td>
+
                                 @if(item.isActive == true) {
                                     <td class="text-center">Proizvod je aktivan</td>
                                 }

@@ -11,6 +11,7 @@ create table app_user (
   city                      varchar(255),
   address                   varchar(255),
   work_time                 varchar(255),
+  description               TEXT,
   password                  varchar(255),
   user_access_level         integer,
   is_active                 tinyint(1) default 0,
@@ -30,6 +31,7 @@ create table image (
   secret_image_url          varchar(255),
   item_id                   integer,
   news_id                   integer,
+  user_id                   integer,
   constraint pk_image primary key (id))
 ;
 
@@ -103,22 +105,24 @@ alter table image add constraint fk_image_item_1 foreign key (item_id) reference
 create index ix_image_item_1 on image (item_id);
 alter table image add constraint fk_image_news_2 foreign key (news_id) references news (id) on delete restrict on update restrict;
 create index ix_image_news_2 on image (news_id);
-alter table item add constraint fk_item_user_3 foreign key (user_id) references app_user (id) on delete restrict on update restrict;
-create index ix_item_user_3 on item (user_id);
-alter table item add constraint fk_item_category_4 foreign key (category_id) references category (id) on delete restrict on update restrict;
-create index ix_item_category_4 on item (category_id);
-alter table item add constraint fk_item_subCategory_5 foreign key (sub_category_id) references sub_category (id) on delete restrict on update restrict;
-create index ix_item_subCategory_5 on item (sub_category_id);
-alter table message add constraint fk_message_user_6 foreign key (user_id) references app_user (id) on delete restrict on update restrict;
-create index ix_message_user_6 on message (user_id);
-alter table news add constraint fk_news_user_7 foreign key (user_id) references app_user (id) on delete restrict on update restrict;
-create index ix_news_user_7 on news (user_id);
-alter table review add constraint fk_review_item_8 foreign key (item_id) references item (id) on delete restrict on update restrict;
-create index ix_review_item_8 on review (item_id);
-alter table store add constraint fk_store_user_9 foreign key (user_id) references app_user (id) on delete restrict on update restrict;
-create index ix_store_user_9 on store (user_id);
-alter table sub_category add constraint fk_sub_category_category_10 foreign key (category_id) references category (id) on delete restrict on update restrict;
-create index ix_sub_category_category_10 on sub_category (category_id);
+alter table image add constraint fk_image_user_3 foreign key (user_id) references app_user (id) on delete restrict on update restrict;
+create index ix_image_user_3 on image (user_id);
+alter table item add constraint fk_item_user_4 foreign key (user_id) references app_user (id) on delete restrict on update restrict;
+create index ix_item_user_4 on item (user_id);
+alter table item add constraint fk_item_category_5 foreign key (category_id) references category (id) on delete restrict on update restrict;
+create index ix_item_category_5 on item (category_id);
+alter table item add constraint fk_item_subCategory_6 foreign key (sub_category_id) references sub_category (id) on delete restrict on update restrict;
+create index ix_item_subCategory_6 on item (sub_category_id);
+alter table message add constraint fk_message_user_7 foreign key (user_id) references app_user (id) on delete restrict on update restrict;
+create index ix_message_user_7 on message (user_id);
+alter table news add constraint fk_news_user_8 foreign key (user_id) references app_user (id) on delete restrict on update restrict;
+create index ix_news_user_8 on news (user_id);
+alter table review add constraint fk_review_item_9 foreign key (item_id) references item (id) on delete restrict on update restrict;
+create index ix_review_item_9 on review (item_id);
+alter table store add constraint fk_store_user_10 foreign key (user_id) references app_user (id) on delete restrict on update restrict;
+create index ix_store_user_10 on store (user_id);
+alter table sub_category add constraint fk_sub_category_category_11 foreign key (category_id) references category (id) on delete restrict on update restrict;
+create index ix_sub_category_category_11 on sub_category (category_id);
 
 
 

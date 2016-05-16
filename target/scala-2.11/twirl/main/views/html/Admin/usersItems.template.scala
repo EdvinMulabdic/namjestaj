@@ -47,7 +47,7 @@ Seq[Any](format.raw/*1.31*/("""
                             <tr class="about">
                                 <th>Naziv proizvoda</th>
                                 <th>Aktivan</th>
-                                <th class="text-center">Datum dodavanja</th>
+                                <th class="text-center">Datum aktivacije</th>
                                 <th class="text-center">Datum deaktivacije</th>
                                 <th class="text-center">Datum blokiranja</th>
                             </tr>
@@ -64,31 +64,32 @@ Seq[Any](format.raw/*1.31*/("""
                                 """)))}),format.raw/*33.34*/("""
 
                                 """),format.raw/*35.33*/("""<td class="text-center">"""),_display_(/*35.58*/item/*35.62*/.dateOfActivation),format.raw/*35.79*/("""</td>
-                                """),_display_(/*36.34*/if(item.isActive == true)/*36.59*/ {_display_(Seq[Any](format.raw/*36.61*/("""
-                                    """),format.raw/*37.37*/("""<td class="text-center">Proizvod je aktivan</td>
-                                """)))}),format.raw/*38.34*/("""
-                                """),_display_(/*39.34*/if(item.isActive == false)/*39.60*/ {_display_(Seq[Any](format.raw/*39.62*/("""
-                                    """),format.raw/*40.37*/("""<td class="text-center">"""),_display_(/*40.62*/item/*40.66*/.dateOfDeActivation),format.raw/*40.85*/("""</td>
-                                """)))}),format.raw/*41.34*/("""
 
-                                """),_display_(/*43.34*/if(item.isBlocked == false)/*43.61*/ {_display_(Seq[Any](format.raw/*43.63*/("""
-                                    """),format.raw/*44.37*/("""<td class="text-center">Proizvod nije blokiran</td>
-                                """)))}),format.raw/*45.34*/("""
-                                """),_display_(/*46.34*/if(item.isBlocked == true)/*46.60*/ {_display_(Seq[Any](format.raw/*46.62*/("""
-                                    """),format.raw/*47.37*/("""<td class="text-center">"""),_display_(/*47.62*/item/*47.66*/.blockingDate),format.raw/*47.79*/("""</td>
-                                """)))}),format.raw/*48.34*/("""
+                                """),_display_(/*37.34*/if(item.isActive == true)/*37.59*/ {_display_(Seq[Any](format.raw/*37.61*/("""
+                                    """),format.raw/*38.37*/("""<td class="text-center">Proizvod je aktivan</td>
+                                """)))}),format.raw/*39.34*/("""
+                                """),_display_(/*40.34*/if(item.isActive == false)/*40.60*/ {_display_(Seq[Any](format.raw/*40.62*/("""
+                                    """),format.raw/*41.37*/("""<td class="text-center">"""),_display_(/*41.62*/item/*41.66*/.dateOfDeActivation),format.raw/*41.85*/("""</td>
+                                """)))}),format.raw/*42.34*/("""
 
-                            """),format.raw/*50.29*/("""</tr>
+                                """),_display_(/*44.34*/if(item.isBlocked == false)/*44.61*/ {_display_(Seq[Any](format.raw/*44.63*/("""
+                                    """),format.raw/*45.37*/("""<td class="text-center">Proizvod nije blokiran</td>
+                                """)))}),format.raw/*46.34*/("""
+                                """),_display_(/*47.34*/if(item.isBlocked == true)/*47.60*/ {_display_(Seq[Any](format.raw/*47.62*/("""
+                                    """),format.raw/*48.37*/("""<td class="text-center">"""),_display_(/*48.62*/item/*48.66*/.blockingDate),format.raw/*48.79*/("""</td>
+                                """)))}),format.raw/*49.34*/("""
 
-                        """)))}),format.raw/*52.26*/("""
-                        """),format.raw/*53.25*/("""</tbody>
+                            """),format.raw/*51.29*/("""</tr>
+
+                        """)))}),format.raw/*53.26*/("""
+                        """),format.raw/*54.25*/("""</tbody>
                     </table>
                 </section>
             </div>
         </div>
     </section>
 
-    <script src=""""),_display_(/*60.19*/routes/*60.25*/.Assets.versioned("javascripts/sort.js")),format.raw/*60.65*/(""""></script>
+    <script src=""""),_display_(/*61.19*/routes/*61.25*/.Assets.versioned("javascripts/sort.js")),format.raw/*61.65*/(""""></script>
 
 """)))}))
       }
@@ -110,11 +111,11 @@ Seq[Any](format.raw/*1.31*/("""
 object usersItems extends usersItems_Scope0.usersItems
               /*
                   -- GENERATED --
-                  DATE: Fri Apr 22 20:16:47 CEST 2016
+                  DATE: Fri May 13 17:14:18 CEST 2016
                   SOURCE: E:/namjestaj/app/views/Admin/usersItems.scala.html
-                  HASH: 31fa659792cb28c8b370f98c8ec57483ec829ca7
-                  MATRIX: 775->1|899->30|926->32|937->36|975->38|1006->43|2089->1099|2124->1118|2164->1120|2221->1149|2305->1206|2318->1210|2344->1215|2410->1254|2471->1306|2511->1308|2576->1345|2672->1410|2733->1444|2794->1496|2834->1498|2899->1535|2994->1599|3056->1633|3108->1658|3121->1662|3159->1679|3225->1718|3259->1743|3299->1745|3364->1782|3477->1864|3538->1898|3573->1924|3613->1926|3678->1963|3730->1988|3743->1992|3783->2011|3853->2050|3915->2085|3951->2112|3991->2114|4056->2151|4172->2236|4233->2270|4268->2296|4308->2298|4373->2335|4425->2360|4438->2364|4472->2377|4542->2416|4600->2446|4663->2478|4716->2503|4876->2636|4891->2642|4952->2682
-                  LINES: 27->1|32->1|33->2|33->2|33->2|34->3|56->25|56->25|56->25|57->26|58->27|58->27|58->27|59->28|59->28|59->28|60->29|61->30|62->31|62->31|62->31|63->32|64->33|66->35|66->35|66->35|66->35|67->36|67->36|67->36|68->37|69->38|70->39|70->39|70->39|71->40|71->40|71->40|71->40|72->41|74->43|74->43|74->43|75->44|76->45|77->46|77->46|77->46|78->47|78->47|78->47|78->47|79->48|81->50|83->52|84->53|91->60|91->60|91->60
+                  HASH: d3b85b4eb8868c837d7a9d027dd73f0876eb28db
+                  MATRIX: 775->1|899->30|926->32|937->36|975->38|1006->43|2090->1100|2125->1119|2165->1121|2222->1150|2306->1207|2319->1211|2345->1216|2411->1255|2472->1307|2512->1309|2577->1346|2673->1411|2734->1445|2795->1497|2835->1499|2900->1536|2995->1600|3057->1634|3109->1659|3122->1663|3160->1680|3227->1720|3261->1745|3301->1747|3366->1784|3479->1866|3540->1900|3575->1926|3615->1928|3680->1965|3732->1990|3745->1994|3785->2013|3855->2052|3917->2087|3953->2114|3993->2116|4058->2153|4174->2238|4235->2272|4270->2298|4310->2300|4375->2337|4427->2362|4440->2366|4474->2379|4544->2418|4602->2448|4665->2480|4718->2505|4878->2638|4893->2644|4954->2684
+                  LINES: 27->1|32->1|33->2|33->2|33->2|34->3|56->25|56->25|56->25|57->26|58->27|58->27|58->27|59->28|59->28|59->28|60->29|61->30|62->31|62->31|62->31|63->32|64->33|66->35|66->35|66->35|66->35|68->37|68->37|68->37|69->38|70->39|71->40|71->40|71->40|72->41|72->41|72->41|72->41|73->42|75->44|75->44|75->44|76->45|77->46|78->47|78->47|78->47|79->48|79->48|79->48|79->48|80->49|82->51|84->53|85->54|92->61|92->61|92->61
                   -- GENERATED --
               */
           
