@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:E:/namjestaj/conf/routes
-// @DATE:Sun May 15 23:50:58 CEST 2016
+// @DATE:Wed Jun 08 01:58:51 CEST 2016
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -24,6 +24,47 @@ package controllers {
     def versioned(file:Asset): Call = {
       implicit val _rrc = new ReverseRouteContext(Map(("path", "/public")))
       Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[Asset]].unbind("file", file))
+    }
+  
+  }
+
+  // @LINE:153
+  class ReverseBanners(_prefix: => String) {
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:154
+    def createBanner(): Call = {
+      import ReverseRouteContext.empty
+      Call("POST", _prefix + { _defaultPrefix } + "dodajBanner")
+    }
+  
+    // @LINE:153
+    def createBannerRender(): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "dodajBanner")
+    }
+  
+    // @LINE:156
+    def deleteBanner(bannerId:Integer): Call = {
+    
+      (bannerId: @unchecked) match {
+      
+        // @LINE:156
+        case (bannerId)  =>
+          import ReverseRouteContext.empty
+          Call("GET", _prefix + { _defaultPrefix } + "obrisibanner/" + implicitly[PathBindable[Integer]].unbind("bannerId", bannerId))
+      
+      }
+    
+    }
+  
+    // @LINE:155
+    def listOfBanners(): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "listaBannera")
     }
   
   }

@@ -1,0 +1,77 @@
+@main {
+    <section class="main-container col2-right-layout wow bounceInUp animated">
+        <div class="main container">
+            <div class="row">
+                <section class="col-main col-sm-9">
+                    <div class="page-title">
+                        <h2>Kreiraj banner</h2>
+                    </div>
+                    <div class="static-contain">
+                        <fieldset class="group-select">
+                            <form  method="POST" role="form" action="" >
+                                <ul>
+                                    <li id="billing-new-address-form">
+                                        <fieldset>
+                                            <ul>
+                                                <li>
+                                                    <div class="customer-name">
+                                                        <div class="input-box name-firstname">
+                                                            <label for="image">Link slike <span class="required">*</span></label>
+                                                            <br>
+                                                            <input type="text" id="image" name="image" title="Link slike" class="input-text" required>
+	                                                        <br>
+	                                                        <label for="link">Link proizvoda  <span class="required">*</span> </label>
+	                                                        <br>
+	                                                        <input type="text" id="link" name="link" title="Product link" class="input-text" required>
+	                                                        <br>
+	                                                        <label for="phone">Pozicija bannera <span class="required">*</span>  </label>
+	                                                        <br>
+	                                                        <input type="number" id="bannerPosition" name="bannerPosition" title="Pozicija bannera" class="input-text" required>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </fieldset>
+                                    </li>
+                                    <li><span class="require"><em class="required">* </em>Obavezna polja</span></li>
+                                    <li>
+                                        <div class="buttons-set">
+                                            <button type="submit" title="Submit" class="button submit"> <span> Dodaj </span> </button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </form>
+                        </fieldset>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+	<div class="row">
+		<div class="product-img-box col-sm-6 col-xs-12">
+			<div class="product-image">
+				<div class="large-image">
+					<img src="@routes.Assets.versioned("images/namjestaj-banner.png")">
+				</div>
+			</div>
+		</div>
+		<div class="product-img-box col-sm-6 col-xs-12">
+			<div class="product-image">
+				<div class="large-image">
+					<img src="@routes.Assets.versioned("images/namjestaj-banner2.png")">
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<div class="row">
+
+	<div class="product-img-box col-sm-6 col-xs-12">
+		<div class="product-image">
+			<div class="large-image">
+				<img src="@routes.Assets.versioned("images/namjestaj-banner3.png")">
+			</div>
+		</div>
+	</div>
+	</div>
+}

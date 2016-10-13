@@ -127,26 +127,36 @@ Seq[Any](_display_(/*2.2*/main/*2.6*/ {_display_(Seq[Any](format.raw/*2.8*/("""
     <!-- banner -->
     <div class="top-banner-section">
         <div class="container">
-                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 wow bounceup animated">
-                    <div class="col"><a href="#"><img src='"""),_display_(/*98.61*/routes/*98.67*/.Assets.versioned("images/block1.jpg" )),format.raw/*98.106*/("""'alt="offer banner3"></a></div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 wow bounceup animated">
-                    <div class="col"><a href="#"><img src='"""),_display_(/*101.61*/routes/*101.67*/.Assets.versioned("images/block2.jpg")),format.raw/*101.105*/("""' alt="offer banner3"></a></div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 wow bounceup animated">
-                    <div class="col"><a href="#"><img src='"""),_display_(/*104.61*/routes/*104.67*/.Assets.versioned("images/block3.jpg")),format.raw/*104.105*/("""' alt="offer banner3"></a></div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 wow bounceup animated">
-                    <div class="col">
-                        <a href=""""),_display_(/*108.35*/routes/*108.41*/.Items.itemRender(1)),format.raw/*108.61*/("""">
-                            """),_display_(/*109.30*/if(models.Item.findItemById(1).images.size() > 0 )/*109.80*/ {_display_(Seq[Any](format.raw/*109.82*/("""
-                                """),format.raw/*110.33*/("""<img src='"""),_display_(/*110.44*/models/*110.50*/.Item.findItemById(1).images.get(0).getSize(370,220)),format.raw/*110.102*/("""' alt="offer banner3">
-                            """)))}/*111.30*/else/*111.35*/{_display_(Seq[Any](format.raw/*111.36*/("""
-                                """),format.raw/*112.33*/("""<img src='"""),_display_(/*112.44*/routes/*112.50*/.Assets.versioned("images/product.png")),format.raw/*112.89*/("""' style="width: 370px; height: 220px" alt="">
-                            """)))}),format.raw/*113.30*/("""
-                        """),format.raw/*114.25*/("""</a>
-                    </div>
-                </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 wow bounceup animated">
+                """),_display_(/*98.18*/if(Banner.findBannerByPosition(1) != null)/*98.60*/ {_display_(Seq[Any](format.raw/*98.62*/("""
+                    """),format.raw/*99.21*/("""<div class="col"><a href=""""),_display_(/*99.48*/Banner/*99.54*/.findBannerByPosition(1).link),format.raw/*99.83*/(""""><img src='"""),_display_(/*99.96*/Banner/*99.102*/.findBannerByPosition(1).image),format.raw/*99.132*/("""'alt="offer banner3"></a></div>
+                """)))}/*100.18*/else/*100.22*/{_display_(Seq[Any](format.raw/*100.23*/("""
+                    """),format.raw/*101.21*/("""<div class="col"><a href=""""),_display_(/*101.48*/routes/*101.54*/.ContactUs.contactUsRender()),format.raw/*101.82*/(""""><img src='"""),_display_(/*101.95*/routes/*101.101*/.Assets.versioned("images/bannerDefault.png")),format.raw/*101.146*/("""' alt="offer banner3"></a></div>
+                """)))}),format.raw/*102.18*/("""
+            """),format.raw/*103.13*/("""</div>
+
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 wow bounceup animated">
+                """),_display_(/*106.18*/if(Banner.findBannerByPosition(2) != null)/*106.60*/ {_display_(Seq[Any](format.raw/*106.62*/("""
+                    """),format.raw/*107.21*/("""<div class="col"><a href=""""),_display_(/*107.48*/Banner/*107.54*/.findBannerByPosition(2).link),format.raw/*107.83*/(""""><img src='"""),_display_(/*107.96*/Banner/*107.102*/.findBannerByPosition(2).image),format.raw/*107.132*/("""'alt="offer banner3"></a></div>
+                """)))}/*108.18*/else/*108.22*/{_display_(Seq[Any](format.raw/*108.23*/("""
+                    """),format.raw/*109.21*/("""<div class="col"><a href=""""),_display_(/*109.48*/routes/*109.54*/.ContactUs.contactUsRender()),format.raw/*109.82*/(""""><img src='"""),_display_(/*109.95*/routes/*109.101*/.Assets.versioned("images/bannerDefault.png")),format.raw/*109.146*/("""' alt="offer banner3"></a></div>
+                """)))}),format.raw/*110.18*/("""
+            """),format.raw/*111.13*/("""</div>
+
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 wow bounceup animated">
+                """),_display_(/*114.18*/if(Banner.findBannerByPosition(3) != null)/*114.60*/ {_display_(Seq[Any](format.raw/*114.62*/("""
+                    """),format.raw/*115.21*/("""<div class="col"><a href=""""),_display_(/*115.48*/Banner/*115.54*/.findBannerByPosition(3).link),format.raw/*115.83*/(""""><img src='"""),_display_(/*115.96*/Banner/*115.102*/.findBannerByPosition(3).image),format.raw/*115.132*/("""'alt="offer banner3"></a></div>
+                """)))}/*116.18*/else/*116.22*/{_display_(Seq[Any](format.raw/*116.23*/("""
+                    """),format.raw/*117.21*/("""<div class="col"><a href=""""),_display_(/*117.48*/routes/*117.54*/.ContactUs.contactUsRender()),format.raw/*117.82*/(""""><img src='"""),_display_(/*117.95*/routes/*117.101*/.Assets.versioned("images/bannerDefault.png")),format.raw/*117.146*/("""' alt="offer banner3"></a></div>
+                """)))}),format.raw/*118.18*/("""
+            """),format.raw/*119.13*/("""</div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 wow bounceup animated">
+                """),_display_(/*121.18*/if(Banner.findBannerByPosition(4) != null)/*121.60*/ {_display_(Seq[Any](format.raw/*121.62*/("""
+                    """),format.raw/*122.21*/("""<div class="col"><a href=""""),_display_(/*122.48*/Banner/*122.54*/.findBannerByPosition(4).link),format.raw/*122.83*/(""""><img src='"""),_display_(/*122.96*/Banner/*122.102*/.findBannerByPosition(4).image),format.raw/*122.132*/("""'alt="offer banner3"></a></div>
+                """)))}/*123.18*/else/*123.22*/{_display_(Seq[Any](format.raw/*123.23*/("""
+                    """),format.raw/*124.21*/("""<div class="col"><a href=""""),_display_(/*124.48*/routes/*124.54*/.ContactUs.contactUsRender()),format.raw/*124.82*/(""""><img src='"""),_display_(/*124.95*/routes/*124.101*/.Assets.versioned("images/bannerDefault.png")),format.raw/*124.146*/("""' alt="offer banner3"></a></div>
+                """)))}),format.raw/*125.18*/("""
+            """),format.raw/*126.13*/("""</div>
 
         </div>
     </div>
@@ -169,77 +179,71 @@ Seq[Any](_display_(/*2.2*/main/*2.6*/ {_display_(Seq[Any](format.raw/*2.8*/("""
                             <div class="slider-items-products">
                                 <div id="best-seller-slider" class="product-flexslider hidden-buttons">
                                     <div class="slider-items slider-width-col4 products-grid">
-                                    """),_display_(/*139.38*/for(item <- models.Item.itemsForHomepageSlider()) yield /*139.87*/ {_display_(Seq[Any](format.raw/*139.89*/("""
-                                            """),format.raw/*140.45*/("""<!-- Item -->
+                                    """),_display_(/*149.38*/for(item <- models.Item.itemsForHomepageSlider()) yield /*149.87*/ {_display_(Seq[Any](format.raw/*149.89*/("""
+                                            """),format.raw/*150.45*/("""<!-- Item -->
                                         <div class="col-md-12 item">
                                             <div class="item-inner">
                                                 <div class="item-img">
-                                                """),_display_(/*144.50*/if(item.images.size() > 0)/*144.76*/{_display_(Seq[Any](format.raw/*144.77*/("""
-                                                    """),format.raw/*145.53*/("""<div class="item-img-info"> <a class="product-image" title=""""),_display_(/*145.114*/item/*145.118*/.name),format.raw/*145.123*/("""" href=""""),_display_(/*145.132*/routes/*145.138*/.Items.itemRender(item.id)),format.raw/*145.164*/(""""> <img alt="Retis lapen casen" src='"""),_display_(/*145.202*/models/*145.208*/.Item.getFirstItemImage(item.id).getSize(179,217)),format.raw/*145.257*/("""'> </a>
+                                                """),_display_(/*154.50*/if(item.images.size() > 0)/*154.76*/{_display_(Seq[Any](format.raw/*154.77*/("""
+                                                    """),format.raw/*155.53*/("""<div class="item-img-info"> <a class="product-image" title=""""),_display_(/*155.114*/item/*155.118*/.name),format.raw/*155.123*/("""" href=""""),_display_(/*155.132*/routes/*155.138*/.Items.itemRender(item.id)),format.raw/*155.164*/(""""> <img alt="Retis lapen casen" src='"""),_display_(/*155.202*/models/*155.208*/.Item.getFirstItemImage(item.id).getSize(179,217)),format.raw/*155.257*/("""'> </a>
 
                                                         <a class="quickview-btn" ><span>Quick View</span></a> </div>
-                                                """)))}/*148.50*/else/*148.54*/{_display_(Seq[Any](format.raw/*148.55*/("""
-                                                    """),format.raw/*149.53*/("""<div class="item-img-info"> <a class="product-image" title=""""),_display_(/*149.114*/item/*149.118*/.name),format.raw/*149.123*/("""" href='"""),_display_(/*149.132*/routes/*149.138*/.Items.itemRender(item.id)),format.raw/*149.164*/("""'> <img alt="Retis lapen casen" src='"""),_display_(/*149.202*/routes/*149.208*/.Assets.versioned("images/product.png")),format.raw/*149.247*/("""'> </a>
+                                                """)))}/*158.50*/else/*158.54*/{_display_(Seq[Any](format.raw/*158.55*/("""
+                                                    """),format.raw/*159.53*/("""<div class="item-img-info"> <a class="product-image" title=""""),_display_(/*159.114*/item/*159.118*/.name),format.raw/*159.123*/("""" href='"""),_display_(/*159.132*/routes/*159.138*/.Items.itemRender(item.id)),format.raw/*159.164*/("""'> <img alt="Retis lapen casen" src='"""),_display_(/*159.202*/routes/*159.208*/.Assets.versioned("images/product.png")),format.raw/*159.247*/("""'> </a>
 
                                                         <a class="quickview-btn" ><span>Quick View</span></a> </div>
-                                                """)))}),format.raw/*152.50*/("""
-                                                """),format.raw/*153.49*/("""</div>
+                                                """)))}),format.raw/*162.50*/("""
+                                                """),format.raw/*163.49*/("""</div>
                                                 <div class="item-info">
                                                     <div class="info-inner">
-                                                        <div class="item-title"> <a title="Retis lapen casen" href=""""),_display_(/*156.118*/routes/*156.124*/.Items.itemRender(item.id)),format.raw/*156.150*/(""""> """),_display_(/*156.154*/item/*156.158*/.name),format.raw/*156.163*/(""" """),format.raw/*156.164*/("""</a> </div>
+                                                        <div class="item-title"> <a title="Retis lapen casen" href=""""),_display_(/*166.118*/routes/*166.124*/.Items.itemRender(item.id)),format.raw/*166.150*/(""""> """),_display_(/*166.154*/item/*166.158*/.name),format.raw/*166.163*/(""" """),format.raw/*166.164*/("""</a> </div>
                                                         <div class="item-content">
                                                             <div class="rating">
                                                                 <div class="ratings">
-                                                                    """),_display_(/*160.70*/if(item.average_Grade == 1)/*160.97*/ {_display_(Seq[Any](format.raw/*160.99*/("""
-                                                                        """),format.raw/*161.73*/("""<div class="rating-box">
+                                                                    """),_display_(/*170.70*/if(item.average_Grade == 1)/*170.97*/ {_display_(Seq[Any](format.raw/*170.99*/("""
+                                                                        """),format.raw/*171.73*/("""<div class="rating-box">
                                                                             <div class="rating1"></div>
                                                                         </div>
-                                                                    """)))}),format.raw/*164.70*/("""
-                                                                    """),_display_(/*165.70*/if(item.average_Grade == 2)/*165.97*/ {_display_(Seq[Any](format.raw/*165.99*/("""
-                                                                        """),format.raw/*166.73*/("""<div class="rating-box">
+                                                                    """)))}),format.raw/*174.70*/("""
+                                                                    """),_display_(/*175.70*/if(item.average_Grade == 2)/*175.97*/ {_display_(Seq[Any](format.raw/*175.99*/("""
+                                                                        """),format.raw/*176.73*/("""<div class="rating-box">
                                                                             <div class="rating2"></div>
                                                                         </div>
-                                                                    """)))}),format.raw/*169.70*/("""
-                                                                    """),_display_(/*170.70*/if(item.average_Grade == 3)/*170.97*/ {_display_(Seq[Any](format.raw/*170.99*/("""
-                                                                        """),format.raw/*171.73*/("""<div class="rating-box">
+                                                                    """)))}),format.raw/*179.70*/("""
+                                                                    """),_display_(/*180.70*/if(item.average_Grade == 3)/*180.97*/ {_display_(Seq[Any](format.raw/*180.99*/("""
+                                                                        """),format.raw/*181.73*/("""<div class="rating-box">
                                                                             <div class="rating3"></div>
                                                                         </div>
-                                                                    """)))}),format.raw/*174.70*/("""
-                                                                    """),_display_(/*175.70*/if(item.average_Grade == 4)/*175.97*/ {_display_(Seq[Any](format.raw/*175.99*/("""
-                                                                        """),format.raw/*176.73*/("""<div class="rating-box">
+                                                                    """)))}),format.raw/*184.70*/("""
+                                                                    """),_display_(/*185.70*/if(item.average_Grade == 4)/*185.97*/ {_display_(Seq[Any](format.raw/*185.99*/("""
+                                                                        """),format.raw/*186.73*/("""<div class="rating-box">
                                                                             <div class="rating4"></div>
                                                                         </div>
-                                                                    """)))}),format.raw/*179.70*/("""
-                                                                    """),_display_(/*180.70*/if(item.average_Grade == 5)/*180.97*/ {_display_(Seq[Any](format.raw/*180.99*/("""
-                                                                        """),format.raw/*181.73*/("""<div class="rating-box">
+                                                                    """)))}),format.raw/*189.70*/("""
+                                                                    """),_display_(/*190.70*/if(item.average_Grade == 5)/*190.97*/ {_display_(Seq[Any](format.raw/*190.99*/("""
+                                                                        """),format.raw/*191.73*/("""<div class="rating-box">
                                                                             <div class="rating5"></div>
                                                                         </div>
-                                                                    """)))}),format.raw/*184.70*/("""
-                                                                    """),_display_(/*185.70*/if(item.average_Grade == 0)/*185.97*/ {_display_(Seq[Any](format.raw/*185.99*/("""
-                                                                        """),format.raw/*186.73*/("""<div class="rating-box">
+                                                                    """)))}),format.raw/*194.70*/("""
+                                                                    """),_display_(/*195.70*/if(item.average_Grade == 0)/*195.97*/ {_display_(Seq[Any](format.raw/*195.99*/("""
+                                                                        """),format.raw/*196.73*/("""<div class="rating-box">
                                                                             <div class="rating0"></div>
                                                                         </div>
-                                                                    """)))}),format.raw/*189.70*/("""
+                                                                    """)))}),format.raw/*199.70*/("""
 
-                                                                    """),format.raw/*191.69*/("""</div>
+                                                                    """),format.raw/*201.69*/("""</div>
                                                             </div>
                                                             <div class="item-price">
-                                                                <div class="price-box"> <span class="regular-price"> <span class="price">"""),_display_(/*194.139*/item/*194.143*/.price),format.raw/*194.149*/("""</span> </span> </div>
+                                                                <div class="price-box"> <span class="regular-price"> <span class="price">"""),_display_(/*204.139*/item/*204.143*/.price),format.raw/*204.149*/("""</span> </span> </div>
                                                             </div>
-                                                            """),format.raw/*196.160*/("""
-                                                            """),format.raw/*197.87*/("""
-                                                            """),format.raw/*198.144*/("""
-                                                            """),format.raw/*199.71*/("""
-                                                            """),format.raw/*200.137*/("""
-                                                            """),format.raw/*201.71*/("""
-                                                        """),format.raw/*202.57*/("""</div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                             <!-- End Item -->
-                                    """)))}),format.raw/*208.38*/("""
-                                    """),format.raw/*209.37*/("""</div>
+                                    """)))}),format.raw/*212.38*/("""
+                                    """),format.raw/*213.37*/("""</div>
                                 </div>
                             </div>
                         </section>
@@ -252,77 +256,71 @@ Seq[Any](_display_(/*2.2*/main/*2.6*/ {_display_(Seq[Any](format.raw/*2.8*/("""
                                 <div class="slider-items-products">
                                     <div id="best-seller-slider" class="product-flexslider hidden-buttons">
                                         <div class="slider-items slider-width-col4 products-grid">
-                                        """),_display_(/*222.42*/for(item <- models.Item.topRatedItems()) yield /*222.82*/ {_display_(Seq[Any](format.raw/*222.84*/("""
-                                                """),format.raw/*223.49*/("""<!-- Item -->
+                                        """),_display_(/*226.42*/for(item <- models.Item.topRatedItems()) yield /*226.82*/ {_display_(Seq[Any](format.raw/*226.84*/("""
+                                                """),format.raw/*227.49*/("""<!-- Item -->
                                             <div class="col-md-12 item">
                                                 <div class="item-inner">
                                                     <div class="item-img">
-                                                    """),_display_(/*227.54*/if(item.images.size() > 0)/*227.80*/{_display_(Seq[Any](format.raw/*227.81*/("""
-                                                        """),format.raw/*228.57*/("""<div class="item-img-info"> <a class="product-image" title=""""),_display_(/*228.118*/item/*228.122*/.name),format.raw/*228.127*/("""" href=""""),_display_(/*228.136*/routes/*228.142*/.Items.itemRender(item.id)),format.raw/*228.168*/(""""> <img alt="Retis lapen casen" src='"""),_display_(/*228.206*/models/*228.212*/.Item.getFirstItemImage(item.id).getSize(179,217)),format.raw/*228.261*/("""'> </a>
+                                                    """),_display_(/*231.54*/if(item.images.size() > 0)/*231.80*/{_display_(Seq[Any](format.raw/*231.81*/("""
+                                                        """),format.raw/*232.57*/("""<div class="item-img-info"> <a class="product-image" title=""""),_display_(/*232.118*/item/*232.122*/.name),format.raw/*232.127*/("""" href=""""),_display_(/*232.136*/routes/*232.142*/.Items.itemRender(item.id)),format.raw/*232.168*/(""""> <img alt="Retis lapen casen" src='"""),_display_(/*232.206*/models/*232.212*/.Item.getFirstItemImage(item.id).getSize(179,217)),format.raw/*232.261*/("""'> </a>
                                                             <div class="new-label new-top-left">new</div>
                                                             <a class="quickview-btn" ><span>Quick View</span></a> </div>
-                                                    """)))}/*231.54*/else/*231.58*/{_display_(Seq[Any](format.raw/*231.59*/("""
-                                                        """),format.raw/*232.57*/("""<div class="item-img-info"> <a class="product-image" title=""""),_display_(/*232.118*/item/*232.122*/.name),format.raw/*232.127*/("""" href='"""),_display_(/*232.136*/routes/*232.142*/.Items.itemRender(item.id)),format.raw/*232.168*/("""'> <img alt="Retis lapen casen" src='"""),_display_(/*232.206*/routes/*232.212*/.Assets.versioned("images/product.png")),format.raw/*232.251*/("""'> </a>
+                                                    """)))}/*235.54*/else/*235.58*/{_display_(Seq[Any](format.raw/*235.59*/("""
+                                                        """),format.raw/*236.57*/("""<div class="item-img-info"> <a class="product-image" title=""""),_display_(/*236.118*/item/*236.122*/.name),format.raw/*236.127*/("""" href='"""),_display_(/*236.136*/routes/*236.142*/.Items.itemRender(item.id)),format.raw/*236.168*/("""'> <img alt="Retis lapen casen" src='"""),_display_(/*236.206*/routes/*236.212*/.Assets.versioned("images/product.png")),format.raw/*236.251*/("""'> </a>
                                                             <div class="new-label new-top-left">new</div>
                                                             <a class="quickview-btn" ><span>Quick View</span></a> </div>
-                                                    """)))}),format.raw/*235.54*/("""
-                                                    """),format.raw/*236.53*/("""</div>
+                                                    """)))}),format.raw/*239.54*/("""
+                                                    """),format.raw/*240.53*/("""</div>
                                                     <div class="item-info">
                                                         <div class="info-inner">
-                                                            <div class="item-title"> <a title="Retis lapen casen" href=""""),_display_(/*239.122*/routes/*239.128*/.Items.itemRender(item.id)),format.raw/*239.154*/(""""> """),_display_(/*239.158*/item/*239.162*/.name),format.raw/*239.167*/(""" """),format.raw/*239.168*/("""</a> </div>
+                                                            <div class="item-title"> <a title="Retis lapen casen" href=""""),_display_(/*243.122*/routes/*243.128*/.Items.itemRender(item.id)),format.raw/*243.154*/(""""> """),_display_(/*243.158*/item/*243.162*/.name),format.raw/*243.167*/(""" """),format.raw/*243.168*/("""</a> </div>
                                                             <div class="item-content">
                                                                 <div class="rating">
                                                                     <div class="ratings">
-                                                                        """),_display_(/*243.74*/if(item.average_Grade == 1)/*243.101*/ {_display_(Seq[Any](format.raw/*243.103*/("""
-                                                                            """),format.raw/*244.77*/("""<div class="rating-box">
+                                                                        """),_display_(/*247.74*/if(item.average_Grade == 1)/*247.101*/ {_display_(Seq[Any](format.raw/*247.103*/("""
+                                                                            """),format.raw/*248.77*/("""<div class="rating-box">
                                                                                 <div class="rating1"></div>
                                                                             </div>
-                                                                        """)))}),format.raw/*247.74*/("""
-                                                                        """),_display_(/*248.74*/if(item.average_Grade == 2)/*248.101*/ {_display_(Seq[Any](format.raw/*248.103*/("""
-                                                                            """),format.raw/*249.77*/("""<div class="rating-box">
+                                                                        """)))}),format.raw/*251.74*/("""
+                                                                        """),_display_(/*252.74*/if(item.average_Grade == 2)/*252.101*/ {_display_(Seq[Any](format.raw/*252.103*/("""
+                                                                            """),format.raw/*253.77*/("""<div class="rating-box">
                                                                                 <div class="rating2"></div>
                                                                             </div>
-                                                                        """)))}),format.raw/*252.74*/("""
-                                                                        """),_display_(/*253.74*/if(item.average_Grade == 3)/*253.101*/ {_display_(Seq[Any](format.raw/*253.103*/("""
-                                                                            """),format.raw/*254.77*/("""<div class="rating-box">
+                                                                        """)))}),format.raw/*256.74*/("""
+                                                                        """),_display_(/*257.74*/if(item.average_Grade == 3)/*257.101*/ {_display_(Seq[Any](format.raw/*257.103*/("""
+                                                                            """),format.raw/*258.77*/("""<div class="rating-box">
                                                                                 <div class="rating3"></div>
                                                                             </div>
-                                                                        """)))}),format.raw/*257.74*/("""
-                                                                        """),_display_(/*258.74*/if(item.average_Grade == 4)/*258.101*/ {_display_(Seq[Any](format.raw/*258.103*/("""
-                                                                            """),format.raw/*259.77*/("""<div class="rating-box">
+                                                                        """)))}),format.raw/*261.74*/("""
+                                                                        """),_display_(/*262.74*/if(item.average_Grade == 4)/*262.101*/ {_display_(Seq[Any](format.raw/*262.103*/("""
+                                                                            """),format.raw/*263.77*/("""<div class="rating-box">
                                                                                 <div class="rating4"></div>
                                                                             </div>
-                                                                        """)))}),format.raw/*262.74*/("""
-                                                                        """),_display_(/*263.74*/if(item.average_Grade == 5)/*263.101*/ {_display_(Seq[Any](format.raw/*263.103*/("""
-                                                                            """),format.raw/*264.77*/("""<div class="rating-box">
+                                                                        """)))}),format.raw/*266.74*/("""
+                                                                        """),_display_(/*267.74*/if(item.average_Grade == 5)/*267.101*/ {_display_(Seq[Any](format.raw/*267.103*/("""
+                                                                            """),format.raw/*268.77*/("""<div class="rating-box">
                                                                                 <div class="rating5"></div>
                                                                             </div>
-                                                                        """)))}),format.raw/*267.74*/("""
-                                                                        """),_display_(/*268.74*/if(item.average_Grade == 0)/*268.101*/ {_display_(Seq[Any](format.raw/*268.103*/("""
-                                                                            """),format.raw/*269.77*/("""<div class="rating-box">
+                                                                        """)))}),format.raw/*271.74*/("""
+                                                                        """),_display_(/*272.74*/if(item.average_Grade == 0)/*272.101*/ {_display_(Seq[Any](format.raw/*272.103*/("""
+                                                                            """),format.raw/*273.77*/("""<div class="rating-box">
                                                                                 <div class="rating0"></div>
                                                                             </div>
-                                                                        """)))}),format.raw/*272.74*/("""
+                                                                        """)))}),format.raw/*276.74*/("""
 
-                                                                    """),format.raw/*274.69*/("""</div>
+                                                                    """),format.raw/*278.69*/("""</div>
                                                                 </div>
                                                                 <div class="item-price">
-                                                                    <div class="price-box"> <span class="regular-price"> <span class="price">"""),_display_(/*277.143*/item/*277.147*/.price),format.raw/*277.153*/("""</span> </span> </div>
+                                                                    <div class="price-box"> <span class="regular-price"> <span class="price">"""),_display_(/*281.143*/item/*281.147*/.price),format.raw/*281.153*/("""</span> </span> </div>
                                                                 </div>
-                                                                """),format.raw/*279.164*/("""
-                                                                """),format.raw/*280.91*/("""
-                                                                """),format.raw/*281.148*/("""
-                                                                """),format.raw/*282.75*/("""
-                                                                """),format.raw/*283.141*/("""
-                                                                """),format.raw/*284.75*/("""
-                                                            """),format.raw/*285.61*/("""</div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                                 <!-- End Item -->
-                                        """)))}),format.raw/*291.42*/("""
-                                        """),format.raw/*292.41*/("""</div>
+                                        """)))}),format.raw/*289.42*/("""
+                                        """),format.raw/*290.41*/("""</div>
                                     </div>
                                 </div>
                             </section>
@@ -337,77 +335,71 @@ Seq[Any](_display_(/*2.2*/main/*2.6*/ {_display_(Seq[Any](format.raw/*2.8*/("""
                                 <div class="slider-items-products">
                                     <div id="best-seller-slider" class="product-flexslider hidden-buttons">
                                         <div class="slider-items slider-width-col4 products-grid">
-                                        """),_display_(/*307.42*/for(item <- models.Item.allActiveItemsShuffled()) yield /*307.91*/ {_display_(Seq[Any](format.raw/*307.93*/("""
-                                                """),format.raw/*308.49*/("""<!-- Item -->
+                                        """),_display_(/*305.42*/for(item <- models.Item.allActiveItemsShuffled()) yield /*305.91*/ {_display_(Seq[Any](format.raw/*305.93*/("""
+                                                """),format.raw/*306.49*/("""<!-- Item -->
                                             <div class="col-md-12 item">
                                                 <div class="item-inner">
                                                     <div class="item-img">
-                                                    """),_display_(/*312.54*/if(item.images.size() > 0)/*312.80*/{_display_(Seq[Any](format.raw/*312.81*/("""
-                                                        """),format.raw/*313.57*/("""<div class="item-img-info"> <a class="product-image" title=""""),_display_(/*313.118*/item/*313.122*/.name),format.raw/*313.127*/("""" href=""""),_display_(/*313.136*/routes/*313.142*/.Items.itemRender(item.id)),format.raw/*313.168*/(""""> <img alt="Retis lapen casen" src='"""),_display_(/*313.206*/models/*313.212*/.Item.getFirstItemImage(item.id).getSize(179,217)),format.raw/*313.261*/("""'> </a>
+                                                    """),_display_(/*310.54*/if(item.images.size() > 0)/*310.80*/{_display_(Seq[Any](format.raw/*310.81*/("""
+                                                        """),format.raw/*311.57*/("""<div class="item-img-info"> <a class="product-image" title=""""),_display_(/*311.118*/item/*311.122*/.name),format.raw/*311.127*/("""" href=""""),_display_(/*311.136*/routes/*311.142*/.Items.itemRender(item.id)),format.raw/*311.168*/(""""> <img alt="Retis lapen casen" src='"""),_display_(/*311.206*/models/*311.212*/.Item.getFirstItemImage(item.id).getSize(179,217)),format.raw/*311.261*/("""'> </a>
 
                                                             <a class="quickview-btn" ><span>Quick View</span></a> </div>
-                                                    """)))}/*316.54*/else/*316.58*/{_display_(Seq[Any](format.raw/*316.59*/("""
-                                                        """),format.raw/*317.57*/("""<div class="item-img-info"> <a class="product-image" title=""""),_display_(/*317.118*/item/*317.122*/.name),format.raw/*317.127*/("""" href='"""),_display_(/*317.136*/routes/*317.142*/.Items.itemRender(item.id)),format.raw/*317.168*/("""'> <img alt="Retis lapen casen" src='"""),_display_(/*317.206*/routes/*317.212*/.Assets.versioned("images/product.png")),format.raw/*317.251*/("""'> </a>
+                                                    """)))}/*314.54*/else/*314.58*/{_display_(Seq[Any](format.raw/*314.59*/("""
+                                                        """),format.raw/*315.57*/("""<div class="item-img-info"> <a class="product-image" title=""""),_display_(/*315.118*/item/*315.122*/.name),format.raw/*315.127*/("""" href='"""),_display_(/*315.136*/routes/*315.142*/.Items.itemRender(item.id)),format.raw/*315.168*/("""'> <img alt="Retis lapen casen" src='"""),_display_(/*315.206*/routes/*315.212*/.Assets.versioned("images/product.png")),format.raw/*315.251*/("""'> </a>
 
                                                             <a class="quickview-btn" ><span>Quick View</span></a> </div>
-                                                    """)))}),format.raw/*320.54*/("""
-                                                    """),format.raw/*321.53*/("""</div>
+                                                    """)))}),format.raw/*318.54*/("""
+                                                    """),format.raw/*319.53*/("""</div>
                                                     <div class="item-info">
                                                         <div class="info-inner">
-                                                            <div class="item-title"> <a title="Retis lapen casen" href=""""),_display_(/*324.122*/routes/*324.128*/.Items.itemRender(item.id)),format.raw/*324.154*/(""""> """),_display_(/*324.158*/item/*324.162*/.name),format.raw/*324.167*/(""" """),format.raw/*324.168*/("""</a> </div>
+                                                            <div class="item-title"> <a title="Retis lapen casen" href=""""),_display_(/*322.122*/routes/*322.128*/.Items.itemRender(item.id)),format.raw/*322.154*/(""""> """),_display_(/*322.158*/item/*322.162*/.name),format.raw/*322.167*/(""" """),format.raw/*322.168*/("""</a> </div>
                                                             <div class="item-content">
                                                                 <div class="rating">
                                                                     <div class="ratings">
-                                                                        """),_display_(/*328.74*/if(item.average_Grade == 1)/*328.101*/ {_display_(Seq[Any](format.raw/*328.103*/("""
-                                                                            """),format.raw/*329.77*/("""<div class="rating-box">
+                                                                        """),_display_(/*326.74*/if(item.average_Grade == 1)/*326.101*/ {_display_(Seq[Any](format.raw/*326.103*/("""
+                                                                            """),format.raw/*327.77*/("""<div class="rating-box">
                                                                                 <div class="rating1"></div>
                                                                             </div>
-                                                                        """)))}),format.raw/*332.74*/("""
-                                                                        """),_display_(/*333.74*/if(item.average_Grade == 2)/*333.101*/ {_display_(Seq[Any](format.raw/*333.103*/("""
-                                                                            """),format.raw/*334.77*/("""<div class="rating-box">
+                                                                        """)))}),format.raw/*330.74*/("""
+                                                                        """),_display_(/*331.74*/if(item.average_Grade == 2)/*331.101*/ {_display_(Seq[Any](format.raw/*331.103*/("""
+                                                                            """),format.raw/*332.77*/("""<div class="rating-box">
                                                                                 <div class="rating2"></div>
                                                                             </div>
-                                                                        """)))}),format.raw/*337.74*/("""
-                                                                        """),_display_(/*338.74*/if(item.average_Grade == 3)/*338.101*/ {_display_(Seq[Any](format.raw/*338.103*/("""
-                                                                            """),format.raw/*339.77*/("""<div class="rating-box">
+                                                                        """)))}),format.raw/*335.74*/("""
+                                                                        """),_display_(/*336.74*/if(item.average_Grade == 3)/*336.101*/ {_display_(Seq[Any](format.raw/*336.103*/("""
+                                                                            """),format.raw/*337.77*/("""<div class="rating-box">
                                                                                 <div class="rating3"></div>
                                                                             </div>
-                                                                        """)))}),format.raw/*342.74*/("""
-                                                                        """),_display_(/*343.74*/if(item.average_Grade == 4)/*343.101*/ {_display_(Seq[Any](format.raw/*343.103*/("""
-                                                                            """),format.raw/*344.77*/("""<div class="rating-box">
+                                                                        """)))}),format.raw/*340.74*/("""
+                                                                        """),_display_(/*341.74*/if(item.average_Grade == 4)/*341.101*/ {_display_(Seq[Any](format.raw/*341.103*/("""
+                                                                            """),format.raw/*342.77*/("""<div class="rating-box">
                                                                                 <div class="rating4"></div>
                                                                             </div>
-                                                                        """)))}),format.raw/*347.74*/("""
-                                                                        """),_display_(/*348.74*/if(item.average_Grade == 5)/*348.101*/ {_display_(Seq[Any](format.raw/*348.103*/("""
-                                                                            """),format.raw/*349.77*/("""<div class="rating-box">
+                                                                        """)))}),format.raw/*345.74*/("""
+                                                                        """),_display_(/*346.74*/if(item.average_Grade == 5)/*346.101*/ {_display_(Seq[Any](format.raw/*346.103*/("""
+                                                                            """),format.raw/*347.77*/("""<div class="rating-box">
                                                                                 <div class="rating5"></div>
                                                                             </div>
-                                                                        """)))}),format.raw/*352.74*/("""
-                                                                        """),_display_(/*353.74*/if(item.average_Grade == 0)/*353.101*/ {_display_(Seq[Any](format.raw/*353.103*/("""
-                                                                            """),format.raw/*354.77*/("""<div class="rating-box">
+                                                                        """)))}),format.raw/*350.74*/("""
+                                                                        """),_display_(/*351.74*/if(item.average_Grade == 0)/*351.101*/ {_display_(Seq[Any](format.raw/*351.103*/("""
+                                                                            """),format.raw/*352.77*/("""<div class="rating-box">
                                                                                 <div class="rating0"></div>
                                                                             </div>
-                                                                        """)))}),format.raw/*357.74*/("""
+                                                                        """)))}),format.raw/*355.74*/("""
 
-                                                                    """),format.raw/*359.69*/("""</div>
+                                                                    """),format.raw/*357.69*/("""</div>
                                                                 </div>
                                                                 <div class="item-price">
-                                                                    <div class="price-box"> <span class="regular-price"> <span class="price">"""),_display_(/*362.143*/item/*362.147*/.price),format.raw/*362.153*/("""</span> </span> </div>
+                                                                    <div class="price-box"> <span class="regular-price"> <span class="price">"""),_display_(/*360.143*/item/*360.147*/.price),format.raw/*360.153*/("""</span> </span> </div>
                                                                 </div>
-                                                                """),format.raw/*364.164*/("""
-                                                                """),format.raw/*365.91*/("""
-                                                                """),format.raw/*366.148*/("""
-                                                                """),format.raw/*367.75*/("""
-                                                                """),format.raw/*368.141*/("""
-                                                                """),format.raw/*369.75*/("""
-                                                            """),format.raw/*370.61*/("""</div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                                 <!-- End Item -->
-                                        """)))}),format.raw/*376.42*/("""
-                                        """),format.raw/*377.41*/("""</div>
+                                        """)))}),format.raw/*368.42*/("""
+                                        """),format.raw/*369.41*/("""</div>
                                     </div>
                                 </div>
                             </section>
@@ -421,11 +413,21 @@ Seq[Any](_display_(/*2.2*/main/*2.6*/ {_display_(Seq[Any](format.raw/*2.8*/("""
         <div class="top-banner-section2 ">
             <div class="container">
                 <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12  ">
-                    <div class="col" style="padding-top: 35px"><a href="#"><img src='"""),_display_(/*391.87*/routes/*391.93*/.Assets.versioned("images/reklama1.jpg")),format.raw/*391.133*/("""' alt="offer banner3"></a></div>
-                </div>
+	                """),_display_(/*383.19*/if(Banner.findBannerByPosition(5) != null)/*383.61*/ {_display_(Seq[Any](format.raw/*383.63*/("""
+		                """),format.raw/*384.19*/("""<div class="col" style="padding-top: 35px"><a href=""""),_display_(/*384.72*/Banner/*384.78*/.findBannerByPosition(5).link),format.raw/*384.107*/(""""><img src='"""),_display_(/*384.120*/Banner/*384.126*/.findBannerByPosition(5).image),format.raw/*384.156*/("""'alt="offer banner3"></a></div>
+	                """)))}/*385.19*/else/*385.23*/{_display_(Seq[Any](format.raw/*385.24*/("""
+		                """),format.raw/*386.19*/("""<div class="col" style="padding-top: 35px"><a href=""""),_display_(/*386.72*/routes/*386.78*/.ContactUs.contactUsRender()),format.raw/*386.106*/(""""><img src='"""),_display_(/*386.119*/routes/*386.125*/.Assets.versioned("images/reklama1.jpg")),format.raw/*386.165*/("""' alt="offer banner3"></a></div>
+	                """)))}),format.raw/*387.19*/("""
+                    """),format.raw/*388.169*/("""
+                """),format.raw/*389.17*/("""</div>
                 <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12  ">
-                    <div class="col" style="padding-top: 0px"><a href="#"><img src='"""),_display_(/*394.86*/routes/*394.92*/.Assets.versioned("images/reklama2.jpg")),format.raw/*394.132*/("""' alt="offer banner3"></a></div>
-                </div>
+	                """),_display_(/*391.19*/if(Banner.findBannerByPosition(6) != null)/*391.61*/ {_display_(Seq[Any](format.raw/*391.63*/("""
+		                """),format.raw/*392.19*/("""<div class="col" style="padding-top: 0px"><a href=""""),_display_(/*392.71*/Banner/*392.77*/.findBannerByPosition(6).link),format.raw/*392.106*/(""""><img src='"""),_display_(/*392.119*/Banner/*392.125*/.findBannerByPosition(5).image),format.raw/*392.155*/("""'alt="offer banner3"></a></div>
+	                """)))}/*393.19*/else/*393.23*/{_display_(Seq[Any](format.raw/*393.24*/("""
+		                """),format.raw/*394.19*/("""<div class="col" style="padding-top: 0px"><a href=""""),_display_(/*394.71*/routes/*394.77*/.ContactUs.contactUsRender()),format.raw/*394.105*/(""""><img src='"""),_display_(/*394.118*/routes/*394.124*/.Assets.versioned("images/reklama1.jpg")),format.raw/*394.164*/("""' alt="offer banner3"></a></div>
+	                """)))}),format.raw/*395.19*/("""
+                    """),format.raw/*396.168*/("""
+                """),format.raw/*397.17*/("""</div>
             </div>
         </div>
     </div>
@@ -435,20 +437,20 @@ Seq[Any](_display_(/*2.2*/main/*2.6*/ {_display_(Seq[Any](format.raw/*2.8*/("""
         <div class="container">
             <ul class="bxslider">
                 <li>
-                    <h2>NEW ARRIVALS</h2>
-                    <h1>Sale up to 30% off</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat. </p>
-                    <a class="shop-now" href="#">Shop now</a> </li>
+                    <h2>Članstvo</h2>
+                    <h1>PRIDRUŽITE NAM SE!</h1>
+                    <p>Želite postati naš član i promovisati svoje proizvode? Klikom na link ispod saznajte kako. </p>
+                    <a class="shop-now" href="#">Saznaj više</a> </li>
                 <li>
-                    <h2>Hello hotness!</h2>
-                    <h1>Summer collection</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat. </p>
-                    <a class="shop-now" href="#">View More</a> </li>
+                    <h2>Marketing</h2>
+                    <h1>Želite li da Vaša reklama bude na našoj strnici?</h1>
+                    <p>Ukoliko želite da se reklamirate na našoj stranici kliknite na link ispod i saznajte kako. </p>
+                    <a class="shop-now" href="#">Saznaj više</a> </li>
                 <li>
-                    <h2>New launch</h2>
-                    <h1>Designer dresses on sale</h1>
-                    <p>Fusce condimentum eleifend enim a feugiat. Pellentesque viverra vehicula sem ut volutpat. Integer sed arcu massa. </p>
-                    <a class="shop-now" href="#">Learn More</a> </li>
+                    <h2>Kupovina</h2>
+                    <h1>Želite kupiti namjestaj?</h1>
+                    <p>Pronađite proizvod, kontaktirajte prodavača, bez pravljenja korisničkog naloga! </p>
+                    </li>
             </ul>
         </div>
     </div>
@@ -463,78 +465,72 @@ Seq[Any](_display_(/*2.2*/main/*2.6*/ {_display_(Seq[Any](format.raw/*2.8*/("""
                     </div>
                     <div id="featured-slider" class="product-flexslider hidden-buttons">
                         <div class="slider-items slider-width-col4 products-grid">
-                        """),_display_(/*433.26*/for(item <- models.Item.getLastTenProducts()) yield /*433.71*/{_display_(Seq[Any](format.raw/*433.72*/("""
-                            """),format.raw/*434.29*/("""<div class="item">
+                        """),_display_(/*435.26*/for(item <- models.Item.getLastTenProducts()) yield /*435.71*/{_display_(Seq[Any](format.raw/*435.72*/("""
+                            """),format.raw/*436.29*/("""<div class="item">
                                 <div class="item-inner">
                                     <div class="item-img">
-                                    """),_display_(/*437.38*/if(item.images.size() > 0)/*437.64*/{_display_(Seq[Any](format.raw/*437.65*/("""
-                                        """),format.raw/*438.41*/("""<div class="item-img-info"> <a class="product-image" title=""""),_display_(/*438.102*/item/*438.106*/.name),format.raw/*438.111*/("""" href=""""),_display_(/*438.120*/routes/*438.126*/.Items.itemRender(item.id)),format.raw/*438.152*/(""""> <img alt="Retis lapen casen" src='"""),_display_(/*438.190*/models/*438.196*/.Item.getFirstItemImage(item.id).getSize(179,217)),format.raw/*438.245*/("""'> </a>
+                                    """),_display_(/*439.38*/if(item.images.size() > 0)/*439.64*/{_display_(Seq[Any](format.raw/*439.65*/("""
+                                        """),format.raw/*440.41*/("""<div class="item-img-info"> <a class="product-image" title=""""),_display_(/*440.102*/item/*440.106*/.name),format.raw/*440.111*/("""" href=""""),_display_(/*440.120*/routes/*440.126*/.Items.itemRender(item.id)),format.raw/*440.152*/(""""> <img alt="Retis lapen casen" src='"""),_display_(/*440.190*/models/*440.196*/.Item.getFirstItemImage(item.id).getSize(179,217)),format.raw/*440.245*/("""'> </a>
                                             <div class="new-label new-top-left">new</div>
                                             <a class="quickview-btn" ><span>Quick View</span></a> </div>
-                                    """)))}/*441.38*/else/*441.42*/{_display_(Seq[Any](format.raw/*441.43*/("""
-                                        """),format.raw/*442.41*/("""<div class="item-img-info"> <a class="product-image" title=""""),_display_(/*442.102*/item/*442.106*/.name),format.raw/*442.111*/("""" href='"""),_display_(/*442.120*/routes/*442.126*/.Items.itemRender(item.id)),format.raw/*442.152*/("""'> <img alt="Retis lapen casen" src='"""),_display_(/*442.190*/routes/*442.196*/.Assets.versioned("images/product.png")),format.raw/*442.235*/("""'> </a>
+                                    """)))}/*443.38*/else/*443.42*/{_display_(Seq[Any](format.raw/*443.43*/("""
+                                        """),format.raw/*444.41*/("""<div class="item-img-info"> <a class="product-image" title=""""),_display_(/*444.102*/item/*444.106*/.name),format.raw/*444.111*/("""" href='"""),_display_(/*444.120*/routes/*444.126*/.Items.itemRender(item.id)),format.raw/*444.152*/("""'> <img alt="Retis lapen casen" src='"""),_display_(/*444.190*/routes/*444.196*/.Assets.versioned("images/product.png")),format.raw/*444.235*/("""'> </a>
                                             <div class="new-label new-top-left">new</div>
                                             <a class="quickview-btn" ><span>Quick View</span></a> </div>
-                                    """)))}),format.raw/*445.38*/("""
-                                    """),format.raw/*446.37*/("""</div>
+                                    """)))}),format.raw/*447.38*/("""
+                                    """),format.raw/*448.37*/("""</div>
                                     <div class="item-info">
                                         <div class="info-inner">
-                                            <div class="item-title"> <a title="Retis lapen casen" href=""""),_display_(/*449.106*/routes/*449.112*/.Items.itemRender(item.id)),format.raw/*449.138*/(""""> """),_display_(/*449.142*/item/*449.146*/.name),format.raw/*449.151*/(""" """),format.raw/*449.152*/("""</a> </div>
+                                            <div class="item-title"> <a title="Retis lapen casen" href=""""),_display_(/*451.106*/routes/*451.112*/.Items.itemRender(item.id)),format.raw/*451.138*/(""""> """),_display_(/*451.142*/item/*451.146*/.name),format.raw/*451.151*/(""" """),format.raw/*451.152*/("""</a> </div>
                                             <div class="item-content">
                                                 <div class="rating">
                                                     <div class="ratings">
-                                                        """),_display_(/*453.58*/if(item.average_Grade == 1)/*453.85*/ {_display_(Seq[Any](format.raw/*453.87*/("""
-                                                            """),format.raw/*454.61*/("""<div class="rating-box">
+                                                        """),_display_(/*455.58*/if(item.average_Grade == 1)/*455.85*/ {_display_(Seq[Any](format.raw/*455.87*/("""
+                                                            """),format.raw/*456.61*/("""<div class="rating-box">
                                                                 <div class="rating1"></div>
                                                             </div>
-                                                        """)))}),format.raw/*457.58*/("""
-                                                        """),_display_(/*458.58*/if(item.average_Grade == 2)/*458.85*/ {_display_(Seq[Any](format.raw/*458.87*/("""
-                                                            """),format.raw/*459.61*/("""<div class="rating-box">
+                                                        """)))}),format.raw/*459.58*/("""
+                                                        """),_display_(/*460.58*/if(item.average_Grade == 2)/*460.85*/ {_display_(Seq[Any](format.raw/*460.87*/("""
+                                                            """),format.raw/*461.61*/("""<div class="rating-box">
                                                                 <div class="rating2"></div>
                                                             </div>
-                                                        """)))}),format.raw/*462.58*/("""
-                                                        """),_display_(/*463.58*/if(item.average_Grade == 3)/*463.85*/ {_display_(Seq[Any](format.raw/*463.87*/("""
-                                                            """),format.raw/*464.61*/("""<div class="rating-box">
+                                                        """)))}),format.raw/*464.58*/("""
+                                                        """),_display_(/*465.58*/if(item.average_Grade == 3)/*465.85*/ {_display_(Seq[Any](format.raw/*465.87*/("""
+                                                            """),format.raw/*466.61*/("""<div class="rating-box">
                                                                 <div class="rating3"></div>
                                                             </div>
-                                                        """)))}),format.raw/*467.58*/("""
-                                                        """),_display_(/*468.58*/if(item.average_Grade == 4)/*468.85*/ {_display_(Seq[Any](format.raw/*468.87*/("""
-                                                            """),format.raw/*469.61*/("""<div class="rating-box">
+                                                        """)))}),format.raw/*469.58*/("""
+                                                        """),_display_(/*470.58*/if(item.average_Grade == 4)/*470.85*/ {_display_(Seq[Any](format.raw/*470.87*/("""
+                                                            """),format.raw/*471.61*/("""<div class="rating-box">
                                                                 <div class="rating4"></div>
                                                             </div>
-                                                        """)))}),format.raw/*472.58*/("""
-                                                        """),_display_(/*473.58*/if(item.average_Grade == 5)/*473.85*/ {_display_(Seq[Any](format.raw/*473.87*/("""
-                                                            """),format.raw/*474.61*/("""<div class="rating-box">
+                                                        """)))}),format.raw/*474.58*/("""
+                                                        """),_display_(/*475.58*/if(item.average_Grade == 5)/*475.85*/ {_display_(Seq[Any](format.raw/*475.87*/("""
+                                                            """),format.raw/*476.61*/("""<div class="rating-box">
                                                                 <div class="rating5"></div>
                                                             </div>
-                                                        """)))}),format.raw/*477.58*/("""
-                                                        """),_display_(/*478.58*/if(item.average_Grade == 0)/*478.85*/ {_display_(Seq[Any](format.raw/*478.87*/("""
-                                                            """),format.raw/*479.61*/("""<div class="rating-box">
+                                                        """)))}),format.raw/*479.58*/("""
+                                                        """),_display_(/*480.58*/if(item.average_Grade == 0)/*480.85*/ {_display_(Seq[Any](format.raw/*480.87*/("""
+                                                            """),format.raw/*481.61*/("""<div class="rating-box">
                                                                 <div class="rating0"></div>
                                                             </div>
-                                                        """)))}),format.raw/*482.58*/("""
+                                                        """)))}),format.raw/*484.58*/("""
 
-                                                    """),format.raw/*484.53*/("""<p class="rating-links">Ukupno """),_display_(/*484.85*/Review/*484.91*/.getNumberOfReviews(item.id)),format.raw/*484.119*/(""" """),format.raw/*484.120*/("""ocjena</p>
+                                                    """),format.raw/*486.53*/("""<p class="rating-links">Ukupno """),_display_(/*486.85*/Review/*486.91*/.getNumberOfReviews(item.id)),format.raw/*486.119*/(""" """),format.raw/*486.120*/("""ocjena</p>
 
                                                     </div>
                                                 </div>
                                             <div class="item-price">
-                                                <div class="price-box"> <span class="regular-price"> <span class="price">"""),_display_(/*489.123*/item/*489.127*/.price),format.raw/*489.133*/(""" """),format.raw/*489.134*/("""KM </span> </span> </div>
+                                                <div class="price-box"> <span class="regular-price"> <span class="price">"""),_display_(/*491.123*/item/*491.127*/.price),format.raw/*491.133*/(""" """),format.raw/*491.134*/("""KM </span> </span> </div>
                                             </div>
-
-                                                """),format.raw/*492.148*/("""
-                                                """),format.raw/*493.75*/("""
-                                                """),format.raw/*494.132*/("""
-                                                """),format.raw/*495.59*/("""
-                                                """),format.raw/*496.131*/("""
-                                            """),format.raw/*497.45*/("""</div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        """)))}),format.raw/*502.26*/("""
+                        """)))}),format.raw/*498.26*/("""
 
-                        """),format.raw/*504.25*/("""</div>
+                        """),format.raw/*500.25*/("""</div>
                     </div>
                 </div>
             </section>
@@ -542,8 +538,13 @@ Seq[Any](_display_(/*2.2*/main/*2.6*/ {_display_(Seq[Any](format.raw/*2.8*/("""
         <div class="top-banner-section2 ">
             <div class="container">
                 <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12  ">
-                    <div class="col"><a href="#"><img src='"""),_display_(/*512.61*/routes/*512.67*/.Assets.versioned("images/slika2.png")),format.raw/*512.105*/("""' alt="offer banner3"></a></div>
-                </div>
+	                """),_display_(/*508.19*/if(Banner.findBannerByPosition(7) != null)/*508.61*/ {_display_(Seq[Any](format.raw/*508.63*/("""
+		                """),format.raw/*509.19*/("""<div class="col"><a href=""""),_display_(/*509.46*/Banner/*509.52*/.findBannerByPosition(7).link),format.raw/*509.81*/(""""><img src='"""),_display_(/*509.94*/Banner/*509.100*/.findBannerByPosition(7).image),format.raw/*509.130*/("""'alt="offer banner3"></a></div>
+	                """)))}/*510.19*/else/*510.23*/{_display_(Seq[Any](format.raw/*510.24*/("""
+		                """),format.raw/*511.19*/("""<div class="col"><a href=""""),_display_(/*511.46*/routes/*511.52*/.ContactUs.contactUsRender()),format.raw/*511.80*/(""""><img src='"""),_display_(/*511.93*/routes/*511.99*/.Assets.versioned("images/slika2.png")),format.raw/*511.137*/("""' alt="offer banner3"></a></div>
+	                """)))}),format.raw/*512.19*/("""
+                    """),format.raw/*513.141*/("""
+                """),format.raw/*514.17*/("""</div>
             </div>
         </div>
 
@@ -560,12 +561,12 @@ Seq[Any](_display_(/*2.2*/main/*2.6*/ {_display_(Seq[Any](format.raw/*2.8*/("""
             <div class="slider-items-products">
                 <div id="brand-logo-slider" class="product-flexslider hidden-buttons">
                     <div class="slider-items slider-width-col6">
-                        """),_display_(/*530.26*/for(user <- models.AppUser.usersWithLogo()) yield /*530.69*/{_display_(Seq[Any](format.raw/*530.70*/("""
-                            """),format.raw/*531.29*/("""<!-- Item -->
-                            <div class="item"><a href=""""),_display_(/*532.57*/routes/*532.63*/.Partners.partnerPageRender(user.id)),format.raw/*532.99*/(""""><img src='"""),_display_(/*532.112*/user/*532.116*/.images.get(0).getSize(178,77)),format.raw/*532.146*/("""' alt="Image"></a> </div>
+                        """),_display_(/*531.26*/for(user <- models.AppUser.usersWithLogo()) yield /*531.69*/{_display_(Seq[Any](format.raw/*531.70*/("""
+                            """),format.raw/*532.29*/("""<!-- Item -->
+                            <div class="item"><a href=""""),_display_(/*533.57*/routes/*533.63*/.Partners.partnerPageRender(user.id)),format.raw/*533.99*/(""""><img src='"""),_display_(/*533.112*/user/*533.116*/.images.get(0).getSize(178,77)),format.raw/*533.146*/("""' alt="Image"></a> </div>
                                 <!-- End Item -->
-                        """)))}),format.raw/*534.26*/("""
-                    """),format.raw/*535.21*/("""</div>
+                        """)))}),format.raw/*535.26*/("""
+                    """),format.raw/*536.21*/("""</div>
                 </div>
             </div>
         </div>
@@ -578,18 +579,18 @@ Seq[Any](_display_(/*2.2*/main/*2.6*/ {_display_(Seq[Any](format.raw/*2.8*/("""
                 <h2>Najnovije vijesti</h2>
             </div>
             <div class="row">
-                """),_display_(/*548.18*/for(news <- models.News.lastNews) yield /*548.51*/ {_display_(Seq[Any](format.raw/*548.53*/("""
-                    """),format.raw/*549.21*/("""<div class="col-lg-4 col-md-4 col-xs-12 col-sm-4">
+                """),_display_(/*549.18*/for(news <- models.News.lastNews) yield /*549.51*/ {_display_(Seq[Any](format.raw/*549.53*/("""
+                    """),format.raw/*550.21*/("""<div class="col-lg-4 col-md-4 col-xs-12 col-sm-4">
                         <div class="blog_inner">
-                            <div class="blog-img"> <img src='"""),_display_(/*551.63*/news/*551.67*/.images.get(0).getSize(780,420)),format.raw/*551.98*/("""' alt="Blog image">
-                                <div class="mask"> <a class="info" href=""""),_display_(/*552.75*/routes/*552.81*/.NewsController.newsRender(news.id)),format.raw/*552.116*/("""">Pročitaj više</a> </div>
+                            <div class="blog-img"> <img src='"""),_display_(/*552.63*/news/*552.67*/.images.get(0).getSize(780,420)),format.raw/*552.98*/("""' alt="Blog image">
+                                <div class="mask"> <a class="info" href=""""),_display_(/*553.75*/routes/*553.81*/.NewsController.newsRender(news.id)),format.raw/*553.116*/("""">Pročitaj više</a> </div>
                             </div>
-                            <h3><a href="blog_detail.html">"""),_display_(/*554.61*/news/*554.65*/.title),format.raw/*554.71*/("""</a> </h3>
-                            <p>"""),_display_(/*555.33*/news/*555.37*/.text.substring(0,70)),format.raw/*555.58*/("""  """),format.raw/*555.60*/("""... </p>
-                            <a class="readmore" href=""""),_display_(/*556.56*/routes/*556.62*/.NewsController.newsRender(news.id)),format.raw/*556.97*/("""">Pročitaj više</a> </div>
+                            <h3><a href="blog_detail.html">"""),_display_(/*555.61*/news/*555.65*/.title),format.raw/*555.71*/("""</a> </h3>
+                            <p>"""),_display_(/*556.33*/news/*556.37*/.text.substring(0,70)),format.raw/*556.58*/("""  """),format.raw/*556.60*/("""... </p>
+                            <a class="readmore" href=""""),_display_(/*557.56*/routes/*557.62*/.NewsController.newsRender(news.id)),format.raw/*557.97*/("""">Pročitaj više</a> </div>
                     </div>
-                """)))}),format.raw/*558.18*/("""
-            """),format.raw/*559.13*/("""</div>
+                """)))}),format.raw/*559.18*/("""
+            """),format.raw/*560.13*/("""</div>
 
         </div>
     </section>
@@ -597,12 +598,12 @@ Seq[Any](_display_(/*2.2*/main/*2.6*/ {_display_(Seq[Any](format.raw/*2.8*/("""
 <style>
 
 
-    .box-content li:hover .level0_455"""),format.raw/*567.38*/("""{"""),format.raw/*567.39*/("""
-    """),format.raw/*568.5*/("""display: block;
-    """),format.raw/*569.5*/("""}"""),format.raw/*569.6*/("""
+    .box-content li:hover .level0_455"""),format.raw/*568.38*/("""{"""),format.raw/*568.39*/("""
+    """),format.raw/*569.5*/("""display: block;
+    """),format.raw/*570.5*/("""}"""),format.raw/*570.6*/("""
 
-"""),format.raw/*571.1*/("""</style>
-""")))}),format.raw/*572.2*/("""
+"""),format.raw/*572.1*/("""</style>
+""")))}),format.raw/*573.2*/("""
 """))
       }
     }
@@ -624,11 +625,11 @@ Seq[Any](_display_(/*2.2*/main/*2.6*/ {_display_(Seq[Any](format.raw/*2.8*/("""
 object index extends index_Scope0.index_Scope1.index
               /*
                   -- GENERATED --
-                  DATE: Mon May 23 20:05:49 CEST 2016
+                  DATE: Sun Jun 26 10:47:47 CEST 2016
                   SOURCE: E:/namjestaj/app/views/index.scala.html
-                  HASH: 7ac66dee2683844d03c2e437c4c58141cb729cec
-                  MATRIX: 886->33|897->37|935->39|966->44|1029->81|1043->87|1114->138|1949->946|2017->998|2057->1000|2124->1039|2166->1054|2181->1060|2246->1103|2278->1107|2296->1115|2323->1120|2353->1121|2429->1166|2492->1201|2663->1345|2678->1351|2719->1371|2942->1567|2957->1573|3011->1606|3104->1672|3119->1678|3164->1702|3361->1897|3419->2001|3476->2064|3533->2153|3595->2269|3652->2303|3710->2343|3767->2406|3825->2446|3878->2481|3928->2503|4529->3076|4545->3082|4609->3124|4650->3137|4666->3143|4730->3185|6792->5219|6808->5225|6872->5267|6913->5280|6929->5286|6993->5328|9050->7357|9066->7363|9130->7405|9171->7418|9187->7424|9251->7466|11308->9495|11324->9501|11388->9543|11429->9556|11445->9562|11509->9604|13904->11972|13919->11978|13980->12017|14212->12221|14228->12227|14289->12265|14522->12470|14538->12476|14599->12514|14844->12731|14860->12737|14902->12757|14962->12789|15022->12839|15063->12841|15125->12874|15164->12885|15180->12891|15255->12943|15327->12995|15341->13000|15381->13001|15443->13034|15482->13045|15498->13051|15559->13090|15666->13165|15720->13190|17020->14462|17086->14511|17127->14513|17201->14558|17501->14830|17537->14856|17577->14857|17659->14910|17749->14971|17764->14975|17792->14980|17830->14989|17847->14995|17896->15021|17963->15059|17980->15065|18052->15114|18247->15289|18261->15293|18301->15294|18383->15347|18473->15408|18488->15412|18516->15417|18554->15426|18571->15432|18620->15458|18687->15496|18704->15502|18766->15541|18973->15716|19051->15765|19353->16038|19370->16044|19419->16070|19452->16074|19467->16078|19495->16083|19526->16084|19885->16415|19922->16442|19963->16444|20065->16517|20374->16794|20472->16864|20509->16891|20550->16893|20652->16966|20961->17243|21059->17313|21096->17340|21137->17342|21239->17415|21548->17692|21646->17762|21683->17789|21724->17791|21826->17864|22135->18141|22233->18211|22270->18238|22311->18240|22413->18313|22722->18590|22820->18660|22857->18687|22898->18689|23000->18762|23309->19039|23408->19109|23734->19406|23749->19410|23778->19416|23958->19665|24048->19752|24139->19896|24229->19967|24320->20104|24410->20175|24496->20232|24846->20550|24912->20587|25597->21244|25654->21284|25695->21286|25773->21335|26089->21623|26125->21649|26165->21650|26251->21707|26341->21768|26356->21772|26384->21777|26422->21786|26439->21792|26488->21818|26555->21856|26572->21862|26644->21911|26952->22199|26966->22203|27006->22204|27092->22261|27182->22322|27197->22326|27225->22331|27263->22340|27280->22346|27329->22372|27396->22410|27413->22416|27475->22455|27795->22743|27877->22796|28191->23081|28208->23087|28257->23113|28290->23117|28305->23121|28333->23126|28364->23127|28739->23474|28777->23501|28819->23503|28925->23580|29246->23869|29348->23943|29386->23970|29428->23972|29534->24049|29855->24338|29957->24412|29995->24439|30037->24441|30143->24518|30464->24807|30566->24881|30604->24908|30646->24910|30752->24987|31073->25276|31175->25350|31213->25377|31255->25379|31361->25456|31682->25745|31784->25819|31822->25846|31864->25848|31970->25925|32291->26214|32390->26284|32728->26593|32743->26597|32772->26603|32960->26860|33054->26951|33149->27099|33243->27174|33338->27315|33432->27390|33522->27451|33896->27793|33966->27834|34762->28602|34828->28651|34869->28653|34947->28702|35263->28990|35299->29016|35339->29017|35425->29074|35515->29135|35530->29139|35558->29144|35596->29153|35613->29159|35662->29185|35729->29223|35746->29229|35818->29278|36021->29461|36035->29465|36075->29466|36161->29523|36251->29584|36266->29588|36294->29593|36332->29602|36349->29608|36398->29634|36465->29672|36482->29678|36544->29717|36759->29900|36841->29953|37155->30238|37172->30244|37221->30270|37254->30274|37269->30278|37297->30283|37328->30284|37703->30631|37741->30658|37783->30660|37889->30737|38210->31026|38312->31100|38350->31127|38392->31129|38498->31206|38819->31495|38921->31569|38959->31596|39001->31598|39107->31675|39428->31964|39530->32038|39568->32065|39610->32067|39716->32144|40037->32433|40139->32507|40177->32534|40219->32536|40325->32613|40646->32902|40748->32976|40786->33003|40828->33005|40934->33082|41255->33371|41354->33441|41692->33750|41707->33754|41736->33760|41924->34017|42018->34108|42113->34256|42207->34331|42302->34472|42396->34547|42486->34608|42860->34950|42930->34991|43437->35470|43453->35476|43516->35516|43754->35726|43770->35732|43833->35772|45766->37677|45828->37722|45868->37723|45926->37752|46126->37924|46162->37950|46202->37951|46272->37992|46362->38053|46377->38057|46405->38062|46443->38071|46460->38077|46509->38103|46576->38141|46593->38147|46665->38196|46925->38436|46939->38440|46979->38441|47049->38482|47139->38543|47154->38547|47182->38552|47220->38561|47237->38567|47286->38593|47353->38631|47370->38637|47432->38676|47704->38916|47770->38953|48036->39190|48053->39196|48102->39222|48135->39226|48150->39230|48178->39235|48209->39236|48520->39519|48557->39546|48598->39548|48688->39609|48961->39850|49047->39908|49084->39935|49125->39937|49215->39998|49488->40239|49574->40297|49611->40324|49652->40326|49742->40387|50015->40628|50101->40686|50138->40713|50179->40715|50269->40776|50542->41017|50628->41075|50665->41102|50706->41104|50796->41165|51069->41406|51155->41464|51192->41491|51233->41493|51323->41554|51596->41795|51679->41849|51739->41881|51755->41887|51806->41915|51837->41916|52183->42233|52198->42237|52227->42243|52258->42244|52414->42469|52492->42544|52571->42676|52649->42735|52728->42866|52802->42911|53030->43107|53085->43133|53402->43422|53418->43428|53479->43466|54053->44012|54113->44055|54153->44056|54211->44085|54309->44155|54325->44161|54383->44197|54425->44210|54440->44214|54493->44244|54626->44345|54676->44366|55047->44709|55097->44742|55138->44744|55188->44765|55378->44927|55392->44931|55445->44962|55567->45056|55583->45062|55641->45097|55791->45219|55805->45223|55833->45229|55904->45272|55918->45276|55961->45297|55992->45299|56084->45363|56100->45369|56157->45404|56260->45475|56302->45488|56445->45602|56475->45603|56508->45608|56556->45628|56585->45629|56615->45631|56656->45641
-                  LINES: 35->2|35->2|35->2|36->3|36->3|36->3|36->3|51->18|51->18|51->18|52->19|52->19|52->19|52->19|52->19|52->19|52->19|52->19|53->20|54->21|58->25|58->25|58->25|61->28|61->28|61->28|62->29|62->29|62->29|66->33|67->34|68->35|69->36|70->37|71->38|73->40|74->41|76->43|77->44|79->46|86->53|86->53|86->53|86->53|86->53|86->53|94->61|94->61|94->61|94->61|94->61|94->61|102->69|102->69|102->69|102->69|102->69|102->69|110->77|110->77|110->77|110->77|110->77|110->77|131->98|131->98|131->98|134->101|134->101|134->101|137->104|137->104|137->104|141->108|141->108|141->108|142->109|142->109|142->109|143->110|143->110|143->110|143->110|144->111|144->111|144->111|145->112|145->112|145->112|145->112|146->113|147->114|172->139|172->139|172->139|173->140|177->144|177->144|177->144|178->145|178->145|178->145|178->145|178->145|178->145|178->145|178->145|178->145|178->145|181->148|181->148|181->148|182->149|182->149|182->149|182->149|182->149|182->149|182->149|182->149|182->149|182->149|185->152|186->153|189->156|189->156|189->156|189->156|189->156|189->156|189->156|193->160|193->160|193->160|194->161|197->164|198->165|198->165|198->165|199->166|202->169|203->170|203->170|203->170|204->171|207->174|208->175|208->175|208->175|209->176|212->179|213->180|213->180|213->180|214->181|217->184|218->185|218->185|218->185|219->186|222->189|224->191|227->194|227->194|227->194|229->196|230->197|231->198|232->199|233->200|234->201|235->202|241->208|242->209|255->222|255->222|255->222|256->223|260->227|260->227|260->227|261->228|261->228|261->228|261->228|261->228|261->228|261->228|261->228|261->228|261->228|264->231|264->231|264->231|265->232|265->232|265->232|265->232|265->232|265->232|265->232|265->232|265->232|265->232|268->235|269->236|272->239|272->239|272->239|272->239|272->239|272->239|272->239|276->243|276->243|276->243|277->244|280->247|281->248|281->248|281->248|282->249|285->252|286->253|286->253|286->253|287->254|290->257|291->258|291->258|291->258|292->259|295->262|296->263|296->263|296->263|297->264|300->267|301->268|301->268|301->268|302->269|305->272|307->274|310->277|310->277|310->277|312->279|313->280|314->281|315->282|316->283|317->284|318->285|324->291|325->292|340->307|340->307|340->307|341->308|345->312|345->312|345->312|346->313|346->313|346->313|346->313|346->313|346->313|346->313|346->313|346->313|346->313|349->316|349->316|349->316|350->317|350->317|350->317|350->317|350->317|350->317|350->317|350->317|350->317|350->317|353->320|354->321|357->324|357->324|357->324|357->324|357->324|357->324|357->324|361->328|361->328|361->328|362->329|365->332|366->333|366->333|366->333|367->334|370->337|371->338|371->338|371->338|372->339|375->342|376->343|376->343|376->343|377->344|380->347|381->348|381->348|381->348|382->349|385->352|386->353|386->353|386->353|387->354|390->357|392->359|395->362|395->362|395->362|397->364|398->365|399->366|400->367|401->368|402->369|403->370|409->376|410->377|424->391|424->391|424->391|427->394|427->394|427->394|466->433|466->433|466->433|467->434|470->437|470->437|470->437|471->438|471->438|471->438|471->438|471->438|471->438|471->438|471->438|471->438|471->438|474->441|474->441|474->441|475->442|475->442|475->442|475->442|475->442|475->442|475->442|475->442|475->442|475->442|478->445|479->446|482->449|482->449|482->449|482->449|482->449|482->449|482->449|486->453|486->453|486->453|487->454|490->457|491->458|491->458|491->458|492->459|495->462|496->463|496->463|496->463|497->464|500->467|501->468|501->468|501->468|502->469|505->472|506->473|506->473|506->473|507->474|510->477|511->478|511->478|511->478|512->479|515->482|517->484|517->484|517->484|517->484|517->484|522->489|522->489|522->489|522->489|525->492|526->493|527->494|528->495|529->496|530->497|535->502|537->504|545->512|545->512|545->512|563->530|563->530|563->530|564->531|565->532|565->532|565->532|565->532|565->532|565->532|567->534|568->535|581->548|581->548|581->548|582->549|584->551|584->551|584->551|585->552|585->552|585->552|587->554|587->554|587->554|588->555|588->555|588->555|588->555|589->556|589->556|589->556|591->558|592->559|600->567|600->567|601->568|602->569|602->569|604->571|605->572
+                  HASH: e6fdd684e03a95f319a844e47d1124e83e6ea7a2
+                  MATRIX: 886->33|897->37|935->39|966->44|1029->81|1043->87|1114->138|1949->946|2017->998|2057->1000|2124->1039|2166->1054|2181->1060|2246->1103|2278->1107|2296->1115|2323->1120|2353->1121|2429->1166|2492->1201|2663->1345|2678->1351|2719->1371|2942->1567|2957->1573|3011->1606|3104->1672|3119->1678|3164->1702|3361->1897|3419->2001|3476->2064|3533->2153|3595->2269|3652->2303|3710->2343|3767->2406|3825->2446|3878->2481|3928->2503|4529->3076|4545->3082|4609->3124|4650->3137|4666->3143|4730->3185|6792->5219|6808->5225|6872->5267|6913->5280|6929->5286|6993->5328|9050->7357|9066->7363|9130->7405|9171->7418|9187->7424|9251->7466|11308->9495|11324->9501|11388->9543|11429->9556|11445->9562|11509->9604|13857->11925|13908->11967|13948->11969|13997->11990|14051->12017|14066->12023|14116->12052|14156->12065|14172->12071|14224->12101|14293->12150|14307->12154|14347->12155|14397->12176|14452->12203|14468->12209|14518->12237|14559->12250|14576->12256|14644->12301|14726->12351|14768->12364|14906->12474|14958->12516|14999->12518|15049->12539|15104->12566|15120->12572|15171->12601|15212->12614|15229->12620|15282->12650|15351->12699|15365->12703|15405->12704|15455->12725|15510->12752|15526->12758|15576->12786|15617->12799|15634->12805|15702->12850|15784->12900|15826->12913|15964->13023|16016->13065|16057->13067|16107->13088|16162->13115|16178->13121|16229->13150|16270->13163|16287->13169|16340->13199|16409->13248|16423->13252|16463->13253|16513->13274|16568->13301|16584->13307|16634->13335|16675->13348|16692->13354|16760->13399|16842->13449|16884->13462|17021->13571|17073->13613|17114->13615|17164->13636|17219->13663|17235->13669|17286->13698|17327->13711|17344->13717|17397->13747|17466->13796|17480->13800|17520->13801|17570->13822|17625->13849|17641->13855|17691->13883|17732->13896|17749->13902|17817->13947|17899->13997|17941->14010|19193->15234|19259->15283|19300->15285|19374->15330|19674->15602|19710->15628|19750->15629|19832->15682|19922->15743|19937->15747|19965->15752|20003->15761|20020->15767|20069->15793|20136->15831|20153->15837|20225->15886|20420->16061|20434->16065|20474->16066|20556->16119|20646->16180|20661->16184|20689->16189|20727->16198|20744->16204|20793->16230|20860->16268|20877->16274|20939->16313|21146->16488|21224->16537|21526->16810|21543->16816|21592->16842|21625->16846|21640->16850|21668->16855|21699->16856|22058->17187|22095->17214|22136->17216|22238->17289|22547->17566|22645->17636|22682->17663|22723->17665|22825->17738|23134->18015|23232->18085|23269->18112|23310->18114|23412->18187|23721->18464|23819->18534|23856->18561|23897->18563|23999->18636|24308->18913|24406->18983|24443->19010|24484->19012|24586->19085|24895->19362|24993->19432|25030->19459|25071->19461|25173->19534|25482->19811|25581->19881|25907->20178|25922->20182|25951->20188|26447->20652|26513->20689|27198->21346|27255->21386|27296->21388|27374->21437|27690->21725|27726->21751|27766->21752|27852->21809|27942->21870|27957->21874|27985->21879|28023->21888|28040->21894|28089->21920|28156->21958|28173->21964|28245->22013|28553->22301|28567->22305|28607->22306|28693->22363|28783->22424|28798->22428|28826->22433|28864->22442|28881->22448|28930->22474|28997->22512|29014->22518|29076->22557|29396->22845|29478->22898|29792->23183|29809->23189|29858->23215|29891->23219|29906->23223|29934->23228|29965->23229|30340->23576|30378->23603|30420->23605|30526->23682|30847->23971|30949->24045|30987->24072|31029->24074|31135->24151|31456->24440|31558->24514|31596->24541|31638->24543|31744->24620|32065->24909|32167->24983|32205->25010|32247->25012|32353->25089|32674->25378|32776->25452|32814->25479|32856->25481|32962->25558|33283->25847|33385->25921|33423->25948|33465->25950|33571->26027|33892->26316|33991->26386|34329->26695|34344->26699|34373->26705|34901->27201|34971->27242|35767->28010|35833->28059|35874->28061|35952->28110|36268->28398|36304->28424|36344->28425|36430->28482|36520->28543|36535->28547|36563->28552|36601->28561|36618->28567|36667->28593|36734->28631|36751->28637|36823->28686|37026->28869|37040->28873|37080->28874|37166->28931|37256->28992|37271->28996|37299->29001|37337->29010|37354->29016|37403->29042|37470->29080|37487->29086|37549->29125|37764->29308|37846->29361|38160->29646|38177->29652|38226->29678|38259->29682|38274->29686|38302->29691|38333->29692|38708->30039|38746->30066|38788->30068|38894->30145|39215->30434|39317->30508|39355->30535|39397->30537|39503->30614|39824->30903|39926->30977|39964->31004|40006->31006|40112->31083|40433->31372|40535->31446|40573->31473|40615->31475|40721->31552|41042->31841|41144->31915|41182->31942|41224->31944|41330->32021|41651->32310|41753->32384|41791->32411|41833->32413|41939->32490|42260->32779|42359->32849|42697->33158|42712->33162|42741->33168|43269->33664|43339->33705|43778->34116|43830->34158|43871->34160|43919->34179|44000->34232|44016->34238|44068->34267|44110->34280|44127->34286|44180->34316|44250->34366|44264->34370|44304->34371|44352->34390|44433->34443|44449->34449|44500->34477|44542->34490|44559->34496|44622->34536|44705->34587|44756->34756|44802->34773|44924->34867|44976->34909|45017->34911|45065->34930|45145->34982|45161->34988|45213->35017|45255->35030|45272->35036|45325->35066|45395->35116|45409->35120|45449->35121|45497->35140|45577->35192|45593->35198|45644->35226|45686->35239|45703->35245|45766->35285|45849->35336|45900->35504|45946->35521|47679->37226|47741->37271|47781->37272|47839->37301|48039->37473|48075->37499|48115->37500|48185->37541|48275->37602|48290->37606|48318->37611|48356->37620|48373->37626|48422->37652|48489->37690|48506->37696|48578->37745|48838->37985|48852->37989|48892->37990|48962->38031|49052->38092|49067->38096|49095->38101|49133->38110|49150->38116|49199->38142|49266->38180|49283->38186|49345->38225|49617->38465|49683->38502|49949->38739|49966->38745|50015->38771|50048->38775|50063->38779|50091->38784|50122->38785|50433->39068|50470->39095|50511->39097|50601->39158|50874->39399|50960->39457|50997->39484|51038->39486|51128->39547|51401->39788|51487->39846|51524->39873|51565->39875|51655->39936|51928->40177|52014->40235|52051->40262|52092->40264|52182->40325|52455->40566|52541->40624|52578->40651|52619->40653|52709->40714|52982->40955|53068->41013|53105->41040|53146->41042|53236->41103|53509->41344|53592->41398|53652->41430|53668->41436|53719->41464|53750->41465|54096->41782|54111->41786|54140->41792|54171->41793|54520->42110|54575->42136|54850->42383|54902->42425|54943->42427|54991->42446|55046->42473|55062->42479|55113->42508|55154->42521|55171->42527|55224->42557|55294->42607|55308->42611|55348->42612|55396->42631|55451->42658|55467->42664|55517->42692|55558->42705|55574->42711|55635->42749|55718->42800|55769->42941|55815->42958|56340->43455|56400->43498|56440->43499|56498->43528|56596->43598|56612->43604|56670->43640|56712->43653|56727->43657|56780->43687|56913->43788|56963->43809|57334->44152|57384->44185|57425->44187|57475->44208|57665->44370|57679->44374|57732->44405|57854->44499|57870->44505|57928->44540|58078->44662|58092->44666|58120->44672|58191->44715|58205->44719|58248->44740|58279->44742|58371->44806|58387->44812|58444->44847|58547->44918|58589->44931|58732->45045|58762->45046|58795->45051|58843->45071|58872->45072|58902->45074|58943->45084
+                  LINES: 35->2|35->2|35->2|36->3|36->3|36->3|36->3|51->18|51->18|51->18|52->19|52->19|52->19|52->19|52->19|52->19|52->19|52->19|53->20|54->21|58->25|58->25|58->25|61->28|61->28|61->28|62->29|62->29|62->29|66->33|67->34|68->35|69->36|70->37|71->38|73->40|74->41|76->43|77->44|79->46|86->53|86->53|86->53|86->53|86->53|86->53|94->61|94->61|94->61|94->61|94->61|94->61|102->69|102->69|102->69|102->69|102->69|102->69|110->77|110->77|110->77|110->77|110->77|110->77|131->98|131->98|131->98|132->99|132->99|132->99|132->99|132->99|132->99|132->99|133->100|133->100|133->100|134->101|134->101|134->101|134->101|134->101|134->101|134->101|135->102|136->103|139->106|139->106|139->106|140->107|140->107|140->107|140->107|140->107|140->107|140->107|141->108|141->108|141->108|142->109|142->109|142->109|142->109|142->109|142->109|142->109|143->110|144->111|147->114|147->114|147->114|148->115|148->115|148->115|148->115|148->115|148->115|148->115|149->116|149->116|149->116|150->117|150->117|150->117|150->117|150->117|150->117|150->117|151->118|152->119|154->121|154->121|154->121|155->122|155->122|155->122|155->122|155->122|155->122|155->122|156->123|156->123|156->123|157->124|157->124|157->124|157->124|157->124|157->124|157->124|158->125|159->126|182->149|182->149|182->149|183->150|187->154|187->154|187->154|188->155|188->155|188->155|188->155|188->155|188->155|188->155|188->155|188->155|188->155|191->158|191->158|191->158|192->159|192->159|192->159|192->159|192->159|192->159|192->159|192->159|192->159|192->159|195->162|196->163|199->166|199->166|199->166|199->166|199->166|199->166|199->166|203->170|203->170|203->170|204->171|207->174|208->175|208->175|208->175|209->176|212->179|213->180|213->180|213->180|214->181|217->184|218->185|218->185|218->185|219->186|222->189|223->190|223->190|223->190|224->191|227->194|228->195|228->195|228->195|229->196|232->199|234->201|237->204|237->204|237->204|245->212|246->213|259->226|259->226|259->226|260->227|264->231|264->231|264->231|265->232|265->232|265->232|265->232|265->232|265->232|265->232|265->232|265->232|265->232|268->235|268->235|268->235|269->236|269->236|269->236|269->236|269->236|269->236|269->236|269->236|269->236|269->236|272->239|273->240|276->243|276->243|276->243|276->243|276->243|276->243|276->243|280->247|280->247|280->247|281->248|284->251|285->252|285->252|285->252|286->253|289->256|290->257|290->257|290->257|291->258|294->261|295->262|295->262|295->262|296->263|299->266|300->267|300->267|300->267|301->268|304->271|305->272|305->272|305->272|306->273|309->276|311->278|314->281|314->281|314->281|322->289|323->290|338->305|338->305|338->305|339->306|343->310|343->310|343->310|344->311|344->311|344->311|344->311|344->311|344->311|344->311|344->311|344->311|344->311|347->314|347->314|347->314|348->315|348->315|348->315|348->315|348->315|348->315|348->315|348->315|348->315|348->315|351->318|352->319|355->322|355->322|355->322|355->322|355->322|355->322|355->322|359->326|359->326|359->326|360->327|363->330|364->331|364->331|364->331|365->332|368->335|369->336|369->336|369->336|370->337|373->340|374->341|374->341|374->341|375->342|378->345|379->346|379->346|379->346|380->347|383->350|384->351|384->351|384->351|385->352|388->355|390->357|393->360|393->360|393->360|401->368|402->369|416->383|416->383|416->383|417->384|417->384|417->384|417->384|417->384|417->384|417->384|418->385|418->385|418->385|419->386|419->386|419->386|419->386|419->386|419->386|419->386|420->387|421->388|422->389|424->391|424->391|424->391|425->392|425->392|425->392|425->392|425->392|425->392|425->392|426->393|426->393|426->393|427->394|427->394|427->394|427->394|427->394|427->394|427->394|428->395|429->396|430->397|468->435|468->435|468->435|469->436|472->439|472->439|472->439|473->440|473->440|473->440|473->440|473->440|473->440|473->440|473->440|473->440|473->440|476->443|476->443|476->443|477->444|477->444|477->444|477->444|477->444|477->444|477->444|477->444|477->444|477->444|480->447|481->448|484->451|484->451|484->451|484->451|484->451|484->451|484->451|488->455|488->455|488->455|489->456|492->459|493->460|493->460|493->460|494->461|497->464|498->465|498->465|498->465|499->466|502->469|503->470|503->470|503->470|504->471|507->474|508->475|508->475|508->475|509->476|512->479|513->480|513->480|513->480|514->481|517->484|519->486|519->486|519->486|519->486|519->486|524->491|524->491|524->491|524->491|531->498|533->500|541->508|541->508|541->508|542->509|542->509|542->509|542->509|542->509|542->509|542->509|543->510|543->510|543->510|544->511|544->511|544->511|544->511|544->511|544->511|544->511|545->512|546->513|547->514|564->531|564->531|564->531|565->532|566->533|566->533|566->533|566->533|566->533|566->533|568->535|569->536|582->549|582->549|582->549|583->550|585->552|585->552|585->552|586->553|586->553|586->553|588->555|588->555|588->555|589->556|589->556|589->556|589->556|590->557|590->557|590->557|592->559|593->560|601->568|601->568|602->569|603->570|603->570|605->572|606->573
                   -- GENERATED --
               */
           

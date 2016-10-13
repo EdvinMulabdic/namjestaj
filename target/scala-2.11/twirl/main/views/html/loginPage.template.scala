@@ -103,7 +103,7 @@ Seq[Any](_display_(/*1.2*/main/*1.6*/{_display_(Seq[Any](format.raw/*1.7*/("""
 object loginPage extends loginPage_Scope0.loginPage
               /*
                   -- GENERATED --
-                  DATE: Fri May 13 17:14:18 CEST 2016
+                  DATE: Wed Jun 08 01:58:53 CEST 2016
                   SOURCE: E:/namjestaj/app/views/loginPage.scala.html
                   HASH: 7978bf2f89bf14d5b890e7336a9ae9313ab75a58
                   MATRIX: 835->1|846->5|883->6|915->12|1295->366|1309->372|1357->400|2352->1368|2367->1374|2402->1388

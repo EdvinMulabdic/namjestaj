@@ -92,7 +92,7 @@ Seq[Any](_display_(/*1.2*/main/*1.6*/ {_display_(Seq[Any](format.raw/*1.8*/("""
 object createCategory extends createCategory_Scope0.createCategory
               /*
                   -- GENERATED --
-                  DATE: Fri May 13 17:14:18 CEST 2016
+                  DATE: Wed Jun 08 01:58:53 CEST 2016
                   SOURCE: E:/namjestaj/app/views/Category/createCategory.scala.html
                   HASH: e315401d0737744aef9a09b57fd34c4ee2296516
                   MATRIX: 854->1|865->5|903->7|935->13|1493->544|1508->550|1558->578

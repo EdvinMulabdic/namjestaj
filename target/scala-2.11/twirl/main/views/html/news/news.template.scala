@@ -64,16 +64,19 @@ Seq[Any](format.raw/*1.14*/("""
                         <div role="complementary" class="widget_wrapper13" id="secondary">
                                 <!-- Banner Ad Block -->
                             <div class="ad-spots widget widget__sidebar">
-                                <a target="_self" href="#" title=""><img alt="offer banner" src='"""),_display_(/*36.99*/routes/*36.105*/.Assets.versioned("images/block1.jpg")),format.raw/*36.143*/("""' style="width : 280px;"></a>
-                                <a target="_self" href="#" title=""><img alt="offer banner" src='"""),_display_(/*37.99*/routes/*37.105*/.Assets.versioned("images/block1.jpg")),format.raw/*37.143*/("""' style="width : 280px;"></a>
-                            </div>
-                                <!-- Banner Text Block -->
-                            <div class="text-widget widget widget__sidebar">
-                                <h3 class="widget-title">Text Banner</h3>
-                                <div class="widget-content">Mauris at blandit erat. Nam vel tortor non quam scelerisque cursus. Praesent nunc vitae magna pellentesque auctor. Quisque id lectus.<br>
-                                    <br>
-                                    Massa, eget eleifend tellus. Proin nec ante leo ssim nunc sit amet velit malesuada pharetra. Nulla neque sapien, sollicitudin non ornare quis, malesuada.</div>
-                            </div>
+	                            """),_display_(/*36.31*/if(Banner.findBannerByPosition(8) != null)/*36.73*/ {_display_(Seq[Any](format.raw/*36.75*/("""
+		                            """),format.raw/*37.31*/("""<div class="col"><a href=""""),_display_(/*37.58*/Banner/*37.64*/.findBannerByPosition(8).link),format.raw/*37.93*/(""""><img src='"""),_display_(/*37.106*/Banner/*37.112*/.findBannerByPosition(8).image),format.raw/*37.142*/("""'alt="offer banner3"></a></div>
+	                            """)))}/*38.31*/else/*38.35*/{_display_(Seq[Any](format.raw/*38.36*/("""
+		                            """),format.raw/*39.31*/("""<div class="col"><a href=""""),_display_(/*39.58*/routes/*39.64*/.ContactUs.contactUsRender()),format.raw/*39.92*/(""""><img src='"""),_display_(/*39.105*/routes/*39.111*/.Assets.versioned("images/bannerNews.png")),format.raw/*39.153*/("""' alt="offer banner3"></a></div>
+	                            """)))}),format.raw/*40.31*/("""
+	                            """),_display_(/*41.31*/if(Banner.findBannerByPosition(9) != null)/*41.73*/ {_display_(Seq[Any](format.raw/*41.75*/("""
+		                            """),format.raw/*42.31*/("""<div class="col"><a href=""""),_display_(/*42.58*/Banner/*42.64*/.findBannerByPosition(9).link),format.raw/*42.93*/(""""><img src='"""),_display_(/*42.106*/Banner/*42.112*/.findBannerByPosition(9).image),format.raw/*42.142*/("""'alt="offer banner3"></a></div>
+	                            """)))}/*43.31*/else/*43.35*/{_display_(Seq[Any](format.raw/*43.36*/("""
+		                            """),format.raw/*44.31*/("""<div class="col"><a href=""""),_display_(/*44.58*/routes/*44.64*/.ContactUs.contactUsRender()),format.raw/*44.92*/(""""><img src='"""),_display_(/*44.105*/routes/*44.111*/.Assets.versioned("images/bannerNews.png")),format.raw/*44.153*/("""' alt="offer banner3"></a></div>
+	                            """)))}),format.raw/*45.31*/("""
+                                """),format.raw/*46.158*/("""
+                                """),format.raw/*47.158*/("""
+                            """),format.raw/*48.29*/("""</div>
                         </div>
                     </aside>
 
@@ -82,7 +85,7 @@ Seq[Any](format.raw/*1.14*/("""
         </section>
         <!-- Main Container End -->
     </div>
-""")))}),format.raw/*54.2*/("""
+""")))}),format.raw/*57.2*/("""
 """))
       }
     }
@@ -103,11 +106,11 @@ Seq[Any](format.raw/*1.14*/("""
 object news extends news_Scope0.news
               /*
                   -- GENERATED --
-                  DATE: Fri May 13 17:14:19 CEST 2016
+                  DATE: Sun Jun 26 10:47:48 CEST 2016
                   SOURCE: E:/namjestaj/app/views/news/news.scala.html
-                  HASH: 091b417f234b87aff31aef4e783eebdaa2338d52
-                  MATRIX: 746->1|853->13|881->16|892->20|930->22|962->28|1022->62|1034->66|1086->98|1912->897|1925->901|1952->907|1981->908|2392->1292|2405->1296|2431->1301|3139->1982|3155->1988|3215->2026|3371->2155|3387->2161|3447->2199|4409->3131
-                  LINES: 27->1|32->1|33->2|33->2|33->2|34->3|34->3|34->3|34->3|47->16|47->16|47->16|47->16|53->22|53->22|53->22|67->36|67->36|67->36|68->37|68->37|68->37|85->54
+                  HASH: ef946ce1147b73985311baebc2c24eab9afd359e
+                  MATRIX: 746->1|853->13|881->16|892->20|930->22|962->28|1022->62|1034->66|1086->98|1912->897|1925->901|1952->907|1981->908|2392->1292|2405->1296|2431->1301|3071->1914|3122->1956|3162->1958|3222->1990|3276->2017|3291->2023|3341->2052|3382->2065|3398->2071|3450->2101|3532->2164|3545->2168|3584->2169|3644->2201|3698->2228|3713->2234|3762->2262|3803->2275|3819->2281|3883->2323|3978->2387|4037->2419|4088->2461|4128->2463|4188->2495|4242->2522|4257->2528|4307->2557|4348->2570|4364->2576|4416->2606|4498->2669|4511->2673|4550->2674|4610->2706|4664->2733|4679->2739|4728->2767|4769->2780|4785->2786|4849->2828|4944->2892|5007->3051|5070->3210|5128->3240|5344->3426
+                  LINES: 27->1|32->1|33->2|33->2|33->2|34->3|34->3|34->3|34->3|47->16|47->16|47->16|47->16|53->22|53->22|53->22|67->36|67->36|67->36|68->37|68->37|68->37|68->37|68->37|68->37|68->37|69->38|69->38|69->38|70->39|70->39|70->39|70->39|70->39|70->39|70->39|71->40|72->41|72->41|72->41|73->42|73->42|73->42|73->42|73->42|73->42|73->42|74->43|74->43|74->43|75->44|75->44|75->44|75->44|75->44|75->44|75->44|76->45|77->46|78->47|79->48|88->57
                   -- GENERATED --
               */
           

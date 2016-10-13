@@ -162,8 +162,11 @@ Seq[Any](format.raw/*3.88*/("""
         <script src="https://cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
 
         """),format.raw/*131.111*/("""
-        """),format.raw/*132.9*/("""<script type="text/javascript" src='"""),_display_(/*132.46*/routes/*132.52*/.Assets.versioned("javascripts/googleAnalytics.js")),format.raw/*132.103*/("""'></script>
+	    """),format.raw/*132.6*/("""<script type="text/javascript" src='"""),_display_(/*132.43*/routes/*132.49*/.Assets.versioned("javascripts/googleAnalytics.js")),format.raw/*132.100*/("""'></script>
 
+	    <script type='text/javascript'>
+(function()"""),format.raw/*135.12*/("""{"""),format.raw/*135.13*/(""" """),format.raw/*135.14*/("""var widget_id = 'r2E5WGIPzp';var d=document;var w=window;function l()"""),format.raw/*135.83*/("""{"""),format.raw/*135.84*/("""
+"""),format.raw/*136.1*/("""var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);"""),format.raw/*136.230*/("""}"""),format.raw/*136.231*/("""if(d.readyState=='complete')"""),format.raw/*136.259*/("""{"""),format.raw/*136.260*/("""l();"""),format.raw/*136.264*/("""}"""),format.raw/*136.265*/("""else"""),format.raw/*136.269*/("""{"""),format.raw/*136.270*/("""if(w.attachEvent)"""),format.raw/*136.287*/("""{"""),format.raw/*136.288*/("""w.attachEvent('onload',l);"""),format.raw/*136.314*/("""}"""),format.raw/*136.315*/("""else"""),format.raw/*136.319*/("""{"""),format.raw/*136.320*/("""w.addEventListener('load',l,false);"""),format.raw/*136.355*/("""}"""),format.raw/*136.356*/("""}"""),format.raw/*136.357*/("""}"""),format.raw/*136.358*/(""")();</script>
 
 
     </head>
@@ -171,18 +174,18 @@ Seq[Any](format.raw/*3.88*/("""
 
     <body class="cms-index-index cms-home-page">
         <div id="page">
-            """),format.raw/*141.45*/("""
-            """),format.raw/*142.130*/("""
-            """),format.raw/*143.133*/("""
-            """),format.raw/*144.23*/("""
+            """),format.raw/*144.45*/("""
+            """),format.raw/*145.130*/("""
+            """),format.raw/*146.133*/("""
+            """),format.raw/*147.23*/("""
 
-                """),format.raw/*146.17*/("""<!-- Navbar -->
+                """),format.raw/*149.17*/("""<!-- Navbar -->
             <nav class=" navbar-fixed-top">
-                """),format.raw/*148.45*/("""
-                """),format.raw/*149.17*/("""<div class="row">
+                """),format.raw/*151.45*/("""
+                """),format.raw/*152.17*/("""<div class="row">
                     <div class="col-lg-2 col-sm-2 col-xs-4 col-lg-offset-1">
                             <!-- Header Logo -->
-                        <div class="logo"><a title="Magento Commerce" href=""""),_display_(/*152.78*/routes/*152.84*/.Application.index()),format.raw/*152.104*/(""""><img alt="Namjestaj" src='"""),_display_(/*152.133*/routes/*152.139*/.Assets.versioned("images/logo.png")),format.raw/*152.175*/("""'></a></div>
+                        <div class="logo"><a title="Magento Commerce" href=""""),_display_(/*155.78*/routes/*155.84*/.Application.index()),format.raw/*155.104*/(""""><img alt="Namjestaj" src='"""),_display_(/*155.133*/routes/*155.139*/.Assets.versioned("images/logo.png")),format.raw/*155.175*/("""'></a></div>
                             <!-- End Header Logo -->
                     </div>
                     <div class="mm-toggle-wrap">
@@ -191,7 +194,7 @@ Seq[Any](format.raw/*3.88*/("""
                     <div class="nav-inner col-lg-9">
 
                         <ul id="nav" class="hidden-xs">
-                            <li class="level0 nav-8 level-top"><a href=""""),_display_(/*161.74*/routes/*161.80*/.Application.index()),format.raw/*161.100*/("""" class="level-top"><span>
+                            <li class="level0 nav-8 level-top"><a href=""""),_display_(/*164.74*/routes/*164.80*/.Application.index()),format.raw/*164.100*/("""" class="level-top"><span>
                                    Početna</span></a></li>
                             <li class="mega-menu"><a href="" class="level-top"><span>NAMEŠTAJ</span></a>
                                 <div class="level0-wrapper dropdown-6col">
@@ -199,45 +202,45 @@ Seq[Any](format.raw/*3.88*/("""
                                         <div class="level0-wrapper2">
                                             <div class="nav-block nav-block-center">
                                                 <ul class="level0">
-                                                """),_display_(/*169.50*/for(category <- models.Category.findAllCategories()) yield /*169.102*/ {_display_(Seq[Any](format.raw/*169.104*/("""
-                                                    """),format.raw/*170.53*/("""<li class="level1 nav-6-1 parent item"><a href=""""),_display_(/*170.102*/routes/*170.108*/.Items.getItemsWithCategory(category.id)),format.raw/*170.148*/(""""><span>
-                                                    """),_display_(/*171.54*/category/*171.62*/.name),format.raw/*171.67*/("""</span>
+                                                """),_display_(/*172.50*/for(category <- models.Category.findAllCategories()) yield /*172.102*/ {_display_(Seq[Any](format.raw/*172.104*/("""
+                                                    """),format.raw/*173.53*/("""<li class="level1 nav-6-1 parent item"><a href=""""),_display_(/*173.102*/routes/*173.108*/.Items.getItemsWithCategory(category.id)),format.raw/*173.148*/(""""><span>
+                                                    """),_display_(/*174.54*/category/*174.62*/.name),format.raw/*174.67*/("""</span>
                                                     </a>
                                                         <ul class="level1">
-                                                        """),_display_(/*174.58*/for(subcategory <- models.SubCategory.allSubCategories(category.id)) yield /*174.126*/ {_display_(Seq[Any](format.raw/*174.128*/("""
-                                                            """),format.raw/*175.61*/("""<li class="level2 nav-6-1-1"><a href=""""),_display_(/*175.100*/routes/*175.106*/.Items.getItemsWithSubCategory(subcategory.id)),format.raw/*175.152*/(""""><span>
-                                                            """),_display_(/*176.62*/subcategory/*176.73*/.name),format.raw/*176.78*/("""</span></a>
+                                                        """),_display_(/*177.58*/for(subcategory <- models.SubCategory.allSubCategories(category.id)) yield /*177.126*/ {_display_(Seq[Any](format.raw/*177.128*/("""
+                                                            """),format.raw/*178.61*/("""<li class="level2 nav-6-1-1"><a href=""""),_display_(/*178.100*/routes/*178.106*/.Items.getItemsWithSubCategory(subcategory.id)),format.raw/*178.152*/(""""><span>
+                                                            """),_display_(/*179.62*/subcategory/*179.73*/.name),format.raw/*179.78*/("""</span></a>
                                                             </li>
-                                                        """)))}),format.raw/*178.58*/("""
-                                                        """),format.raw/*179.57*/("""</ul>
+                                                        """)))}),format.raw/*181.58*/("""
+                                                        """),format.raw/*182.57*/("""</ul>
                                                     </li>
-                                                """)))}),format.raw/*181.50*/("""
+                                                """)))}),format.raw/*184.50*/("""
 
-                                                """),format.raw/*183.49*/("""</ul>
+                                                """),format.raw/*186.49*/("""</ul>
                                             </div>
                                         </div>
                                             <!--level0-wrapper2-->
                                         <div class="nav-add">
                                             <div class="push_item">
-                                                <div class="push_img"><a href=""""),_display_(/*189.81*/routes/*189.87*/.Items.getItemsWithCategory(Constants.DNEVNI_BORAVAK)),format.raw/*189.140*/(""""><img alt="phone" src='"""),_display_(/*189.165*/routes/*189.171*/.Assets.versioned("images/menu_ele_phone1.png")),format.raw/*189.218*/("""'></a></div>
+                                                <div class="push_img"><a href=""""),_display_(/*192.81*/routes/*192.87*/.Items.getItemsWithCategory(Constants.DNEVNI_BORAVAK)),format.raw/*192.140*/(""""><img alt="phone" src='"""),_display_(/*192.165*/routes/*192.171*/.Assets.versioned("images/menu_ele_phone1.png")),format.raw/*192.218*/("""'></a></div>
                                                 <div class="push_text">
                                                    DNEVNI BORAVAK
                                                 </div>
                                             </div>
                                             <div class="push_item">
-                                                <div class="push_img"><a href=""""),_display_(/*195.81*/routes/*195.87*/.Items.getItemsWithCategory(Constants.KUHINJE)),format.raw/*195.133*/(""""><img alt="camera" src='"""),_display_(/*195.159*/routes/*195.165*/.Assets.versioned("images/kuhinja.jpg")),format.raw/*195.204*/("""'></a></div>
+                                                <div class="push_img"><a href=""""),_display_(/*198.81*/routes/*198.87*/.Items.getItemsWithCategory(Constants.KUHINJE)),format.raw/*198.133*/(""""><img alt="camera" src='"""),_display_(/*198.159*/routes/*198.165*/.Assets.versioned("images/kuhinja.jpg")),format.raw/*198.204*/("""'></a></div>
                                                 <div class="push_text">
                                                     KUHINJA
                                                 </div>
                                             </div>
                                             <div class="push_item">
-                                                <div class="push_img"><a href=""""),_display_(/*201.81*/routes/*201.87*/.Items.getItemsWithCategory(Constants.SPAVACA_SOBA)),format.raw/*201.138*/(""""><img alt="ipod" src='"""),_display_(/*201.162*/routes/*201.168*/.Assets.versioned("images/spavacaSoba.jpg")),format.raw/*201.211*/("""'></a></div>
+                                                <div class="push_img"><a href=""""),_display_(/*204.81*/routes/*204.87*/.Items.getItemsWithCategory(Constants.SPAVACA_SOBA)),format.raw/*204.138*/(""""><img alt="ipod" src='"""),_display_(/*204.162*/routes/*204.168*/.Assets.versioned("images/spavacaSoba.jpg")),format.raw/*204.211*/("""'></a></div>
                                                 <div class="push_text">
                                                     SPAVAĆA SOBA
                                                 </div>
                                             </div>
                                             <div class="push_item push_item_last">
-                                                <div class="push_img"><a href=""""),_display_(/*207.81*/routes/*207.87*/.Items.getItemsWithCategory(Constants.KUPATILO)),format.raw/*207.134*/(""""><img alt="laptop" src='"""),_display_(/*207.160*/routes/*207.166*/.Assets.versioned("images/kupatilo.jpg")),format.raw/*207.206*/("""'></a></div>
+                                                <div class="push_img"><a href=""""),_display_(/*210.81*/routes/*210.87*/.Items.getItemsWithCategory(Constants.KUPATILO)),format.raw/*210.134*/(""""><img alt="laptop" src='"""),_display_(/*210.160*/routes/*210.166*/.Assets.versioned("images/kupatilo.jpg")),format.raw/*210.206*/("""'></a></div>
                                                 <div class="push_text">
                                                     KUPATILO
                                                 </div>
@@ -246,22 +249,22 @@ Seq[Any](format.raw/*3.88*/("""
                                     </div>
                                 </div>
                             </li>
-                            <li class="level0 nav-8 level-top"><a href=""""),_display_(/*216.74*/routes/*216.80*/.Items.itemsOnSale()),format.raw/*216.100*/("""" class="level-top"><span>
-                                   AKCIJA <img src=""""),_display_(/*217.54*/routes/*217.60*/.Assets.versioned("images/11568812.png")),format.raw/*217.100*/("""">  </span></a></li>
+                            <li class="level0 nav-8 level-top"><a href=""""),_display_(/*219.74*/routes/*219.80*/.Items.itemsOnSale()),format.raw/*219.100*/("""" class="level-top"><span>
+                                   AKCIJA <img src=""""),_display_(/*220.54*/routes/*220.60*/.Assets.versioned("images/11568812.png")),format.raw/*220.100*/("""">  </span></a></li>
                             <li class="level0 nav-8 level-top"><a href="#" class="level-top"><span>
                                    TOP PONUDA</span></a></li>
                             <li class="level0 nav-8 level-top"><a href="#" class="level-top"><span>
                                    IDEJE</span></a></li>
-                            <li class="level0 nav-8 level-top"><a href=""""),_display_(/*222.74*/routes/*222.80*/.NewsController.newsPanelRender()),format.raw/*222.113*/("""" class="level-top"><span>
+                            <li class="level0 nav-8 level-top"><a href=""""),_display_(/*225.74*/routes/*225.80*/.NewsController.newsPanelRender()),format.raw/*225.113*/("""" class="level-top"><span>
                                    VIJESTI</span></a></li>
-                            <li class="level0 nav-8 level-top"><a href=""""),_display_(/*224.74*/routes/*224.80*/.Partners.partnerPanel()),format.raw/*224.104*/("""" class="level-top"><span>
+                            <li class="level0 nav-8 level-top"><a href=""""),_display_(/*227.74*/routes/*227.80*/.Partners.partnerPanel()),format.raw/*227.104*/("""" class="level-top"><span>
                                    PARTNERI</span></a></li>
-                            """),_display_(/*226.30*/if(currentUser == null)/*226.53*/ {_display_(Seq[Any](format.raw/*226.55*/("""
-                                """),format.raw/*227.33*/("""<li class="level0 nav-8 level-top"><a href=""""),_display_(/*227.78*/routes/*227.84*/.Login.loginPageRender()),format.raw/*227.108*/("""" class="level-top"><span>
+                            """),_display_(/*229.30*/if(currentUser == null)/*229.53*/ {_display_(Seq[Any](format.raw/*229.55*/("""
+                                """),format.raw/*230.33*/("""<li class="level0 nav-8 level-top"><a href=""""),_display_(/*230.78*/routes/*230.84*/.Login.loginPageRender()),format.raw/*230.108*/("""" class="level-top"><span>
                                     Log In</span></a></li>
-                            """)))}/*229.31*/else/*229.36*/{_display_(Seq[Any](format.raw/*229.37*/("""
-                                """),_display_(/*230.34*/if(currentUser.userAccessLevel.equals(UserAccessLevel.ADMIN))/*230.95*/ {_display_(Seq[Any](format.raw/*230.97*/("""
-                                    """),format.raw/*231.37*/("""<li class="mega-menu"><a class="level-top" href="#"><span>"""),_display_(/*231.96*/currentUser/*231.107*/.name),format.raw/*231.112*/("""</span></a>
+                            """)))}/*232.31*/else/*232.36*/{_display_(Seq[Any](format.raw/*232.37*/("""
+                                """),_display_(/*233.34*/if(currentUser.userAccessLevel.equals(UserAccessLevel.ADMIN))/*233.95*/ {_display_(Seq[Any](format.raw/*233.97*/("""
+                                    """),format.raw/*234.37*/("""<li class="mega-menu"><a class="level-top" href="#"><span>"""),_display_(/*234.96*/currentUser/*234.107*/.name),format.raw/*234.112*/("""</span></a>
                                         <div class="level0-wrapper dropdown-6col">
                                             <div class="container">
                                                 <div class="level0-wrapper2">
@@ -270,9 +273,9 @@ Seq[Any](format.raw/*3.88*/("""
                                                             <li class="level1 nav-6-1 parent item"><a href=""><span>
                                                                 ADMIN PANEL</span></a>
                                                                 <ul class="level1">
-                                                                    <li class="level1 first parent"><a href=""""),_display_(/*240.111*/routes/*240.117*/.AppUsers.adminPanelRender(currentUser.id)),format.raw/*240.159*/(""""><span>
+                                                                    <li class="level1 first parent"><a href=""""),_display_(/*243.111*/routes/*243.117*/.AppUsers.adminPanelRender(currentUser.id)),format.raw/*243.159*/(""""><span>
                                                                     Admin Panel</span></a></li>
-                                                                    <li class="level1 first parent"><a href=""""),_display_(/*242.111*/routes/*242.117*/.NewsController.createNewsRender()),format.raw/*242.151*/(""""><span>
+                                                                    <li class="level1 first parent"><a href=""""),_display_(/*245.111*/routes/*245.117*/.NewsController.createNewsRender()),format.raw/*245.151*/(""""><span>
                                                                         Kreiraj Vijest</span></a></li>
 
                                                                 </ul>
@@ -280,27 +283,27 @@ Seq[Any](format.raw/*3.88*/("""
                                                             <li class="level1 nav-6-1 parent item"><a href="" class=""><span>
                                                                 KORISNICI</span></a>
                                                                 <ul class="level1">
-                                                                    <li class="level1 parent"><a href=""""),_display_(/*250.105*/routes/*250.111*/.AppUsers.listOfUsersRender()),format.raw/*250.140*/(""""><span>
+                                                                    <li class="level1 parent"><a href=""""),_display_(/*253.105*/routes/*253.111*/.AppUsers.listOfUsersRender()),format.raw/*253.140*/(""""><span>
                                                                     Lista korisnika</span></a></li>
-                                                                    <li class="level1 parent"><a href=""""),_display_(/*252.105*/routes/*252.111*/.AppUsers.createUserRender()),format.raw/*252.139*/(""""><span>
+                                                                    <li class="level1 parent"><a href=""""),_display_(/*255.105*/routes/*255.111*/.AppUsers.createUserRender()),format.raw/*255.139*/(""""><span>
                                                                         Dodaj korisnika</span></a></li>
-                                                                    <li class="level1 first parent"><a href=""""),_display_(/*254.111*/routes/*254.117*/.Items.allItems()),format.raw/*254.134*/(""""><span>
+                                                                    <li class="level1 first parent"><a href=""""),_display_(/*257.111*/routes/*257.117*/.Items.allItems()),format.raw/*257.134*/(""""><span>
                                                                         Lista proizvoda</span></a></li>
                                                                 </ul>
                                                             </li>
                                                             <li class="level1 nav-6-1 parent item"><a href="" class=""><span>
                                                                 KATEGORIJE</span></a>
                                                                 <ul class="level1">
-                                                                    <li class="level1 parent"><a href=""""),_display_(/*261.105*/routes/*261.111*/.Categories.listOfCategories()),format.raw/*261.141*/(""""><span>
+                                                                    <li class="level1 parent"><a href=""""),_display_(/*264.105*/routes/*264.111*/.Categories.listOfCategories()),format.raw/*264.141*/(""""><span>
                                                                         Lista kategorija</span></a></li>
-                                                                    <li class="level1 parent"><a href=""""),_display_(/*263.105*/routes/*263.111*/.Categories.createCategoryRender()),format.raw/*263.145*/(""""><span>
+                                                                    <li class="level1 parent"><a href=""""),_display_(/*266.105*/routes/*266.111*/.Categories.createCategoryRender()),format.raw/*266.145*/(""""><span>
                                                                         Dodaj kategoriju</span></a></li>
                                                                 </ul>
                                                             </li>
                                                             <li class="level1 nav-6-1 parent item"><a href=""><span>
                                                                LOGOUT</span></a>
                                                                 <ul class="level1">
-                                                                    <li class="level1 parent"><a href=""""),_display_(/*270.105*/routes/*270.111*/.Login.logout()),format.raw/*270.126*/(""""><span>
+                                                                    <li class="level1 parent"><a href=""""),_display_(/*273.105*/routes/*273.111*/.Login.logout()),format.raw/*273.126*/(""""><span>
                                                                     Logout</span></a></li>
                                                                 </ul>
                                                             </li>
@@ -308,17 +311,17 @@ Seq[Any](format.raw/*3.88*/("""
                                                         </ul>
                                                     </div>
                                                         <!--nav-block nav-block-center-->
-                                                    <div class="nav-block nav-block-right std grid12-4"><a href="#"><img src='"""),_display_(/*278.128*/routes/*278.134*/.Assets.versioned("images/navbarPicture.jpg")),format.raw/*278.179*/("""' alt="furniture"></a> </div>
+                                                    <div class="nav-block nav-block-right std grid12-4"><a href="#"><img src='"""),_display_(/*281.128*/routes/*281.134*/.Assets.versioned("images/navbarPicture.jpg")),format.raw/*281.179*/("""' alt="furniture"></a> </div>
                                                         <!--nav-block nav-block-right std grid12-4-->
                                                 </div>
                                             </div>
                                                 <!--level0-wrapper2-->
                                         </div>
                                     </li>
-                                """)))}/*285.35*/else/*285.40*/{_display_(Seq[Any](format.raw/*285.41*/("""
-                                    """),_display_(/*286.38*/if(currentUser.userAccessLevel.equals(UserAccessLevel.USER))/*286.98*/ {_display_(Seq[Any](format.raw/*286.100*/("""
-                                        """),format.raw/*287.41*/("""<script type="text/javascript" src=""""),_display_(/*287.78*/routes/*287.84*/.Assets.versioned("javascripts/messageNotifications.js")),format.raw/*287.140*/(""""></script>
-                                        <li class="mega-menu"><a class="level-top" href="#"><span>"""),_display_(/*288.100*/currentUser/*288.111*/.name),format.raw/*288.116*/("""</span></a>
+                                """)))}/*288.35*/else/*288.40*/{_display_(Seq[Any](format.raw/*288.41*/("""
+                                    """),_display_(/*289.38*/if(currentUser.userAccessLevel.equals(UserAccessLevel.USER))/*289.98*/ {_display_(Seq[Any](format.raw/*289.100*/("""
+                                        """),format.raw/*290.41*/("""<script type="text/javascript" src=""""),_display_(/*290.78*/routes/*290.84*/.Assets.versioned("javascripts/messageNotifications.js")),format.raw/*290.140*/(""""></script>
+                                        <li class="mega-menu"><a class="level-top" href="#"><span>"""),_display_(/*291.100*/currentUser/*291.111*/.name),format.raw/*291.116*/("""</span></a>
                                             <div class="level0-wrapper dropdown-6col">
                                                 <div class="container">
                                                     <div class="level0-wrapper2">
@@ -327,36 +330,36 @@ Seq[Any](format.raw/*3.88*/("""
                                                                 <li class="level1 nav-6-1 parent item"><a href=""><span>
                                                                     Krisnički panel</span></a>
                                                                     <ul class="level1">
-                                                                        <li class="level1 first parent"><a href=""""),_display_(/*297.115*/routes/*297.121*/.AppUsers.userPanelRender(currentUser.id)),format.raw/*297.162*/(""""><span>
+                                                                        <li class="level1 first parent"><a href=""""),_display_(/*300.115*/routes/*300.121*/.AppUsers.userPanelRender(currentUser.id)),format.raw/*300.162*/(""""><span>
                                                                             Korisnički panel</span></a></li>
-                                                                        <li class="level1 first parent"><a href=""""),_display_(/*299.115*/routes/*299.121*/.AppUsers.updateUserInformationsRender(currentUser.id)),format.raw/*299.175*/(""""><span>
+                                                                        <li class="level1 first parent"><a href=""""),_display_(/*302.115*/routes/*302.121*/.AppUsers.updateUserInformationsRender(currentUser.id)),format.raw/*302.175*/(""""><span>
                                                                             Ažuriraj podatke</span></a></li>
-                                                                        <li class="level1 first parent"><a href=""""),_display_(/*301.115*/routes/*301.121*/.Messages.listOfMessages(currentUser.id)),format.raw/*301.161*/(""""><span>
+                                                                        <li class="level1 first parent"><a href=""""),_display_(/*304.115*/routes/*304.121*/.Messages.listOfMessages(currentUser.id)),format.raw/*304.161*/(""""><span>
                                                                             Poruke </span> <span class="badge" id="message_notifications"> </span></a></li>
                                                                     </ul>
                                                                 </li>
                                                                 <li class="level1 nav-6-1 parent item"><a href="" class=""><span>
                                                                     OBJEKTI</span></a>
                                                                     <ul class="level1">
-                                                                        <li class="level1 parent"><a href=""""),_display_(/*308.109*/routes/*308.115*/.Stores.listOfStores(currentUser.id)),format.raw/*308.151*/(""""><span>
+                                                                        <li class="level1 parent"><a href=""""),_display_(/*311.109*/routes/*311.115*/.Stores.listOfStores(currentUser.id)),format.raw/*311.151*/(""""><span>
                                                                             Lista objekata</span></a></li>
-                                                                        <li class="level1 parent"><a href=""""),_display_(/*310.109*/routes/*310.115*/.Stores.createStoreRender(currentUser.id)),format.raw/*310.156*/(""""><span>
+                                                                        <li class="level1 parent"><a href=""""),_display_(/*313.109*/routes/*313.115*/.Stores.createStoreRender(currentUser.id)),format.raw/*313.156*/(""""><span>
                                                                             Dodaj objekat</span></a></li>
                                                                     </ul>
                                                                 </li>
                                                                 <li class="level1 nav-6-1 parent item"><a href="" class=""><span>
                                                                     PROIZVODI</span></a>
                                                                     <ul class="level1">
-                                                                        <li class="level1 parent"><a href=""""),_display_(/*317.109*/routes/*317.115*/.Items.listOfItems(currentUser.id)),format.raw/*317.149*/(""""><span>
+                                                                        <li class="level1 parent"><a href=""""),_display_(/*320.109*/routes/*320.115*/.Items.listOfItems(currentUser.id)),format.raw/*320.149*/(""""><span>
                                                                             Lista proizvoda</span></a></li>
-                                                                        <li class="level1 parent"><a href=""""),_display_(/*319.109*/routes/*319.115*/.Items.createItemRender(currentUser.id)),format.raw/*319.154*/(""""><span>
+                                                                        <li class="level1 parent"><a href=""""),_display_(/*322.109*/routes/*322.115*/.Items.createItemRender(currentUser.id)),format.raw/*322.154*/(""""><span>
                                                                             Dodaj proizvod</span></a></li>
                                                                     </ul>
                                                                 </li>
                                                                 <li class="level1 nav-6-1 parent item"><a href=""><span>
                                                                     LOGOUT</span></a>
                                                                     <ul class="level1">
-                                                                        <li class="level1 parent"><a href=""""),_display_(/*326.109*/routes/*326.115*/.Login.logout()),format.raw/*326.130*/(""""><span>
+                                                                        <li class="level1 parent"><a href=""""),_display_(/*329.109*/routes/*329.115*/.Login.logout()),format.raw/*329.130*/(""""><span>
                                                                             Logout</span></a></li>
                                                                     </ul>
                                                                 </li>
@@ -364,19 +367,19 @@ Seq[Any](format.raw/*3.88*/("""
                                                             </ul>
                                                         </div>
                                                             <!--nav-block nav-block-center-->
-                                                        <div class="nav-block nav-block-right std grid12-4"><a href="#"><img src='"""),_display_(/*334.132*/routes/*334.138*/.Assets.versioned("images/navbarPicture.jpg")),format.raw/*334.183*/("""' alt="furniture"></a> </div>
+                                                        <div class="nav-block nav-block-right std grid12-4"><a href="#"><img src='"""),_display_(/*337.132*/routes/*337.138*/.Assets.versioned("images/navbarPicture.jpg")),format.raw/*337.183*/("""' alt="furniture"></a> </div>
                                                             <!--nav-block nav-block-right std grid12-4-->
                                                     </div>
                                                 </div>
                                                     <!--level0-wrapper2-->
                                             </div>
                                         </li>
-                                    """)))}),format.raw/*341.38*/("""
-                                """)))}),format.raw/*342.34*/("""
-                            """)))}),format.raw/*343.30*/("""
-                                """),format.raw/*344.33*/("""<!-- Search-col -->
+                                    """)))}),format.raw/*344.38*/("""
+                                """)))}),format.raw/*345.34*/("""
+                            """)))}),format.raw/*346.30*/("""
+                                """),format.raw/*347.33*/("""<!-- Search-col -->
                             <div class="search-box pull-right">
-                                <form action=""""),_display_(/*346.48*/routes/*346.54*/.Items.searchBox()),format.raw/*346.72*/("""" method="POST" id="search_mini_form" name="Categories">
+                                <form action=""""),_display_(/*349.48*/routes/*349.54*/.Items.searchBox()),format.raw/*349.72*/("""" method="POST" id="search_mini_form" name="Categories">
                                     <input type="text" placeholder="Pretražite po nazivu, cijeni, kategoriji ..."  maxlength="70" name="search" id="search">
                                     <button type="button" class="search-btn-bg"><span class="fa fa-search"></span>&nbsp;</button>
                                     <div name="results"></div>
@@ -387,14 +390,14 @@ Seq[Any](format.raw/*3.88*/("""
                         </ul>
                     </div>
                 </div>
-                """),format.raw/*357.27*/("""
-            """),format.raw/*358.13*/("""</nav>
+                """),format.raw/*360.27*/("""
+            """),format.raw/*361.13*/("""</nav>
                 <!-- end nav -->
 
                 <!-------------------------------------------- CONTENT --------------------------------------------->
             <div style="margin-top: 60px">
-                """),_display_(/*363.18*/content),format.raw/*363.25*/("""
-            """),format.raw/*364.13*/("""</div>
+                """),_display_(/*366.18*/content),format.raw/*366.25*/("""
+            """),format.raw/*367.13*/("""</div>
                 <!-- Footer -->
             <footer>
                 <div class="footer-inner">
@@ -404,7 +407,7 @@ Seq[Any](format.raw/*3.88*/("""
                                 <div class="footer-column pull-left col-md-3">
                                     <h4>O NAMA</h4>
                                     <ul class="links">
-                                        <li><a href=""""),_display_(/*374.55*/routes/*374.61*/.Application.faqRender()),format.raw/*374.85*/("""" title="FAQs">FAQs</a></li>
+                                        <li><a href=""""),_display_(/*377.55*/routes/*377.61*/.Application.faqRender()),format.raw/*377.85*/("""" title="FAQs">FAQs</a></li>
                                     </ul>
                                 </div>
                                 <div class="footer-column pull-left col-md-3">
@@ -416,7 +419,7 @@ Seq[Any](format.raw/*3.88*/("""
                                 <div class="footer-column pull-left col-md-3">
                                     <h4>KONTAKTIRAJTE NAS/PREDLOŽITE</h4>
                                     <ul class="links">
-                                        <li><a href=""""),_display_(/*386.55*/routes/*386.61*/.ContactUs.contactUsRender()),format.raw/*386.89*/("""" title="Contact Us">
+                                        <li><a href=""""),_display_(/*389.55*/routes/*389.61*/.ContactUs.contactUsRender()),format.raw/*389.89*/("""" title="Contact Us">
                                             Contact Us</a></li>
                                     </ul>
                                 </div>
@@ -426,35 +429,35 @@ Seq[Any](format.raw/*3.88*/("""
                                     </ul>
                                 </div>
                             </div>
-                            """),format.raw/*396.65*/("""
-                                """),format.raw/*397.69*/("""
-                                    """),format.raw/*398.61*/("""
-                                        """),format.raw/*399.63*/("""
-                                        """),format.raw/*400.62*/("""
-                                            """),format.raw/*401.95*/("""
-                                            """),format.raw/*402.95*/("""
-                                            """),format.raw/*403.103*/("""
-                                            """),format.raw/*404.101*/("""
-                                        """),format.raw/*405.50*/("""
-                                    """),format.raw/*406.47*/("""
-                                """),format.raw/*407.43*/("""
-                            """),format.raw/*408.39*/("""
-                        """),format.raw/*409.25*/("""</div>
+                            """),format.raw/*399.65*/("""
+                                """),format.raw/*400.69*/("""
+                                    """),format.raw/*401.61*/("""
+                                        """),format.raw/*402.63*/("""
+                                        """),format.raw/*403.62*/("""
+                                            """),format.raw/*404.95*/("""
+                                            """),format.raw/*405.95*/("""
+                                            """),format.raw/*406.103*/("""
+                                            """),format.raw/*407.101*/("""
+                                        """),format.raw/*408.50*/("""
+                                    """),format.raw/*409.47*/("""
+                                """),format.raw/*410.43*/("""
+                            """),format.raw/*411.39*/("""
+                        """),format.raw/*412.25*/("""</div>
                     </div>
                 </div>
-                """),format.raw/*412.48*/("""
-                    """),format.raw/*413.48*/("""
-                        """),format.raw/*414.46*/("""
-                            """),format.raw/*415.113*/("""
-                            """),format.raw/*416.42*/("""
-                                """),format.raw/*417.72*/("""
-                                """),format.raw/*418.116*/("""
-                                """),format.raw/*419.124*/("""
-                            """),format.raw/*420.43*/("""
-                        """),format.raw/*421.35*/("""
-                    """),format.raw/*422.31*/("""
-                """),format.raw/*423.27*/("""
-                """),format.raw/*424.17*/("""<div class="footer-bottom">
+                """),format.raw/*415.48*/("""
+                    """),format.raw/*416.48*/("""
+                        """),format.raw/*417.46*/("""
+                            """),format.raw/*418.113*/("""
+                            """),format.raw/*419.42*/("""
+                                """),format.raw/*420.72*/("""
+                                """),format.raw/*421.116*/("""
+                                """),format.raw/*422.124*/("""
+                            """),format.raw/*423.43*/("""
+                        """),format.raw/*424.35*/("""
+                    """),format.raw/*425.31*/("""
+                """),format.raw/*426.27*/("""
+                """),format.raw/*427.17*/("""<div class="footer-bottom">
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-12 col-xs-12 text-center coppyright">&copy;
@@ -468,7 +471,7 @@ Seq[Any](format.raw/*3.88*/("""
             <ul>
                 <li>
                     <div class="mm-search">
-                        <form action=""""),_display_(/*438.40*/routes/*438.46*/.Items.searchBoxMobile()),format.raw/*438.70*/("""" method="POST">
+                        <form action=""""),_display_(/*441.40*/routes/*441.46*/.Items.searchBoxMobile()),format.raw/*441.70*/("""" method="POST">
                             <div class="input-group">
                                 <div class="input-group-btn">
                                     <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
@@ -481,53 +484,53 @@ Seq[Any](format.raw/*3.88*/("""
             <li><a href="">POČETNA</a></li>
                 <li><a href="#">NAMJEŠTAJ</a>
                     <ul>
-                        """),_display_(/*451.26*/for(category <- models.Category.findAllCategories()) yield /*451.78*/ {_display_(Seq[Any](format.raw/*451.80*/("""
-                            """),format.raw/*452.29*/("""<li><a href=""""),_display_(/*452.43*/routes/*452.49*/.Items.getItemsWithCategory(category.id)),format.raw/*452.89*/(""""><span>
-                                """),_display_(/*453.34*/category/*453.42*/.name),format.raw/*453.47*/("""</span>
+                        """),_display_(/*454.26*/for(category <- models.Category.findAllCategories()) yield /*454.78*/ {_display_(Seq[Any](format.raw/*454.80*/("""
+                            """),format.raw/*455.29*/("""<li><a href=""""),_display_(/*455.43*/routes/*455.49*/.Items.getItemsWithCategory(category.id)),format.raw/*455.89*/(""""><span>
+                                """),_display_(/*456.34*/category/*456.42*/.name),format.raw/*456.47*/("""</span>
                                     </a>
                                         <ul class="level1">
-                                        """),_display_(/*456.42*/for(subcategory <- models.SubCategory.allSubCategories(category.id)) yield /*456.110*/ {_display_(Seq[Any](format.raw/*456.112*/("""
-                                            """),format.raw/*457.45*/("""<li><a href=""""),_display_(/*457.59*/routes/*457.65*/.Items.getItemsWithSubCategory(subcategory.id)),format.raw/*457.111*/(""""><span>
-                                            """),_display_(/*458.46*/subcategory/*458.57*/.name),format.raw/*458.62*/("""</span></a>
+                                        """),_display_(/*459.42*/for(subcategory <- models.SubCategory.allSubCategories(category.id)) yield /*459.110*/ {_display_(Seq[Any](format.raw/*459.112*/("""
+                                            """),format.raw/*460.45*/("""<li><a href=""""),_display_(/*460.59*/routes/*460.65*/.Items.getItemsWithSubCategory(subcategory.id)),format.raw/*460.111*/(""""><span>
+                                            """),_display_(/*461.46*/subcategory/*461.57*/.name),format.raw/*461.62*/("""</span></a>
                                             </li>
-                                        """)))}),format.raw/*460.42*/("""
-                                        """),format.raw/*461.41*/("""</ul>
+                                        """)))}),format.raw/*463.42*/("""
+                                        """),format.raw/*464.41*/("""</ul>
                                     </li>
-                        """)))}),format.raw/*463.26*/("""
+                        """)))}),format.raw/*466.26*/("""
 
-                    """),format.raw/*465.21*/("""</ul>
+                    """),format.raw/*468.21*/("""</ul>
                 </li>
-                <li><a href=""""),_display_(/*467.31*/routes/*467.37*/.Items.itemsOnSale()),format.raw/*467.57*/("""">AKCIJA</a></li>
+                <li><a href=""""),_display_(/*470.31*/routes/*470.37*/.Items.itemsOnSale()),format.raw/*470.57*/("""">AKCIJA</a></li>
                 <li><a href="#">TOP PONUDA</a></li>
                 <li><a href="#">IDEJE</a></li>
-                <li><a href=""""),_display_(/*470.31*/routes/*470.37*/.NewsController.newsPanelRender()),format.raw/*470.70*/("""">VIJESTI</a></li>
-                <li><a href=""""),_display_(/*471.31*/routes/*471.37*/.Partners.partnerPanel()),format.raw/*471.61*/("""">PARTNERI</a></li>
-                """),_display_(/*472.18*/if(currentUser == null)/*472.41*/ {_display_(Seq[Any](format.raw/*472.43*/("""
-                    """),format.raw/*473.21*/("""<li><a href=""""),_display_(/*473.35*/routes/*473.41*/.Login.loginPageRender()),format.raw/*473.65*/("""" class="level-top"><span>Log In</span></a></li>
-                """)))}/*474.19*/else/*474.24*/{_display_(Seq[Any](format.raw/*474.25*/("""
-                    """),_display_(/*475.22*/if(currentUser.userAccessLevel.equals(UserAccessLevel.ADMIN))/*475.83*/ {_display_(Seq[Any](format.raw/*475.85*/("""
-                        """),format.raw/*476.25*/("""<li><a href=""><span>"""),_display_(/*476.47*/currentUser/*476.58*/.name),format.raw/*476.63*/("""</span></a>
+                <li><a href=""""),_display_(/*473.31*/routes/*473.37*/.NewsController.newsPanelRender()),format.raw/*473.70*/("""">VIJESTI</a></li>
+                <li><a href=""""),_display_(/*474.31*/routes/*474.37*/.Partners.partnerPanel()),format.raw/*474.61*/("""">PARTNERI</a></li>
+                """),_display_(/*475.18*/if(currentUser == null)/*475.41*/ {_display_(Seq[Any](format.raw/*475.43*/("""
+                    """),format.raw/*476.21*/("""<li><a href=""""),_display_(/*476.35*/routes/*476.41*/.Login.loginPageRender()),format.raw/*476.65*/("""" class="level-top"><span>Log In</span></a></li>
+                """)))}/*477.19*/else/*477.24*/{_display_(Seq[Any](format.raw/*477.25*/("""
+                    """),_display_(/*478.22*/if(currentUser.userAccessLevel.equals(UserAccessLevel.ADMIN))/*478.83*/ {_display_(Seq[Any](format.raw/*478.85*/("""
+                        """),format.raw/*479.25*/("""<li><a href=""><span>"""),_display_(/*479.47*/currentUser/*479.58*/.name),format.raw/*479.63*/("""</span></a>
                             <ul>
-                                <li><a href=""""),_display_(/*478.47*/routes/*478.53*/.AppUsers.adminPanelRender(currentUser.id)),format.raw/*478.95*/(""""><span>
+                                <li><a href=""""),_display_(/*481.47*/routes/*481.53*/.AppUsers.adminPanelRender(currentUser.id)),format.raw/*481.95*/(""""><span>
                                     Admin Panel</span></a></li>
-                                <li><a href=""""),_display_(/*480.47*/routes/*480.53*/.AppUsers.listOfUsersRender()),format.raw/*480.82*/(""""><span>Korisnici</span></a></li>
-                                <li><a href=""""),_display_(/*481.47*/routes/*481.53*/.Login.logout()),format.raw/*481.68*/(""""><span>Logout</span></a></li>
+                                <li><a href=""""),_display_(/*483.47*/routes/*483.53*/.AppUsers.listOfUsersRender()),format.raw/*483.82*/(""""><span>Korisnici</span></a></li>
+                                <li><a href=""""),_display_(/*484.47*/routes/*484.53*/.Login.logout()),format.raw/*484.68*/(""""><span>Logout</span></a></li>
                             </ul>
                         </li>
-                    """)))}/*484.23*/else/*484.28*/{_display_(Seq[Any](format.raw/*484.29*/("""
-                        """),_display_(/*485.26*/if(currentUser.userAccessLevel.equals(UserAccessLevel.USER))/*485.86*/ {_display_(Seq[Any](format.raw/*485.88*/("""
-                            """),format.raw/*486.29*/("""<li><a href=""><span>"""),_display_(/*486.51*/currentUser/*486.62*/.name),format.raw/*486.67*/("""</span></a>
+                    """)))}/*487.23*/else/*487.28*/{_display_(Seq[Any](format.raw/*487.29*/("""
+                        """),_display_(/*488.26*/if(currentUser.userAccessLevel.equals(UserAccessLevel.USER))/*488.86*/ {_display_(Seq[Any](format.raw/*488.88*/("""
+                            """),format.raw/*489.29*/("""<li><a href=""><span>"""),_display_(/*489.51*/currentUser/*489.62*/.name),format.raw/*489.67*/("""</span></a>
                                 <ul>
-                                    <li><a href=""""),_display_(/*488.51*/routes/*488.57*/.AppUsers.userPanelRender(currentUser.id)),format.raw/*488.98*/(""""><span>
+                                    <li><a href=""""),_display_(/*491.51*/routes/*491.57*/.AppUsers.userPanelRender(currentUser.id)),format.raw/*491.98*/(""""><span>
                                         User Panel</span></a></li>
-                                    <li><a href=""""),_display_(/*490.51*/routes/*490.57*/.Stores.listOfStores(currentUser.id)),format.raw/*490.93*/(""""><span>Objekti</span></a></li>
-                                    <li><a href=""""),_display_(/*491.51*/routes/*491.57*/.Login.logout()),format.raw/*491.72*/(""""><span>Logout</span></a></li>
+                                    <li><a href=""""),_display_(/*493.51*/routes/*493.57*/.Stores.listOfStores(currentUser.id)),format.raw/*493.93*/(""""><span>Objekti</span></a></li>
+                                    <li><a href=""""),_display_(/*494.51*/routes/*494.57*/.Login.logout()),format.raw/*494.72*/(""""><span>Logout</span></a></li>
                                 </ul>
                             </li>
-                        """)))}),format.raw/*494.26*/("""
-                    """)))}),format.raw/*495.22*/("""
-                """)))}),format.raw/*496.18*/("""
-            """),format.raw/*497.13*/("""</ul>
+                        """)))}),format.raw/*497.26*/("""
+                    """)))}),format.raw/*498.22*/("""
+                """)))}),format.raw/*499.18*/("""
+            """),format.raw/*500.13*/("""</ul>
         </div>
 
             <!-- End Footer -->
@@ -555,11 +558,11 @@ Seq[Any](format.raw/*3.88*/("""
 object main extends main_Scope0.main_Scope1.main
               /*
                   -- GENERATED --
-                  DATE: Mon May 23 19:49:10 CEST 2016
+                  DATE: Thu Oct 13 20:49:59 CEST 2016
                   SOURCE: E:/namjestaj/app/views/main.scala.html
-                  HASH: 49d40790c7fb25264e8f60dc28a03115c8bbc805
-                  MATRIX: 832->59|1013->145|1040->146|1863->942|1878->948|1953->1002|2082->1104|2097->1110|2169->1160|2209->1290|2245->1299|2318->1345|2333->1351|2399->1395|2495->1464|2510->1470|2578->1516|2663->1574|2678->1580|2749->1629|2833->1686|2848->1692|2916->1738|3000->1795|3015->1801|3089->1853|3173->1910|3188->1916|3265->1971|3349->2028|3364->2034|3428->2076|3524->2145|3539->2151|3608->2198|4194->2757|4209->2763|4276->2809|4360->2866|4375->2872|4446->2921|4530->2978|4545->2984|4610->3028|4694->3085|4709->3091|4775->3136|4859->3193|4874->3199|4937->3241|5021->3298|5036->3304|5113->3359|5197->3416|5212->3422|5286->3474|5370->3531|5385->3537|5465->3595|5549->3652|5564->3658|5631->3704|5752->3797|5781->3798|5822->3811|5892->3853|5921->3854|5966->3871|8033->5909|8063->5910|8102->5921|8132->5922|8226->5988|8242->5994|8318->6047|8404->6105|8420->6111|8493->6161|8586->6226|8602->6232|8672->6279|8927->6606|8964->6615|9029->6652|9045->6658|9119->6709|9262->6855|9305->6985|9348->7118|9390->7141|9437->7159|9542->7263|9588->7280|9837->7501|9853->7507|9896->7527|9954->7556|9971->7562|10030->7598|10525->8065|10541->8071|10584->8091|11210->8689|11280->8741|11322->8743|11404->8796|11482->8845|11499->8851|11562->8891|11652->8953|11670->8961|11697->8966|11923->9164|12009->9232|12051->9234|12141->9295|12209->9334|12226->9340|12295->9386|12393->9456|12414->9467|12441->9472|12608->9607|12694->9664|12839->9777|12918->9827|13327->10208|13343->10214|13419->10267|13473->10292|13490->10298|13560->10345|13993->10750|14009->10756|14078->10802|14133->10828|14150->10834|14212->10873|14639->11272|14655->11278|14729->11329|14782->11353|14799->11359|14865->11402|15312->11821|15328->11827|15398->11874|15453->11900|15470->11906|15533->11946|16049->12434|16065->12440|16108->12460|16216->12540|16232->12546|16295->12586|16736->12999|16752->13005|16808->13038|16995->13197|17011->13203|17058->13227|17202->13343|17235->13366|17276->13368|17338->13401|17411->13446|17427->13452|17474->13476|17609->13592|17623->13597|17663->13598|17725->13632|17796->13693|17837->13695|17903->13732|17990->13791|18012->13802|18040->13807|18909->14647|18926->14653|18991->14695|19235->14910|19252->14916|19309->14950|19986->15598|20003->15604|20055->15633|20297->15846|20314->15852|20365->15880|20617->16103|20634->16109|20674->16126|21352->16775|21369->16781|21422->16811|21669->17029|21686->17035|21743->17069|22408->17705|22425->17711|22463->17726|23067->18301|23084->18307|23152->18352|23603->18784|23617->18789|23657->18790|23723->18828|23793->18888|23835->18890|23905->18931|23970->18968|23986->18974|24065->19030|24205->19141|24227->19152|24255->19157|25164->20037|25181->20043|25245->20084|25506->20316|25523->20322|25600->20376|25861->20608|25878->20614|25941->20654|26692->21376|26709->21382|26768->21418|27021->21642|27038->21648|27102->21689|27805->22363|27822->22369|27879->22403|28133->22628|28150->22634|28212->22673|28904->23336|28921->23342|28959->23357|29595->23964|29612->23970|29680->24015|30171->24474|30237->24508|30299->24538|30361->24571|30520->24702|30536->24708|30576->24726|31240->25371|31282->25384|31529->25603|31558->25610|31600->25623|32140->26135|32156->26141|32202->26165|32873->26808|32889->26814|32939->26842|33477->27387|33539->27456|33605->27517|33675->27580|33745->27642|33819->27737|33893->27832|33968->27935|34043->28036|34113->28086|34179->28133|34241->28176|34299->28215|34353->28240|34455->28344|34505->28392|34559->28438|34618->28551|34676->28593|34738->28665|34801->28781|34864->28905|34922->28948|34976->28983|35026->29014|35072->29041|35118->29058|35709->29621|35725->29627|35771->29651|36490->30342|36559->30394|36600->30396|36658->30425|36700->30439|36716->30445|36778->30485|36848->30527|36866->30535|36893->30540|37071->30690|37157->30758|37199->30760|37273->30805|37315->30819|37331->30825|37400->30871|37482->30925|37503->30936|37530->30941|37665->31044|37735->31085|37840->31158|37891->31180|37977->31238|37993->31244|38035->31264|38210->31411|38226->31417|38281->31450|38358->31499|38374->31505|38420->31529|38485->31566|38518->31589|38559->31591|38609->31612|38651->31626|38667->31632|38713->31656|38799->31723|38813->31728|38853->31729|38903->31751|38974->31812|39015->31814|39069->31839|39119->31861|39140->31872|39167->31877|39286->31968|39302->31974|39366->32016|39513->32135|39529->32141|39580->32170|39688->32250|39704->32256|39741->32271|39877->32388|39891->32393|39931->32394|39985->32420|40055->32480|40096->32482|40154->32511|40204->32533|40225->32544|40252->32549|40379->32648|40395->32654|40458->32695|40612->32821|40628->32827|40686->32863|40796->32945|40812->32951|40849->32966|41009->33094|41063->33116|41113->33134|41155->33147
-                  LINES: 31->3|36->3|37->4|56->23|56->23|56->23|58->25|58->25|58->25|59->26|60->27|60->27|60->27|60->27|61->28|61->28|61->28|62->29|62->29|62->29|63->30|63->30|63->30|64->31|64->31|64->31|65->32|65->32|65->32|66->33|66->33|66->33|67->34|67->34|67->34|75->42|75->42|75->42|76->43|76->43|76->43|77->44|77->44|77->44|78->45|78->45|78->45|79->46|79->46|79->46|80->47|80->47|80->47|81->48|81->48|81->48|82->49|82->49|82->49|83->50|83->50|83->50|85->52|85->52|86->53|86->53|86->53|87->54|153->120|153->120|154->121|154->121|156->123|156->123|156->123|158->125|158->125|158->125|159->126|159->126|159->126|164->131|165->132|165->132|165->132|165->132|174->141|175->142|176->143|177->144|179->146|181->148|182->149|185->152|185->152|185->152|185->152|185->152|185->152|194->161|194->161|194->161|202->169|202->169|202->169|203->170|203->170|203->170|203->170|204->171|204->171|204->171|207->174|207->174|207->174|208->175|208->175|208->175|208->175|209->176|209->176|209->176|211->178|212->179|214->181|216->183|222->189|222->189|222->189|222->189|222->189|222->189|228->195|228->195|228->195|228->195|228->195|228->195|234->201|234->201|234->201|234->201|234->201|234->201|240->207|240->207|240->207|240->207|240->207|240->207|249->216|249->216|249->216|250->217|250->217|250->217|255->222|255->222|255->222|257->224|257->224|257->224|259->226|259->226|259->226|260->227|260->227|260->227|260->227|262->229|262->229|262->229|263->230|263->230|263->230|264->231|264->231|264->231|264->231|273->240|273->240|273->240|275->242|275->242|275->242|283->250|283->250|283->250|285->252|285->252|285->252|287->254|287->254|287->254|294->261|294->261|294->261|296->263|296->263|296->263|303->270|303->270|303->270|311->278|311->278|311->278|318->285|318->285|318->285|319->286|319->286|319->286|320->287|320->287|320->287|320->287|321->288|321->288|321->288|330->297|330->297|330->297|332->299|332->299|332->299|334->301|334->301|334->301|341->308|341->308|341->308|343->310|343->310|343->310|350->317|350->317|350->317|352->319|352->319|352->319|359->326|359->326|359->326|367->334|367->334|367->334|374->341|375->342|376->343|377->344|379->346|379->346|379->346|390->357|391->358|396->363|396->363|397->364|407->374|407->374|407->374|419->386|419->386|419->386|429->396|430->397|431->398|432->399|433->400|434->401|435->402|436->403|437->404|438->405|439->406|440->407|441->408|442->409|445->412|446->413|447->414|448->415|449->416|450->417|451->418|452->419|453->420|454->421|455->422|456->423|457->424|471->438|471->438|471->438|484->451|484->451|484->451|485->452|485->452|485->452|485->452|486->453|486->453|486->453|489->456|489->456|489->456|490->457|490->457|490->457|490->457|491->458|491->458|491->458|493->460|494->461|496->463|498->465|500->467|500->467|500->467|503->470|503->470|503->470|504->471|504->471|504->471|505->472|505->472|505->472|506->473|506->473|506->473|506->473|507->474|507->474|507->474|508->475|508->475|508->475|509->476|509->476|509->476|509->476|511->478|511->478|511->478|513->480|513->480|513->480|514->481|514->481|514->481|517->484|517->484|517->484|518->485|518->485|518->485|519->486|519->486|519->486|519->486|521->488|521->488|521->488|523->490|523->490|523->490|524->491|524->491|524->491|527->494|528->495|529->496|530->497
+                  HASH: 7860d8d36fadb3b7995f9681a591078d9a81c38e
+                  MATRIX: 832->59|1013->145|1040->146|1863->942|1878->948|1953->1002|2082->1104|2097->1110|2169->1160|2209->1290|2245->1299|2318->1345|2333->1351|2399->1395|2495->1464|2510->1470|2578->1516|2663->1574|2678->1580|2749->1629|2833->1686|2848->1692|2916->1738|3000->1795|3015->1801|3089->1853|3173->1910|3188->1916|3265->1971|3349->2028|3364->2034|3428->2076|3524->2145|3539->2151|3608->2198|4194->2757|4209->2763|4276->2809|4360->2866|4375->2872|4446->2921|4530->2978|4545->2984|4610->3028|4694->3085|4709->3091|4775->3136|4859->3193|4874->3199|4937->3241|5021->3298|5036->3304|5113->3359|5197->3416|5212->3422|5286->3474|5370->3531|5385->3537|5465->3595|5549->3652|5564->3658|5631->3704|5752->3797|5781->3798|5822->3811|5892->3853|5921->3854|5966->3871|8033->5909|8063->5910|8102->5921|8132->5922|8226->5988|8242->5994|8318->6047|8404->6105|8420->6111|8493->6161|8586->6226|8602->6232|8672->6279|8927->6606|8961->6612|9026->6649|9042->6655|9116->6706|9206->6767|9236->6768|9266->6769|9364->6838|9394->6839|9423->6840|9682->7069|9713->7070|9771->7098|9802->7099|9836->7103|9867->7104|9901->7108|9932->7109|9979->7126|10010->7127|10066->7153|10097->7154|10131->7158|10162->7159|10227->7194|10258->7195|10289->7196|10320->7197|10464->7344|10507->7474|10550->7607|10592->7630|10639->7648|10744->7752|10790->7769|11039->7990|11055->7996|11098->8016|11156->8045|11173->8051|11232->8087|11727->8554|11743->8560|11786->8580|12412->9178|12482->9230|12524->9232|12606->9285|12684->9334|12701->9340|12764->9380|12854->9442|12872->9450|12899->9455|13125->9653|13211->9721|13253->9723|13343->9784|13411->9823|13428->9829|13497->9875|13595->9945|13616->9956|13643->9961|13810->10096|13896->10153|14041->10266|14120->10316|14529->10697|14545->10703|14621->10756|14675->10781|14692->10787|14762->10834|15195->11239|15211->11245|15280->11291|15335->11317|15352->11323|15414->11362|15841->11761|15857->11767|15931->11818|15984->11842|16001->11848|16067->11891|16514->12310|16530->12316|16600->12363|16655->12389|16672->12395|16735->12435|17251->12923|17267->12929|17310->12949|17418->13029|17434->13035|17497->13075|17938->13488|17954->13494|18010->13527|18197->13686|18213->13692|18260->13716|18404->13832|18437->13855|18478->13857|18540->13890|18613->13935|18629->13941|18676->13965|18811->14081|18825->14086|18865->14087|18927->14121|18998->14182|19039->14184|19105->14221|19192->14280|19214->14291|19242->14296|20111->15136|20128->15142|20193->15184|20437->15399|20454->15405|20511->15439|21188->16087|21205->16093|21257->16122|21499->16335|21516->16341|21567->16369|21819->16592|21836->16598|21876->16615|22554->17264|22571->17270|22624->17300|22871->17518|22888->17524|22945->17558|23610->18194|23627->18200|23665->18215|24269->18790|24286->18796|24354->18841|24805->19273|24819->19278|24859->19279|24925->19317|24995->19377|25037->19379|25107->19420|25172->19457|25188->19463|25267->19519|25407->19630|25429->19641|25457->19646|26366->20526|26383->20532|26447->20573|26708->20805|26725->20811|26802->20865|27063->21097|27080->21103|27143->21143|27894->21865|27911->21871|27970->21907|28223->22131|28240->22137|28304->22178|29007->22852|29024->22858|29081->22892|29335->23117|29352->23123|29414->23162|30106->23825|30123->23831|30161->23846|30797->24453|30814->24459|30882->24504|31373->24963|31439->24997|31501->25027|31563->25060|31722->25191|31738->25197|31778->25215|32442->25860|32484->25873|32731->26092|32760->26099|32802->26112|33342->26624|33358->26630|33404->26654|34075->27297|34091->27303|34141->27331|34679->27876|34741->27945|34807->28006|34877->28069|34947->28131|35021->28226|35095->28321|35170->28424|35245->28525|35315->28575|35381->28622|35443->28665|35501->28704|35555->28729|35657->28833|35707->28881|35761->28927|35820->29040|35878->29082|35940->29154|36003->29270|36066->29394|36124->29437|36178->29472|36228->29503|36274->29530|36320->29547|36911->30110|36927->30116|36973->30140|37692->30831|37761->30883|37802->30885|37860->30914|37902->30928|37918->30934|37980->30974|38050->31016|38068->31024|38095->31029|38273->31179|38359->31247|38401->31249|38475->31294|38517->31308|38533->31314|38602->31360|38684->31414|38705->31425|38732->31430|38867->31533|38937->31574|39042->31647|39093->31669|39179->31727|39195->31733|39237->31753|39412->31900|39428->31906|39483->31939|39560->31988|39576->31994|39622->32018|39687->32055|39720->32078|39761->32080|39811->32101|39853->32115|39869->32121|39915->32145|40001->32212|40015->32217|40055->32218|40105->32240|40176->32301|40217->32303|40271->32328|40321->32350|40342->32361|40369->32366|40488->32457|40504->32463|40568->32505|40715->32624|40731->32630|40782->32659|40890->32739|40906->32745|40943->32760|41079->32877|41093->32882|41133->32883|41187->32909|41257->32969|41298->32971|41356->33000|41406->33022|41427->33033|41454->33038|41581->33137|41597->33143|41660->33184|41814->33310|41830->33316|41888->33352|41998->33434|42014->33440|42051->33455|42211->33583|42265->33605|42315->33623|42357->33636
+                  LINES: 31->3|36->3|37->4|56->23|56->23|56->23|58->25|58->25|58->25|59->26|60->27|60->27|60->27|60->27|61->28|61->28|61->28|62->29|62->29|62->29|63->30|63->30|63->30|64->31|64->31|64->31|65->32|65->32|65->32|66->33|66->33|66->33|67->34|67->34|67->34|75->42|75->42|75->42|76->43|76->43|76->43|77->44|77->44|77->44|78->45|78->45|78->45|79->46|79->46|79->46|80->47|80->47|80->47|81->48|81->48|81->48|82->49|82->49|82->49|83->50|83->50|83->50|85->52|85->52|86->53|86->53|86->53|87->54|153->120|153->120|154->121|154->121|156->123|156->123|156->123|158->125|158->125|158->125|159->126|159->126|159->126|164->131|165->132|165->132|165->132|165->132|168->135|168->135|168->135|168->135|168->135|169->136|169->136|169->136|169->136|169->136|169->136|169->136|169->136|169->136|169->136|169->136|169->136|169->136|169->136|169->136|169->136|169->136|169->136|169->136|177->144|178->145|179->146|180->147|182->149|184->151|185->152|188->155|188->155|188->155|188->155|188->155|188->155|197->164|197->164|197->164|205->172|205->172|205->172|206->173|206->173|206->173|206->173|207->174|207->174|207->174|210->177|210->177|210->177|211->178|211->178|211->178|211->178|212->179|212->179|212->179|214->181|215->182|217->184|219->186|225->192|225->192|225->192|225->192|225->192|225->192|231->198|231->198|231->198|231->198|231->198|231->198|237->204|237->204|237->204|237->204|237->204|237->204|243->210|243->210|243->210|243->210|243->210|243->210|252->219|252->219|252->219|253->220|253->220|253->220|258->225|258->225|258->225|260->227|260->227|260->227|262->229|262->229|262->229|263->230|263->230|263->230|263->230|265->232|265->232|265->232|266->233|266->233|266->233|267->234|267->234|267->234|267->234|276->243|276->243|276->243|278->245|278->245|278->245|286->253|286->253|286->253|288->255|288->255|288->255|290->257|290->257|290->257|297->264|297->264|297->264|299->266|299->266|299->266|306->273|306->273|306->273|314->281|314->281|314->281|321->288|321->288|321->288|322->289|322->289|322->289|323->290|323->290|323->290|323->290|324->291|324->291|324->291|333->300|333->300|333->300|335->302|335->302|335->302|337->304|337->304|337->304|344->311|344->311|344->311|346->313|346->313|346->313|353->320|353->320|353->320|355->322|355->322|355->322|362->329|362->329|362->329|370->337|370->337|370->337|377->344|378->345|379->346|380->347|382->349|382->349|382->349|393->360|394->361|399->366|399->366|400->367|410->377|410->377|410->377|422->389|422->389|422->389|432->399|433->400|434->401|435->402|436->403|437->404|438->405|439->406|440->407|441->408|442->409|443->410|444->411|445->412|448->415|449->416|450->417|451->418|452->419|453->420|454->421|455->422|456->423|457->424|458->425|459->426|460->427|474->441|474->441|474->441|487->454|487->454|487->454|488->455|488->455|488->455|488->455|489->456|489->456|489->456|492->459|492->459|492->459|493->460|493->460|493->460|493->460|494->461|494->461|494->461|496->463|497->464|499->466|501->468|503->470|503->470|503->470|506->473|506->473|506->473|507->474|507->474|507->474|508->475|508->475|508->475|509->476|509->476|509->476|509->476|510->477|510->477|510->477|511->478|511->478|511->478|512->479|512->479|512->479|512->479|514->481|514->481|514->481|516->483|516->483|516->483|517->484|517->484|517->484|520->487|520->487|520->487|521->488|521->488|521->488|522->489|522->489|522->489|522->489|524->491|524->491|524->491|526->493|526->493|526->493|527->494|527->494|527->494|530->497|531->498|532->499|533->500
                   -- GENERATED --
               */
           

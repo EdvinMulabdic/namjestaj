@@ -6207,7 +6207,10 @@ button.button.continue:before {
 	font-size: 14px;
 }
 .col2-right-layout {
-	margin-top: 10px;
+	margin-top: 140px;
+}
+.margin-bottom-50{
+    margin-bottom: 50px;
 }
 .box-account .page-title h2 {
 	font-size: 16px;

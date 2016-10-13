@@ -81,11 +81,8 @@ public class Image extends Model {
         Image image = new Image();
 
         image.public_id = (String) uploadResult.get("public_id");
-        Logger.debug(image.public_id);
         image.image_url = (String) uploadResult.get("url");
-        Logger.debug(image.image_url);
         image.secret_image_url = (String) uploadResult.get("secure_url");
-        Logger.debug(image.secret_image_url);
         if(itemId != null) {
             image.item = Item.findItemById(itemId);
         }

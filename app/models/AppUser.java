@@ -80,7 +80,7 @@ public class AppUser extends Model {
         return finder.where().eq("email", email).findUnique();
     }
 
-    /* ------------------- finds user by email ------------------ */
+    /* ------------------- finds all users ------------------ */
 
     public static List<AppUser> getAllUsers(){
         Finder<String, AppUser> finder = new Finder<>(AppUser.class);

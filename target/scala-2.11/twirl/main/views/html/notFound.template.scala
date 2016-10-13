@@ -31,7 +31,7 @@ class notFound extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Fo
 
 Seq[Any](_display_(/*1.2*/main/*1.6*/ {_display_(Seq[Any](format.raw/*1.8*/("""
     """),format.raw/*2.5*/("""<section class="content-wrapper bounceInUp animated">
-        <div class="container">
+        <div class="container margin-bottom-50">
             <div class="std">
                 <div class="page-not-found">
                     <h2>404</h2>
@@ -61,10 +61,10 @@ Seq[Any](_display_(/*1.2*/main/*1.6*/ {_display_(Seq[Any](format.raw/*1.8*/("""
 object notFound extends notFound_Scope0.notFound
               /*
                   -- GENERATED --
-                  DATE: Fri May 13 17:14:18 CEST 2016
+                  DATE: Wed Jun 08 02:51:46 CEST 2016
                   SOURCE: E:/namjestaj/app/views/notFound.scala.html
-                  HASH: 364e6d057ad539b769e5694e2a6b74ee00d94b89
-                  MATRIX: 833->1|844->5|882->7|913->12|1168->241|1182->247|1240->285|1374->393|1388->399|1428->419
+                  HASH: 5af31dc80e577a758e74322dc046dd4759b62232
+                  MATRIX: 833->1|844->5|882->7|913->12|1185->258|1199->264|1257->302|1391->410|1405->416|1445->436
                   LINES: 32->1|32->1|32->1|33->2|38->7|38->7|38->7|39->8|39->8|39->8
                   -- GENERATED --
               */

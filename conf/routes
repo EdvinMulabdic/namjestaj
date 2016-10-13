@@ -148,3 +148,10 @@ GET           /partner/:userId                               @controllers.Partne
 #SEARCH
 POST          /pretraga                                      @controllers.Items.searchBox()
 POST          /pretragatelefon                               @controllers.Items.searchBoxMobile()
+
+#BANNERI
+GET           /dodajBanner                                   @controllers.Banners.createBannerRender()
+POST          /dodajBanner                                   @controllers.Banners.createBanner()
+GET           /listaBannera                                  @controllers.Banners.listOfBanners()
+GET           /obrisibanner/:bannerId                        @controllers.Banners.deleteBanner(bannerId: Integer)
+DELETE        /obrisibanner/:bannerId                        @controllers.Banners.deleteBanner(bannerId: Integer)

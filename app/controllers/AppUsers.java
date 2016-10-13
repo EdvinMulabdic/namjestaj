@@ -163,7 +163,7 @@ public class AppUsers extends Controller {
         DynamicForm form = Form.form().bindFromRequest();
         String password = form.field("password").value();
 
-        boolean isUpdated = AppUser.updateAdminPassword(user, password);
+        boolean isUpdated = AppUser.updateUserPassword(user, password);
 
         if(!isUpdated){
             flash("success", "Vaš password je ažuriran");

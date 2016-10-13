@@ -110,7 +110,7 @@ Seq[Any](format.raw/*1.16*/("""
 object updateStore extends updateStore_Scope0.updateStore
               /*
                   -- GENERATED --
-                  DATE: Fri May 13 17:14:19 CEST 2016
+                  DATE: Wed Jun 08 01:58:53 CEST 2016
                   SOURCE: E:/namjestaj/app/views/Store/updateStore.scala.html
                   HASH: 576b1db985853630dd3c4f759a88cb4fd19bf908
                   MATRIX: 762->1|871->15|898->17|909->21|947->23|978->28|1524->547|1539->553|1590->582|2401->1365|2416->1370|2443->1375|3118->2022|3133->2027|3160->2032|3779->2623|3794->2628|3824->2636

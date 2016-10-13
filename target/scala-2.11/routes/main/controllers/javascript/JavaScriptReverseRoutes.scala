@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:E:/namjestaj/conf/routes
-// @DATE:Sun May 15 23:50:58 CEST 2016
+// @DATE:Wed Jun 08 01:58:51 CEST 2016
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -29,6 +29,60 @@ package controllers.javascript {
       """
         function(file) {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "assets/" + (""" + implicitly[PathBindable[Asset]].javascriptUnbind + """)("file", file)})
+        }
+      """
+    )
+  
+  }
+
+  // @LINE:153
+  class ReverseBanners(_prefix: => String) {
+
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:154
+    def createBanner: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Banners.createBanner",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "dodajBanner"})
+        }
+      """
+    )
+  
+    // @LINE:153
+    def createBannerRender: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Banners.createBannerRender",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "dodajBanner"})
+        }
+      """
+    )
+  
+    // @LINE:156
+    def deleteBanner: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Banners.deleteBanner",
+      """
+        function(bannerId) {
+        
+          if (true) {
+            return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "obrisibanner/" + (""" + implicitly[PathBindable[Integer]].javascriptUnbind + """)("bannerId", bannerId)})
+          }
+        
+        }
+      """
+    )
+  
+    // @LINE:155
+    def listOfBanners: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Banners.listOfBanners",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "listaBannera"})
         }
       """
     )

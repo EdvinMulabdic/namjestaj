@@ -18,6 +18,14 @@ create table app_user (
   constraint pk_app_user primary key (id))
 ;
 
+create table banner (
+  id                        integer auto_increment not null,
+  banner_position           integer,
+  link                      varchar(255),
+  image                     varchar(255),
+  constraint pk_banner primary key (id))
+;
+
 create table category (
   id                        integer auto_increment not null,
   name                      varchar(255),
@@ -131,6 +139,8 @@ create index ix_sub_category_category_11 on sub_category (category_id);
 SET FOREIGN_KEY_CHECKS=0;
 
 drop table app_user;
+
+drop table banner;
 
 drop table category;
 

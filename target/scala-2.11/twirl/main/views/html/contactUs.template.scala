@@ -91,20 +91,7 @@ Seq[Any](_display_(/*1.2*/main/*1.6*/ {_display_(Seq[Any](format.raw/*1.8*/("""
                         </form>
                     </div>
                 </section>
-                <aside class="col-right sidebar col-sm-3">
-                    <div class="block block-company">
-                        <div class="block-title">Namještaj.ba </div>
-                        <div class="block-content">
-                            <ol id="recently-viewed-items">
-                                <li class="item odd"><a href="about_us.html">About Us</a></li>
-                                <li class="item even"><a href="sitemap.html">Sitemap</a></li>
-                                <li class="item  odd"><a href="#">Terms of Service</a></li>
-                                <li class="item even"><a href="#">Search Terms</a></li>
-                                <li class="item last"><strong>Contact Us</strong></li>
-                            </ol>
-                        </div>
-                    </div>
-                </aside>
+
             </div>
         </div>
     </section>
@@ -129,9 +116,9 @@ Seq[Any](_display_(/*1.2*/main/*1.6*/ {_display_(Seq[Any](format.raw/*1.8*/("""
 object contactUs extends contactUs_Scope0.contactUs
               /*
                   -- GENERATED --
-                  DATE: Fri May 13 17:14:17 CEST 2016
+                  DATE: Thu Jun 23 12:05:41 CEST 2016
                   SOURCE: E:/namjestaj/app/views/contactUs.scala.html
-                  HASH: 3ded638964f6a14cf1973a0fc8db24fad723129b
+                  HASH: 9a667d00ca083f4eceecc05511fdead3a831fac7
                   MATRIX: 835->1|846->5|884->7|915->12
                   LINES: 32->1|32->1|32->1|33->2
                   -- GENERATED --

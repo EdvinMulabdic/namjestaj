@@ -94,26 +94,36 @@
     <!-- banner -->
     <div class="top-banner-section">
         <div class="container">
-                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 wow bounceup animated">
-                    <div class="col"><a href="#"><img src='@routes.Assets.versioned("images/block1.jpg" )'alt="offer banner3"></a></div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 wow bounceup animated">
-                    <div class="col"><a href="#"><img src='@routes.Assets.versioned("images/block2.jpg")' alt="offer banner3"></a></div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 wow bounceup animated">
-                    <div class="col"><a href="#"><img src='@routes.Assets.versioned("images/block3.jpg")' alt="offer banner3"></a></div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 wow bounceup animated">
-                    <div class="col">
-                        <a href="@routes.Items.itemRender(1)">
-                            @if(models.Item.findItemById(1).images.size() > 0 ) {
-                                <img src='@models.Item.findItemById(1).images.get(0).getSize(370,220)' alt="offer banner3">
-                            }else {
-                                <img src='@routes.Assets.versioned("images/product.png")' style="width: 370px; height: 220px" alt="">
-                            }
-                        </a>
-                    </div>
-                </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 wow bounceup animated">
+                @if(Banner.findBannerByPosition(1) != null) {
+                    <div class="col"><a href="@Banner.findBannerByPosition(1).link"><img src='@Banner.findBannerByPosition(1).image'alt="offer banner3"></a></div>
+                }else{
+                    <div class="col"><a href="@routes.ContactUs.contactUsRender()"><img src='@routes.Assets.versioned("images/bannerDefault.png")' alt="offer banner3"></a></div>
+                }
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 wow bounceup animated">
+                @if(Banner.findBannerByPosition(2) != null) {
+                    <div class="col"><a href="@Banner.findBannerByPosition(2).link"><img src='@Banner.findBannerByPosition(2).image'alt="offer banner3"></a></div>
+                }else{
+                    <div class="col"><a href="@routes.ContactUs.contactUsRender()"><img src='@routes.Assets.versioned("images/bannerDefault.png")' alt="offer banner3"></a></div>
+                }
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 wow bounceup animated">
+                @if(Banner.findBannerByPosition(3) != null) {
+                    <div class="col"><a href="@Banner.findBannerByPosition(3).link"><img src='@Banner.findBannerByPosition(3).image'alt="offer banner3"></a></div>
+                }else{
+                    <div class="col"><a href="@routes.ContactUs.contactUsRender()"><img src='@routes.Assets.versioned("images/bannerDefault.png")' alt="offer banner3"></a></div>
+                }
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 wow bounceup animated">
+                @if(Banner.findBannerByPosition(4) != null) {
+                    <div class="col"><a href="@Banner.findBannerByPosition(4).link"><img src='@Banner.findBannerByPosition(4).image'alt="offer banner3"></a></div>
+                }else{
+                    <div class="col"><a href="@routes.ContactUs.contactUsRender()"><img src='@routes.Assets.versioned("images/bannerDefault.png")' alt="offer banner3"></a></div>
+                }
+            </div>
 
         </div>
     </div>
@@ -193,12 +203,6 @@
                                                             <div class="item-price">
                                                                 <div class="price-box"> <span class="regular-price"> <span class="price">@item.price</span> </span> </div>
                                                             </div>
-                                                            @*<div class="actions"><a href="wishlist.html" class="link-wishlist" title="Add to Wishlist"></a>*@
-                                                            @*<div class="add_cart">*@
-                                                            @*<button class="button btn-cart" type="button"><span>Add to Cart</span></button>*@
-                                                            @*</div>*@
-                                                            @*<a href="compare.html" class="link-compare" title="Add to Compare"></a> *@
-                                                            @*</div>*@
                                                         </div>
                                                     </div>
                                                 </div>
@@ -276,12 +280,6 @@
                                                                 <div class="item-price">
                                                                     <div class="price-box"> <span class="regular-price"> <span class="price">@item.price</span> </span> </div>
                                                                 </div>
-                                                                @*<div class="actions"><a href="wishlist.html" class="link-wishlist" title="Add to Wishlist"></a>*@
-                                                                @*<div class="add_cart">*@
-                                                                @*<button class="button btn-cart" type="button"><span>Add to Cart</span></button>*@
-                                                                @*</div>*@
-                                                                @*<a href="compare.html" class="link-compare" title="Add to Compare"></a> *@
-                                                                @*</div>*@
                                                             </div>
                                                         </div>
                                                     </div>
@@ -361,12 +359,6 @@
                                                                 <div class="item-price">
                                                                     <div class="price-box"> <span class="regular-price"> <span class="price">@item.price</span> </span> </div>
                                                                 </div>
-                                                                @*<div class="actions"><a href="wishlist.html" class="link-wishlist" title="Add to Wishlist"></a>*@
-                                                                @*<div class="add_cart">*@
-                                                                @*<button class="button btn-cart" type="button"><span>Add to Cart</span></button>*@
-                                                                @*</div>*@
-                                                                @*<a href="compare.html" class="link-compare" title="Add to Compare"></a> *@
-                                                                @*</div>*@
                                                             </div>
                                                         </div>
                                                     </div>
@@ -388,10 +380,20 @@
         <div class="top-banner-section2 ">
             <div class="container">
                 <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12  ">
-                    <div class="col" style="padding-top: 35px"><a href="#"><img src='@routes.Assets.versioned("images/reklama1.jpg")' alt="offer banner3"></a></div>
+	                @if(Banner.findBannerByPosition(5) != null) {
+		                <div class="col" style="padding-top: 35px"><a href="@Banner.findBannerByPosition(5).link"><img src='@Banner.findBannerByPosition(5).image'alt="offer banner3"></a></div>
+	                }else{
+		                <div class="col" style="padding-top: 35px"><a href="@routes.ContactUs.contactUsRender()"><img src='@routes.Assets.versioned("images/reklama1.jpg")' alt="offer banner3"></a></div>
+	                }
+                    @*<div class="col" style="padding-top: 35px"><a href="#"><img src='@routes.Assets.versioned("images/reklama1.jpg")' alt="offer banner3"></a></div>*@
                 </div>
                 <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12  ">
-                    <div class="col" style="padding-top: 0px"><a href="#"><img src='@routes.Assets.versioned("images/reklama2.jpg")' alt="offer banner3"></a></div>
+	                @if(Banner.findBannerByPosition(6) != null) {
+		                <div class="col" style="padding-top: 0px"><a href="@Banner.findBannerByPosition(6).link"><img src='@Banner.findBannerByPosition(5).image'alt="offer banner3"></a></div>
+	                }else{
+		                <div class="col" style="padding-top: 0px"><a href="@routes.ContactUs.contactUsRender()"><img src='@routes.Assets.versioned("images/reklama1.jpg")' alt="offer banner3"></a></div>
+	                }
+                    @*<div class="col" style="padding-top: 0px"><a href="#"><img src='@routes.Assets.versioned("images/reklama1.jpg")' alt="offer banner3"></a></div>*@
                 </div>
             </div>
         </div>
@@ -402,20 +404,20 @@
         <div class="container">
             <ul class="bxslider">
                 <li>
-                    <h2>NEW ARRIVALS</h2>
-                    <h1>Sale up to 30% off</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat. </p>
-                    <a class="shop-now" href="#">Shop now</a> </li>
+                    <h2>Članstvo</h2>
+                    <h1>PRIDRUŽITE NAM SE!</h1>
+                    <p>Želite postati naš član i promovisati svoje proizvode? Klikom na link ispod saznajte kako. </p>
+                    <a class="shop-now" href="#">Saznaj više</a> </li>
                 <li>
-                    <h2>Hello hotness!</h2>
-                    <h1>Summer collection</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat. </p>
-                    <a class="shop-now" href="#">View More</a> </li>
+                    <h2>Marketing</h2>
+                    <h1>Želite li da Vaša reklama bude na našoj strnici?</h1>
+                    <p>Ukoliko želite da se reklamirate na našoj stranici kliknite na link ispod i saznajte kako. </p>
+                    <a class="shop-now" href="#">Saznaj više</a> </li>
                 <li>
-                    <h2>New launch</h2>
-                    <h1>Designer dresses on sale</h1>
-                    <p>Fusce condimentum eleifend enim a feugiat. Pellentesque viverra vehicula sem ut volutpat. Integer sed arcu massa. </p>
-                    <a class="shop-now" href="#">Learn More</a> </li>
+                    <h2>Kupovina</h2>
+                    <h1>Želite kupiti namjestaj?</h1>
+                    <p>Pronađite proizvod, kontaktirajte prodavača, bez pravljenja korisničkog naloga! </p>
+                    </li>
             </ul>
         </div>
     </div>
@@ -488,12 +490,6 @@
                                             <div class="item-price">
                                                 <div class="price-box"> <span class="regular-price"> <span class="price">@item.price KM </span> </span> </div>
                                             </div>
-
-                                                @*<div class="actions"><a href="wishlist.html" class="link-wishlist" title="Add to Wishlist"></a>*@
-                                                @*<div class="add_cart">*@
-                                                @*<button class="button btn-cart" type="button"><span>Add to Cart</span></button>*@
-                                                @*</div>*@
-                                                @*<a href="compare.html" class="link-compare" title="Add to Compare"></a> </div>*@
                                             </div>
                                         </div>
                                     </div>
@@ -509,7 +505,12 @@
         <div class="top-banner-section2 ">
             <div class="container">
                 <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12  ">
-                    <div class="col"><a href="#"><img src='@routes.Assets.versioned("images/slika2.png")' alt="offer banner3"></a></div>
+	                @if(Banner.findBannerByPosition(7) != null) {
+		                <div class="col"><a href="@Banner.findBannerByPosition(7).link"><img src='@Banner.findBannerByPosition(7).image'alt="offer banner3"></a></div>
+	                }else{
+		                <div class="col"><a href="@routes.ContactUs.contactUsRender()"><img src='@routes.Assets.versioned("images/slika2.png")' alt="offer banner3"></a></div>
+	                }
+                    @*<div class="col"><a href="#"><img src='@routes.Assets.versioned("images/slika2.png")' alt="offer banner3"></a></div>*@
                 </div>
             </div>
         </div>

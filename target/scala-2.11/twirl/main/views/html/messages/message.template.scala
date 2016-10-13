@@ -91,7 +91,7 @@ Seq[Any](format.raw/*2.20*/("""
 object message extends message_Scope0.message_Scope1.message
               /*
                   -- GENERATED --
-                  DATE: Fri May 13 17:14:19 CEST 2016
+                  DATE: Wed Jun 08 01:58:53 CEST 2016
                   SOURCE: E:/namjestaj/app/views/messages/message.scala.html
                   HASH: f9a5371d270d413945dd04ced7d7db1f2dd48fad
                   MATRIX: 820->33|933->51|960->53|971->57|1009->59|1040->64|1334->332|1349->339|1377->347|1515->458|1531->465|1566->479|1732->618|1748->625|1781->637|2225->1054|2240->1060|2303->1101|2381->1152|2477->1238|2518->1240|2584->1278|2643->1310|2658->1316|2722->1358|2855->1460|2912->1489

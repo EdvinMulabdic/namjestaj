@@ -8,6 +8,7 @@
     <file url="file://$PROJECT_DIR$/app/views/Admin/usersItems.scala.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/views/AppUser/logo.scala.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/views/Item/saleItems.scala.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/banner/listOfBanners.scala.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/views/news/createNews.scala.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/views/news/news.scala.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/views/partner/partnerMain.scala.html" charset="UTF-8" />

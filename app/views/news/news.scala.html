@@ -33,15 +33,18 @@
                         <div role="complementary" class="widget_wrapper13" id="secondary">
                                 <!-- Banner Ad Block -->
                             <div class="ad-spots widget widget__sidebar">
-                                <a target="_self" href="#" title=""><img alt="offer banner" src='@routes.Assets.versioned("images/block1.jpg")' style="width : 280px;"></a>
-                                <a target="_self" href="#" title=""><img alt="offer banner" src='@routes.Assets.versioned("images/block1.jpg")' style="width : 280px;"></a>
-                            </div>
-                                <!-- Banner Text Block -->
-                            <div class="text-widget widget widget__sidebar">
-                                <h3 class="widget-title">Text Banner</h3>
-                                <div class="widget-content">Mauris at blandit erat. Nam vel tortor non quam scelerisque cursus. Praesent nunc vitae magna pellentesque auctor. Quisque id lectus.<br>
-                                    <br>
-                                    Massa, eget eleifend tellus. Proin nec ante leo ssim nunc sit amet velit malesuada pharetra. Nulla neque sapien, sollicitudin non ornare quis, malesuada.</div>
+	                            @if(Banner.findBannerByPosition(8) != null) {
+		                            <div class="col"><a href="@Banner.findBannerByPosition(8).link"><img src='@Banner.findBannerByPosition(8).image'alt="offer banner3"></a></div>
+	                            }else{
+		                            <div class="col"><a href="@routes.ContactUs.contactUsRender()"><img src='@routes.Assets.versioned("images/bannerNews.png")' alt="offer banner3"></a></div>
+	                            }
+	                            @if(Banner.findBannerByPosition(9) != null) {
+		                            <div class="col"><a href="@Banner.findBannerByPosition(9).link"><img src='@Banner.findBannerByPosition(9).image'alt="offer banner3"></a></div>
+	                            }else{
+		                            <div class="col"><a href="@routes.ContactUs.contactUsRender()"><img src='@routes.Assets.versioned("images/bannerNews.png")' alt="offer banner3"></a></div>
+	                            }
+                                @*<a target="_self" href="#" title=""><img alt="offer banner" src='@routes.Assets.versioned("images/bannerNews.png")' ></a>*@
+                                @*<a target="_self" href="#" title=""><img alt="offer banner" src='@routes.Assets.versioned("images/bannerNews.png")' ></a>*@
                             </div>
                         </div>
                     </aside>

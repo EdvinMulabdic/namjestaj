@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:E:/namjestaj/conf/routes
-// @DATE:Sun May 15 23:50:58 CEST 2016
+// @DATE:Wed Jun 08 01:58:51 CEST 2016
 
 package controllers;
 
@@ -10,6 +10,7 @@ import router.RoutesPrefix;
 public class routes {
   
   public static final controllers.ReverseAssets Assets = new controllers.ReverseAssets(RoutesPrefix.byNamePrefix());
+  public static final controllers.ReverseBanners Banners = new controllers.ReverseBanners(RoutesPrefix.byNamePrefix());
   public static final controllers.ReverseCategories Categories = new controllers.ReverseCategories(RoutesPrefix.byNamePrefix());
   public static final controllers.ReverseNewsController NewsController = new controllers.ReverseNewsController(RoutesPrefix.byNamePrefix());
   public static final controllers.ReverseLogin Login = new controllers.ReverseLogin(RoutesPrefix.byNamePrefix());
@@ -26,6 +27,7 @@ public class routes {
   public static class javascript {
     
     public static final controllers.javascript.ReverseAssets Assets = new controllers.javascript.ReverseAssets(RoutesPrefix.byNamePrefix());
+    public static final controllers.javascript.ReverseBanners Banners = new controllers.javascript.ReverseBanners(RoutesPrefix.byNamePrefix());
     public static final controllers.javascript.ReverseCategories Categories = new controllers.javascript.ReverseCategories(RoutesPrefix.byNamePrefix());
     public static final controllers.javascript.ReverseNewsController NewsController = new controllers.javascript.ReverseNewsController(RoutesPrefix.byNamePrefix());
     public static final controllers.javascript.ReverseLogin Login = new controllers.javascript.ReverseLogin(RoutesPrefix.byNamePrefix());

@@ -21,6 +21,7 @@ public class SubCategory extends Model {
     public Category category;
 
     public SubCategory() {}
+
     public SubCategory(Category category, String name) {
         this.category = category;
         this.name = name;

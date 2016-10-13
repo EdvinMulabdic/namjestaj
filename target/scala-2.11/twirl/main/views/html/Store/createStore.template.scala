@@ -123,7 +123,7 @@ Seq[Any](format.raw/*1.19*/("""
 object createStore extends createStore_Scope0.createStore
               /*
                   -- GENERATED --
-                  DATE: Fri May 13 17:14:19 CEST 2016
+                  DATE: Wed Jun 08 01:58:53 CEST 2016
                   SOURCE: E:/namjestaj/app/views/Store/createStore.scala.html
                   HASH: c69c4d394119669e2c7a8ff0e7af16fe3988c721
                   MATRIX: 764->1|876->18|903->20|914->24|952->26|983->31|1529->550|1544->556|1593->583
