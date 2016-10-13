@@ -105,7 +105,7 @@ Seq[Any](format.raw/*1.17*/("""
 object description extends description_Scope0.description
               /*
                   -- GENERATED --
-                  DATE: Wed Jun 08 01:58:53 CEST 2016
+                  DATE: Thu Oct 13 22:16:36 CEST 2016
                   SOURCE: E:/namjestaj/app/views/AppUser/description.scala.html
                   HASH: 842a2b3649c7ba955e757048222762c7f3550cf6
                   MATRIX: 766->1|876->16|904->19|915->23|952->24|982->28|1540->559|1555->565|1611->599|2455->1415|2469->1419|2503->1431|3637->2537|3666->2538|3697->2542|3777->2594|3806->2595|3839->2601|4072->2807|4100->2808|4130->2811|4158->2812

@@ -93,7 +93,7 @@ Seq[Any](format.raw/*1.22*/("""
 object updateCategory extends updateCategory_Scope0.updateCategory
               /*
                   -- GENERATED --
-                  DATE: Wed Jun 08 01:58:53 CEST 2016
+                  DATE: Thu Oct 13 22:16:36 CEST 2016
                   SOURCE: E:/namjestaj/app/views/Category/updateCategory.scala.html
                   HASH: a2f73b6315285ae7dc5e2ef1b82a5f221168e626
                   MATRIX: 774->1|889->21|916->23|927->27|965->29|996->34|1545->556|1560->562|1621->601|2441->1393|2459->1401|2486->1406

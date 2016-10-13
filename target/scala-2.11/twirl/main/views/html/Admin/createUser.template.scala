@@ -121,7 +121,7 @@ Seq[Any](_display_(/*1.2*/main/*1.6*/{_display_(Seq[Any](format.raw/*1.7*/("""
 object createUser extends createUser_Scope0.createUser
               /*
                   -- GENERATED --
-                  DATE: Wed Jun 08 01:58:53 CEST 2016
+                  DATE: Thu Oct 13 22:16:36 CEST 2016
                   SOURCE: E:/namjestaj/app/views/Admin/createUser.scala.html
                   HASH: f0885151cfef86d562d2ca72a01a8062d18ee5ca
                   MATRIX: 843->1|854->5|891->6|923->12|1480->542|1495->548|1538->570

@@ -116,7 +116,7 @@ Seq[Any](_display_(/*1.2*/main/*1.6*/ {_display_(Seq[Any](format.raw/*1.8*/("""
 object contactUs extends contactUs_Scope0.contactUs
               /*
                   -- GENERATED --
-                  DATE: Thu Jun 23 12:05:41 CEST 2016
+                  DATE: Thu Oct 13 22:16:34 CEST 2016
                   SOURCE: E:/namjestaj/app/views/contactUs.scala.html
                   HASH: 9a667d00ca083f4eceecc05511fdead3a831fac7
                   MATRIX: 835->1|846->5|884->7|915->12

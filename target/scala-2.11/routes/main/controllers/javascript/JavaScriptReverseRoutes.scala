@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:E:/namjestaj/conf/routes
-// @DATE:Wed Jun 08 01:58:51 CEST 2016
+// @DATE:Thu Oct 13 22:16:34 CEST 2016
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }

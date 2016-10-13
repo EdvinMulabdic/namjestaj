@@ -125,7 +125,7 @@ Seq[Any](_display_(/*1.2*/main/*1.6*/ {_display_(Seq[Any](format.raw/*1.8*/("""
 object createBanner extends createBanner_Scope0.createBanner
               /*
                   -- GENERATED --
-                  DATE: Sun Jun 26 10:56:41 CEST 2016
+                  DATE: Thu Oct 13 22:16:36 CEST 2016
                   SOURCE: E:/namjestaj/app/views/banner/createBanner.scala.html
                   HASH: 9ebd866498fe73d168c1d4edf298a4a2b6aaf429
                   MATRIX: 848->1|859->5|897->7|929->13|4247->3304|4262->3310|4331->3358|4526->3526|4541->3532|4611->3581|4835->3778|4850->3784|4920->3833

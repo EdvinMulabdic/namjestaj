@@ -101,7 +101,7 @@ Seq[Any](format.raw/*1.37*/("""
 object listOfMessagesForAdmin extends listOfMessagesForAdmin_Scope0.listOfMessagesForAdmin
               /*
                   -- GENERATED --
-                  DATE: Wed Jun 08 01:58:53 CEST 2016
+                  DATE: Thu Oct 13 22:16:37 CEST 2016
                   SOURCE: E:/namjestaj/app/views/messages/listOfMessagesForAdmin.scala.html
                   HASH: dda2c2915146cbb9d20a948355f951e4ce76fd63
                   MATRIX: 805->1|935->36|962->38|973->42|1011->44|1042->49|2016->996|2056->1020|2096->1022|2153->1052|2186->1076|2226->1078|2287->1111|2375->1172|2391->1179|2426->1193|2500->1240|2516->1247|2549->1259|2684->1367|2700->1374|2729->1382|2798->1424|2825->1442|2865->1444|2938->1489|3068->1588|3134->1626|3319->1784|3334->1790|3385->1819|3664->2067|3721->2093|3774->2118|3934->2251|3949->2257|4010->2297
