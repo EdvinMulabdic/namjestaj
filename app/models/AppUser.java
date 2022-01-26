@@ -61,7 +61,13 @@ public class AppUser extends Model {
 
         AppUser user = finder.where().eq("email", email).findUnique();
 
-        if (user != null && BCrypt.checkpw(password, user.password)) {
+//        if (user != null && BCrypt.checkpw(password, user.password)) {
+//            return user;
+//        } else {
+//            return null;
+//        }
+
+        if (user != null && password.equals(user.password)) {
             return user;
         } else {
             return null;
